@@ -1,0 +1,265 @@
+.video-testimonials-section {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+.testimonials-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.video-slider-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.video-slider-wrapper {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.video-slider {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-slide {
+  flex: 0 0 auto;
+  width: calc(20% - 0.8rem); /* 5 slides per view on large screens */
+}
+
+.video-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 9 / 16;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.video-control {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.video-control:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.video-control svg {
+  width: 20px;
+  height: 20px;
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  text-align: center;
+  z-index: 5;
+}
+
+.customer-name {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.star {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.star-image {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  object-fit: contain;
+}
+
+.video-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: white;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* Navigation Buttons */
+.slider-nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 20;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slider-nav:hover:not(:disabled) {
+  background-color: #667eea;
+  border-color: #667eea;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.slider-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.slider-nav svg {
+  color: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .video-slide {
+    width: calc(25% - 0.75rem); /* 4 slides */
+  }
+}
+
+@media (max-width: 991px) {
+  .video-slide {
+    width: calc(33.333% - 0.667rem); /* 3 slides */
+  }
+  
+  .testimonials-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-slide {
+    width: calc(50% - 0.5rem); /* 2 slides */
+  }
+  
+  .slider-nav {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .testimonials-heading {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .video-testimonials-section {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .video-slide {
+    width: 100%; /* 1 slide */
+  }
+  
+  .video-slider-container {
+    gap: 10px;
+  }
+  
+  .slider-nav {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .customer-name {
+    font-size: 1rem;
+  }
+  
+  .star svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Animation pour l'apparition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Smooth scroll behavior */
+.video-slider {
+  scroll-behavior: smooth;
+}

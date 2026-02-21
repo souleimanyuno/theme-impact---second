@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "message_4JWk4f": {
+          "type": "message",
+          "settings": {
+            "text": "FREE SHIPPING & RETURNS",
+            "url": ""
+          }
+        },
+        "message": {
+          "type": "message",
+          "settings": {
+            "text": "12,000+ WOMEN OBSESSED | 5-STAR REVIEWS",
+            "url": ""
+          }
+        },
+        "message_4MYheV": {
+          "type": "message",
+          "settings": {
+            "text": "30-DAY PERFECT FIT GUARANTEE",
+            "url": ""
+          }
+        },
+        "message_H7Ab9a": {
+          "type": "message",
+          "settings": {
+            "text": "VALENTINE'S EXCLUSIVE OFFER",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "message_4JWk4f",
+        "message",
+        "message_4MYheV",
+        "message_H7Ab9a"
+      ],
+      "settings": {
+        "enable_sticky": false,
+        "autoplay": false,
+        "cycle_speed": 6,
+        "text_size": "text-xs",
+        "navigation_mode": "scrolling",
+        "scrolling_speed": 10,
+        "background": "#d8baa0",
+        "background_gradient": "",
+        "text_color": "#1a1a1a"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "enable_sticky": true,
+        "hide_on_scroll": false,
+        "logo": "shopify://shop_images/Nude_Beige.png",
+        "logo_max_width": 200,
+        "logo_mobile_max_width": 120,
+        "menu": "",
+        "sidebar_menu": "",
+        "secondary_menu": "",
+        "menu_open_trigger": "click",
+        "opening_from": "bottom",
+        "layout": "logo_left_navigation_center",
+        "show_social_media": true,
+        "show_locale_selector": true,
+        "show_country_selector": true,
+        "show_country_flag": true,
+        "show_country_name": false,
+        "transparent_header_text_color": "#ffffff",
+        "reduce_padding": true,
+        "background_opacity": 100,
+        "background_blur_radius": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
