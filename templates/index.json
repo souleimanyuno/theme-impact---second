@@ -323,7 +323,7 @@
         "liquid_7YKANC": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div style=\"display: flex; align-items: center; background-color: #FAFAFA; padding: 8px 8px; border-radius: 8px; width: fit-content; margin: 10px 0; text-align: left;\">\n  <!-- Stars -->\n  <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/stars-4.5-trust-pilot.svg?v=1747080316\" alt=\"5 stars\" class=\"stars-img\" style=\"width: 105px; margin-right: 8px;\">\n  <!-- Text -->\n  <div style=\"color: #4A4A4A; font-size: 11.1px; text-align: left;\">\n    <span style=\"font-weight: 400;\">Rated</span> <span style=\"color: #000000; font-weight: 700;\">4.7</span> <span style=\"font-weight: 400;\">based on</span> <span style=\"color: #000000; font-weight: 700;\">12,000+ reviews</span>\n  </div>\n</div>"
+            "liquid": "<div style=\"display: flex; align-items: center; background-color: #FFFFFF; padding: 8px 8px; border-radius: 8px; width: fit-content; margin: 10px 0; text-align: left;\">\n  <!-- Stars -->\n  <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/stars-4.5-trust-pilot.svg?v=1747080316\" alt=\"5 stars\" class=\"stars-img\" style=\"width: 55px; margin-right: 8px;\">\n  <!-- Text -->\n  <div style=\"color: #4A4A4A; font-size: 11.1px; text-align: left; white-space: nowrap;\">\n    <span style=\"font-weight: 200;\">Bewertet mit</span> <span style=\"color: #000000; font-weight: 700;\">4,7</span> <span style=\"font-weight: 200;\">basierend auf</span> <span style=\"color: #000000; font-weight: 700;\">12.000+ Bewertungen</span>\n  </div>\n</div>"
           }
         },
         "title_8Ka9pi": {
@@ -335,13 +335,13 @@
         "text_HinwiJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Thermal tights that finally respect your style, flawless bare legs illusion combined with winter warmth and instant confidence</p>"
+            "text": "<p>Strumpfhosen die endlich deinen Stil respektieren  makellose Nackte-Haut-Illusion kombiniert mit sofortigem Selbstbewusstsein und verführerischen Kurven</p>"
           }
         },
         "liquid_6ewCBU": {
           "type": "liquid",
           "settings": {
-            "liquid": "<ul style=\"list-style: none; padding: 0; font-size: 14px;\">\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Legs that look perfect even at -10°F\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Sculpting effect smooths cellulite and imperfections\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Instant slimming without shapewear underneath\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Never rips – premium durability that lasts all season\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Bare skin illusion – nobody knows your secret\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Confident from first wear, no adjustment needed\n  </li>\n</ul>"
+            "liquid": "<ul style=\"list-style: none; padding: 0; font-size: 14px;\">\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Glättet Cellulite und Unreinheiten sofort\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Nackte-Haut-Illusion – niemand kennt dein Geheimnis\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Sofort schlank – kein Shapewear nötig\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Selbstbewusst ab dem ersten Tragen\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Makellose Beine selbst bei -23°C\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Reißt nie – Premium-Qualität für jede Saison\n  </li>\n</ul>"
           }
         },
         "kaching_bundles_app_block_Mx3Xtc": {
