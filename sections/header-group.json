@@ -34,20 +34,12 @@
             "text": "30-DAY PERFECT FIT GUARANTEE",
             "url": ""
           }
-        },
-        "message_H7Ab9a": {
-          "type": "message",
-          "settings": {
-            "text": "VALENTINE'S EXCLUSIVE OFFER",
-            "url": ""
-          }
         }
       },
       "block_order": [
         "message_4JWk4f",
         "message",
-        "message_4MYheV",
-        "message_H7Ab9a"
+        "message_4MYheV"
       ],
       "settings": {
         "enable_sticky": false,
