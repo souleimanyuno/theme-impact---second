@@ -183,7 +183,7 @@
         "heading_gtfBVF": {
           "type": "heading",
           "settings": {
-            "text": "Why confident women choose Sorelya",
+            "text": "Warum selbstbewusste Frauen Sorelya wählen",
             "heading_tag": "h3",
             "text_color": "",
             "gradient": ""
@@ -219,7 +219,7 @@
             "icon_width": 24,
             "subheading": "",
             "title": "",
-            "content": "<p><strong>Forget wardrobe anxiety and winter limitations.</strong></p><ul><li>Bare-skin illusion</li><li>Sculpting compression</li><li>Warm to -10°F</li><li>Never rips + lifetime replacement</li></ul>",
+            "content": "<p><strong>Vergiss Unsicherheiten und Kompromisse beim Anziehen.</strong></p><ul><li>Nackte-Haut-Illusion</li><li>Formende Kompression</li><li>Versteckt Cellulite sofort</li><li>Warm bis -23°C + lebenslanger Ersatz</li></ul>",
             "link_text": "",
             "link_url": "",
             "background": "#ffffff",
@@ -244,19 +244,6 @@
     "multi_column_k9tG6W": {
       "type": "multi-column",
       "blocks": {
-        "item_kWAwir": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/2682245c-7082-4e4f-b303-648caec25ba7_1.webp",
-            "column_size": "3",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "<p>I've been wearing pants to the office for 3 winters straight because <strong>I refused to freeze in dresses. These</strong> changed <strong>EVERYTHING</strong>.<br/>Yesterday it was 15°F outside, I wore a midi dress with heels, and <strong>felt like a boss</strong>. Plus the shapewear effect is <strong>NO JOKE</strong>. Instant hourglass without Spanx.<br/><br/><strong>Jessica L. | Chicago, IL</strong></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
         "item_DqqLiw": {
           "type": "item",
           "settings": {
@@ -264,7 +251,7 @@
             "column_size": "3",
             "title": "",
             "heading_tag": "h4",
-            "content": "<p>My husband asked if I lost weight... I haven't. But these tights? <strong>MAGIC</strong>. I wore them with my pencil skirt to work and <strong>got compliments </strong>ALL DAY. My legs look <strong>incredible smooth</strong>, <strong>sculpted</strong>, and I finally <strong>feel confident</strong> enough to wear dresses in winter again.<br/><br/><br/><strong>Sarah M. | New York, NY</strong></p>",
+            "content": "<p>Mein Mann hat mich gefragt ob ich abgenommen habe... Nein. Aber diese Strumpfhosen? <strong>MAGIE</strong>. Ich hab sie mit meinem Bleistiftrock zur Arbeit getragen und den <strong>ganzen Tag Komplimente</strong> bekommen. Meine Beine sehen <strong>unglaublich glatt</strong>, <strong>geformt</strong> aus — und ich fühle mich endlich wieder <strong>selbstbewusst genug</strong> um Kleider zu tragen wann immer ich will.<br/><br/><br/><strong>Sarah M. | Berlin</strong></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -277,7 +264,7 @@
             "column_size": "3",
             "title": "",
             "heading_tag": "h4",
-            "content": "<p><strong>The confidence boost I didn't know I needed. </strong>After having my daughter, I avoided anything form-fitting. Cellulite, loose skin, the works. These hide EVERYTHING while <strong>making my legs look flawless</strong>.<br/><br/><br/><br/><strong>Amanda K. | Boston, MA</strong></p>",
+            "content": "<p><strong>Der Selbstbewusstseinsschub den ich nicht wusste dass ich ihn brauche.</strong> Nach meiner Tochter habe ich alles Körperbetonte gemieden. Cellulite, schlaffe Haut, das volle Programm. Diese verstecken ALLES und lassen <strong>meine Beine trotzdem makellos aussehen</strong>.<br/><br/><br/><br/><strong>Laura K. | München</strong></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -290,7 +277,20 @@
             "column_size": "3",
             "title": "",
             "heading_tag": "h4",
-            "content": "<p>Wore them 9am to midnight. <strong>Still perfect.</strong><br/>They don't roll down, don't lose shape, and honestly <strong>make my legs look better</strong> than they actually are (sorry, genetics 😂). The sculpting is subtle but <strong>REAL</strong>.                        Pro tip: If you're tall (I'm 5'9\"), size up. The L/XL fits me perfectly.<br/><br/><strong>Rachel T. | Seattle, WA</strong></p>",
+            "content": "<p>Von 9 Uhr morgens bis Mitternacht getragen. <strong>Immer noch perfekt.</strong> Rutschen nicht runter, verlieren nicht die Form, und ehrlich gesagt lassen sie <strong>meine Beine besser aussehen</strong> als sie eigentlich sind (sorry, Gene 😂). Das Shaping ist subtil aber <strong>REAL</strong>. Tipp: Wenn du groß bist (ich bin 1,75m), nimm eine Größe größer. Die L/XL sitzt perfekt.<br/><br/><strong>Nina T. | Hamburg</strong></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_kWAwir": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2682245c-7082-4e4f-b303-648caec25ba7_1.webp",
+            "column_size": "3",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Ich hab drei Winter lang nur Hosen ins Büro getragen weil ich <strong>in Kleidern nicht frieren wollte</strong>. Diese haben ALLES verändert. Gestern waren es -9°C, ich trug ein Midikleid mit Absätzen und hab mich <strong>wie eine Königin gefühlt</strong>. Und der Shapewear-Effekt ist <strong>KEIN WITZ</strong>. Sofort Sanduhr-Silhouette ohne extra Shapewear darunter.<br/><br/><strong>Jessica L. | Köln</strong></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -298,10 +298,10 @@
         }
       },
       "block_order": [
-        "item_kWAwir",
         "item_DqqLiw",
         "item_VrzGmK",
-        "item_DetHQz"
+        "item_DetHQz",
+        "item_kWAwir"
       ],
       "name": "Multi-column",
       "settings": {
