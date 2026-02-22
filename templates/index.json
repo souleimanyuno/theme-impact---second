@@ -841,7 +841,7 @@
         "image_yqrBqh": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WARM_IN_EXTREME_COLD_3.png",
+            "image": "shopify://shop_images/WARM_IN_EXTREME_COLD_5.png",
             "media_width": 60,
             "media_position": "start",
             "text_position": "place-self-center text-center",
@@ -877,7 +877,7 @@
         "heading_wWbpLx": {
           "type": "heading",
           "settings": {
-            "text": "Confidence without compromise",
+            "text": "Selbstbewusstsein ohne Kompromisse",
             "heading_tag": "h3",
             "text_color": "",
             "gradient": ""
@@ -886,7 +886,7 @@
         "subheading_bBWR3a": {
           "type": "subheading",
           "settings": {
-            "text": "Stay warm. Look flawless. Feel sculpted."
+            "text": "Makellos. Geformt. Unwiderstehlich."
           }
         }
       },
@@ -918,7 +918,7 @@
             "icon_width": 24,
             "subheading": "",
             "title": "",
-            "content": "<h4>✔ Bare-Skin Illusion</h4><h4>✔ Sculpting Compression</h4><h4>✔ All-Day Strength</h4><p></p><p><strong>Sorelya isn’t just tights. It’s confidence you wear.</strong></p>",
+            "content": "<h4>✔ Nackte-Haut-Illusion</h4><h4>✔ Formende Kompression</h4><h4>✔ Den ganzen Tag stark</h4><p></p><p><em>Sorelya sind nicht einfach Strumpfhosen. Es ist Selbstbewusstsein das du trägst.</em></p>",
             "link_text": "",
             "link_url": "",
             "background": "#ffffff",
