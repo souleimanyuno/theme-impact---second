@@ -416,8 +416,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Shipping Information",
-            "content": "<p>Just placed your order? 🎉 Great choice!<br/><br/>Our team gets to work immediately to prepare your package with care.<br/><br/>⏱️ Processing time: Within 24-48 hours<br/>🚚 Delivery: 7-10 business days (free shipping)<br/><br/>Once your order ships, you'll receive a confirmation email with your tracking number. With one click, you can follow your package all the way to your doorstep.<br/><br/>Note: During high-demand periods, popular shades like Porcelain and Sunkissed sell out fast.<br/><br/>Questions? Our customer support team is available 7 days a week.</p>",
+            "title": "Versandinformationen",
+            "content": "<p>Bestellung aufgegeben? 🎉 Gute Wahl! Unser Team macht sich sofort an die Arbeit um dein Paket sorgfältig vorzubereiten.</p><p>⏱️ Bearbeitungszeit: Innerhalb von 24-48 Stunden<br/>🚚 Lieferung: 7-10 Werktage (kostenloser Versand)</p><p>Sobald deine Bestellung verschickt wurde, erhältst du eine Bestätigungs-E-Mail mit deiner Sendungsverfolgungsnummer. Mit einem Klick kannst du dein Paket bis zur Haustür verfolgen.</p><p>Hinweis: In Stoßzeiten sind beliebte Farbtöne wie Ivory Kiss und Golden Desire schnell ausverkauft.</p><p>Fragen? Unser Kundensupport ist 7 Tage die Woche für dich da.</p>",
             "page": ""
           }
         },
@@ -426,8 +426,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Risk-Free Guarantee",
-            "content": "<p>Try Sorelya risk-free for 30 days. Don't love them? Return for a full refund—no questions asked.<br/><br/>Free Size/Color Exchange<br/>Ordered the wrong shade or size? We'll exchange them free. You only pay return shipping.<br/><br/>Lifetime Replacement Warranty<br/>If they ever rip or lose their sculpting power, we replace them. Free. Forever.<br/><br/>Zero risk. Just confidence.</p>",
+            "title": "Risikofreie Garantie",
+            "content": "<p>Teste Sorelya 30 Tage risikofrei. Nicht begeistert? Vollständige Rückerstattung — keine Fragen gestellt.</p><p><strong>Kostenloser Größen- & Farbtausch</strong><br/>Falsche Farbe oder Größe bestellt? Wir tauschen kostenlos. Du zahlst nur den Rückversand.</p><p><strong>Lebenslange Ersatzgarantie</strong><br/>Wenn sie je reißen oder die formende Wirkung nachlässt, ersetzen wir sie. Kostenlos. Für immer.</p><p>Kein Risiko. Nur Selbstbewusstsein.</p>",
             "page": ""
           }
         }
@@ -677,7 +677,7 @@
       ],
       "name": "Témoignages Vidéo",
       "settings": {
-        "heading": "12,000+ women obsessed with their legs",
+        "heading": "Über 12.000 Frauen lieben ihre Beine",
         "slides_per_view": 4,
         "slides_per_view_mobile": 1.5,
         "slider_gap": 32,
