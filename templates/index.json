@@ -360,7 +360,7 @@
         "buy_buttons_dqab8L": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": false,
+            "show_payment_button": true,
             "show_gift_card_recipient": true,
             "atc_button_background": "#00a341",
             "atc_button_text_color": "",
