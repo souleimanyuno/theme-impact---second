@@ -192,7 +192,7 @@
         "heading_gtfBVF": {
           "type": "heading",
           "settings": {
-            "text": "Warum selbstbewusste Frauen Sorelya wählen",
+            "text": "See It Work In Real Time.",
             "heading_tag": "h3",
             "text_color": "",
             "gradient": ""
@@ -212,42 +212,19 @@
         "text_color": ""
       }
     },
-    "media_with_text_EdQ4Xn": {
-      "type": "media-with-text",
-      "blocks": {
-        "video_gwPnHz": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/c4742090cd8a414f9cdebd608e9dbe4a.mp4",
-            "external_video_url": "",
-            "autoplay": true,
-            "media_width": 50,
-            "media_position": "end",
-            "text_position": "place-self-center-start text-start",
-            "icon": "none",
-            "icon_width": 24,
-            "subheading": "",
-            "title": "",
-            "content": "<p><strong>Vergiss Unsicherheiten und Kompromisse beim Anziehen.</strong></p><ul><li>Nackte-Haut-Illusion</li><li>Formende Kompression</li><li>Versteckt Cellulite sofort</li><li>Warm bis -23°C + lebenslanger Ersatz</li></ul>",
-            "link_text": "",
-            "link_url": "",
-            "background": "#ffffff",
-            "background_gradient": "",
-            "text_color": "#1a1a1a",
-            "text_gradient": "",
-            "button_background": "",
-            "button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_gwPnHz"
-      ],
-      "name": "Media with text",
+    "image_with_text_overlay_3J6Vkn": {
+      "type": "image-with-text-overlay",
       "settings": {
-        "full_width": false,
-        "alternate_media_position": false,
-        "spacing": "small"
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "sm",
+        "image": "shopify://shop_images/videoframe_6200.png",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
       }
     },
     "multi_column_k9tG6W": {
@@ -1207,7 +1184,7 @@
     "rich_text_qMKYdU",
     "image-with-text-overlay",
     "rich_text_KiattM",
-    "media_with_text_EdQ4Xn",
+    "image_with_text_overlay_3J6Vkn",
     "multi_column_k9tG6W",
     "featured_product_WYUtAJ",
     "featured_product_cKRAm3",
