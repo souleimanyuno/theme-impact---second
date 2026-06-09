@@ -545,40 +545,17 @@
         "text_color": ""
       }
     },
-    "media_with_text_zpfxxP": {
-      "type": "media-with-text",
-      "blocks": {
-        "image_yqrBqh": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WARM_IN_EXTREME_COLD_5.png",
-            "media_width": 60,
-            "media_position": "start",
-            "text_position": "place-self-center text-center",
-            "icon": "none",
-            "icon_width": 24,
-            "subheading": "",
-            "title": "",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "background": "#ffffff",
-            "background_gradient": "",
-            "text_color": "#1a1a1a",
-            "text_gradient": "",
-            "button_background": "",
-            "button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_yqrBqh"
-      ],
-      "name": "Media with text",
+    "custom_liquid_WgJTim": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
-        "alternate_media_position": false,
-        "spacing": "none"
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "<div class=\"sv-faq2-section\">\n  <p class=\"sv-faq2-label\">FREQUENTLY ASKED QUESTIONS</p>\n  <h2 class=\"sv-faq2-title\">QUESTIONS? WE'RE HERE TO HELP</h2>\n  <p class=\"sv-faq2-contact\">Email us at <a href=\"mailto:support@mysorelya.com\">support@mysorelya.com</a> — we reply within 24 hours.</p>\n\n  <div class=\"sv-faq2-list\">\n\n    <div class=\"sv-faq2-item\">\n      <button class=\"sv-faq2-q\" aria-expanded=\"false\">\n        <span>How do I choose the right shade from the 6 available?</span>\n        <svg class=\"sv-faq2-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n      </button>\n      <div class=\"sv-faq2-a\">\n        <p>Choose the shade closest to your natural skin tone. If you want a subtle bronzed effect, go one shade darker. When in doubt, go lighter — you can always layer for more depth. Use our 60-second shade quiz for a personalised recommendation.</p>\n      </div>\n    </div>\n\n    <div class=\"sv-faq2-item\">\n      <button class=\"sv-faq2-q\" aria-expanded=\"false\">\n        <span>How long does one tube last?</span>\n        <svg class=\"sv-faq2-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n      </button>\n      <div class=\"sv-faq2-a\">\n        <p>Covering both legs from ankle to thigh takes approximately 10ml — roughly 12 applications per tube. Used 3 times a week, one tube lasts about a month. Most customers order 2 tubes for the summer season.</p>\n      </div>\n    </div>\n\n    <div class=\"sv-faq2-item\">\n      <button class=\"sv-faq2-q\" aria-expanded=\"false\">\n        <span>Can I use it on my face, décolletage, arms and hands?</span>\n        <svg class=\"sv-faq2-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n      </button>\n      <div class=\"sv-faq2-a\">\n        <p>Yes — anywhere you want to cover something. Sun spots on the décolletage, thread veins on the hands, scars on the arms or back. On the face, use sparingly on specific areas such as redness or post-acne marks — it is not designed as a daily facial foundation.</p>\n      </div>\n    </div>\n\n    <div class=\"sv-faq2-item\">\n      <button class=\"sv-faq2-q\" aria-expanded=\"false\">\n        <span>Does it work on tattoos and keloid scars?</span>\n        <svg class=\"sv-faq2-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n      </button>\n      <div class=\"sv-faq2-a\">\n        <p><strong>Tattoos:</strong> small and light-coloured tattoos disappear with one or two layers. Large, dark or heavily saturated tattoos are partially covered — the outline may remain slightly visible.</p>\n        <p><strong>Keloid scars:</strong> the pigment adheres perfectly to the scar tissue, covering the colour effectively. The raised texture may still be felt but will no longer be visible.</p>\n      </div>\n    </div>\n\n    <div class=\"sv-faq2-item\">\n      <button class=\"sv-faq2-q\" aria-expanded=\"false\">\n        <span>Is it safe during pregnancy, breastfeeding and for sensitive skin?</span>\n        <svg class=\"sv-faq2-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n      </button>\n      <div class=\"sv-faq2-a\">\n        <p>SkinVeil™ is free from DHA, parabens, phthalates and synthetic fragrance. Dermatologically tested and nickel-tested. Suitable for reactive and sensitive skin types. If you are pregnant or breastfeeding, we recommend consulting your GP before use, as with any cosmetic product.</p>\n      </div>\n    </div>\n\n    <div class=\"sv-faq2-item\">\n      <button class=\"sv-faq2-q\" aria-expanded=\"false\">\n        <span>Is SkinVeil™ vegan and cruelty-free?</span>\n        <svg class=\"sv-faq2-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n      </button>\n      <div class=\"sv-faq2-a\">\n        <p>Yes — 100% vegan and cruelty-free. No animal-derived ingredients, and no animal testing at any stage of development or production. Free from parabens, phthalates, alcohol, DHA and synthetic fragrances.</p>\n      </div>\n    </div>\n\n    <div class=\"sv-faq2-item\">\n      <button class=\"sv-faq2-q\" aria-expanded=\"false\">\n        <span>How do I apply it on my back if I'm on my own?</span>\n        <svg class=\"sv-faq2-chevron\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n      </button>\n      <div class=\"sv-faq2-a\">\n        <p>The included kabuki brush has a long handle designed for this. For the upper back, pass the brush over your shoulder. For the lower back, reach from underneath with a slight bend. For the very centre, a back roller extension works well — or ask a partner for 30 seconds of help. The formula self-levels during drying, so perfect precision is not required.</p>\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<style>\n.sv-faq2-section {\n  padding: 48px 16px 36px;\n  background: #ffffff;\n  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;\n  text-align: center;\n}\n\n.sv-faq2-label {\n  font-size: 11px;\n  font-weight: 700;\n  letter-spacing: 1.5px;\n  text-transform: uppercase;\n  color: #999;\n  margin: 0 0 10px;\n}\n\n.sv-faq2-title {\n  font-family: 'Helvetica Neue', Arial, sans-serif;\n  font-size: 28px;\n  font-weight: 900;\n  color: #1a1a2e;\n  margin: 0 0 12px;\n  line-height: 1.1;\n  letter-spacing: -0.5px;\n  text-transform: uppercase;\n}\n\n.sv-faq2-contact {\n  font-size: 14px;\n  color: #888;\n  margin: 0 0 36px;\n  line-height: 1.5;\n}\n\n.sv-faq2-contact a {\n  color: #c9a84c;\n  text-decoration: none;\n}\n\n.sv-faq2-list {\n  text-align: left;\n  border-top: 1px solid #e8e8e8;\n}\n\n.sv-faq2-item {\n  border-bottom: 1px solid #e8e8e8;\n}\n\n.sv-faq2-q {\n  width: 100%;\n  background: none;\n  border: none;\n  padding: 18px 0;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n  cursor: pointer;\n  text-align: left;\n  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;\n  font-size: 15px;\n  font-weight: 700;\n  color: #1a1a2e;\n  line-height: 1.4;\n}\n\n.sv-faq2-q:hover {\n  color: #c9a84c;\n}\n\n.sv-faq2-chevron {\n  flex-shrink: 0;\n  color: #1a1a2e;\n  transition: transform 0.3s ease;\n}\n\n.sv-faq2-q[aria-expanded=\"true\"] .sv-faq2-chevron {\n  transform: rotate(180deg);\n}\n\n.sv-faq2-a {\n  display: none;\n  padding: 0 0 18px;\n  font-size: 14px;\n  color: #555;\n  line-height: 1.7;\n}\n\n.sv-faq2-a p {\n  margin: 0 0 10px;\n}\n\n.sv-faq2-a p:last-child {\n  margin-bottom: 0;\n}\n\n.sv-faq2-a strong {\n  color: #1a1a2e;\n}\n\n.sv-faq2-item.open .sv-faq2-a {\n  display: block;\n}\n</style>\n\n<script>\ndocument.querySelectorAll('.sv-faq2-q').forEach(btn => {\n  btn.addEventListener('click', () => {\n    const item = btn.closest('.sv-faq2-item');\n    const isOpen = item.classList.contains('open');\n    document.querySelectorAll('.sv-faq2-item').forEach(i => {\n      i.classList.remove('open');\n      i.querySelector('.sv-faq2-q').setAttribute('aria-expanded', 'false');\n    });\n    if (!isOpen) {\n      item.classList.add('open');\n      btn.setAttribute('aria-expanded', 'true');\n    }\n  });\n});\n</script>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "faq_aX8Tqy": {
@@ -651,6 +628,7 @@
         "item_A6K9UF",
         "item_HXkUiJ"
       ],
+      "disabled": true,
       "name": "FAQ",
       "settings": {
         "full_width": true,
@@ -812,6 +790,7 @@
         "testimonial_BMwFVa",
         "testimonial_iMfLKg"
       ],
+      "disabled": true,
       "name": "Testimonials",
       "settings": {
         "full_width": true,
@@ -844,7 +823,7 @@
     "featured_product_cKRAm3",
     "custom_liquid_tTF4Jz",
     "custom_liquid_q4d3Ea",
-    "media_with_text_zpfxxP",
+    "custom_liquid_WgJTim",
     "faq_aX8Tqy",
     "testimonials_gcYEBK"
   ]
