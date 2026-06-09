@@ -97,13 +97,22 @@
             "logo_width": 260,
             "link": ""
           }
+        },
+        "logo_k4fd4p": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Grazia-Logo_svg.png",
+            "logo_width": 210,
+            "link": ""
+          }
         }
       },
       "block_order": [
         "logo_R6XHma",
         "logo_fcKXaG",
         "logo_FAHHef",
-        "logo_dhiREe"
+        "logo_dhiREe",
+        "logo_k4fd4p"
       ],
       "name": "Logo list",
       "settings": {
