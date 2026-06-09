@@ -131,26 +131,13 @@
         "logo_item_border": ""
       }
     },
-    "custom_liquid_gnJhNY": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div class=\"trustpilot-clean\">\n  <h2>Proven Results</h2>\n  <div class=\"trustpilot-line\">\n    <span class=\"rating-text\">Excellent</span>\n    <strong class=\"rating-score\">4.7 / 5</strong>\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/stars-4.5-trust-pilot.svg?v=1747080316\" alt=\"5 stars\" class=\"stars-img\">\n  </div>\n  <div class=\"trustpilot-bottom\">\n    <span style=\"white-space: nowrap;\">Based on <strong>+10,000</strong> Reviews</span>\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/trustpilot-svg_klyne.webp?v=1743809609\" alt=\"Trustpilot\" class=\"tp-logo\" loading=\"lazy\">\n  </div>\n</div>\n<style>\n.trustpilot-clean {\n  text-align: center;\n  color: #000;\n  margin-bottom: 0 !important;\n  padding-bottom: 0 !important;\n}\n.trustpilot-clean h2 {\n  font-size: 22px;\n  font-weight: 700;\n  margin-bottom: 0.8rem;\n  line-height: 1.5;\n}\n.trustpilot-line {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  font-size: 1rem;\n  margin-bottom: 0.5rem;\n}\n.rating-text,\n.rating-score {\n  font-size: 1rem;\n  line-height: 1;\n  display: inline-block;\n  vertical-align: middle;\n  margin-top: 2px;\n}\n.rating-score {\n  font-weight: bold;\n}\n.stars-img {\n  width: 120px;\n  margin-right: 10px;\n  vertical-align: middle;\n}\n.trustpilot-bottom {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  font-size: 0.95rem;\n  white-space: nowrap;\n}\n.tp-logo {\n  height: 24px;\n  margin-top: -2px;\n}\n.trustpilot-badge-below {\n  margin-top: 12px;\n  text-align: center;\n  background-color: #fef9f5;\n  padding: 1.2rem 1rem;\n}\n.trustpilot-badge-below img {\n  max-width: 100%;\n  height: auto;\n}\n</style>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "rich_text_qMKYdU": {
       "type": "rich-text",
       "blocks": {
         "heading_Kwxiib": {
           "type": "heading",
           "settings": {
-            "text": "Finally wear dresses in winter without freezing or shapewear.",
+            "text": "Why 10,000 UK Women Choose SkinVeil™ Over Anything Else",
             "heading_tag": "h3",
             "text_color": "",
             "gradient": ""
@@ -160,7 +147,6 @@
       "block_order": [
         "heading_Kwxiib"
       ],
-      "disabled": true,
       "name": "Rich text",
       "settings": {
         "full_width": true,
@@ -227,77 +213,14 @@
         "overlay_opacity": 0
       }
     },
-    "multi_column_k9tG6W": {
-      "type": "multi-column",
-      "blocks": {
-        "item_DqqLiw": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/2_c49e5623-fa01-4c07-85a4-b1423092be05.png",
-            "column_size": "3",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "<p>Mein Mann hat mich gefragt ob ich abgenommen habe... Nein. Aber diese Strumpfhosen? <strong>MAGIE</strong>. Ich hab sie mit meinem Bleistiftrock zur Arbeit getragen und den <strong>ganzen Tag Komplimente</strong> bekommen. Meine Beine sehen <strong>unglaublich glatt</strong>, <strong>geformt</strong> aus — und ich fühle mich endlich wieder <strong>selbstbewusst genug</strong> um Kleider zu tragen wann immer ich will.<br/><br/><br/><strong>Sarah M. | Berlin</strong></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_VrzGmK": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/3_0cf0099b-c1c5-4b56-b1d4-4da770e199e8.png",
-            "column_size": "3",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "<p><strong>Der Selbstbewusstseinsschub den ich nicht wusste dass ich ihn brauche.</strong> Nach meiner Tochter habe ich alles Körperbetonte gemieden. Cellulite, schlaffe Haut, das volle Programm. Diese verstecken ALLES und lassen <strong>meine Beine trotzdem makellos aussehen</strong>.<br/><br/><br/><br/><strong>Laura K. | München</strong></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_DetHQz": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/4_40cb99d6-51b2-4c24-9c1b-830e7c9b8f60.png",
-            "column_size": "3",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "<p>Von 9 Uhr morgens bis Mitternacht getragen. <strong>Immer noch perfekt.</strong> Rutschen nicht runter, verlieren nicht die Form, und ehrlich gesagt lassen sie <strong>meine Beine besser aussehen</strong> als sie eigentlich sind (sorry, Gene 😂). Das Shaping ist subtil aber <strong>REAL</strong>. Tipp: Wenn du groß bist (ich bin 1,75m), nimm eine Größe größer. Die L/XL sitzt perfekt.<br/><br/><strong>Nina T. | Hamburg</strong></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_kWAwir": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/2682245c-7082-4e4f-b303-648caec25ba7_1.webp",
-            "column_size": "3",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "<p>Ich hab drei Winter lang nur Hosen ins Büro getragen weil ich <strong>in Kleidern nicht frieren wollte</strong>. Diese haben ALLES verändert. Gestern waren es -9°C, ich trug ein Midikleid mit Absätzen und hab mich <strong>wie eine Königin gefühlt</strong>. Und der Shapewear-Effekt ist <strong>KEIN WITZ</strong>. Sofort Sanduhr-Silhouette ohne extra Shapewear darunter.<br/><br/><strong>Jessica L. | Köln</strong></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "item_DqqLiw",
-        "item_VrzGmK",
-        "item_DetHQz",
-        "item_kWAwir"
-      ],
-      "name": "Multi-column",
+    "custom_liquid_gnJhNY": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
       "settings": {
         "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "",
-        "content": "",
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": true,
+        "liquid": "<div class=\"trustpilot-clean\">\n  <h2>Proven Results</h2>\n  <div class=\"trustpilot-line\">\n    <span class=\"rating-text\">Excellent</span>\n    <strong class=\"rating-score\">4.7 / 5</strong>\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/stars-4.5-trust-pilot.svg?v=1747080316\" alt=\"5 stars\" class=\"stars-img\">\n  </div>\n  <div class=\"trustpilot-bottom\">\n    <span style=\"white-space: nowrap;\">Based on <strong>+10,000</strong> Reviews</span>\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/trustpilot-svg_klyne.webp?v=1743809609\" alt=\"Trustpilot\" class=\"tp-logo\" loading=\"lazy\">\n  </div>\n</div>\n\n<div class=\"ugc-carousel-wrapper\">\n  <div class=\"ugc-track\" id=\"ugcTrack\">\n\n    <div class=\"ugc-card\">\n      <div class=\"ugc-img-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/IMG_6919_430x.jpg?v=1780978075\" alt=\"Emma review\" loading=\"lazy\">\n      </div>\n      <div class=\"ugc-review\">\n        <div class=\"ugc-stars\">★★★★★</div>\n        <p class=\"ugc-text\">\"I've had dark spots on my legs for years and always covered up. Applied SkinVeil™ before a BBQ and my sister asked if I'd had laser treatment. I haven't — it's just this.\"</p>\n        <div class=\"ugc-author\">\n          <span class=\"ugc-name\">Emma R.</span>\n          <span class=\"ugc-tag\">Verified Buyer · London</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"ugc-card\">\n      <div class=\"ugc-img-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/e1780d28-86f3-4820-833d-ffcd64e441ed_430x.jpg?v=1780978073\" alt=\"Sophie review\" loading=\"lazy\">\n      </div>\n      <div class=\"ugc-review\">\n        <div class=\"ugc-stars\">★★★★★</div>\n        <p class=\"ugc-text\">\"Thread veins behind my knees have stopped me wearing dresses for 4 summers. Wore a midi dress to my friend's wedding last weekend. Nobody noticed — including me after the first hour.\"</p>\n        <div class=\"ugc-author\">\n          <span class=\"ugc-name\">Sophie M.</span>\n          <span class=\"ugc-tag\">Verified Buyer · Manchester</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"ugc-card\">\n      <div class=\"ugc-img-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/IMG_6920_430x.jpg?v=1780978074\" alt=\"Claire review\" loading=\"lazy\">\n      </div>\n      <div class=\"ugc-review\">\n        <div class=\"ugc-stars\">★★★★★</div>\n        <p class=\"ugc-text\">\"I have a tattoo on my calf I regret. Applied two layers of SkinVeil™ before a job interview — completely invisible. Wore a skirt for the first time in 3 years.\"</p>\n        <div class=\"ugc-author\">\n          <span class=\"ugc-name\">Claire T.</span>\n          <span class=\"ugc-tag\">Verified Buyer · Birmingham</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"ugc-card\">\n      <div class=\"ugc-img-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/12712c8e3ad23d53bf99aa2dc28d5736_430x.jpg?v=1780978075\" alt=\"Natalie review\" loading=\"lazy\">\n      </div>\n      <div class=\"ugc-review\">\n        <div class=\"ugc-stars\">★★★★★</div>\n        <p class=\"ugc-text\">\"Post-pregnancy stretch marks on my thighs. Tried everything — Bio-Oil for months, nothing. SkinVeil™ covered them in 10 minutes. I wore shorts to the school run. First time since 2021.\"</p>\n        <div class=\"ugc-author\">\n          <span class=\"ugc-name\">Natalie B.</span>\n          <span class=\"ugc-tag\">Verified Buyer · Bristol</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"ugc-card\">\n      <div class=\"ugc-img-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/IMG_6922_430x.jpg?v=1780978074\" alt=\"Jessica review\" loading=\"lazy\">\n      </div>\n      <div class=\"ugc-review\">\n        <div class=\"ugc-stars\">★★★★★</div>\n        <p class=\"ugc-text\">\"Went to Ibiza with the girls. Applied SkinVeil™ every morning — swam, sweated, danced until 4am. Zero transfer on my white bikini. Zero touch-ups. Just me, finally comfortable in my skin.\"</p>\n        <div class=\"ugc-author\">\n          <span class=\"ugc-name\">Jessica H.</span>\n          <span class=\"ugc-tag\">Verified Buyer · Leeds</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"ugc-card\">\n      <div class=\"ugc-img-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/f359b380-a1ae-4144-a9c1-2f476328adb8_430x.jpg?v=1780978073\" alt=\"Rachel review\" loading=\"lazy\">\n      </div>\n      <div class=\"ugc-review\">\n        <div class=\"ugc-stars\">★★★★★</div>\n        <p class=\"ugc-text\">\"Knee scar from surgery two years ago. Left leg is me without — right leg is me with SkinVeil™. One application, 10 minutes. I wore a dress to my niece's birthday party for the first time since the operation.\"</p>\n        <div class=\"ugc-author\">\n          <span class=\"ugc-name\">Rachel W.</span>\n          <span class=\"ugc-tag\">Verified Buyer · Edinburgh</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"ugc-card\">\n      <div class=\"ugc-img-wrap\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/2a440f9b-9ca6-4bf8-b43e-7173095450ae_430x.jpg?v=1780978073\" alt=\"Lauren review\" loading=\"lazy\">\n      </div>\n      <div class=\"ugc-review\">\n        <div class=\"ugc-stars\">★★★★★</div>\n        <p class=\"ugc-text\">\"Surgical scar on my knee from a sports injury. Always wore leggings at the gym. Applied SkinVeil™ before a yoga class — wore shorts. My instructor asked what moisturiser I use.\"</p>\n        <div class=\"ugc-author\">\n          <span class=\"ugc-name\">Lauren K.</span>\n          <span class=\"ugc-tag\">Verified Buyer · Glasgow</span>\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <div class=\"ugc-dots\" id=\"ugcDots\"></div>\n</div>\n\n<style>\n.trustpilot-clean {\n  text-align: center;\n  color: #000;\n  margin-bottom: 0 !important;\n  padding-bottom: 0 !important;\n}\n.trustpilot-clean h2 {\n  font-size: 22px;\n  font-weight: 700;\n  margin-bottom: 0.8rem;\n  line-height: 1.5;\n}\n.trustpilot-line {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  font-size: 1rem;\n  margin-bottom: 0.5rem;\n}\n.rating-text,\n.rating-score {\n  font-size: 1rem;\n  line-height: 1;\n  display: inline-block;\n  vertical-align: middle;\n  margin-top: 2px;\n}\n.rating-score { font-weight: bold; }\n.stars-img {\n  width: 120px;\n  margin-right: 10px;\n  vertical-align: middle;\n}\n.trustpilot-bottom {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  font-size: 0.95rem;\n  white-space: nowrap;\n}\n.tp-logo {\n  height: 24px;\n  margin-top: -2px;\n}\n\n/* CAROUSEL */\n.ugc-carousel-wrapper {\n  width: 100%;\n  overflow: hidden;\n  margin-top: 28px;\n  background: #f5ede6;\n}\n.ugc-track {\n  display: flex;\n  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);\n  will-change: transform;\n  cursor: grab;\n  align-items: stretch;\n}\n.ugc-track:active { cursor: grabbing; }\n\n.ugc-card {\n  min-width: 100%;\n  width: 100%;\n  flex-shrink: 0;\n  display: flex;\n  flex-direction: column;\n  background: #fff;\n}\n\n.ugc-img-wrap {\n  width: 100%;\n  aspect-ratio: 3/4;\n  overflow: hidden;\n  background: #e8ddd6;\n  flex-shrink: 0;\n}\n.ugc-img-wrap img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center top;\n  display: block;\n}\n\n.ugc-review {\n  padding: 18px 20px 22px;\n  background: #fff;\n  border-top: 2px solid #f5ede6;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.ugc-stars {\n  color: #f5a623;\n  font-size: 18px;\n  margin-bottom: 10px;\n  letter-spacing: 3px;\n}\n.ugc-text {\n  font-size: 14px;\n  line-height: 1.65;\n  color: #2a2a2a;\n  margin: 0 0 14px 0;\n  font-style: italic;\n  flex: 1;\n}\n.ugc-author {\n  display: flex;\n  flex-direction: column;\n  gap: 3px;\n  border-top: 1px solid #f0e8e0;\n  padding-top: 12px;\n}\n.ugc-name {\n  font-size: 14px;\n  font-weight: 700;\n  color: #1a1a2e;\n}\n.ugc-tag {\n  font-size: 11px;\n  color: #aaa;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n\n/* DOTS */\n.ugc-dots {\n  display: flex;\n  justify-content: center;\n  gap: 7px;\n  padding: 16px 0 20px;\n  background: #f5ede6;\n}\n.ugc-dot {\n  width: 7px;\n  height: 7px;\n  border-radius: 50%;\n  background: #c9b8ac;\n  transition: background 0.3s, transform 0.3s;\n  cursor: pointer;\n}\n.ugc-dot.active {\n  background: #1a1a2e;\n  transform: scale(1.35);\n}\n\n/* DESKTOP */\n@media (min-width: 768px) {\n  .ugc-card {\n    min-width: 50%;\n    width: 50%;\n  }\n}\n</style>\n\n<script>\n(function() {\n  const track = document.getElementById('ugcTrack');\n  const dotsContainer = document.getElementById('ugcDots');\n  const cards = track.querySelectorAll('.ugc-card');\n  const total = cards.length;\n  let current = 0;\n  let startX = 0;\n  let isDragging = false;\n  let autoTimer;\n\n  function cardsPerView() {\n    return window.innerWidth >= 768 ? 2 : 1;\n  }\n  function maxIndex() {\n    return total - cardsPerView();\n  }\n  function buildDots() {\n    dotsContainer.innerHTML = '';\n    const count = maxIndex() + 1;\n    for (let i = 0; i < count; i++) {\n      const dot = document.createElement('div');\n      dot.className = 'ugc-dot' + (i === 0 ? ' active' : '');\n      dot.addEventListener('click', () => goTo(i));\n      dotsContainer.appendChild(dot);\n    }\n  }\n  function updateDots() {\n    dotsContainer.querySelectorAll('.ugc-dot').forEach((d, i) => {\n      d.classList.toggle('active', i === current);\n    });\n  }\n  function goTo(index) {\n    const max = maxIndex();\n    current = ((index % (max + 1)) + (max + 1)) % (max + 1);\n    const pct = (100 / cardsPerView()) * current;\n    track.style.transform = `translateX(-${pct}%)`;\n    updateDots();\n  }\n  function next() { goTo(current + 1); }\n\n  track.addEventListener('touchstart', e => {\n    startX = e.touches[0].clientX;\n    clearInterval(autoTimer);\n  }, { passive: true });\n  track.addEventListener('touchend', e => {\n    const diff = startX - e.changedTouches[0].clientX;\n    if (Math.abs(diff) > 50) diff > 0 ? next() : goTo(current - 1);\n    startAuto();\n  }, { passive: true });\n  track.addEventListener('mousedown', e => {\n    isDragging = true;\n    startX = e.clientX;\n    clearInterval(autoTimer);\n  });\n  window.addEventListener('mouseup', e => {\n    if (!isDragging) return;\n    isDragging = false;\n    const diff = startX - e.clientX;\n    if (Math.abs(diff) > 50) diff > 0 ? next() : goTo(current - 1);\n    startAuto();\n  });\n\n  function startAuto() {\n    clearInterval(autoTimer);\n    autoTimer = setInterval(next, 4000);\n  }\n  window.addEventListener('resize', () => {\n    buildDots();\n    goTo(current);\n  });\n\n  buildDots();\n  goTo(0);\n  startAuto();\n})();\n</script>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
@@ -309,7 +232,7 @@
         "liquid_7YKANC": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div style=\"display: flex; align-items: center; background-color: #FFFFFF; padding: 8px 8px; border-radius: 8px; width: fit-content; margin: 10px 0; text-align: left;\">\n  <!-- Stars -->\n  <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/stars-4.5-trust-pilot.svg?v=1747080316\" alt=\"5 stars\" class=\"stars-img\" style=\"width: 55px; margin-right: 8px;\">\n  <!-- Text -->\n  <div style=\"color: #4A4A4A; font-size: 11.1px; text-align: left; white-space: nowrap;\">\n    <span style=\"font-weight: 200;\">Bewertet mit</span> <span style=\"color: #000000; font-weight: 700;\">4,7</span> <span style=\"font-weight: 200;\">basierend auf</span> <span style=\"color: #000000; font-weight: 700;\">12.000+ Bewertungen</span>\n  </div>\n</div>"
+            "liquid": "<div style=\"display: flex; align-items: center; background-color: #FFFFFF; padding: 8px 8px; border-radius: 8px; width: fit-content; margin: 10px 0; text-align: left;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/stars-4.5-trust-pilot.svg?v=1747080316\" alt=\"5 stars\" style=\"width: 55px; margin-right: 8px;\">\n  <div style=\"color: #4A4A4A; font-size: 11.1px; text-align: left; white-space: nowrap;\">\n    <span style=\"font-weight: 200;\">Rated</span> <span style=\"color: #000000; font-weight: 700;\">4.7</span> <span style=\"font-weight: 200;\">based on</span> <span style=\"color: #000000; font-weight: 700;\">10,000+ Reviews</span>\n  </div>\n</div>"
           }
         },
         "title_8Ka9pi": {
@@ -438,7 +361,7 @@
       "name": "Featured product",
       "settings": {
         "full_width": true,
-        "product": "sorelya™-thermashape-fleece-tights",
+        "product": "sorelya-skinveil™",
         "desktop_media_width": 50,
         "desktop_media_layout": "carousel_thumbnails_left",
         "mobile_media_size": "expanded",
@@ -1180,12 +1103,11 @@
     "rich_text_EHTNaF",
     "slideshow_GAJrtf",
     "logo_list_4DTGtf",
-    "custom_liquid_gnJhNY",
     "rich_text_qMKYdU",
     "image-with-text-overlay",
     "rich_text_KiattM",
     "video_x67yjM",
-    "multi_column_k9tG6W",
+    "custom_liquid_gnJhNY",
     "featured_product_WYUtAJ",
     "featured_product_cKRAm3",
     "video_testimonials_slider_hxxynq",
