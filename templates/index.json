@@ -256,6 +256,7 @@
         },
         "liquid_Afy9qD": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<style>\n  .blink {\n    animation: blink-animation 1.5s steps(5, start) infinite;\n    color: red;\n    font-size: 10px;\n    margin-right: 8px;\n  }\n  @keyframes blink-animation {\n    to {\n      visibility: hidden;\n    }\n  }\n  .red-div {\n    background-color: #ffe5e5;\n    padding: 4px 12px;\n    border-radius: 10px;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .text {\n    color: #AD0000;\n    font-weight: 600;\n    font-size: 10px;\n  }\n</style>\n<div class=\"red-div\">\n  <div class=\"blink\" aria-hidden=\"true\">&#9679;</div>\n  <div class=\"text\">Begrenzte Stückzahl! Beliebte Farbtöne sind schnell ausverkauft</div>\n</div>"
           }
@@ -286,8 +287,17 @@
             "max_width": 220
           }
         },
+        "image_eV6Npj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_8_juin_2026_23_31_05.png",
+            "alignment": "center",
+            "max_width": 330
+          }
+        },
         "liquid_FGMXwE": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"features-container\">\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/NOUVEAU-SHIPPING1.svg?v=1744585896\" alt=\"Kostenloser Versand\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">Kostenloser Versand</p>\n      <p class=\"feature-subtitle\">Versandfertig | Versand innerhalb 24h</p>\n    </div>\n  </div>\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/NOUVEAU-check-shield.svg?v=1744586491\" alt=\"Sichere Zahlung\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">Sichere Zahlung</p>\n      <p class=\"feature-subtitle\">via SSL & 3D Secure</p>\n    </div>\n  </div>\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/NOUVEAU-RETOUR.svg?v=1744585755\" alt=\"Geld-zurück-Garantie\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">Geld-zurück-Garantie</p>\n      <p class=\"feature-subtitle\">30 Tage – keine Fragen gestellt</p>\n    </div>\n  </div>\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0795/2754/3033/files/headset_mic_45dp_000000_FILL0_wght400_GRAD0_opsz48_430x.svg?v=1770042933\" alt=\"Kundensupport\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">Kundensupport</p>\n      <p class=\"feature-subtitle\">7 Tage die Woche erreichbar</p>\n    </div>\n  </div>\n</div>\n<style>\n.features-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 20px 10px;\n  padding: 20px 0;\n}\n.feature-item {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n.feature-item img {\n  width: 28px;\n  height: 28px;\n  object-fit: contain;\n}\n.feature-text {\n  display: flex;\n  flex-direction: column;\n}\n.feature-title {\n  font-weight: 600;\n  font-size: 15px;\n  color: #1c1c1c;\n  margin: 0;\n}\n.feature-subtitle {\n  font-size: 13px;\n  color: #555;\n  margin: 0;\n}\n</style>"
           }
@@ -295,17 +305,18 @@
         "liquid_t48HqY": {
           "type": "liquid",
           "settings": {
-            "liquid": "<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    .custom-review {\n      font-family: 'Poppins', sans-serif;\n      max-width: 600px;\n      margin: 20px auto;\n      padding: 16px;\n      background-color: #ffffff;\n      border: 1px solid #E0E0E0;\n      border-radius: 12px;\n      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n    }\n    .custom-review__container {\n      display: flex;\n      align-items: flex-start;\n    }\n    .custom-review__image-container {\n      flex-shrink: 0;\n      margin-right: 12px;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n    }\n    .custom-review__image {\n      width: 75px;\n      height: 75px;\n      border-radius: 35%;\n      object-fit: cover;\n      border: 2px solid #34a853;\n    }\n    .custom-review__content {\n      flex: 1;\n    }\n    .custom-review__stars {\n      display: flex;\n      gap: 3px;\n    }\n    .custom-review__star {\n      color: #FFC009;\n      font-size: 18px;\n      line-height: 1;\n    }\n    .custom-review__text {\n      font-size: 13px;\n      font-weight: 400;\n      font-style: italic;\n      color: #444;\n      margin: 6px 0;\n      line-height: 1.4;\n    }\n    .custom-review__user {\n      display: flex;\n      align-items: center;\n      gap: 6px;\n      flex-wrap: nowrap;\n    }\n    .custom-review__username {\n      font-size: 12.5px;\n      font-weight: 700;\n      color: #222;\n      margin: 0;\n      white-space: nowrap;\n    }\n    .custom-review__badge {\n      width: 14px;\n    }\n    .custom-review__verified {\n      font-size: 12.5px;\n      color: #666;\n      white-space: nowrap;\n    }\n  </style>\n</head>\n\n<div class=\"custom-review\">\n  <div class=\"custom-review__container\">\n    <!-- Customer Photo -->\n    <div class=\"custom-review__image-container\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/telechargement_430x.jpg?v=1770743000\" \n           alt=\"Kundenbewertung\" \n           class=\"custom-review__image\">\n    </div>\n    \n    <!-- Review Content -->\n    <div class=\"custom-review__content\">\n      <!-- Stars -->\n      <div class=\"custom-review__stars\">\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n      </div>\n      \n      <!-- Review Text -->\n      <p class=\"custom-review__text\">\n        Mein Mann hat mich gefragt ob ich abgenommen habe. Nein. Diese Strumpfhosen lassen meine Beine einfach unglaublich glatt, geformt und makellos aussehen. Hab sie zu einer Party mit einem Cocktailkleid bei -6°C getragen. Niemand hat gemerkt dass ich Strumpfhosen trage. Bester Selbstbewusstseinsschub seit Jahren.\n      </p>\n      \n      <!-- Name & Verification -->\n      <div class=\"custom-review__user\">\n        <p class=\"custom-review__username\">Sarah M.</p>\n        <img src=\"https://cdn-icons-png.flaticon.com/512/190/190411.png\" \n             alt=\"Verifizierter Kauf\" \n             class=\"custom-review__badge\">\n        <span class=\"custom-review__verified\">Verifizierter Kauf</span>\n      </div>\n    </div>\n  </div>\n</div>"
+            "liquid": "<!-- GUARANTEE BLOCK -->\n<div class=\"sv-guarantee-block\">\n  <div class=\"sv-guarantee-inner\">\n    <div class=\"sv-guarantee-icon\">\n      <svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#c9a84c\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><polyline points=\"9 12 11 14 15 10\"/></svg>\n    </div>\n    <div class=\"sv-guarantee-text\">\n      <strong>30-Day Money-Back Guarantee</strong>\n      <p>Try SkinVeil™ completely risk-free. If you're not 100% satisfied within 30 days of delivery, we'll refund you in full. No questions asked.</p>\n    </div>\n  </div>\n</div>\n\n<!-- REVIEW BLOCK -->\n<div class=\"custom-review\">\n  <div class=\"custom-review__container\">\n    <div class=\"custom-review__image-container\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/telechargement_430x.jpg?v=1770743000\"\n           alt=\"Customer review\"\n           class=\"custom-review__image\">\n    </div>\n    <div class=\"custom-review__content\">\n      <div class=\"custom-review__stars\">\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n      </div>\n      <p class=\"custom-review__text\">\n        My husband asked if I'd lost weight. I hadn't. SkinVeil™ just makes my legs look incredibly smooth, defined and flawless. Wore it to a party in a midi dress on a cold evening. Nobody could tell I had anything on. Best confidence boost I've had in years.\n      </p>\n      <div class=\"custom-review__user\">\n        <p class=\"custom-review__username\">Sarah M.</p>\n        <img src=\"https://cdn-icons-png.flaticon.com/512/190/190411.png\"\n             alt=\"Verified purchase\"\n             class=\"custom-review__badge\">\n        <span class=\"custom-review__verified\">Verified Purchase</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- FAQ ACCORDION -->\n<div class=\"sv-faq-block\">\n  <div class=\"sv-faq-item\">\n    <button class=\"sv-faq-q\" aria-expanded=\"false\">\n      <span>1. How do I apply and remove it?</span>\n      <svg class=\"sv-faq-chevron\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n    </button>\n    <div class=\"sv-faq-a\">\n      <p><strong>Three steps. Ten minutes.</strong></p>\n      <p>Start with clean, dry skin — no oily moisturiser beforehand. Apply with the included kabuki brush using upward strokes from ankle to thigh. Leave to dry for 5–10 minutes until the brush comes away clean.</p>\n      <p><strong>To remove:</strong> massage a body oil or olive oil onto the skin for 30 seconds, then shower as normal. Skin returns to exactly as it was — no residue, no staining.</p>\n    </div>\n  </div>\n\n  <div class=\"sv-faq-item\">\n    <button class=\"sv-faq-q\" aria-expanded=\"false\">\n      <span>2. Does it hold against water, sweat, clothes and bed sheets?</span>\n      <svg class=\"sv-faq-chevron\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n    </button>\n    <div class=\"sv-faq-a\">\n      <p><strong>Yes — to all of them.</strong></p>\n      <p>Once dry (10 minutes after application), SkinVeil™ is fully waterproof, sweat-resistant and transfer-free. It won't mark your clothes, bed sheets or the white hotel towel. You can swim, dance and sweat — coverage stays put.</p>\n    </div>\n  </div>\n\n  <div class=\"sv-faq-item\">\n    <button class=\"sv-faq-q\" aria-expanded=\"false\">\n      <span>3. How long does it last and what does it actually cover?</span>\n      <svg class=\"sv-faq-chevron\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n    </button>\n    <div class=\"sv-faq-a\">\n      <p><strong>48 hours. Thread veins, spider veins, stretch marks, scars, tattoos, discolouration.</strong></p>\n      <p>One layer covers fine capillaries and light imperfections. Two layers for deeper stretch marks and prominent veins. SkinVeil™ doesn't make anything disappear permanently — it covers what's been making you hesitate about showing your skin.</p>\n    </div>\n  </div>\n\n  <div class=\"sv-faq-item\">\n    <button class=\"sv-faq-q\" aria-expanded=\"false\">\n      <span>4. Is it safe? Sensitive skin, pregnancy, ingredients?</span>\n      <svg class=\"sv-faq-chevron\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n    </button>\n    <div class=\"sv-faq-a\">\n      <p><strong>No DHA, no parabens, no synthetic fragrance. Dermatologically tested.</strong></p>\n      <p>Professional silicone base + hyaluronic acid + vitamins A, E and C + pure cosmetic pigments. No chemical reaction, no orange cast. If you are pregnant or breastfeeding, we recommend consulting your GP before use as with any cosmetic product.</p>\n    </div>\n  </div>\n\n  <div class=\"sv-faq-item\">\n    <button class=\"sv-faq-q\" aria-expanded=\"false\">\n      <span>5. Delivery and returns?</span>\n      <svg class=\"sv-faq-chevron\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"/></svg>\n    </button>\n    <div class=\"sv-faq-a\">\n      <p><strong>DELIVERY</strong><br>Free standard delivery on all UK orders. Dispatched within 1–3 business days. Estimated delivery: 3–7 business days.</p>\n      <p><strong>RETURNS</strong><br>30-day money-back guarantee. If SkinVeil™ isn't right for you within 30 days of delivery, contact us and we'll refund you in full — no questions asked.</p>\n    </div>\n  </div>\n</div>\n\n<style>\n/* GUARANTEE */\n.sv-guarantee-block {\n  margin: 16px 0;\n  background: #fffaf4;\n  border: 1px solid #e8ddd6;\n  border-radius: 12px;\n  padding: 16px;\n}\n.sv-guarantee-inner {\n  display: flex;\n  align-items: flex-start;\n  gap: 14px;\n}\n.sv-guarantee-icon {\n  width: 48px;\n  height: 48px;\n  background: #fdf3ea;\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n}\n.sv-guarantee-text strong {\n  display: block;\n  font-size: 14px;\n  font-weight: 700;\n  color: #1a1a2e;\n  margin-bottom: 4px;\n}\n.sv-guarantee-text p {\n  font-size: 13px;\n  color: #666;\n  line-height: 1.5;\n  margin: 0;\n}\n\n/* REVIEW */\n.custom-review {\n  font-family: 'Poppins', sans-serif;\n  margin: 16px 0;\n  padding: 16px;\n  background-color: #ffffff;\n  border: 1px solid #E0E0E0;\n  border-radius: 12px;\n  box-shadow: 0 4px 12px rgba(0,0,0,0.06);\n}\n.custom-review__container {\n  display: flex;\n  align-items: flex-start;\n}\n.custom-review__image-container {\n  flex-shrink: 0;\n  margin-right: 12px;\n}\n.custom-review__image {\n  width: 75px;\n  height: 75px;\n  border-radius: 35%;\n  object-fit: cover;\n  border: 2px solid #c9a84c;\n}\n.custom-review__content { flex: 1; }\n.custom-review__stars { display: flex; gap: 3px; }\n.custom-review__star { color: #FFC009; font-size: 18px; line-height: 1; }\n.custom-review__text {\n  font-size: 13px;\n  font-weight: 400;\n  font-style: italic;\n  color: #444;\n  margin: 6px 0;\n  line-height: 1.4;\n}\n.custom-review__user {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n  flex-wrap: nowrap;\n}\n.custom-review__username {\n  font-size: 12.5px;\n  font-weight: 700;\n  color: #222;\n  margin: 0;\n  white-space: nowrap;\n}\n.custom-review__badge { width: 14px; }\n.custom-review__verified {\n  font-size: 12.5px;\n  color: #666;\n  white-space: nowrap;\n}\n\n/* FAQ */\n.sv-faq-block {\n  margin: 16px 0;\n  border-top: 1px solid #efe8e2;\n}\n.sv-faq-item {\n  border-bottom: 1px solid #efe8e2;\n}\n.sv-faq-q {\n  width: 100%;\n  background: none;\n  border: none;\n  padding: 16px 0;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n  cursor: pointer;\n  text-align: left;\n  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  color: #1a1a2e;\n  line-height: 1.4;\n}\n.sv-faq-q:hover { color: #c9a84c; }\n.sv-faq-chevron {\n  flex-shrink: 0;\n  color: #c9a84c;\n  transition: transform 0.3s ease;\n}\n.sv-faq-q[aria-expanded=\"true\"] .sv-faq-chevron {\n  transform: rotate(180deg);\n}\n.sv-faq-a {\n  display: none;\n  padding: 0 0 16px;\n  font-size: 13px;\n  color: #555;\n  line-height: 1.6;\n}\n.sv-faq-a p { margin: 0 0 8px; }\n.sv-faq-a p:last-child { margin-bottom: 0; }\n.sv-faq-a strong { color: #1a1a2e; }\n.sv-faq-item.open .sv-faq-a { display: block; }\n</style>\n\n<script>\ndocument.querySelectorAll('.sv-faq-q').forEach(btn => {\n  btn.addEventListener('click', () => {\n    const item = btn.closest('.sv-faq-item');\n    const isOpen = item.classList.contains('open');\n    document.querySelectorAll('.sv-faq-item').forEach(i => {\n      i.classList.remove('open');\n      i.querySelector('.sv-faq-q').setAttribute('aria-expanded', 'false');\n    });\n    if (!isOpen) {\n      item.classList.add('open');\n      btn.setAttribute('aria-expanded', 'true');\n    }\n  });\n});\n</script>"
           }
         },
-        "liquid_AJfHaK": {
+        "liquid_b9QNnR": {
           "type": "liquid",
           "settings": {
-            "liquid": "<details class=\"collapsible-size-guide\">\n  <summary class=\"collapsible-size-guide__summary\">Größentabelle</summary>\n  <div class=\"collapsible-size-guide__content\">\n    <p class=\"collapsible-size-guide__text\">Unsere Strumpfhosen sind so konzipiert, dass sie <strong>formen und schmeicheln</strong>. Wähle deine Größe basierend auf deinem Gewicht für die perfekte Passform.</p>\n    \n    <p class=\"collapsible-size-guide__text\">Zwischen zwei Größen? <strong>Nimm die größere</strong> – die formende Wirkung bleibt vollständig erhalten.</p>\n    \n    <p class=\"collapsible-size-guide__text\">Für die genaueste Passform, beachte die <strong>Größentabelle unten</strong>.</p>\n    \n    <div class=\"collapsible-size-guide__image\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/17_430x.png?v=1771743227#\" alt=\"Sorelya Größentabelle\" loading=\"lazy\">\n    </div>\n  </div>\n</details>\n<style>\n  .collapsible-size-guide__summary {\n    cursor: pointer;\n    font-weight: bold;\n    padding: 12px 0;\n    list-style: none;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n  }\n  \n  .collapsible-size-guide__summary::-webkit-details-marker {\n    display: none;\n  }\n  \n  .collapsible-size-guide__summary::after {\n    content: '+';\n    font-size: 20px;\n    font-weight: bold;\n    transition: transform 0.3s ease;\n  }\n  \n  .collapsible-size-guide[open] .collapsible-size-guide__summary::after {\n    content: '−';\n  }\n  \n  .collapsible-size-guide__content {\n    padding: 15px 0;\n    line-height: 1.6;\n  }\n  \n  .collapsible-size-guide__text {\n    margin-bottom: 15px;\n  }\n  \n  .collapsible-size-guide__text:last-of-type {\n    margin-bottom: 0;\n  }\n  \n  .collapsible-size-guide__image {\n    margin-top: 20px;\n  }\n  \n  .collapsible-size-guide__image img {\n    width: 100%;\n    max-width: 600px;\n    height: auto;\n    display: block;\n  }\n</style>"
+            "liquid": "<div class=\"sv-ugc-section\">\n  <h2 class=\"sv-ugc-title\">No Photoshop. No filters.</h2>\n  <p class=\"sv-ugc-sub\">Just SkinVeil™, ten minutes later.</p>\n\n  <div class=\"sv-ugc-scroll\" id=\"svUgcScroll\">\n    <div class=\"sv-ugc-track\" id=\"svUgcTrack\">\n      <div class=\"sv-ugc-card\">\n        <video src=\"https://cdn.shopify.com/videos/c/o/v/a72001712ee7406a87f2942cdb5702d9.mp4\"\n          autoplay muted loop playsinline preload=\"metadata\"></video>\n      </div>\n      <div class=\"sv-ugc-card\">\n        <video src=\"https://cdn.shopify.com/videos/c/o/v/fc5bed58169b40c381c2f75203fc5956.mp4\"\n          autoplay muted loop playsinline preload=\"metadata\"></video>\n      </div>\n      <div class=\"sv-ugc-card\">\n        <video src=\"https://cdn.shopify.com/videos/c/o/v/8f76cfbf5796444ba3cf9b51631ab66b.mp4\"\n          autoplay muted loop playsinline preload=\"metadata\"></video>\n      </div>\n      <div class=\"sv-ugc-card\">\n        <video src=\"https://cdn.shopify.com/videos/c/o/v/3fadc61f2c0244578d6fb273ce8ef32c.mp4\"\n          autoplay muted loop playsinline preload=\"metadata\"></video>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"sv-ugc-dots\" id=\"svUgcDots\">\n    <span class=\"sv-dot active\" data-idx=\"0\"></span>\n    <span class=\"sv-dot\" data-idx=\"1\"></span>\n    <span class=\"sv-dot\" data-idx=\"2\"></span>\n    <span class=\"sv-dot\" data-idx=\"3\"></span>\n  </div>\n</div>\n\n<style>\n.sv-ugc-section {\n  padding: 32px 0 24px;\n  background: #f5ede6;\n  text-align: center;\n  overflow: hidden;\n}\n.sv-ugc-title {\n  font-family: Georgia, serif;\n  font-size: 26px;\n  font-style: italic;\n  color: #1a1a2e;\n  margin: 0 0 6px;\n  padding: 0 16px;\n  line-height: 1.3;\n}\n.sv-ugc-sub {\n  font-size: 14px;\n  color: #888;\n  margin: 0 0 20px;\n  padding: 0 16px;\n}\n.sv-ugc-scroll {\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n}\n.sv-ugc-track {\n  display: flex;\n  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n  will-change: transform;\n  gap: 12px;\n  padding: 0;\n}\n.sv-ugc-card {\n  flex: 0 0 78vw;\n  max-width: 300px;\n  border-radius: 16px;\n  overflow: hidden;\n  background: #000;\n  aspect-ratio: 9/16;\n  position: relative;\n  box-shadow: 0 8px 24px rgba(0,0,0,0.14);\n}\n.sv-ugc-card video {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  display: block;\n}\n.sv-ugc-dots {\n  display: flex;\n  justify-content: center;\n  gap: 8px;\n  margin-top: 18px;\n}\n.sv-dot {\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: #d4c4b8;\n  cursor: pointer;\n  transition: background 0.3s, transform 0.2s;\n}\n.sv-dot.active {\n  background: #c9a84c;\n  transform: scale(1.3);\n}\n@media (min-width: 768px) {\n  .sv-ugc-card {\n    flex: 0 0 calc(25% - 12px);\n    max-width: 280px;\n  }\n  .sv-ugc-title { font-size: 32px; }\n}\n</style>\n\n<script>\n(function() {\n  const track   = document.getElementById('svUgcTrack');\n  const scroll  = document.getElementById('svUgcScroll');\n  const dots    = document.querySelectorAll('.sv-dot');\n  const cards   = document.querySelectorAll('.sv-ugc-card');\n  const total   = cards.length;\n  let current   = 0;\n  let startX    = 0;\n  let isDragging = false;\n  let autoTimer;\n\n  function getCardWidth() {\n    return cards[0].offsetWidth + 12;\n  }\n\n  function getCenterOffset() {\n    const scrollWidth = scroll.offsetWidth;\n    const cardWidth   = cards[0].offsetWidth;\n    return (scrollWidth - cardWidth) / 2;\n  }\n\n  function goTo(idx) {\n    current = ((idx % total) + total) % total;\n    const offset = current * getCardWidth() - getCenterOffset();\n    track.style.transform = `translateX(${-Math.max(0, offset)}px)`;\n    dots.forEach((d, i) => d.classList.toggle('active', i === current));\n  }\n\n  function next() { goTo(current + 1); }\n\n  function startAuto() { autoTimer = setInterval(next, 3500); }\n  function stopAuto()  { clearInterval(autoTimer); }\n\n  dots.forEach(dot => {\n    dot.addEventListener('click', () => {\n      stopAuto();\n      goTo(parseInt(dot.dataset.idx));\n      startAuto();\n    });\n  });\n\n  track.addEventListener('touchstart', e => {\n    startX = e.touches[0].clientX;\n    isDragging = true;\n    stopAuto();\n  }, { passive: true });\n\n  track.addEventListener('touchend', e => {\n    if (!isDragging) return;\n    const diff = startX - e.changedTouches[0].clientX;\n    if (Math.abs(diff) > 40) {\n      diff > 0 ? next() : goTo(current - 1);\n    }\n    isDragging = false;\n    startAuto();\n  }, { passive: true });\n\n  // Init après chargement complet pour avoir les bonnes dimensions\n  function init() {\n    goTo(0);\n    startAuto();\n  }\n\n  if (document.readyState === 'complete') {\n    init();\n  } else {\n    window.addEventListener('load', init);\n  }\n})();\n</script>"
           }
         },
         "collapsible_text_7LqTqm": {
           "type": "collapsible_text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "icon_width": 20,
@@ -316,6 +327,7 @@
         },
         "collapsible_text_7tUrHT": {
           "type": "collapsible_text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "icon_width": 20,
@@ -326,6 +338,7 @@
         },
         "collapsible_text_VtxJgU": {
           "type": "collapsible_text",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "icon_width": 20,
@@ -344,9 +357,10 @@
         "buy_buttons_dqab8L",
         "image_JnHyHE",
         "image_7k6WKf",
+        "image_eV6Npj",
         "liquid_FGMXwE",
         "liquid_t48HqY",
-        "liquid_AJfHaK",
+        "liquid_b9QNnR",
         "collapsible_text_7LqTqm",
         "collapsible_text_7tUrHT",
         "collapsible_text_VtxJgU"
@@ -503,151 +517,6 @@
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
-      }
-    },
-    "video_testimonials_slider_hxxynq": {
-      "type": "video-testimonials-slider",
-      "blocks": {
-        "video_slide_6zcqdc": {
-          "type": "video_slide",
-          "settings": {
-            "video_shopify": "shopify://files/videos/reelUp_6868665820260129131230_short (1).mp4",
-            "video_embed_url": "",
-            "title": "Sarah C.",
-            "stars_count": 5,
-            "badge_text": ""
-          }
-        },
-        "video_slide_6B6RbH": {
-          "type": "video_slide",
-          "settings": {
-            "video_shopify": "shopify://files/videos/reelUp_6868688220260129131300_short.mp4",
-            "video_embed_url": "",
-            "title": "Jessica S.",
-            "stars_count": 5,
-            "badge_text": ""
-          }
-        },
-        "video_slide_4kTdhr": {
-          "type": "video_slide",
-          "settings": {
-            "video_shopify": "shopify://files/videos/reelUp_6868665320260129131229_short.mp4",
-            "video_embed_url": "",
-            "title": "Emily F.",
-            "stars_count": 5,
-            "badge_text": ""
-          }
-        },
-        "video_slide_PxXVNr": {
-          "type": "video_slide",
-          "settings": {
-            "video_shopify": "shopify://files/videos/reelUp_6868665220260129131229_short.mp4",
-            "video_embed_url": "",
-            "title": "Ashley C.",
-            "stars_count": 5,
-            "badge_text": ""
-          }
-        },
-        "video_slide_wDTzR9": {
-          "type": "video_slide",
-          "settings": {
-            "video_shopify": "shopify://files/videos/reelUp_6868665020260129131229_short.mp4",
-            "video_embed_url": "",
-            "title": "Lauren A.",
-            "stars_count": 5,
-            "badge_text": ""
-          }
-        },
-        "video_slide_hYWxbf": {
-          "type": "video_slide",
-          "settings": {
-            "video_shopify": "shopify://files/videos/reelUp_6868665120260129131229_short.mp4",
-            "video_embed_url": "",
-            "title": "Rachel P.",
-            "stars_count": 5,
-            "badge_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_slide_6zcqdc",
-        "video_slide_6B6RbH",
-        "video_slide_4kTdhr",
-        "video_slide_PxXVNr",
-        "video_slide_wDTzR9",
-        "video_slide_hYWxbf"
-      ],
-      "name": "Témoignages Vidéo",
-      "settings": {
-        "heading": "Über 12.000 Frauen lieben ihre Beine",
-        "slides_per_view": 4,
-        "slides_per_view_mobile": 1.5,
-        "slider_gap": 32,
-        "slider_gap_mobile": 8,
-        "slides_rotate": 0,
-        "slide_padding_vertical": 0,
-        "slide_padding_vertical_mobile": 0,
-        "slide_padding_horizontal": 0,
-        "slide_padding_horizontal_mobile": 0,
-        "slide_border_radius": 13,
-        "slide_border_thickness": 0,
-        "slide_shadow": true,
-        "media_aspect_ratio": "portrait",
-        "media_aspect_ratio_mobile": "portrait",
-        "slide_overlay": 0.2,
-        "content_horizontal_position": "center",
-        "content_horizontal_position_mobile": "center",
-        "content_vertical_position": "bottom",
-        "content_vertical_position_mobile": "bottom",
-        "use_custom_font": false,
-        "slide_heading_font": "assistant_n4",
-        "slide_heading_size": 17,
-        "slide_heading_size_mobile": 14,
-        "slide_heading_line_height": 110,
-        "stars_size": 16,
-        "stars_size_mobile": 13,
-        "stars_margin_top": 16,
-        "stars_margin_top_mobile": 9,
-        "hide_stars": false,
-        "use_play_button": true,
-        "play_button_size": 40,
-        "play_button_size_mobile": 40,
-        "play_button_icon_size": 24,
-        "play_button_icon_size_mobile": 24,
-        "play_button_border_thickness": 0,
-        "use_mute_button": false,
-        "mute_button_size": 40,
-        "mute_button_size_mobile": 40,
-        "mute_button_icon_size": 24,
-        "mute_button_icon_size_mobile": 24,
-        "mute_button_border_thickness": 0,
-        "arrow_size": 20,
-        "arrow_size_mobile": 20,
-        "arrow_icon_size": 4,
-        "slide_border_color": "#000000",
-        "slide_shadow_color": "#000000",
-        "slide_overlay_color": "#000000",
-        "slide_title_color": "#ffffff",
-        "slide_stars_color": "#ffffff",
-        "play_button_color": "#ffffff",
-        "play_button_hover_color": "#ffffff",
-        "play_button_bg_color": "#000000",
-        "play_button_bg_hover_color": "#434343",
-        "mute_button_color": "#ffffff",
-        "mute_button_hover_color": "#ffffff",
-        "mute_button_bg_color": "#000000",
-        "mute_button_bg_hover_color": "#434343",
-        "arrow_color": "#434343",
-        "arrow_bg_color": "#434343",
-        "arrow_bg_hover_color": "#ffffff",
-        "arrow_border_color": "#000000",
-        "arrow_border_hover_color": "#000000",
-        "section_bg_color": "#ffffff",
-        "section_bg_gradient": "",
-        "section_border_color": "#000000",
-        "section_margin_top": 0,
-        "section_margin_bottom": 0,
-        "custom_css": ""
       }
     },
     "media_with_text_czrzaa": {
@@ -1103,7 +972,6 @@
     "custom_liquid_gnJhNY",
     "featured_product_WYUtAJ",
     "featured_product_cKRAm3",
-    "video_testimonials_slider_hxxynq",
     "media_with_text_czrzaa",
     "rich_text_XAgGC3",
     "media_with_text_zpfxxP",
