@@ -17,21 +17,28 @@
         "message_4JWk4f": {
           "type": "message",
           "settings": {
-            "text": "30 TAGE PERFEKTE PASSFORM — GARANTIERT",
+            "text": "FREE DELIVERY ON ALL ORDERS",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "12.000+ BEGEISTERTE FRAUEN | 5-STERNE-BEWERTUNGEN",
+            "text": "10,000+ HAPPY CUSTOMERS",
             "url": ""
           }
         },
         "message_4MYheV": {
           "type": "message",
           "settings": {
-            "text": "KOSTENLOSER VERSAND & RÜCKVERSAND",
+            "text": "30-DAY MONEY-BACK GUARANTEE",
+            "url": ""
+          }
+        },
+        "message_Q8tTkh": {
+          "type": "message",
+          "settings": {
+            "text": "BUY 2, GET YOUR KABUKI BRUSH FREE",
             "url": ""
           }
         }
@@ -39,7 +46,8 @@
       "block_order": [
         "message_4JWk4f",
         "message",
-        "message_4MYheV"
+        "message_4MYheV",
+        "message_Q8tTkh"
       ],
       "settings": {
         "enable_sticky": false,
