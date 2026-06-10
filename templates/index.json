@@ -254,6 +254,13 @@
             "liquid": "<style>\n  .blink {\n    animation: blink-animation 1.5s steps(5, start) infinite;\n    color: red;\n    font-size: 10px;\n    margin-right: 8px;\n  }\n  @keyframes blink-animation {\n    to {\n      visibility: hidden;\n    }\n  }\n  .red-div {\n    background-color: #ffe5e5;\n    padding: 4px 12px;\n    border-radius: 10px;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .text {\n    color: #AD0000;\n    font-weight: 600;\n    font-size: 10px;\n  }\n</style>\n<div class=\"red-div\">\n  <div class=\"blink\" aria-hidden=\"true\">&#9679;</div>\n  <div class=\"text\">Begrenzte Stückzahl! Beliebte Farbtöne sind schnell ausverkauft</div>\n</div>"
           }
         },
+        "kaching_bundles_app_block_YXMTXB": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{section.settings.product}}",
+            "manual_deal_block_id": ""
+          }
+        },
         "buy_buttons_dqab8L": {
           "type": "buy_buttons",
           "settings": {
@@ -346,6 +353,7 @@
         "liquid_6ewCBU",
         "liquid_fGj86D",
         "liquid_Afy9qD",
+        "kaching_bundles_app_block_YXMTXB",
         "buy_buttons_dqab8L",
         "image_JnHyHE",
         "image_7k6WKf",
