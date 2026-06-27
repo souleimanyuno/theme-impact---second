@@ -491,6 +491,48 @@
         "text_color": ""
       }
     },
+    "slideshow_FHYXmf": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Bhgfek": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPTImage25juin2026_12_23_13.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h3",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Bhgfek"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "numbers",
+        "transition_type": "fade_with_text",
+        "autoplay": true,
+        "cycle_speed": 6,
+        "background": "#1a1a1a",
+        "background_gradient": "linear-gradient(180deg, rgba(100, 100, 100, 1), rgba(168, 255, 251, 1) 100%)"
+      }
+    },
     "custom_liquid_q4d3Ea": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -498,10 +540,52 @@
         "full_width": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
-        "liquid": "<style>\n  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');\n\n  .vets {\n    font-family: 'Inter', sans-serif;\n    padding: 48px 20px;\n    max-width: 680px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .vets__badge {\n    display: inline-flex;\n    align-items: center;\n    gap: 7px;\n    background: #1a7a3f;\n    color: #fff;\n    font-size: 11px;\n    font-weight: 800;\n    letter-spacing: 0.09em;\n    text-transform: uppercase;\n    padding: 7px 16px;\n    border-radius: 999px;\n    margin-bottom: 16px;\n  }\n\n  .vets__badge svg {\n    width: 14px;\n    height: 14px;\n    stroke: #fff;\n    fill: none;\n    stroke-width: 2;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  .vets__title {\n    font-size: 26px;\n    font-weight: 900;\n    color: #0d1f3c;\n    margin-bottom: 8px;\n    letter-spacing: -0.02em;\n    line-height: 1.2;\n  }\n\n  .vets__sub {\n    font-size: 14px;\n    color: #666;\n    margin-bottom: 44px;\n    line-height: 1.55;\n    max-width: 440px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n\n  /* ── CARD ── */\n  .vets__list {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n    text-align: left;\n  }\n\n  .vets__card {\n    display: flex;\n    flex-direction: column;\n    gap: 14px;\n  }\n\n  /* TOP ROW: photo + identity */\n  .vets__top {\n    display: flex;\n    align-items: center;\n    gap: 14px;\n  }\n\n  /* Alternate: odd = photo left, even = photo right */\n  .vets__card:nth-child(even) .vets__top {\n    flex-direction: row-reverse;\n    text-align: right;\n  }\n\n  .vets__card:nth-child(even) .vets__verified {\n    justify-content: flex-end;\n  }\n\n  .vets__photo {\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    object-fit: cover;\n    flex-shrink: 0;\n    display: block;\n  }\n\n  .vets__identity {\n    flex: 1;\n  }\n\n  .vets__name {\n    font-size: 14px;\n    font-weight: 800;\n    color: #0d1f3c;\n    margin-bottom: 2px;\n    line-height: 1.3;\n  }\n\n  .vets__specialty {\n    font-size: 12px;\n    color: #888;\n    margin-bottom: 6px;\n    line-height: 1.4;\n  }\n\n  .vets__verified {\n    display: inline-flex;\n    align-items: center;\n    gap: 4px;\n    font-size: 12px;\n    font-weight: 700;\n    color: #1a7a3f;\n  }\n\n  .vets__verified svg {\n    width: 13px;\n    height: 13px;\n    stroke: #1a7a3f;\n    fill: none;\n    stroke-width: 2.5;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  /* QUOTE BELOW */\n  .vets__quote {\n    border-left: 3px solid #1a5cff;\n    padding-left: 14px;\n    font-size: 14px;\n    font-style: italic;\n    color: #222;\n    line-height: 1.7;\n    margin: 0;\n  }\n\n  /* Divider between cards */\n  .vets__card + .vets__card {\n    padding-top: 40px;\n    border-top: 1px solid #ebebeb;\n  }\n</style>\n\n<div class=\"vets\">\n\n  <div class=\"vets__badge\">\n    <svg viewBox=\"0 0 24 24\">\n      <path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/>\n      <polyline points=\"9 12 11 14 15 10\"/>\n    </svg>\n    #1 Vet Recommended\n  </div>\n\n  <h2 class=\"vets__title\">Trusted by Veterinarians</h2>\n  <p class=\"vets__sub\">Leading veterinary professionals recommend the ChillNest for safe, effective heat relief — with no gel, no risk.</p>\n\n  <div class=\"vets__list\">\n\n    <!-- VET 1 — photo LEFT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-1_430x.jpg?v=1782491118\" alt=\"Dr. Sarah Mitchell DVM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Sarah Mitchell, DVM</p>\n          <p class=\"vets__specialty\">Board Certified, Small Animal Internal Medicine</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"I recommend the ChillNest to all my clients with brachycephalic breeds. The fabric-based cooling is far safer than gel alternatives — no risk of toxic ingestion if chewed.\"</p>\n    </div>\n\n    <!-- VET 2 — photo RIGHT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-2_430x.jpg?v=1782491118\" alt=\"Dr. Emily Warren DVM DACVIM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Emily Warren, DVM, DACVIM</p>\n          <p class=\"vets__specialty\">Emergency & Critical Care Specialist</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"Heatstroke in dogs can escalate in minutes. Having a pressure-activated cooling surface available — especially one that requires no freezing or electricity — is a genuine preventative tool I endorse.\"</p>\n    </div>\n\n    <!-- VET 3 — photo LEFT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-3_430x.jpg?v=1782491118\" alt=\"Dr. Rachel Hodgson DVM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Rachel Hodgson, DVM</p>\n          <p class=\"vets__specialty\">Canine Sports Medicine & Rehabilitation</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"The triple-layer design provides consistent 2–4°F temperature reduction on contact. For senior dogs and breeds prone to overheating, this is exactly what I want to see in a cooling product.\"</p>\n    </div>\n\n    <!-- VET 4 — photo RIGHT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-4_430x.jpg?v=1782491118\" alt=\"Dr. David Reyes DVM PhD\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. David Reyes, DVM, PhD</p>\n          <p class=\"vets__specialty\">Veterinary Toxicology, UC Davis</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"What sets ChillNest apart is the non-toxic, machine-washable construction. I've seen too many ER visits from dogs ingesting gel mat contents. This eliminates that risk entirely.\"</p>\n    </div>\n\n    <!-- VET 5 — photo LEFT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-5_430x.jpg?v=1782491118\" alt=\"Dr. Lauren Torres DVM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Lauren Torres, DVM</p>\n          <p class=\"vets__specialty\">General Practice, 18 Years Experience</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"I keep one in my own clinic's recovery room. The portable, foldable design means pet parents can use it at home, in the car, or outdoors. Exactly where dogs need cooling most.\"</p>\n    </div>\n\n  </div>\n</div>",
+        "liquid": "<style>\n  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');\n\n  .vets {\n    font-family: 'Inter', sans-serif;\n    padding: 18px 20px;\n    max-width: 680px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .vets__badge {\n    display: inline-flex;\n    align-items: center;\n    gap: 7px;\n    background: #1a7a3f;\n    color: #fff;\n    font-size: 11px;\n    font-weight: 800;\n    letter-spacing: 0.09em;\n    text-transform: uppercase;\n    padding: 7px 16px;\n    border-radius: 999px;\n    margin-bottom: 16px;\n  }\n\n  .vets__badge svg {\n    width: 14px;\n    height: 14px;\n    stroke: #fff;\n    fill: none;\n    stroke-width: 2;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  .vets__title {\n    font-size: 26px;\n    font-weight: 900;\n    color: #0d1f3c;\n    margin-bottom: 8px;\n    letter-spacing: -0.02em;\n    line-height: 1.2;\n  }\n\n  .vets__sub {\n    font-size: 14px;\n    color: #666;\n    margin-bottom: 44px;\n    line-height: 1.55;\n    max-width: 440px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n\n  /* ── CARD ── */\n  .vets__list {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n    text-align: left;\n  }\n\n  .vets__card {\n    display: flex;\n    flex-direction: column;\n    gap: 14px;\n  }\n\n  /* TOP ROW: photo + identity */\n  .vets__top {\n    display: flex;\n    align-items: center;\n    gap: 14px;\n  }\n\n  /* Alternate: odd = photo left, even = photo right */\n  .vets__card:nth-child(even) .vets__top {\n    flex-direction: row-reverse;\n    text-align: right;\n  }\n\n  .vets__card:nth-child(even) .vets__verified {\n    justify-content: flex-end;\n  }\n\n  .vets__photo {\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    object-fit: cover;\n    flex-shrink: 0;\n    display: block;\n  }\n\n  .vets__identity {\n    flex: 1;\n  }\n\n  .vets__name {\n    font-size: 14px;\n    font-weight: 800;\n    color: #0d1f3c;\n    margin-bottom: 2px;\n    line-height: 1.3;\n  }\n\n  .vets__specialty {\n    font-size: 12px;\n    color: #888;\n    margin-bottom: 6px;\n    line-height: 1.4;\n  }\n\n  .vets__verified {\n    display: inline-flex;\n    align-items: center;\n    gap: 4px;\n    font-size: 12px;\n    font-weight: 700;\n    color: #1a7a3f;\n  }\n\n  .vets__verified svg {\n    width: 13px;\n    height: 13px;\n    stroke: #1a7a3f;\n    fill: none;\n    stroke-width: 2.5;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  /* QUOTE BELOW */\n  .vets__quote {\n    border-left: 3px solid #1a5cff;\n    padding-left: 14px;\n    font-size: 14px;\n    font-style: italic;\n    color: #222;\n    line-height: 1.7;\n    margin: 0;\n  }\n\n  /* Divider between cards */\n  .vets__card + .vets__card {\n    padding-top: 40px;\n    border-top: 1px solid #ebebeb;\n  }\n</style>\n\n<div class=\"vets\">\n\n  <div class=\"vets__badge\">\n    <svg viewBox=\"0 0 24 24\">\n      <path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/>\n      <polyline points=\"9 12 11 14 15 10\"/>\n    </svg>\n    #1 Vet Recommended\n  </div>\n\n  <h2 class=\"vets__title\">Trusted by Veterinarians</h2>\n  <p class=\"vets__sub\">Leading veterinary professionals recommend the ChillNest for safe, effective heat relief — with no gel, no risk.</p>\n\n  <div class=\"vets__list\">\n\n    <!-- VET 1 — photo LEFT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-1_430x.jpg?v=1782491118\" alt=\"Dr. Sarah Mitchell DVM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Sarah Mitchell, DVM</p>\n          <p class=\"vets__specialty\">Board Certified, Small Animal Internal Medicine</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"I recommend the ChillNest to all my clients with brachycephalic breeds. The fabric-based cooling is far safer than gel alternatives — no risk of toxic ingestion if chewed.\"</p>\n    </div>\n\n    <!-- VET 2 — photo RIGHT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-2_430x.jpg?v=1782491118\" alt=\"Dr. Emily Warren DVM DACVIM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Emily Warren, DVM, DACVIM</p>\n          <p class=\"vets__specialty\">Emergency & Critical Care Specialist</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"Heatstroke in dogs can escalate in minutes. Having a pressure-activated cooling surface available — especially one that requires no freezing or electricity — is a genuine preventative tool I endorse.\"</p>\n    </div>\n\n    <!-- VET 3 — photo LEFT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-3_430x.jpg?v=1782491118\" alt=\"Dr. Rachel Hodgson DVM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Rachel Hodgson, DVM</p>\n          <p class=\"vets__specialty\">Canine Sports Medicine & Rehabilitation</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"The triple-layer design provides consistent 2–4°F temperature reduction on contact. For senior dogs and breeds prone to overheating, this is exactly what I want to see in a cooling product.\"</p>\n    </div>\n\n    <!-- VET 4 — photo RIGHT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-4_430x.jpg?v=1782491118\" alt=\"Dr. David Reyes DVM PhD\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. David Reyes, DVM, PhD</p>\n          <p class=\"vets__specialty\">Veterinary Toxicology, UC Davis</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"What sets ChillNest apart is the non-toxic, machine-washable construction. I've seen too many ER visits from dogs ingesting gel mat contents. This eliminates that risk entirely.\"</p>\n    </div>\n\n    <!-- VET 5 — photo LEFT -->\n    <div class=\"vets__card\">\n      <div class=\"vets__top\">\n        <img class=\"vets__photo\" src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/vet-5_430x.jpg?v=1782491118\" alt=\"Dr. Lauren Torres DVM\" loading=\"lazy\">\n        <div class=\"vets__identity\">\n          <p class=\"vets__name\">Dr. Lauren Torres, DVM</p>\n          <p class=\"vets__specialty\">General Practice, 18 Years Experience</p>\n          <span class=\"vets__verified\">\n            <svg viewBox=\"0 0 24 24\"><polyline points=\"20 6 9 17 4 12\"/></svg>\n            Verified Veterinarian\n          </span>\n        </div>\n      </div>\n      <p class=\"vets__quote\">\"I keep one in my own clinic's recovery room. The portable, foldable design means pet parents can use it at home, in the car, or outdoors. Exactly where dogs need cooling most.\"</p>\n    </div>\n\n  </div>\n</div>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
+      }
+    },
+    "slideshow_n9kyRx": {
+      "type": "slideshow",
+      "blocks": {
+        "image_HWhTrm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPTImage25juin2026_12_23_13.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h3",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_HWhTrm"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "numbers",
+        "transition_type": "fade_with_text",
+        "autoplay": true,
+        "cycle_speed": 6,
+        "background": "#1a1a1a",
+        "background_gradient": "linear-gradient(180deg, rgba(100, 100, 100, 1), rgba(168, 255, 251, 1) 100%)"
       }
     },
     "custom_liquid_gnJhNY": {
@@ -794,7 +878,9 @@
     "featured_product_WYUtAJ",
     "featured_product_cKRAm3",
     "custom_liquid_tTF4Jz",
+    "slideshow_FHYXmf",
     "custom_liquid_q4d3Ea",
+    "slideshow_n9kyRx",
     "custom_liquid_gnJhNY",
     "custom_liquid_WgJTim",
     "faq_aX8Tqy",
