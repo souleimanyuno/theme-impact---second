@@ -201,8 +201,117 @@
         "overlay_opacity": 0
       }
     },
+    "slideshow_VMRcKa": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Xt3jne": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_juil._2026_03_29_10.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_PYEDyq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_juil._2026_03_29_13.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_TETbPA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_juil._2026_03_37_31.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_8bC6gn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_14_juil._2026_03_41_40.png",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Xt3jne",
+        "image_PYEDyq",
+        "image_TETbPA",
+        "image_8bC6gn"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "outline_arrows",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 4,
+        "background": "#F2F2F2",
+        "background_gradient": ""
+      }
+    },
     "custom_liquid_xTHbTc": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "Custom Liquid",
       "settings": {
         "full_width": true,
@@ -333,141 +442,6 @@
         "mobile_media_size": "expanded",
         "mobile_carousel_control": "thumbnails",
         "enable_video_autoplay": false,
-        "enable_video_looping": false,
-        "enable_image_zoom": true,
-        "max_image_zoom_level": 3,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "input_background": "rgba(0,0,0,0)",
-        "input_text_color": ""
-      }
-    },
-    "featured_product_cKRAm3": {
-      "type": "featured-product",
-      "blocks": {
-        "liquid_Hgxcnq": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div style=\"display: flex; align-items: center; background-color: #FAFAFA; padding: 8px 8px; border-radius: 8px; width: fit-content; margin: 10px 0; text-align: left;\">\n  <!-- Stars -->\n  <img src=\"https://cdn.trustpilot.net/brand-assets/4.1.0/stars/stars-5.svg\" alt=\"5 stars\" style=\"width: 105px; margin-right: 8px;\">\n  <!-- Text -->\n  <div style=\"color: #4A4A4A; font-size: 11.1px; text-align: left;\">\n    <span style=\"font-weight: 400;\">Rated</span> <span style=\"color: #000000; font-weight: 700;\">4.7</span> <span style=\"font-weight: 400;\">based on</span> <span style=\"color: #000000; font-weight: 700;\">2,000+ reviews</span>\n  </div>\n</div>"
-          }
-        },
-        "title_AJMwai": {
-          "type": "title",
-          "settings": {
-            "heading_tag": "h3"
-          }
-        },
-        "text_UAGdiV": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Winter boots that finally respect your feet – Complete protection against cold and ice combined with unmatched comfort</p>"
-          }
-        },
-        "liquid_KRkhRi": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<ul style=\"list-style: none; padding: 0; font-size: 14px;\">\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Keeps feet warm in extreme cold conditions\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Wide toe box eliminates cramping and pain\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Non-slip grip for secure traction on ice\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> 100% waterproof - dry feet all day long\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Durable construction built for multiple winters\n  </li>\n  <li style=\"margin-bottom: 10px;\">\n    <span style=\"color: #34a853;\">✔</span> Comfortable from the first step, no break-in needed\n  </li>\n</ul>"
-          }
-        },
-        "liquid_AzKMzc": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<style>\n  .blink {\n    animation: blink-animation 1.5s steps(5, start) infinite;\n    color: red;\n    font-size: 10px;\n    margin-right: 8px;\n  }\n  @keyframes blink-animation {\n    to {\n      visibility: hidden;\n    }\n  }\n  .red-div {\n    background-color: #ffe5e5;\n    padding: 4px 12px;\n    border-radius: 10px;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .text {\n    color: #AD0000;\n    font-weight: 600;\n    font-size: 13px;\n  }\n</style>\n<div class=\"red-div\">\n  <div class=\"blink\" aria-hidden=\"true\">&#9679;</div>\n  <div class=\"text\">Limited stock! Only 5 units left</div>\n</div>"
-          }
-        },
-        "buy_buttons_ab43KY": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": false,
-            "atc_button_background": "#00a341",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "image_MkPaK8": {
-          "type": "image",
-          "settings": {
-            "alignment": "center",
-            "max_width": 220
-          }
-        },
-        "liquid_zPnYkj": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"features-container\">\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/NOUVEAU-SHIPPING1.svg?v=1744585896\" alt=\"Free Shipping\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">Free Shipping</p>\n      <p class=\"feature-subtitle\">Ready to ship | Ships within 24h</p>\n    </div>\n  </div>\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/NOUVEAU-check-shield.svg?v=1744586491\" alt=\"Secure Payment\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">Secure Payment</p>\n      <p class=\"feature-subtitle\">via SSL & 3D Secure</p>\n    </div>\n  </div>\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0891/4871/9429/files/NOUVEAU-RETOUR.svg?v=1744585755\" alt=\"Money-Back Guarantee\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">Money-Back Guarantee</p>\n      <p class=\"feature-subtitle\">30-day no-questions-asked trial</p>\n    </div>\n  </div>\n  <div class=\"feature-item\">\n    <img src=\"https://em-content.zobj.net/source/apple/391/flag-united-states_1f1fa-1f1f8.png\" alt=\"US Customer Support\">\n    <div class=\"feature-text\">\n      <p class=\"feature-title\">US Customer Support</p>\n      <p class=\"feature-subtitle\">Available 7 days a week</p>\n    </div>\n  </div>\n</div>\n<style>\n.features-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 20px 10px;\n  padding: 20px 0;\n}\n.feature-item {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n.feature-item img {\n  width: 28px;\n  height: 28px;\n  object-fit: contain;\n}\n.feature-text {\n  display: flex;\n  flex-direction: column;\n}\n.feature-title {\n  font-weight: 600;\n  font-size: 15px;\n  color: #1c1c1c;\n  margin: 0;\n}\n.feature-subtitle {\n  font-size: 13px;\n  color: #555;\n  margin: 0;\n}\n</style>"
-          }
-        },
-        "liquid_VX6PtF": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<head>\n  <meta charset=\"UTF-8\">\n \n  <style>\n    .custom-review {\n      font-family: 'Poppins', sans-serif;\n      max-width: 600px;\n      margin: 20px auto;\n      padding: 16px;\n      background-color: #ffffff;\n      border: 1px solid #E0E0E0;\n      border-radius: 12px;\n      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n    }\n    .custom-review__container {\n      display: flex;\n      align-items: flex-start;\n    }\n    .custom-review__image-container {\n      flex-shrink: 0;\n      margin-right: 12px;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n    }\n    .custom-review__image {\n      width: 75px;\n      height: 75px;\n      border-radius: 35%;\n      object-fit: cover;\n      border: 2px solid #34a853;\n    }\n    .custom-review__content {\n      flex: 1;\n    }\n    .custom-review__stars {\n      display: flex;\n      gap: 3px;\n    }\n    .custom-review__star {\n      color: #FFC009;\n      font-size: 18px;\n      line-height: 1;\n    }\n    .custom-review__text {\n      font-size: 13px;\n      font-weight: 400;\n      font-style: italic;\n      color: #444;\n      margin: 6px 0;\n      line-height: 1.4;\n    }\n    .custom-review__user {\n      display: flex;\n      align-items: center;\n      gap: 6px;\n      flex-wrap: nowrap;\n    }\n    .custom-review__username {\n      font-size: 12.5px;\n      font-weight: 700;\n      color: #222;\n      margin: 0;\n      white-space: nowrap;\n    }\n    .custom-review__badge {\n      width: 14px;\n    }\n    .custom-review__verified {\n      font-size: 12.5px;\n      color: #666;\n      white-space: nowrap;\n    }\n  </style>\n</head>\n<div class=\"custom-review\">\n  <div class=\"custom-review__container\">\n    <!-- Customer Photo -->\n    <div class=\"custom-review__image-container\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0711/0230/0250/files/Capture_d_ecran_le_2026-01-26_a_12.35.52_430x.png?v=1769405762\" \n           alt=\"Customer Review\" \n           class=\"custom-review__image\">\n    </div>\n    <!-- Review Content -->\n    <div class=\"custom-review__content\">\n      <!-- Stars -->\n      <div class=\"custom-review__stars\">\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n        <span class=\"custom-review__star\">★</span>\n      </div>\n      <!-- Review Text -->\n      <p class=\"custom-review__text\">\n        Arthritis in my hands made lacing boots a nightmare. These velcro straps changed everything. Walk 2 miles every morning - warm feet, no slipping, zero pain. They look normal too, not like clunky \"senior\" boots.\n      </p>\n      <!-- Name & Verification -->\n      <div class=\"custom-review__user\">\n        <p class=\"custom-review__username\">Robert H.</p>\n        <img src=\"https://cdn-icons-png.flaticon.com/512/190/190411.png\" \n             alt=\"Verified Purchase\" \n             class=\"custom-review__badge\">\n        <span class=\"custom-review__verified\">Verified Purchase</span>\n      </div>\n    </div>\n  </div>\n</div>"
-          }
-        },
-        "liquid_mPDa8p": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<details class=\"collapsible-size-guide\">\n  <summary class=\"collapsible-size-guide__summary\">Size Guide</summary>\n  <div class=\"collapsible-size-guide__content\">\n    <p class=\"collapsible-size-guide__text\">Our boots fit true to size according to <strong>US sizing standards</strong>. Choose your regular size when ordering.</p>\n    \n    <p class=\"collapsible-size-guide__text\">If you're between two sizes, <strong>size up for extra comfort</strong>.</p>\n    \n    <p class=\"collapsible-size-guide__text\">For more details, check the <strong>size chart below</strong>.</p>\n    \n    <div class=\"collapsible-size-guide__image\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0711/0230/0250/files/Capture_d_ecran_le_2026-01-26_a_12.59.45_430x.png?v=1769407215\" alt=\"Size Guide Chart\" loading=\"lazy\">\n    </div>\n  </div>\n</details>\n<style>\n  .collapsible-size-guide__summary {\n    cursor: pointer;\n    font-weight: bold;\n    padding: 12px 0;\n    list-style: none;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n  }\n  \n  .collapsible-size-guide__summary::-webkit-details-marker {\n    display: none;\n  }\n  \n  .collapsible-size-guide__summary::after {\n    content: '+';\n    font-size: 20px;\n    font-weight: bold;\n    transition: transform 0.3s ease;\n  }\n  \n  .collapsible-size-guide[open] .collapsible-size-guide__summary::after {\n    content: '−';\n  }\n  \n  .collapsible-size-guide__content {\n    padding: 15px 0;\n    line-height: 1.6;\n  }\n  \n  .collapsible-size-guide__text {\n    margin-bottom: 15px;\n  }\n  \n  .collapsible-size-guide__text:last-of-type {\n    margin-bottom: 0;\n  }\n  \n  .collapsible-size-guide__image {\n    margin-top: 20px;\n  }\n  \n  .collapsible-size-guide__image img {\n    width: 100%;\n    max-width: 600px;\n    height: auto;\n    display: block;\n  }\n</style>"
-          }
-        },
-        "collapsible_text_yQXtGn": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Performance-Tested Winter Protection",
-            "content": "<p>Discover <strong>ELORYA winter boots :</strong> your all-day <strong>solution for cold, cramped feet and slippery conditions</strong>, without the bulk or discomfort of traditional winter boots.</p><p>Thanks to advanced insulation, a wide anatomical toe box, and aggressive non-slip treads, <strong>ELORYA targets the root causes of winter foot pain</strong> — keeping you warm, stable, and comfortable from the first step.</p><p>Tested in real winters and backed by thousands of satisfied customers, <strong>ELORYA delivers immediate comfort, superior traction, and long-lasting durability</strong> that outlasts cheaper alternatives.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_text_Pyn9JK": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "Shipping Information",
-            "content": "<p><strong>Just placed your order? 🎉 Great choice!</strong></p><p>Our team gets to work immediately to prepare your package with care.</p><p><strong>⏱️ Processing time:</strong> Within 24-48 hours</p><p>Once your order ships, you'll receive <strong>a confirmation email with your tracking number</strong>. With one click, you can follow your package all the way to your doorstep.</p><p>Questions? Our customer support team is available 7 days a week.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_text_WhXRyT": {
-          "type": "collapsible_text",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "title": "30-Day Money-Back Guarantee",
-            "content": "<p>Try ELORYA® risk-free for 30 days. If you're not satisfied you can request a full refund.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "liquid_Hgxcnq",
-        "title_AJMwai",
-        "text_UAGdiV",
-        "liquid_KRkhRi",
-        "liquid_AzKMzc",
-        "buy_buttons_ab43KY",
-        "image_MkPaK8",
-        "liquid_zPnYkj",
-        "liquid_VX6PtF",
-        "liquid_mPDa8p",
-        "collapsible_text_yQXtGn",
-        "collapsible_text_Pyn9JK",
-        "collapsible_text_WhXRyT"
-      ],
-      "disabled": true,
-      "name": "Featured product",
-      "settings": {
-        "full_width": true,
-        "product": "elovya™-safestep-winter-boots-anti-slip-thermal-boots-for-ice-snow",
-        "desktop_media_width": 55,
-        "desktop_media_layout": "carousel_thumbnails_left",
-        "mobile_media_size": "expanded",
-        "mobile_carousel_control": "floating_dots",
-        "enable_video_autoplay": true,
         "enable_video_looping": false,
         "enable_image_zoom": true,
         "max_image_zoom_level": 3,
@@ -902,9 +876,9 @@
     "custom_liquid_DLg7Vj",
     "rich_text_KiattM",
     "video_x67yjM",
+    "slideshow_VMRcKa",
     "custom_liquid_xTHbTc",
     "featured_product_WYUtAJ",
-    "featured_product_cKRAm3",
     "custom_liquid_tTF4Jz",
     "slideshow_FHYXmf",
     "custom_liquid_q4d3Ea",
