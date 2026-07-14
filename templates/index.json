@@ -27,7 +27,7 @@
         "image_CHGkji": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_26_juin_2026_13_14_24.png",
+            "image": "shopify://shop_images/36d4d141-3f32-49f1-951e-4634c65d506b.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -152,7 +152,7 @@
         "full_width": true,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
-        "liquid": "<style>\n  .chillnest-features {\n    width: 100%;\n    max-width: 900px;\n    margin: 0 auto;\n    padding: 34px 10px 3px 10px;\n    text-align: center;\n    font-family: sans-serif;\n  }\n\n  .chillnest-features__title {\n    font-size: 28px;\n    font-weight: 800;\n    color: #0d1f3c;\n    line-height: 1.25;\n    margin-bottom: 32px;\n    letter-spacing: -0.01em;\n  }\n\n  .chillnest-features__title span {\n    color: #1a5cff;\n  }\n\n  .chillnest-features__image {\n    width: 100%;\n    height: auto;\n    display: block;\n    border-radius: 12px;\n  }\n\n  @media (max-width: 768px) {\n    .chillnest-features__title {\n      font-size: 20px;\n    }\n  }\n</style>\n\n<div class=\"chillnest-features\">\n  <h2 class=\"chillnest-features__title\">\n    Why 8,000 US Dog Owners Choose <span>CHILLNEST™</span> Over Anything Else\n  </h2>\n  <img\n    class=\"chillnest-features__image\"\n    src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/hf_20260626_121628_e68f248e-1958-4386-9931-90bf75e3d93f_430x.png?v=1782476361\"\n    alt=\"Why dog owners choose ChillNest\"\n    loading=\"lazy\"\n  >\n</div>",
+        "liquid": "<style>\n  .sorelya-features {\n    width: 100%;\n    max-width: 900px;\n    margin: 0 auto;\n    padding: 34px 10px 3px 10px;\n    text-align: center;\n    font-family: sans-serif;\n  }\n\n  .sorelya-features__title {\n    font-size: 28px;\n    font-weight: 800;\n    color: #0d1f3c;\n    line-height: 1.25;\n    margin-bottom: 32px;\n    letter-spacing: -0.01em;\n  }\n\n  .sorelya-features__title span {\n    color: #78A953;\n  }\n\n  .sorelya-features__image {\n    width: 100%;\n    height: auto;\n    display: block;\n    border-radius: 12px;\n  }\n\n  @media (max-width: 768px) {\n    .sorelya-features {\n      padding: 28px 10px 3px 10px;\n    }\n\n    .sorelya-features__title {\n      font-size: 20px;\n      margin-bottom: 24px;\n    }\n  }\n</style>\n\n<div class=\"sorelya-features\">\n  <h2 class=\"sorelya-features__title\">\n    Why Dog Owners Choose <span>SORELYA™</span> Before Every Outdoor Adventure\n  </h2>\n\n  <img\n    class=\"sorelya-features__image\"\n    src=\"https://cdn.shopify.com/s/files/1/0992/0384/2370/files/ChatGPT_Image_14_juil._2026_00_53_59_430x.png?v=1783986853\"\n    alt=\"Six reasons dog owners choose the SORELYA outdoor tag\"\n    loading=\"lazy\"\n  >\n</div>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
