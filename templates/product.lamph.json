@@ -12,72 +12,90 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "heading_tag": "h2"
+          }
         },
-        "badges": {
-          "type": "badges",
-          "settings": {}
+        "liquid_qnD7FL": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"sor-rating-price\">\n  <div class=\"sor-rating\">\n    <span class=\"sor-stars\">\n      <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"currentColor\"><path d=\"M12 2l2.9 6.26L21.5 9.1l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-7-4.75-4.4 6.6-.84L12 2z\"/></svg>\n      <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"currentColor\"><path d=\"M12 2l2.9 6.26L21.5 9.1l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-7-4.75-4.4 6.6-.84L12 2z\"/></svg>\n      <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"currentColor\"><path d=\"M12 2l2.9 6.26L21.5 9.1l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-7-4.75-4.4 6.6-.84L12 2z\"/></svg>\n      <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"currentColor\"><path d=\"M12 2l2.9 6.26L21.5 9.1l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-7-4.75-4.4 6.6-.84L12 2z\"/></svg>\n      <svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"currentColor\" opacity=\"0.8\"><path d=\"M12 2l2.9 6.26L21.5 9.1l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-7-4.75-4.4 6.6-.84L12 2z\"/></svg>\n    </span>\n    <span class=\"sor-rating-text\">4,8 / 5 sterren (+12.000 vrouwen vertrouwen ons)</span>\n  </div>\n\n  <div class=\"sor-price-row\">\n    <span class=\"sor-price-current\">&euro;29,90</span>\n    <span class=\"sor-price-old\">&euro;39,90</span>\n    <span class=\"sor-save-badge\">\n      <svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"currentColor\"><path d=\"M20.59 13.41L13 21l-9-9V4h8l9 9.41a2 2 0 010 2.83zM7 8a1 1 0 100-2 1 1 0 000 2z\"/></svg>\n      BESPAAR 25%\n    </span>\n  </div>\n</div>\n\n<style>\n.sor-rating-price{font-family:inherit;max-width:100%;}\n\n.sor-rating{\n  display:flex;\n  align-items:center;\n  flex-wrap:wrap;\n  gap:6px;\n  margin-bottom:10px;\n}\n.sor-stars{\n  display:inline-flex;\n  gap:1px;\n  color:#2B1E14;\n}\n.sor-rating-text{\n  font-size:13px;\n  color:#1a1a1a;\n  line-height:1.3;\n}\n\n.sor-price-row{\n  display:flex;\n  align-items:center;\n  flex-wrap:wrap;\n  gap:9px;\n}\n.sor-price-current{\n  font-size:22px;\n  font-weight:700;\n  color:#1a1a1a;\n}\n.sor-price-old{\n  font-size:14px;\n  color:#9C8770;\n  text-decoration:line-through;\n}\n.sor-save-badge{\n  display:inline-flex;\n  align-items:center;\n  gap:5px;\n  background:#2B1E14;\n  color:#fff;\n  font-size:11.5px;\n  font-weight:700;\n  letter-spacing:0.02em;\n  padding:5px 10px;\n  border-radius:999px;\n}\n\n@media (min-width:750px){\n  .sor-rating-text{font-size:14.5px;}\n  .sor-price-current{font-size:28px;}\n  .sor-price-old{font-size:17px;}\n  .sor-save-badge{font-size:13px;padding:6px 12px;}\n}\n</style>"
+          }
         },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "rating": {
-          "type": "rating",
-          "settings": {}
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {}
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
+        "liquid_wtLPiB": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- assign now_ts = 'now' | date: '%s' -%}\n{%- assign ship_start_ts = now_ts | plus: 432000 -%}\n{%- assign ship_end_ts = now_ts | plus: 604800 -%}\n{%- assign nl_months = 'jan,feb,mrt,apr,mei,jun,jul,aug,sep,okt,nov,dec' | split: ',' -%}\n{%- assign start_day = ship_start_ts | date: '%d' -%}\n{%- assign start_month_num = ship_start_ts | date: '%m' | plus: 0 -%}\n{%- assign end_day = ship_end_ts | date: '%d' -%}\n{%- assign end_month_num = ship_end_ts | date: '%m' | plus: 0 -%}\n{%- assign start_month_index = start_month_num | minus: 1 -%}\n{%- assign end_month_index = end_month_num | minus: 1 -%}\n{%- assign start_month = nl_months[start_month_index] -%}\n{%- assign end_month = nl_months[end_month_index] -%}\n\n<div class=\"sor-badge-benefits\">\n  <div class=\"sor-badge\">\n    <span class=\"sor-badge-star\">\n      <svg viewBox=\"0 0 24 24\" fill=\"currentColor\" width=\"11\" height=\"11\">\n        <path d=\"M12 2l2.9 6.26L21.5 9.1l-4.75 4.4L18 20.5 12 17l-6 3.5 1.25-7-4.75-4.4 6.6-.84L12 2z\"/>\n      </svg>\n    </span>\n    <span class=\"sor-badge-text\">Exclusief verkrijgbaar bij Sorelya</span>\n  </div>\n\n  <ul class=\"sor-benefits-list\">\n    <li>\n      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" width=\"18\" height=\"18\"><circle cx=\"12\" cy=\"12\" r=\"9.5\"/><path d=\"M8 12.5l2.5 2.5L16 9.5\"/></svg>\n      <span>Minder opgezwollen gezicht bij het wakker worden — vanaf 7 dagen</span>\n    </li>\n    <li>\n      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" width=\"18\" height=\"18\"><circle cx=\"12\" cy=\"12\" r=\"9.5\"/><path d=\"M8 12.5l2.5 2.5L16 9.5\"/></svg>\n      <span>Lichte benen en enkels aan het einde van de dag</span>\n    </li>\n    <li>\n      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" width=\"18\" height=\"18\"><circle cx=\"12\" cy=\"12\" r=\"9.5\"/><path d=\"M8 12.5l2.5 2.5L16 9.5\"/></svg>\n      <span>Natuurlijke afvoer — zonder agressief diureticum</span>\n    </li>\n    <li>\n      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" width=\"18\" height=\"18\"><circle cx=\"12\" cy=\"12\" r=\"9.5\"/><path d=\"M8 12.5l2.5 2.5L16 9.5\"/></svg>\n      <span>100% plantaardig · veganistisch · glutenvrij</span>\n    </li>\n    <li class=\"sor-shipping-item\">\n      <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" width=\"18\" height=\"18\">\n        <rect x=\"1.5\" y=\"7\" width=\"11\" height=\"9\"/>\n        <path d=\"M12.5 10h4l3 3.2V16h-7z\"/>\n        <circle cx=\"6\" cy=\"18.5\" r=\"1.6\"/>\n        <circle cx=\"16.5\" cy=\"18.5\" r=\"1.6\"/>\n      </svg>\n      <span>Verwachte verzending: <strong>{{ start_day }} {{ start_month }} - {{ end_day }} {{ end_month }}</strong></span>\n    </li>\n  </ul>\n</div>\n\n<style>\n.sor-badge-benefits{font-family:inherit;max-width:100%;}\n\n.sor-badge{\n  display:inline-flex;\n  align-items:center;\n  gap:8px;\n  background:linear-gradient(100deg,#8B9A7A 0%,#6B4A35 100%);\n  border-radius:999px;\n  padding:9px 16px;\n  margin-bottom:16px;\n}\n.sor-badge-star{\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  width:20px;\n  height:20px;\n  border-radius:50%;\n  background:rgba(255,255,255,0.25);\n  color:#fff;\n  flex-shrink:0;\n}\n.sor-badge-text{\n  color:#fff;\n  font-weight:700;\n  font-size:12.5px;\n  letter-spacing:0.01em;\n  line-height:1.2;\n}\n\n.sor-benefits-list{\n  list-style:none;\n  margin:0;\n  padding:0;\n  display:flex;\n  flex-direction:column;\n  gap:10px;\n}\n.sor-benefits-list li{\n  display:flex;\n  align-items:flex-start;\n  gap:9px;\n}\n.sor-benefits-list li svg{\n  color:#4A5D3A;\n  flex-shrink:0;\n  margin-top:1px;\n}\n.sor-benefits-list li span{\n  font-size:14px;\n  line-height:1.4;\n  color:#1a1a1a;\n}\n.sor-shipping-item svg{\n  color:#6B4A35;\n}\n.sor-shipping-item span strong{\n  color:#2B1E14;\n  font-weight:700;\n}\n\n@media (min-width:750px){\n  .sor-badge-text{font-size:13.5px;}\n  .sor-benefits-list li span{font-size:16px;}\n  .sor-benefits-list li svg{width:20px;height:20px;}\n}\n</style>"
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "settings": {}
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#4C7032",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
         },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {}
+        "liquid_yhCXPz": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"sor-accordion\">\n  <details class=\"sor-acc-item\">\n    <summary>\n      <span class=\"sor-acc-icon\">\n        <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"12\" cy=\"12\" r=\"9.5\"/><line x1=\"12\" y1=\"11\" x2=\"12\" y2=\"16.5\"/><circle cx=\"12\" cy=\"7.8\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg>\n      </span>\n      <span class=\"sor-acc-title\">Productbeschrijving</span>\n      <svg class=\"sor-acc-chevron\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 9l6 6 6-6\"/></svg>\n    </summary>\n    <div class=\"sor-acc-body\">\n      <p>De Sorelya Lymfedrainage Druppels zijn ontwikkeld om het natuurlijke reinigingsproces van je lichaam te ondersteunen. Ze helpen een opgezwollen gevoel, vochtophoping en een zwaar gevoel te verminderen, terwijl ze de bloedsomloop en je energieniveau ondersteunen. Deze zachte kruidenmix bevordert een dagelijkse balans, zodat je 's ochtends licht, helder en vernieuwd wakker wordt.</p>\n    </div>\n  </details>\n\n  <details class=\"sor-acc-item\">\n    <summary>\n      <span class=\"sor-acc-icon\">\n        <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M9 15l7-7 2 2-7 7H9v-2z\"/><circle cx=\"6\" cy=\"18\" r=\"2.3\"/></svg>\n      </span>\n      <span class=\"sor-acc-title\">Hoe te gebruiken</span>\n      <svg class=\"sor-acc-chevron\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 9l6 6 6-6\"/></svg>\n    </summary>\n    <div class=\"sor-acc-body\">\n      <p>Neem 1 tot 2 pipetten (1-2 ml) een tot twee keer per dag. Je kunt de druppels toevoegen aan water, thee of sap, of ze rechtstreeks onder je tong plaatsen. Voor het beste resultaat gebruik je de druppels consistent en drink je voldoende water gedurende de dag.</p>\n    </div>\n  </details>\n\n  <details class=\"sor-acc-item\">\n    <summary>\n      <span class=\"sor-acc-icon\">\n        <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M12 3c4 3 6 6 6 9.5A6 6 0 016 12.5C6 9 8 6 12 3z\"/></svg>\n      </span>\n      <span class=\"sor-acc-title\">Waarom heb je Sorelya nodig?</span>\n      <svg class=\"sor-acc-chevron\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 9l6 6 6-6\"/></svg>\n    </summary>\n    <div class=\"sor-acc-body\">\n      <p>Wanneer je lymfestelsel vertraagt, kunnen vocht en afvalstoffen zich ophopen. Dit kan leiden tot een opgezwollen gevoel, zwaarte, vermoeidheid en een doffere huid. Sorelya helpt een gezonde lymfestroom te ondersteunen, zodat je lichaam vocht kan afvoeren, je bloedsomloop verbetert en je natuurlijke glow op een zachte en doeltreffende manier terugkeert.</p>\n    </div>\n  </details>\n\n  <details class=\"sor-acc-item\">\n    <summary>\n      <span class=\"sor-acc-icon\">\n        <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"12\" rx=\"1.5\"/><path d=\"M9 8V6a3 3 0 013-3v0a3 3 0 013 3v2\"/></svg>\n      </span>\n      <span class=\"sor-acc-title\">Ingrediënten en voordelen</span>\n      <svg class=\"sor-acc-chevron\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 9l6 6 6-6\"/></svg>\n    </summary>\n    <div class=\"sor-acc-body sor-acc-ingredients\">\n      <p><strong>Kleefkruid (Galium aparine)</strong><br>Ondersteunt de lymfestroom en een zachte reiniging van het lichaam.</p>\n      <p><strong>Rode klaver</strong><br>Helpt een gezonde bloedsomloop en een stralendere huid te bevorderen.</p>\n      <p><strong>Prickly Ash</strong><br>Draagt bij aan meer energie en ondersteunt de microcirculatie.</p>\n      <p><strong>Stillingia</strong><br>Ondersteunt een natuurlijke vochtafvoer en een zachte reiniging.</p>\n    </div>\n  </details>\n\n  <details class=\"sor-acc-item sor-acc-noicon\">\n    <summary>\n      <span class=\"sor-acc-title\">Verzending, retour en garantie</span>\n      <svg class=\"sor-acc-chevron\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 9l6 6 6-6\"/></svg>\n    </summary>\n    <div class=\"sor-acc-body\">\n      <p>We bieden snelle verzending met Track &amp; Trace binnen Nederland en België. De meeste bestellingen komen binnen 2 tot 4 werkdagen aan, afhankelijk van je locatie.</p>\n      <p>Je hebt 60 dagen om het risicovrij te proberen: voel je je niet lichter, minder opgezwollen of energieker, neem dan contact met ons op voor een volledige terugbetaling — geen vragen, geen kleine lettertjes.</p>\n    </div>\n  </details>\n</div>\n\n<style>\n.sor-accordion{font-family:inherit;max-width:100%;}\n.sor-acc-item{\n  border-bottom:1px solid #E4E1DA;\n  padding:14px 0;\n}\n.sor-acc-item:first-child{border-top:1px solid #E4E1DA;}\n.sor-acc-item summary{\n  display:flex;\n  align-items:center;\n  gap:10px;\n  cursor:pointer;\n  list-style:none;\n}\n.sor-acc-item summary::-webkit-details-marker{display:none;}\n.sor-acc-icon{\n  display:flex;\n  flex-shrink:0;\n  color:#1a1a1a;\n}\n.sor-acc-title{\n  flex:1;\n  font-weight:700;\n  font-size:15px;\n  color:#1a1a1a;\n}\n.sor-acc-noicon .sor-acc-title{font-size:15.5px;}\n.sor-acc-chevron{\n  flex-shrink:0;\n  color:#1a1a1a;\n  transition:transform 0.2s ease;\n}\n.sor-acc-item[open] .sor-acc-chevron{transform:rotate(180deg);}\n.sor-acc-body{\n  padding:12px 0 0 28px;\n}\n.sor-acc-noicon .sor-acc-body{padding-left:0;}\n.sor-acc-body p{\n  font-size:13.5px;\n  line-height:1.55;\n  color:#3a3a3a;\n  margin:0 0 10px;\n}\n.sor-acc-ingredients p{margin-bottom:14px;}\n.sor-acc-ingredients strong{color:#1a1a1a;font-size:14px;}\n\n@media (min-width:750px){\n  .sor-acc-title{font-size:17px;}\n  .sor-acc-body p{font-size:15px;}\n}\n</style>"
+          }
+        },
+        "liquid_kKxULM": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"sor-reviews\" id=\"sor-reviews\">\n  <div class=\"sor-review-slide active\" data-slide=\"0\">\n    <div class=\"sor-review-stars\">★★★★★</div>\n    <div class=\"sor-review-name\">Lucia, 41 jaar | Overgang</div>\n    <p class=\"sor-review-text\">\"Na 7 dagen knelde mijn ring 's ochtends niet meer en was mijn gezicht minder gezwollen. 's Avonds voelen mijn benen <strong>lichter</strong> aan, en ik hoef niet meer om de 10 minuten naar het toilet. Eindelijk voel ik me <strong>comfortabel in mijn kleding</strong>.\"</p>\n    <div class=\"sor-review-verified\">\n      <span class=\"sor-verified-check\">\n        <svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.5\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg>\n      </span>\n      Geverifieerde aankoop\n    </div>\n  </div>\n\n  <div class=\"sor-review-slide\" data-slide=\"1\">\n    <div class=\"sor-review-stars\">★★★★★</div>\n    <div class=\"sor-review-name\">Carla, 36 jaar | Zware benen</div>\n    <p class=\"sor-review-text\">\"Mijn enkels zijn <strong>de helft dunner</strong> geworden. Een echt verschil bij het wakker worden en vooral als ik thuiskom van werk: ik voel me <strong>minder opgezwollen</strong> en <strong>minder afgekneld</strong>.\"</p>\n    <div class=\"sor-review-verified\">\n      <span class=\"sor-verified-check\">\n        <svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.5\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg>\n      </span>\n      Geverifieerde aankoop\n    </div>\n  </div>\n\n  <div class=\"sor-review-slide\" data-slide=\"2\">\n    <div class=\"sor-review-stars\">★★★★★</div>\n    <div class=\"sor-review-name\">Marta, 48 jaar | Vocht vasthouden</div>\n    <p class=\"sor-review-text\">\"Ik ben in een paar weken <strong>meer dan 10 cm kwijtgeraakt</strong> rond mijn bovenbenen en billen. Voor een 100% natuurlijke oplossing zonder moeite had ik dit <strong>nooit verwacht</strong>.\"</p>\n    <div class=\"sor-review-verified\">\n      <span class=\"sor-verified-check\">\n        <svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.5\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg>\n      </span>\n      Geverifieerde aankoop\n    </div>\n  </div>\n\n  <div class=\"sor-review-dots\">\n    <button class=\"sor-dot active\" data-goto=\"0\" aria-label=\"Review 1\"></button>\n    <button class=\"sor-dot\" data-goto=\"1\" aria-label=\"Review 2\"></button>\n    <button class=\"sor-dot\" data-goto=\"2\" aria-label=\"Review 3\"></button>\n  </div>\n</div>\n\n<style>\n.sor-reviews{\n  font-family:inherit;\n  max-width:100%;\n  position:relative;\n  margin-top:24px;\n}\n.sor-review-slide{\n  display:none;\n  background:#F7F6F3;\n  border:1px solid #1a1a1a;\n  border-radius:14px;\n  padding:22px 18px;\n}\n.sor-review-slide.active{display:block;}\n.sor-review-stars{\n  color:#E8A93B;\n  font-size:16px;\n  letter-spacing:2px;\n  margin-bottom:10px;\n}\n.sor-review-name{\n  font-weight:700;\n  font-size:15px;\n  color:#1a1a1a;\n  margin-bottom:12px;\n}\n.sor-review-text{\n  font-size:14px;\n  line-height:1.55;\n  color:#1a1a1a;\n  margin:0 0 16px;\n}\n.sor-review-text strong{font-weight:700;}\n.sor-review-verified{\n  display:flex;\n  align-items:center;\n  gap:8px;\n  font-weight:700;\n  font-size:13.5px;\n  color:#5C8A5C;\n}\n.sor-verified-check{\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  width:20px;\n  height:20px;\n  border-radius:50%;\n  background:#5C8A5C;\n  flex-shrink:0;\n}\n.sor-review-dots{\n  display:flex;\n  justify-content:center;\n  gap:8px;\n  margin-top:16px;\n}\n.sor-dot{\n  width:8px;\n  height:8px;\n  border-radius:50%;\n  border:none;\n  background:#D9D5CE;\n  padding:0;\n  cursor:pointer;\n}\n.sor-dot.active{background:#1a1a1a;}\n\n@media (min-width:750px){\n  .sor-review-name{font-size:17px;}\n  .sor-review-text{font-size:16px;}\n}\n</style>\n\n<script>\n(function(){\n  var root = document.getElementById('sor-reviews');\n  if(!root) return;\n  var slides = root.querySelectorAll('.sor-review-slide');\n  var dots = root.querySelectorAll('.sor-dot');\n  dots.forEach(function(dot){\n    dot.addEventListener('click', function(){\n      var i = parseInt(dot.getAttribute('data-goto'), 10);\n      slides.forEach(function(s, idx){ s.classList.toggle('active', idx === i); });\n      dots.forEach(function(d, idx){ d.classList.toggle('active', idx === i); });\n    });\n  });\n})();\n</script>"
+          }
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "badges",
-        "price",
-        "rating",
-        "payment_terms",
-        "separator",
-        "description",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons"
+        "liquid_qnD7FL",
+        "liquid_wtLPiB",
+        "buy_buttons",
+        "liquid_yhCXPz",
+        "liquid_kKxULM"
       ],
-      "settings": {}
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "custom_liquid_gXtP7b": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<p style=\"text-align: center\">Write or copy/paste Liquid code</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_gXtP7b"
   ]
 }
