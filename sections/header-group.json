@@ -17,28 +17,28 @@
         "message_4JWk4f": {
           "type": "message",
           "settings": {
-            "text": "FREE DELIVERY ON ALL ORDERS",
+            "text": "GRATIS VERZENDING OP ALLE BESTELLINGEN",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "4,300+ HAPPY WOMEN",
+            "text": "+12.000 TEVREDEN KLANTEN",
             "url": ""
           }
         },
         "message_4MYheV": {
           "type": "message",
           "settings": {
-            "text": "60-DAY MONEY-BACK GUARANTEE",
+            "text": "60 DAGEN GELD-TERUG-GARANTIE",
             "url": ""
           }
         },
         "message_Q8tTkh": {
           "type": "message",
           "settings": {
-            "text": "BUY 2, GET 1 FREE",
+            "text": "2 KOPEN, 1 GRATIS",
             "url": ""
           }
         }
@@ -56,7 +56,7 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#4C7032",
+        "background": "#497967",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
