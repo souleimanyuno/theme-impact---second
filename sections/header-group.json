@@ -17,28 +17,28 @@
         "message_4JWk4f": {
           "type": "message",
           "settings": {
-            "text": "GRATIS VERZENDING OP ALLE BESTELLINGEN",
+            "text": "FREE SHIPPING ON ALL ORDERS",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "+12.000 TEVREDEN KLANTEN",
+            "text": "8,000+ HAPPY CUSTOMERS",
             "url": ""
           }
         },
         "message_4MYheV": {
           "type": "message",
           "settings": {
-            "text": "60 DAGEN GELD-TERUG-GARANTIE",
+            "text": "30-DAY MONEY-BACK GUARANTEE",
             "url": ""
           }
         },
         "message_Q8tTkh": {
           "type": "message",
           "settings": {
-            "text": "2 KOPEN, 1 GRATIS",
+            "text": "BUY 1, GET 1 FREE",
             "url": ""
           }
         }
@@ -56,7 +56,7 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#1565C0",
+        "background": "#1565c0",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
