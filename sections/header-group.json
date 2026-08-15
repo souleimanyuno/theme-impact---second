@@ -17,28 +17,28 @@
         "message_4JWk4f": {
           "type": "message",
           "settings": {
-            "text": "FREE SHIPPING ON ALL ORDERS",
+            "text": "LIVRAISON OFFERTE AUJOURD’HUI",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "8,000+ HAPPY CUSTOMERS",
+            "text": "JUSQU’À -50 % DE RÉDUCTION",
             "url": ""
           }
         },
         "message_4MYheV": {
           "type": "message",
           "settings": {
-            "text": "30-DAY MONEY-BACK GUARANTEE",
+            "text": "GARANTIE SATISFAIT OU REMBOURSÉ PENDANT 60 JOURS",
             "url": ""
           }
         },
         "message_Q8tTkh": {
           "type": "message",
           "settings": {
-            "text": "BUY 1, GET 1 FREE",
+            "text": "DE 8 000 FEMMES SATISFAITES",
             "url": ""
           }
         }
@@ -56,7 +56,7 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#FDF8F6",
+        "background": "#fdf8f6",
         "background_gradient": "",
         "text_color": "#000000"
       }
