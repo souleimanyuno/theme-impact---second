@@ -24,7 +24,7 @@
         "message": {
           "type": "message",
           "settings": {
-            "text": "JUSQU’À -50 % DE RÉDUCTION",
+            "text": "JUSQU’À -60 % DE RÉDUCTION",
             "url": ""
           }
         },
@@ -38,7 +38,7 @@
         "message_Q8tTkh": {
           "type": "message",
           "settings": {
-            "text": "DE 8 000 FEMMES SATISFAITES",
+            "text": "DE 12 000 FEMMES SATISFAITES",
             "url": ""
           }
         }
@@ -56,7 +56,7 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#fdf8f6",
+        "background": "#E4EFEE",
         "background_gradient": "",
         "text_color": "#000000"
       }
