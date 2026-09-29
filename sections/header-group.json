@@ -17,28 +17,28 @@
         "message_4JWk4f": {
           "type": "message",
           "settings": {
-            "text": "LIVRAISON OFFERTE AUJOURD’HUI",
+            "text": "ENVÍO GRATIS HOY",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "JUSQU’À -60 % DE RÉDUCTION",
+            "text": "HASTA -60 % DE DESCUENTO",
             "url": ""
           }
         },
         "message_4MYheV": {
           "type": "message",
           "settings": {
-            "text": "GARANTIE SATISFAIT OU REMBOURSÉ PENDANT 60 JOURS",
+            "text": "GARANTÍA DE SATISFACCIÓN O REEMBOLSO DE 99 DÍAS",
             "url": ""
           }
         },
         "message_Q8tTkh": {
           "type": "message",
           "settings": {
-            "text": "DE 12 000 FEMMES SATISFAITES",
+            "text": "MÁS DE 12.000 MUJERES SATISFECHAS",
             "url": ""
           }
         }
