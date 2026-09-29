@@ -95,7 +95,7 @@
           "settings": {
             "image_width": 50,
             "heading_size": "h5",
-            "title": "Inscrivez-vous pour recevoir nos conseils bien-être et nos offres exclusives.",
+            "title": "Suscríbete para recibir nuestros consejos de bienestar y ofertas exclusivas.",
             "content": ""
           }
         },
@@ -111,7 +111,7 @@
           "type": "text",
           "settings": {
             "title": "Besoin d'aide ?",
-            "content": "<p><strong>Contactez-nous via le formulaire disponible sur notre page de contact ou par e-mail à </strong><a>contact@sorelya.com</a><a href=\"mailto:contact@sorelya.com\"><br/><br/></a><strong>Horaires d’ouverture : </strong>du lundi au samedi, de 9 h à 13 h et de 14 h à 20 h / le dimanche, de 10 h à 12 h.</p>",
+            "content": "<p><strong>¿Necesitas ayuda?</strong></p><p>Ponte en contacto con nosotros a través del formulario disponible en nuestra página de contacto o por correo electrónico a<br/><strong>support@sorelya.com</strong></p><p><strong>Horario de atención:</strong> de lunes a sábado, de 9:00 a 13:00 y de 14:00 a 20:00 / los domingos, de 10:00 a 12:00.</p>",
             "enable_follow_on_shop": false
           }
         }
