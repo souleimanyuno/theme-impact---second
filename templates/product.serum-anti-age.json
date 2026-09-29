@@ -41,6 +41,14 @@
             "payment_button_text_color": ""
           }
         },
+        "image_AMqqct": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Capture_d_ecran_le_2026-06-26_a_14.45.12.png",
+            "alignment": "center",
+            "max_width": 280
+          }
+        },
         "sor_b04": {
           "type": "liquid",
           "settings": {
@@ -59,6 +67,7 @@
         "title",
         "sor_b02",
         "buy_buttons",
+        "image_AMqqct",
         "sor_b04",
         "sor_b05"
       ],
