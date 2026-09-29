@@ -27,7 +27,7 @@
         "image_CHGkji": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_21_sept._2026_06_59_34.png",
+            "image": "shopify://shop_images/G13.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -119,7 +119,7 @@
         "full_width": true,
         "stack_mobile": false,
         "title": "",
-        "content": "<h3><strong>COMME VU DANS LES PLUS GRANDS MAGAZINES </strong></h3>",
+        "content": "<h3>COMO SE HA VISTO EN LAS REVISTAS MÁS IMPORTANTES</h3>",
         "text_alignment": "center",
         "items_per_row": 5,
         "background": "",
