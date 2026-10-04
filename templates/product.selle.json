@@ -25,6 +25,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "kaching_bundles_app_block_WGiNLU": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
+          }
+        },
         "title": {
           "type": "title",
           "disabled": true,
@@ -38,17 +45,6 @@
             "liquid": "<style>\n      /* ============================================================\n         BLOC CONVERSION — au-dessus du bouton d'ajout au panier\n\n         Largeurs vérifiées au pixel sur Poppins :\n         chaque argument tient sur UNE ligne jusqu'à un écran de\n         360 px. La ligne de preuve sociale tient sur DEUX lignes.\n         La ligne de note tient sur UNE ligne dès 320 px.\n         Lisibilité : rien sous 13 px, arguments à 14,5 px.\n         ============================================================ */\n\n      .sorelya-conversion-block {\n        width: 100%;\n        margin: 12px 0 10px;\n        font-family: Poppins, Arial, sans-serif;\n        color: #111111;\n      }\n\n      .sorelya-conversion-block *,\n      .sorelya-conversion-block *::before,\n      .sorelya-conversion-block *::after {\n        box-sizing: border-box;\n      }\n\n      /* ===== PREUVE SOCIALE ===== */\n      .sorelya-social-proof {\n        display: flex;\n        align-items: center;\n        gap: 11px;\n        margin-bottom: 12px;\n      }\n\n      .sorelya-cyclists-image-wrap {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        flex: 0 0 auto;\n        width: 86px;\n        min-width: 86px;\n      }\n\n      .sorelya-cyclists-image {\n        display: block;\n        width: 86px;\n        height: auto;\n        max-width: 100%;\n        object-fit: contain;\n      }\n\n      .sorelya-social-text {\n        flex: 1;\n        min-width: 0;\n        margin: 0;\n        color: #292929;\n        font-size: 14px;\n        line-height: 1.42;\n        font-weight: 500;\n      }\n\n      .sorelya-social-text strong {\n        color: #111111;\n        font-weight: 700;\n      }\n\n      /* ===== BADGE ===== */\n      .sorelya-best-badge-wrap {\n        display: flex;\n        justify-content: center;\n        margin: 0 0 12px;\n      }\n\n      .sorelya-best-badge {\n        display: inline-flex;\n        align-items: center;\n        justify-content: center;\n        gap: 8px;\n        max-width: 100%;\n        padding: 8px 14px;\n        background: #f3f3f3;\n        border: 1px solid #e9e9e9;\n        border-radius: 999px;\n        color: #111111;\n        font-size: 11.5px;\n        line-height: 1;\n        font-weight: 700;\n        text-align: center;\n        text-transform: uppercase;\n        white-space: nowrap;\n      }\n\n      .sorelya-de-flag {\n        display: inline-flex;\n        flex-direction: column;\n        flex: 0 0 22px;\n        width: 22px;\n        height: 15px;\n        overflow: hidden;\n        border: 1px solid rgba(0,0,0,.08);\n        border-radius: 2px;\n      }\n\n      .sorelya-de-flag span { flex: 1; width: 100%; }\n      .sorelya-de-flag span:nth-child(1) { background:#000000; }\n      .sorelya-de-flag span:nth-child(2) { background:#DD0000; }\n      .sorelya-de-flag span:nth-child(3) { background:#FFCE00; }\n\n      /* ===== NOTE CLIENTS =====\n         Tout tient sur UNE ligne : nowrap sur la rangée et tailles\n         en clamp() pour que l'ensemble se réduise avec l'écran\n         au lieu de passer à la ligne. */\n      .sorelya-rating-row {\n        display: flex;\n        align-items: center;\n        align-content: center;\n        justify-content: center;\n        flex-wrap: nowrap;\n        gap: 7px;\n        margin-bottom: 14px;\n        width: 100%;\n        min-width: 0;\n        white-space: nowrap;\n        line-height: 1;\n      }\n\n      .sorelya-rating-group {\n        display: inline-flex;\n        align-items: center;\n        gap: 6px;\n        flex: 0 0 auto;\n        white-space: nowrap;\n        line-height: 1;\n      }\n\n      .sorelya-rating-excellent {\n        display: inline-flex;\n        align-items: center;\n        height: clamp(15px, 4.6vw, 20px);\n        color: #111111;\n        font-size: clamp(12.5px, 3.85vw, 16px);\n        line-height: 1;\n        font-weight: 700;\n      }\n\n      .sorelya-rating-stars {\n        display: inline-flex;\n        align-items: center;\n        gap: 3px;\n        flex: 0 0 auto;\n        line-height: 0;\n      }\n\n      .sorelya-rating-star {\n        display: inline-flex;\n        align-items: center;\n        justify-content: center;\n        flex: 0 0 auto;\n        width: clamp(15px, 4.6vw, 20px);\n        height: clamp(15px, 4.6vw, 20px);\n        background: #00b67a;\n      }\n\n      .sorelya-rating-star svg {\n        display: block;\n        width: 62%;\n        height: 62%;\n        fill: #ffffff;\n      }\n\n      .sorelya-rating-text {\n        display: inline-flex;\n        align-items: center;\n        height: clamp(15px, 4.6vw, 20px);\n        color: #111111;\n        font-size: clamp(11.5px, 3.55vw, 14.5px);\n        line-height: 1;\n        font-weight: 500;\n        white-space: nowrap;\n        flex: 0 0 auto;\n      }\n\n      .sorelya-rating-text strong {\n        color: #111111;\n        font-weight: 700;\n      }\n\n      /* espace franc entre la note et le nombre d'avis */\n      .sorelya-rating-sub {\n        margin-left: 5px;\n      }\n\n      /* ===== ARGUMENTS ===== */\n      .sorelya-benefits-grid {\n        display: flex;\n        flex-direction: column;\n        gap: 11px;\n        width: 100%;\n      }\n\n      .sorelya-benefit-item {\n        display: flex;\n        align-items: center;\n        gap: 9px;\n        width: 100%;\n      }\n\n      .sorelya-benefit-check {\n        display: inline-flex;\n        align-items: center;\n        justify-content: center;\n        flex: 0 0 21px;\n        width: 21px;\n        height: 21px;\n        background: #08aaa3;\n        border-radius: 50%;\n      }\n\n      .sorelya-benefit-check svg {\n        display: block;\n        width: 11px;\n        height: 11px;\n        fill: none;\n        stroke: #ffffff;\n        stroke-width: 3.2;\n        stroke-linecap: round;\n        stroke-linejoin: round;\n      }\n\n      .sorelya-benefit-flag {\n        display: inline-flex;\n        flex-direction: column;\n        flex: 0 0 21px;\n        width: 21px;\n        height: 21px;\n        overflow: hidden;\n        border: 1px solid rgba(0,0,0,.1);\n        border-radius: 50%;\n      }\n\n      .sorelya-benefit-flag span { flex: 1; width: 100%; }\n      .sorelya-benefit-flag span:nth-child(1) { background:#000000; }\n      .sorelya-benefit-flag span:nth-child(2) { background:#DD0000; }\n      .sorelya-benefit-flag span:nth-child(3) { background:#FFCE00; }\n\n      .sorelya-benefit-item p {\n        flex: 1;\n        min-width: 0;\n        margin: 0;\n        color: #111111;\n        font-size: 15px;\n        line-height: 1.34;\n        font-weight: 600;\n        letter-spacing: -0.1px;\n        text-align: left;\n      }\n\n      .sorelya-benefit-item strong { font-weight: 700; }\n\n      /* ===== MOBILE ===== */\n      @media screen and (max-width:749px) {\n\n        .sorelya-conversion-block { margin: 9px 0 7px; }\n\n        .sorelya-social-proof { gap: 10px; margin-bottom: 11px; }\n\n        .sorelya-cyclists-image-wrap { width: 76px; min-width: 76px; }\n        .sorelya-cyclists-image { width: 76px; }\n\n        .sorelya-social-text { font-size: 13.5px; }\n\n        .sorelya-best-badge-wrap { margin-bottom: 11px; }\n\n        .sorelya-best-badge {\n          gap: 7px;\n          padding: 8px 12px;\n          font-size: 11px;\n        }\n\n        .sorelya-de-flag { flex-basis: 20px; width: 20px; height: 14px; }\n\n        /* La rangée de note garde ses clamp() : aucune taille fixe\n           ici, sinon elle repasserait sur deux lignes. */\n        .sorelya-rating-row { gap: 6px; margin-bottom: 13px; }\n        .sorelya-rating-group { gap: 5px; }\n\n        .sorelya-benefits-grid { gap: 10px; }\n        .sorelya-benefit-item { gap: 8px; }\n\n        .sorelya-benefit-check,\n        .sorelya-benefit-flag {\n          flex: 0 0 19px;\n          width: 19px;\n          height: 19px;\n        }\n\n        .sorelya-benefit-check svg { width: 10px; height: 10px; }\n\n        .sorelya-benefit-item p {\n          font-size: 14.5px;\n          line-height: 1.32;\n        }\n\n        .sorelya-protection-card {\n          margin-top: 13px;\n          padding: 11px 7px;\n          border-radius: 12px;\n        }\n\n        .sorelya-protection-label {\n          gap: 6px;\n          margin-bottom: 9px;\n          font-size: 10px;\n          letter-spacing: 1.05px;\n        }\n\n        .sorelya-protection-label::before,\n        .sorelya-protection-label::after { width: 17px; }\n\n\n        .sorelya-protection-item { justify-content: flex-start; }\n\n        .sorelya-protection-separator {\n          width: 100%;\n          height: 1px;\n          background: linear-gradient(\n            90deg,\n            transparent 0%,\n            rgba(5,46,87,.2) 20%,\n            rgba(5,46,87,.2) 80%,\n            transparent 100%\n          );\n        }\n      }\n    </style>\n\n\n    <div class=\"sorelya-conversion-block\">\n\n      <!-- PREUVE SOCIALE -->\n      <div class=\"sorelya-social-proof\">\n\n        <div class=\"sorelya-cyclists-image-wrap\">\n          <img\n            class=\"sorelya-cyclists-image\"\n            src=\"{{ 'sorelya_3_radfahrer.png' | asset_url }}\"\n            alt=\"Cyclistes satisfaits Sorelya\"\n            width=\"192\" height=\"70\"\n            loading=\"lazy\"\n          >\n        </div>\n\n        <p class=\"sorelya-social-text\">\n          <strong>Wie Bernhard und Michael</strong> fahren 80.000 Radfahrer ohne Schmerzen.\n        </p>\n\n      </div>\n\n\n      <!-- BADGE -->\n      <div class=\"sorelya-best-badge-wrap\">\n        <div class=\"sorelya-best-badge\">\n          <span class=\"sorelya-de-flag\" aria-label=\"Deutschland\">\n            <span></span><span></span><span></span>\n          </span>\n          <span>Der deutsche Sattel gegen Schmerzen</span>\n        </div>\n      </div>\n\n\n      <!-- NOTE CLIENTS -->\n      <div class=\"sorelya-rating-row\">\n\n        <span class=\"sorelya-rating-group\">\n          <span class=\"sorelya-rating-excellent\">Hervorragend</span>\n\n          <span class=\"sorelya-rating-stars\" aria-label=\"Note de 4,8 sur 5\">\n            <span class=\"sorelya-rating-star\">\n              <svg viewBox=\"0 0 24 24\"><path d=\"M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7z\"/></svg>\n            </span>\n            <span class=\"sorelya-rating-star\">\n              <svg viewBox=\"0 0 24 24\"><path d=\"M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7z\"/></svg>\n            </span>\n            <span class=\"sorelya-rating-star\">\n              <svg viewBox=\"0 0 24 24\"><path d=\"M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7z\"/></svg>\n            </span>\n            <span class=\"sorelya-rating-star\">\n              <svg viewBox=\"0 0 24 24\"><path d=\"M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7z\"/></svg>\n            </span>\n            <span class=\"sorelya-rating-star\">\n              <svg viewBox=\"0 0 24 24\"><path d=\"M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7z\"/></svg>\n            </span>\n          </span>\n        </span>\n\n        <span class=\"sorelya-rating-text\">\n          <strong>4,8/5</strong><span class=\"sorelya-rating-sub\">bei 4.218 Bewertungen</span>\n        </span>\n\n      </div>\n\n\n      <!-- ARGUMENTS PRODUIT -->\n      <div class=\"sorelya-benefits-grid\">\n\n        <div class=\"sorelya-benefit-item\">\n          <span class=\"sorelya-benefit-check\" aria-hidden=\"true\">\n            <svg viewBox=\"0 0 24 24\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"></path></svg>\n          </span>\n          <p><strong>Keine Schmerzen mehr</strong> im Gesäß und am Steißbein</p>\n        </div>\n\n        <div class=\"sorelya-benefit-item\">\n          <span class=\"sorelya-benefit-check\" aria-hidden=\"true\">\n            <svg viewBox=\"0 0 24 24\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"></path></svg>\n          </span>\n          <p>Ein <strong>Entlastungskanal</strong>, der den Druck nimmt</p>\n        </div>\n\n        <div class=\"sorelya-benefit-item\">\n          <span class=\"sorelya-benefit-check\" aria-hidden=\"true\">\n            <svg viewBox=\"0 0 24 24\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"></path></svg>\n          </span>\n          <p><strong>Derselbe Komfort</strong> auf jedem Fahrrad</p>\n        </div>\n\n        <div class=\"sorelya-benefit-item\">\n          <span class=\"sorelya-benefit-check\" aria-hidden=\"true\">\n            <svg viewBox=\"0 0 24 24\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"></path></svg>\n          </span>\n          <p><strong>Fest und stabil</strong>, ohne „Sofasattel“-Effekt</p>\n        </div>\n\n        <div class=\"sorelya-benefit-item\">\n          <span class=\"sorelya-benefit-check\" aria-hidden=\"true\">\n            <svg viewBox=\"0 0 24 24\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"></path></svg>\n          </span>\n          <p><strong>In 2 Minuten montiert</strong></p>\n        </div>\n\n        <div class=\"sorelya-benefit-item\">\n          <span class=\"sorelya-benefit-flag\" aria-label=\"Deutsche Flagge\">\n            <span></span><span></span><span></span>\n          </span>\n          <p><strong>Hergestellt in Deutschland</strong>, in unserer eigenen Fertigung</p>\n        </div>\n\n      </div>\n\n\n    </div>\n  </div>\n</div>\n<div class=\"mvxg\">\n  <div class=\"srx-guar\">\n    <span class=\"srx-guar__ico\" aria-hidden=\"true\">&#8634;</span>\n    <span class=\"srx-guar__txt\">\n      <strong>30 Tage risikofrei testen</strong><span>Nicht überzeugt? 100 % Geld zurück.</span></span>\n  </div>\n</div>"
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": false,
-            "atc_button_background": "#0e2a5c",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
         "liquid_timer": {
           "type": "liquid",
           "settings": {
@@ -59,6 +55,17 @@
           "type": "liquid",
           "settings": {
             "liquid": "<style>\n  .tnx-v2-countdown {\n    display: grid;\n    grid-template-columns: minmax(58px, auto) auto minmax(58px, auto) auto minmax(58px, auto) auto minmax(58px, auto);\n    column-gap: 14px;\n    row-gap: 8px;\n    justify-items: center;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    margin: 16px 0;\n    background: transparent;\n    font-family: inherit;\n  }\n  .tnx-v2-countdown-number {\n    grid-row: 1;\n    font-size: 46px;\n    font-weight: 700;\n    line-height: 1;\n    letter-spacing: 3px;\n    color: #111111;\n  }\n  .tnx-v2-countdown-separator {\n    grid-row: 1;\n    font-size: 42px;\n    font-weight: 700;\n    line-height: 1;\n    color: #111111;\n  }\n  .tnx-v2-countdown-label {\n    grid-row: 2;\n    font-size: 14px;\n    font-weight: 600;\n    letter-spacing: 1.6px;\n    color: #6b7280;\n    text-transform: uppercase;\n  }\n  .tnx-v2-countdown .d1 { grid-column: 1; }\n  .tnx-v2-countdown .s1 { grid-column: 2; }\n  .tnx-v2-countdown .d2 { grid-column: 3; }\n  .tnx-v2-countdown .s2 { grid-column: 4; }\n  .tnx-v2-countdown .d3 { grid-column: 5; }\n  .tnx-v2-countdown .s3 { grid-column: 6; }\n  .tnx-v2-countdown .d4 { grid-column: 7; }\n  .tnx-v2-countdown .l1 { grid-column: 1; }\n  .tnx-v2-countdown .l2 { grid-column: 3; }\n  .tnx-v2-countdown .l3 { grid-column: 5; }\n  .tnx-v2-countdown .l4 { grid-column: 7; }\n  @media (max-width: 480px) {\n    .tnx-v2-countdown {\n      column-gap: 10px;\n      row-gap: 6px;\n    }\n    .tnx-v2-countdown-number {\n      font-size: 36px;\n      letter-spacing: 2px;\n    }\n    .tnx-v2-countdown-separator {\n      font-size: 34px;\n    }\n    .tnx-v2-countdown-label {\n      font-size: 12px;\n      letter-spacing: 1.1px;\n    }\n  }\n</style>\n<script>\n  (function() {\n    const daysEl = document.getElementById('tnx-v2-days');\n    const hoursEl = document.getElementById('tnx-v2-hours');\n    const minutesEl = document.getElementById('tnx-v2-minutes');\n    const secondsEl = document.getElementById('tnx-v2-seconds');\n    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;\n    const TIMER_DURATION = 25 * 60 * 1000;\n    const STORAGE_KEY = 'bf_countdown_timer_end_time_fr';\n    function pad(num) {\n      return String(num).padStart(2, '0');\n    }\n    function getSavedEndTime() {\n      const now = Date.now();\n      let savedEndTime = localStorage.getItem(STORAGE_KEY);\n      if (!savedEndTime || Number(savedEndTime) <= now) {\n        savedEndTime = now + TIMER_DURATION;\n        localStorage.setItem(STORAGE_KEY, savedEndTime);\n      }\n      return Number(savedEndTime);\n    }\n    let endTime = getSavedEndTime();\n    function updateTimer() {\n      const now = Date.now();\n      let remaining = Math.floor((endTime - now) / 1000);\n      if (remaining <= 0) {\n        endTime = Date.now() + TIMER_DURATION;\n        localStorage.setItem(STORAGE_KEY, endTime);\n        remaining = Math.floor((endTime - Date.now()) / 1000);\n      }\n      const days = Math.floor(remaining / 86400);\n      const hours = Math.floor((remaining % 86400) / 3600);\n      const minutes = Math.floor((remaining % 3600) / 60);\n      const seconds = remaining % 60;\n      daysEl.textContent = pad(days);\n      hoursEl.textContent = pad(hours);\n      minutesEl.textContent = pad(minutes);\n      secondsEl.textContent = pad(seconds);\n    }\n    updateTimer();\n    setInterval(updateTimer, 1000);\n  })();\n</script>\n<div style=\"\n  position:relative;\n  top:4px;\n  margin-bottom:-11px;\n  z-index:3;\n  display:flex;\n  justify-content:center;\n  align-items:center;\n  gap:5px;\n  width:100%;\n  flex-wrap:nowrap;\n  white-space:nowrap;\n\">\n\n  <!-- 30 T. Geld-zurück-Garantie -->\n  <div style=\"\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    min-height:20px;\n    background:#e0ffd8;\n    color:#004d00;\n    padding:2px 5px;\n    border-radius:3px;\n    font-size:9px;\n    line-height:1;\n    font-weight:700;\n    white-space:nowrap;\n    flex-shrink:1;\n  \">\n    <svg\n      viewBox=\"0 0 24 24\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      style=\"\n        width:11px;\n        height:11px;\n        margin-right:3px;\n        flex-shrink:0;\n      \"\n    >\n      <path\n        fill=\"#004d00\"\n        d=\"M12 2C9.24 2 7 4.24 7 7V10H5C3.9 10 3 10.9 3 12V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12C21 10.9 20.1 10 19 10H17V7C17 4.24 14.76 2 12 2M12 4C13.66 4 15 5.34 15 7V10H9V7C9 5.34 10.34 4 12 4M12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z\"\n      ></path>\n    </svg>\n\n    30 T. Geld-zurück-Garantie\n  </div>\n\n  <!-- Hergestellt in Deutschland -->\n  <div style=\"\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    min-height:20px;\n    background:#eef4fb;\n    color:#052e57;\n    padding:2px 5px;\n    border:1px solid rgba(5,46,87,0.12);\n    border-radius:3px;\n    font-size:9px;\n    line-height:1;\n    font-weight:700;\n    white-space:nowrap;\n    flex-shrink:1;\n  \">\n\n    <span\n      aria-label=\"Deutsche Flagge\"\n      style=\"\n        width:14px;\n        height:10px;\n        margin-right:3px;\n        display:flex;\n        flex-direction:column;\n        overflow:hidden;\n        border-radius:2px;\n        box-shadow:0 0 0 1px rgba(0,0,0,0.10);\n        flex-shrink:0;\n      \"\n    >\n      <span style=\"width:100%; height:33.33%; background:#000000;\"></span>\n      <span style=\"width:100%; height:33.33%; background:#DD0000;\"></span>\n      <span style=\"width:100%; height:33.34%; background:#FFCE00;\"></span>\n    </span>\n\n    Hergestellt in Deutschland\n  </div>\n\n</div>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#0e2a5c",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
           }
         },
         "liquid_objection": {
@@ -75,11 +82,12 @@
         }
       },
       "block_order": [
+        "kaching_bundles_app_block_WGiNLU",
         "title",
         "liquid_hero",
-        "buy_buttons",
         "liquid_timer",
         "liquid_badges",
+        "buy_buttons",
         "liquid_objection",
         "liquid_faq"
       ],
@@ -160,6 +168,68 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "slideshow_Tb3pGF": {
+      "type": "slideshow",
+      "blocks": {
+        "image_B8Lxaq": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "Tell your story",
+            "title": "Slide 1",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_zVVPci": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "Tell your story",
+            "title": "Slide 2",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_B8Lxaq",
+        "image_zVVPci"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#F2F2F2",
+        "background_gradient": ""
+      }
     }
   },
   "order": [
@@ -169,6 +239,7 @@
     "sorelya_pression",
     "sorelya_montage",
     "sorelya_garantie",
-    "sorelya_avis_douleur"
+    "sorelya_avis_douleur",
+    "slideshow_Tb3pGF"
   ]
 }
