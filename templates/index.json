@@ -27,7 +27,7 @@
         "image_CHGkji": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/G13.jpg",
+            "image": "shopify://shop_images/14_roland_original.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -49,7 +49,6 @@
       "block_order": [
         "image_CHGkji"
       ],
-      "disabled": true,
       "name": "Slideshow",
       "settings": {
         "full_width": true,
