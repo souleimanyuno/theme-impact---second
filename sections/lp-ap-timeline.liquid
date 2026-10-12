@@ -1,0 +1,340 @@
+{%- comment -%}
+  Clone verbatim - section source : {{ section.id }}
+  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
+  Chaque texte et chaque image sont exposes en setting : le rendu par
+  defaut est identique a la source, tout reste editable.
+{%- endcomment -%}
+
+<style>
+.section-{{ section.id }}-padding {
+    padding-top: calc(40px * 0.75);
+    padding-bottom: calc(52px  * 0.75);
+  }
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 52px;
+    }
+}
+</style>
+
+<style data-shopify>.section-{{ section.id }}-padding {
+    padding-top: calc(40px * 0.75);
+    padding-bottom: calc(52px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 52px;
+    }
+  }</style><div class="color-background-1 gradient content-for-grouping always-display">
+  
+  <div class="section-{{ section.id }}-padding">
+    <style>
+  /* Container und Allgemeine Settings */
+  .timeline-box {
+    background-color: #F4ECFA; /* Dein helllila Hintergrund (optional, falls gew\fc nscht) */
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    box-sizing: border-box;
+    /* Damit das Bild unten b\fc ndig abschlie\df t */
+    overflow: hidden; 
+    border-radius: 10px; /* Runde Ecken f\fc r die ganze Box */
+  }
+
+  /* Die Timeline Struktur */
+  .timeline-container {
+    position: relative;
+    padding-left: 80px;
+    /* WICHTIG: Padding unten wegnehmen, damit die Linie bis zum Bild geht */
+    padding-bottom: 0; 
+  }
+
+  /* Die durchgehende Linie (Hintergrund) */
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 28.5px;
+    top: 10px;
+    /* HIER GE\c4 NDERT: Linie viel l\e4 nger gemacht */
+    bottom: -100px; 
+    width: 3px;
+    background: #A855F7;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  /* Einzelnes Item */
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .timeline-item:last-child {
+    /* Letztes Item braucht weniger Abstand nach unten */
+    margin-bottom: 20px;
+  }
+
+  /* DER PUNKT */
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -62px; 
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 5px solid #A855F7;
+    z-index: 5;
+    box-sizing: border-box;
+    animation: glowing-pulse 2s infinite;
+  }
+
+  @keyframes glowing-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(168, 85, 247, 0.8); }
+    70% { box-shadow: 0 0 0 15px rgba(168, 85, 247, 0); }
+    100% { box-shadow: 0 0 0 0px rgba(168, 85, 247, 0); }
+  }
+
+  .timeline-badge {
+    display: inline-block;
+    background-color: #A855F7;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(168, 85, 247, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .timeline-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+    color: #000;
+  }
+
+  .timeline-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+  }
+
+  /* --- NEU: Das Bild Styling --- */
+  .timeline-footer-image {
+    /* Negative Margins ziehen das Bild \fc ber das Padding der Box */
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -35px; /* Zieht es ganz nach unten */
+    margin-top: 30px;
+    position: relative;
+    z-index: 2; /* Bild liegt \fc ber der Linie, falls sie zu lang ist */
+  }
+
+  .timeline-footer-image img {
+    width: 100%;
+    display: block;
+    /* Damit das Bild die runden Ecken der Box \fc bernimmt */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  /* Responsive Anpassungen */
+  @media (max-width: 600px) {
+    .timeline-container { padding-left: 60px; }
+    .timeline-container::before { left: 24px; width: 2px; }
+    .timeline-item::after { left: -45px; width: 20px; height: 20px; border-width: 4px; }
+    .timeline-badge { font-size: 13px; padding: 6px 14px; }
+    .timeline-title { font-size: 18px; }
+  }
+</style>
+
+<div class="timeline-box">
+  <div class="timeline-container">
+    
+    <div class="timeline-item">
+      <span class="timeline-badge">{{ section.settings.t01 }}</span>
+      <h3 class="timeline-title">{{ section.settings.t02 }}</h3>
+      <p class="timeline-desc">
+        {{ section.settings.t03 }}
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-badge">{{ section.settings.t04 }}</span>
+      <h3 class="timeline-title">{{ section.settings.t05 }}</h3>
+      <p class="timeline-desc">
+        {{ section.settings.t06 }}
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-badge">{{ section.settings.t07 }}</span>
+      <h3 class="timeline-title">{{ section.settings.t08 }}</h3>
+      <p class="timeline-desc">
+        {{ section.settings.t09 }}
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-badge">{{ section.settings.t10 }}</span>
+      <h3 class="timeline-title">{{ section.settings.t11 }}</h3>
+      <p class="timeline-desc">
+        {{ section.settings.t12 }}
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-badge">{{ section.settings.t13 }}</span>
+      <h3 class="timeline-title">{{ section.settings.t14 }}</h3>
+      <p class="timeline-desc">
+        {{ section.settings.t15 }}
+      </p>
+    </div>
+
+  </div>
+</div>
+  </div>
+</div>
+
+<style>
+/* css-applique : regles de la source */
+#shopify-section-{{ section.id }} { --color-base-text: 26, 26, 26; --color-base-background-1: 244, 236, 250; --gradient-base-background-1: #f4ecfa; --color-base-outline-button-labels: 181, 126, 220; --color-base-accent-1: 168, 85, 247; --color-base-solid-button-labels: 255, 255, 255; --color-background: 244, 236, 250; --color-foreground: 26, 26, 26; --spacing-sections-mobile: 0px; --spacing-sections-desktop: 0px; --gradient-background: #f4ecfa; }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-foreground: var(--color-base-text); --color-background: var(--color-base-background-1); --gradient-background: var(--gradient-base-background-1); --color-link: var(--color-base-outline-button-labels); --alpha-link: .85; --color-button: var(--color-base-accent-1); --color-button-text: var(--color-base-solid-button-labels); --alpha-button-background: 1; --alpha-button-border: 1; --color-badge-background: var(--color-background); --color-badge-border: var(--color-foreground); --alpha-badge-border: .1; --accent-color: var(--color-base-accent-1); --border-color: var(--color-foreground); }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-card-hover: var(--color-base-text); }
+#shopify-section-{{ section.id }} .src-section + .src-section, #shopify-section-{{ section.id }}:is(.src-section + .src-section) { margin-top: var(--spacing-sections-mobile); }
+#shopify-section-{{ section.id }} .color-accent-1, #shopify-section-{{ section.id }}:is(.color-accent-1), #shopify-section-{{ section.id }} .color-accent-2, #shopify-section-{{ section.id }}:is(.color-accent-2), #shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} .color-inverse, #shopify-section-{{ section.id }}:is(.color-inverse), #shopify-section-{{ section.id }} .color-custom, #shopify-section-{{ section.id }}:is(.color-custom), #shopify-section-{{ section.id }} body, #shopify-section-{{ section.id }}:is(body) { color: rgba(var(--color-foreground),.9); background-color: rgb(var(--color-background)); }
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background: var(--gradient-background); }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: calc(30px); padding-bottom: calc(39px); }
+#shopify-section-{{ section.id }} .timeline-box, #shopify-section-{{ section.id }}:is(.timeline-box) { background-color: rgb(244, 236, 250); padding: 30px 20px; max-width: 800px; margin: 0px auto; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(26, 26, 26); box-sizing: border-box; overflow: hidden; border-radius: 10px; }
+#shopify-section-{{ section.id }} .timeline-container, #shopify-section-{{ section.id }}:is(.timeline-container) { position: relative; padding-left: 80px; padding-bottom: 0px; }
+#shopify-section-{{ section.id }} .timeline-container::before { content: ""; position: absolute; left: 28.5px; top: 10px; bottom: -100px; width: 3px; background: rgb(168, 85, 247); opacity: 0.6; z-index: 1; }
+#shopify-section-{{ section.id }} .timeline-item, #shopify-section-{{ section.id }}:is(.timeline-item) { position: relative; margin-bottom: 50px; }
+#shopify-section-{{ section.id }} .timeline-item:last-child, #shopify-section-{{ section.id }}:is(.timeline-item:last-child) { margin-bottom: 20px; }
+#shopify-section-{{ section.id }} .timeline-item::after { content: ""; position: absolute; left: -62px; top: 2px; width: 24px; height: 24px; border-radius: 50%; background-color: rgb(255, 255, 255); border: 5px solid rgb(168, 85, 247); z-index: 5; box-sizing: border-box; animation: 2s ease 0s infinite normal none running glowing-pulse; }
+#shopify-section-{{ section.id }} .timeline-badge, #shopify-section-{{ section.id }}:is(.timeline-badge) { display: inline-block; background-color: rgb(168, 85, 247); color: rgb(255, 255, 255); font-size: 15px; font-weight: 900; padding: 8px 18px; border-radius: 50px; margin-bottom: 12px; box-shadow: rgba(168, 85, 247, 0.3) 0px 2px 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+#shopify-section-{{ section.id }} .timeline-title, #shopify-section-{{ section.id }}:is(.timeline-title) { font-size: 20px; font-weight: 800; margin: 0px 0px 10px; line-height: 1.3; color: rgb(0, 0, 0); }
+#shopify-section-{{ section.id }} .timeline-desc, #shopify-section-{{ section.id }}:is(.timeline-desc) { font-size: 16px; line-height: 1.6; color: rgb(51, 51, 51); margin: 0px; }
+@media screen and (min-width: 750px) {
+#shopify-section-{{ section.id }} .src-section + .src-section, #shopify-section-{{ section.id }}:is(.src-section + .src-section) { margin-top: var(--spacing-sections-desktop); }
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background-attachment: fixed; }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: 40px; padding-bottom: 52px; }
+}
+@media (max-width: 600px) {
+#shopify-section-{{ section.id }} .timeline-container, #shopify-section-{{ section.id }}:is(.timeline-container) { padding-left: 60px; }
+#shopify-section-{{ section.id }} .timeline-container::before { left: 24px; width: 2px; }
+#shopify-section-{{ section.id }} .timeline-item::after { left: -45px; width: 20px; height: 20px; border-width: 4px; }
+#shopify-section-{{ section.id }} .timeline-badge, #shopify-section-{{ section.id }}:is(.timeline-badge) { font-size: 13px; padding: 6px 14px; }
+#shopify-section-{{ section.id }} .timeline-title, #shopify-section-{{ section.id }}:is(.timeline-title) { font-size: 18px; }
+}
+</style>
+{% schema %}
+{
+  "name": "AP Timeline",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "Semaine 1",
+      "default": "Semaine 1"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "Peau et poils plus doux",
+      "default": "&#199;a pique moins"
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "Les premiers poils qui repoussent sont n",
+      "default": "Les premiers poils qui repoussent sont plus doux et piquent moins. Menthe poivr&#233;e et panth&#233;nol apaisent la peau d&#232;s le premier soir."
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "Semaine 2",
+      "default": "Semaine 2"
+    },
+    {
+      "type": "text",
+      "id": "t05",
+      "label": "Une repousse plus fine",
+      "default": "Une repousse plus fine"
+    },
+    {
+      "type": "text",
+      "id": "t06",
+      "label": "Les nouveaux poils repoussent visiblemen",
+      "default": "Les poils reviennent visiblement plus fins et plus clairs. Le rasoir et la pince sortent moins souvent."
+    },
+    {
+      "type": "text",
+      "id": "t07",
+      "label": "Mois 1",
+      "default": "Mois 1"
+    },
+    {
+      "type": "text",
+      "id": "t08",
+      "label": "Des poils presque invisibles",
+      "default": "Des poils presque invisibles"
+    },
+    {
+      "type": "text",
+      "id": "t09",
+      "label": "Les poils autrefois &#233;pais et fonc&#233;s sont",
+      "default": "Les poils &#233;pais et fonc&#233;s deviennent fins, on les voit &#224; peine. Beaucoup de zones restent lisses plusieurs jours."
+    },
+    {
+      "type": "text",
+      "id": "t10",
+      "label": "Mois 3",
+      "default": "Mois 3"
+    },
+    {
+      "type": "text",
+      "id": "t11",
+      "label": "Confiance totale",
+      "default": "Fini la peur de l&#8217;ombre"
+    },
+    {
+      "type": "text",
+      "id": "t12",
+      "label": "Sur les zones &#224; probl&#232;mes, il ne pousse ",
+      "default": "Sur les zones &#224; probl&#232;mes, il ne reste que quelques poils tr&#232;s fins. Plus d&#8217;ombre sur la l&#232;vre ni sur le menton."
+    },
+    {
+      "type": "text",
+      "id": "t13",
+      "label": "Mois 6",
+      "default": "Mois 6"
+    },
+    {
+      "type": "text",
+      "id": "t14",
+      "label": "Lib&#233;r&#233;e du rasoir",
+      "default": "Lib&#233;r&#233;e du rasoir"
+    },
+    {
+      "type": "text",
+      "id": "t15",
+      "label": "Les follicules sont fortement affaiblis.",
+      "default": "La racine re&#231;oit de moins en moins le signal de pousse. Une peau lisse pour de bon, avec un minimum d&#8217;effort."
+    }
+  ],
+  "class": "shopify-section src-section"
+}
+{% endschema %}

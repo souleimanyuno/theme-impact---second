@@ -1,0 +1,112 @@
+{%- comment -%}
+  Clone verbatim - section source : {{ section.id }}
+  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
+  Chaque texte et chaque image sont exposes en setting : le rendu par
+  defaut est identique a la source, tout reste editable.
+{%- endcomment -%}
+
+<style>
+.section-{{ section.id }}-padding {
+    padding-top: calc(12px * 0.75);
+    padding-bottom: calc(36px  * 0.75);
+  }
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+      padding-top: 12px;
+      padding-bottom: 36px;
+    }
+}
+</style>
+
+<style data-shopify>.section-{{ section.id }}-padding {
+    padding-top: calc(12px * 0.75);
+    padding-bottom: calc(36px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 12px;
+      padding-bottom: 36px;
+    }
+  }</style><div class="color-background-1 gradient content-for-grouping always-display">
+  
+  <div class="section-{{ section.id }}-padding">
+    <style>
+  .vcta{max-width:520px;margin:0 auto;text-align:center;padding:8px 4px}
+  .vcta__stars{margin:0 0 10px;font-size:13px;font-weight:600;color:#6B21A8;letter-spacing:.2px}
+  .vcta__stars span{color:#F4B400;letter-spacing:2px;margin-right:6px}
+  .vcta__title{margin:0 0 18px;font-family:var(--font-heading-family);font-weight:700;font-size:24px;line-height:1.25;color:#1a1a1a}
+  .vcta__btn{display:block;width:100%;max-width:380px;margin:0 auto;padding:17px 24px;border:0;border-radius:50px;background:#A855F7;color:#fff;font-family:var(--font-heading-family);font-size:17px;font-weight:700;letter-spacing:.3px;cursor:pointer;box-shadow:0 8px 22px rgba(168,85,247,.35);transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+  .vcta__btn:hover{background:#9333EA;transform:translateY(-1px);box-shadow:0 10px 26px rgba(147,51,234,.4)}
+  .vcta__btn:active{transform:translateY(0)}
+  .vcta__trust{margin:14px 0 0;font-size:13px;line-height:1.5;color:#5a5a5a}
+  @media (max-width:600px){.vcta__title{font-size:21px}.vcta__btn{font-size:16px;padding:16px 20px}}
+</style>
+<div class="vcta">
+  <p class="vcta__stars">{{ section.settings.t01 }}</p>
+  <p class="vcta__title">{{ section.settings.t02 }}</p>
+  <button type="button" class="vcta__btn" onclick="window.scrollTo({top:0,behavior:(window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth')})">{{ section.settings.t03 }}</button>
+  <p class="vcta__trust">{{ section.settings.t04 }}</p>
+</div>
+  </div>
+</div>
+
+<style>
+/* css-applique : regles de la source */
+#shopify-section-{{ section.id }} { --color-base-text: 26, 26, 26; --color-base-background-1: 244, 236, 250; --gradient-base-background-1: #f4ecfa; --color-base-outline-button-labels: 181, 126, 220; --color-base-accent-1: 168, 85, 247; --color-base-solid-button-labels: 255, 255, 255; --color-background: 244, 236, 250; --color-foreground: 26, 26, 26; --gradient-background: #f4ecfa; --font-heading-family: Poppins, sans-serif; }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-foreground: var(--color-base-text); --color-background: var(--color-base-background-1); --gradient-background: var(--gradient-base-background-1); --color-link: var(--color-base-outline-button-labels); --alpha-link: .85; --color-button: var(--color-base-accent-1); --color-button-text: var(--color-base-solid-button-labels); --alpha-button-background: 1; --alpha-button-border: 1; --color-badge-background: var(--color-background); --color-badge-border: var(--color-foreground); --alpha-badge-border: .1; --accent-color: var(--color-base-accent-1); --border-color: var(--color-foreground); }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-card-hover: var(--color-base-text); }
+#shopify-section-{{ section.id }} .color-accent-1, #shopify-section-{{ section.id }}:is(.color-accent-1), #shopify-section-{{ section.id }} .color-accent-2, #shopify-section-{{ section.id }}:is(.color-accent-2), #shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} .color-inverse, #shopify-section-{{ section.id }}:is(.color-inverse), #shopify-section-{{ section.id }} .color-custom, #shopify-section-{{ section.id }}:is(.color-custom), #shopify-section-{{ section.id }} body, #shopify-section-{{ section.id }}:is(body) { color: rgba(var(--color-foreground),.9); background-color: rgb(var(--color-background)); }
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background: var(--gradient-background); }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: calc(9px); padding-bottom: calc(27px); }
+#shopify-section-{{ section.id }} .vcta, #shopify-section-{{ section.id }}:is(.vcta) { max-width: 520px; margin: 0px auto; text-align: center; padding: 8px 4px; }
+#shopify-section-{{ section.id }} .vcta__stars, #shopify-section-{{ section.id }}:is(.vcta__stars) { margin: 0px 0px 10px; font-size: 13px; font-weight: 600; color: rgb(107, 33, 168); letter-spacing: 0.2px; }
+#shopify-section-{{ section.id }} .vcta__stars span, #shopify-section-{{ section.id }}:is(.vcta__stars span) { color: rgb(244, 180, 0); letter-spacing: 2px; margin-right: 6px; }
+#shopify-section-{{ section.id }} .vcta__title, #shopify-section-{{ section.id }}:is(.vcta__title) { margin: 0px 0px 18px; font-family: var(--font-heading-family); font-weight: 700; font-size: 24px; line-height: 1.25; color: rgb(26, 26, 26); }
+#shopify-section-{{ section.id }} .vcta__btn, #shopify-section-{{ section.id }}:is(.vcta__btn) { display: block; width: 100%; max-width: 380px; margin: 0px auto; padding: 17px 24px; border: 0px; border-radius: 50px; background: rgb(168, 85, 247); color: rgb(255, 255, 255); font-family: var(--font-heading-family); font-size: 17px; font-weight: 700; letter-spacing: 0.3px; cursor: pointer; box-shadow: rgba(168, 85, 247, 0.35) 0px 8px 22px; transition: transform 0.15s, box-shadow 0.15s, background 0.15s; }
+#shopify-section-{{ section.id }} .vcta__btn:hover, #shopify-section-{{ section.id }}:is(.vcta__btn:hover) { background: rgb(147, 51, 234); transform: translateY(-1px); box-shadow: rgba(147, 51, 234, 0.4) 0px 10px 26px; }
+#shopify-section-{{ section.id }} .vcta__btn:active, #shopify-section-{{ section.id }}:is(.vcta__btn:active) { transform: translateY(0px); }
+#shopify-section-{{ section.id }} .vcta__trust, #shopify-section-{{ section.id }}:is(.vcta__trust) { margin: 14px 0px 0px; font-size: 13px; line-height: 1.5; color: rgb(90, 90, 90); }
+@media screen and (min-width: 750px) {
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background-attachment: fixed; }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: 12px; padding-bottom: 36px; }
+}
+@media (max-width: 600px) {
+#shopify-section-{{ section.id }} .vcta__title, #shopify-section-{{ section.id }}:is(.vcta__title) { font-size: 21px; }
+#shopify-section-{{ section.id }} .vcta__btn, #shopify-section-{{ section.id }}:is(.vcta__btn) { font-size: 16px; padding: 16px 20px; }
+}
+</style>
+{% schema %}
+{
+  "name": "AP CTA final",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "4,7/5 &#183; 7 867 avis",
+      "default": "Formule v&#233;g&#233;tale &#183; sans hormones &#183; vegan"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "Reprends confiance en toi.",
+      "default": "Reprends confiance en toi."
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "Je veux mon Sorelya &#8594;",
+      "default": "Je commence ma cure &#8594;"
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "&#128737;&#65039; Satisfaite ou rembours&#233;e pendant 90 j",
+      "default": "&#128737;&#65039; Satisfaite ou rembours&#233;e pendant 90 jours &#183; Sans formulaire, sans discussion."
+    }
+  ],
+  "class": "shopify-section src-section"
+}
+{% endschema %}

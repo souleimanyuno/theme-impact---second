@@ -1,0 +1,399 @@
+{%- comment -%}
+  Clone verbatim - section source : {{ section.id }}
+  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
+  Chaque texte et chaque image sont exposes en setting : le rendu par
+  defaut est identique a la source, tout reste editable.
+{%- endcomment -%}
+
+<style>
+.section-{{ section.id }}-padding {
+    padding-top: calc(40px * 0.75);
+    padding-bottom: calc(52px  * 0.75);
+  }
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 52px;
+    }
+}
+</style>
+
+<style data-shopify>.section-{{ section.id }}-padding {
+    padding-top: calc(40px * 0.75);
+    padding-bottom: calc(52px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 52px;
+    }
+  }</style><div class="color-background-1 gradient content-for-grouping always-display">
+  
+  <div class="section-{{ section.id }}-padding">
+    <style>
+  /* --- CSS STYLING --- */
+  .serum-comparison-widget {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #F4ECFA; 
+    padding: 0 20px; /* Nur seitliches Padding, oben/unten 0 */
+    border-radius: 10px;
+    max-width: 800px; 
+    margin: 0 auto; /* Zentriert ohne vertikalen Abstand */
+    text-align: center;
+  }
+
+  /* Header Bereich ohne Abstand nach oben */
+  .cw-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 0; /* Absolut kein Platz nach oben */
+    margin-bottom: 30px;
+    align-items: flex-start; 
+  }
+
+  .cw-product-box {
+    width: 48%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cw-image-frame {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+  }
+
+  .cw-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+  }
+
+  .cw-product-name {
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 12px 0; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+  }
+
+  .cw-select {
+    padding: 0 10px;
+    height: 46px; 
+    font-size: 13px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-align-last: center; 
+    -webkit-appearance: none; 
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    color: #111;
+  }
+
+  .cw-rows-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 0; /* Kein Platz nach unten */
+  }
+
+  .cw-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+  }
+
+  .cw-row:last-child {
+    margin-bottom: 0; /* Letzte Zeile schlie\df t b\fc ndig ab */
+  }
+
+  .cw-point {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cw-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .cw-icon.check {
+    background-color: #dcd0ff; 
+    color: #000;
+    border: 1px solid #bda0e3;
+  }
+
+  .cw-icon.cross {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+  }
+
+  .cw-text-bold {
+    font-weight: bold;
+    font-size: 14px; 
+    color: #000;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 600px) {
+    .serum-comparison-widget { padding: 0 10px; }
+    .cw-header { gap: 10px; }
+    .cw-text-bold { font-size: 12px; }
+    .cw-icon { width: 24px; height: 24px; font-size: 14px; }
+    .cw-select { 
+        font-size: 12px; 
+        padding: 0 25px 0 10px; 
+    }
+    .cw-product-box { width: 49%; }
+  }
+</style>
+
+<div class="serum-comparison-widget">
+  <div class="cw-header">
+      <div class="cw-product-box">
+          <div class="cw-image-frame">
+              <img src="{% if section.settings.img01 != blank %}{{ section.settings.img01 | image_url: width: 1400 }}{% else %}{{ 'ap-flacon.jpg' | asset_url }}{% endif %}" alt="Sorelya Serum" loading="lazy" decoding="async">
+          </div>
+          <div class="cw-product-name">{{ section.settings.t01 }}</div>
+      </div>
+
+      <div class="cw-product-box">
+          <div class="cw-image-frame">
+              <img id="cw-comp-img" src="" alt="Autre m&#233;thode">
+          </div>
+          <div style="width: 100%; display: flex; align-items: center; justify-content: center; height: 50px;">
+              <select id="cw-select" class="cw-select">
+                  <option value="shaving">{{ section.settings.t02 }}</option>
+                  <option value="cream">{{ section.settings.t03 }}</option>
+                  <option value="waxing">{{ section.settings.t04 }}</option>
+                  <option value="ipl">{{ section.settings.t05 }}</option>
+                  <option value="plucking">{{ section.settings.t06 }}</option>
+              </select>
+          </div>
+      </div>
+  </div>
+
+  <div id="cw-content" class="cw-rows-container"></div>
+</div>
+
+
+  </div>
+</div>
+
+<style>
+/* css-applique : regles de la source */
+#shopify-section-{{ section.id }} { --color-base-text: 26, 26, 26; --color-base-background-1: 244, 236, 250; --gradient-base-background-1: #f4ecfa; --color-base-outline-button-labels: 181, 126, 220; --color-base-accent-1: 168, 85, 247; --color-base-solid-button-labels: 255, 255, 255; --color-background: 244, 236, 250; --color-foreground: 26, 26, 26; --spacing-sections-mobile: 0px; --spacing-sections-desktop: 0px; --gradient-background: #f4ecfa; }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-foreground: var(--color-base-text); --color-background: var(--color-base-background-1); --gradient-background: var(--gradient-base-background-1); --color-link: var(--color-base-outline-button-labels); --alpha-link: .85; --color-button: var(--color-base-accent-1); --color-button-text: var(--color-base-solid-button-labels); --alpha-button-background: 1; --alpha-button-border: 1; --color-badge-background: var(--color-background); --color-badge-border: var(--color-foreground); --alpha-badge-border: .1; --accent-color: var(--color-base-accent-1); --border-color: var(--color-foreground); }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-card-hover: var(--color-base-text); }
+#shopify-section-{{ section.id }} .src-section + .src-section, #shopify-section-{{ section.id }}:is(.src-section + .src-section) { margin-top: var(--spacing-sections-mobile); }
+#shopify-section-{{ section.id }} .color-accent-1, #shopify-section-{{ section.id }}:is(.color-accent-1), #shopify-section-{{ section.id }} .color-accent-2, #shopify-section-{{ section.id }}:is(.color-accent-2), #shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} .color-inverse, #shopify-section-{{ section.id }}:is(.color-inverse), #shopify-section-{{ section.id }} .color-custom, #shopify-section-{{ section.id }}:is(.color-custom), #shopify-section-{{ section.id }} body, #shopify-section-{{ section.id }}:is(body) { color: rgba(var(--color-foreground),.9); background-color: rgb(var(--color-background)); }
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background: var(--gradient-background); }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: calc(30px); padding-bottom: calc(39px); }
+#shopify-section-{{ section.id }} .serum-comparison-widget, #shopify-section-{{ section.id }}:is(.serum-comparison-widget) { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: rgb(244, 236, 250); padding: 0px 20px; border-radius: 10px; max-width: 800px; margin: 0px auto; text-align: center; }
+#shopify-section-{{ section.id }} .cw-header, #shopify-section-{{ section.id }}:is(.cw-header) { display: flex; justify-content: center; gap: 20px; padding-top: 0px; margin-bottom: 30px; align-items: flex-start; }
+#shopify-section-{{ section.id }} .cw-product-box, #shopify-section-{{ section.id }}:is(.cw-product-box) { width: 48%; display: flex; flex-direction: column; align-items: center; }
+#shopify-section-{{ section.id }} .cw-image-frame, #shopify-section-{{ section.id }}:is(.cw-image-frame) { width: 100%; aspect-ratio: 1 / 1; background-color: rgb(255, 255, 255); border: 2px solid rgb(0, 0, 0); border-radius: 12px; overflow: hidden; margin-bottom: 12px; display: flex; justify-content: center; align-items: center; padding: 10px; }
+#shopify-section-{{ section.id }} .cw-image-frame img, #shopify-section-{{ section.id }}:is(.cw-image-frame img) { width: 100%; height: 100%; object-fit: contain; display: block; }
+#shopify-section-{{ section.id }} .cw-product-name, #shopify-section-{{ section.id }}:is(.cw-product-name) { font-weight: 800; letter-spacing: 1px; text-transform: uppercase; font-size: 16px; padding: 12px 0px; height: 50px; display: flex; align-items: center; justify-content: center; color: rgb(17, 17, 17); }
+#shopify-section-{{ section.id }} .cw-select, #shopify-section-{{ section.id }}:is(.cw-select) { padding: 0px 10px; height: 46px; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; border: 2px solid rgb(0, 0, 0); border-radius: 50px; background-color: rgb(255, 255, 255); cursor: pointer; width: 100%; text-align: center; text-align-last: center; appearance: none; background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); background-repeat: no-repeat; background-position: right 10px center; background-size: 10px auto; color: rgb(17, 17, 17); }
+#shopify-section-{{ section.id }} .cw-rows-container, #shopify-section-{{ section.id }}:is(.cw-rows-container) { display: flex; flex-direction: column; gap: 15px; padding-bottom: 0px; }
+#shopify-section-{{ section.id }} .cw-row, #shopify-section-{{ section.id }}:is(.cw-row) { display: flex; justify-content: space-between; align-items: center; padding: 15px 10px; background-color: rgba(255, 255, 255, 0.7); border-radius: 8px; }
+#shopify-section-{{ section.id }} .cw-row:last-child, #shopify-section-{{ section.id }}:is(.cw-row:last-child) { margin-bottom: 0px; }
+#shopify-section-{{ section.id }} .cw-point, #shopify-section-{{ section.id }}:is(.cw-point) { width: 48%; display: flex; flex-direction: column; align-items: center; text-align: center; }
+#shopify-section-{{ section.id }} .cw-icon, #shopify-section-{{ section.id }}:is(.cw-icon) { width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 16px; margin-bottom: 8px; font-weight: bold; flex-shrink: 0; }
+#shopify-section-{{ section.id }} .cw-icon.check, #shopify-section-{{ section.id }}:is(.cw-icon.check) { background-color: rgb(220, 208, 255); color: rgb(0, 0, 0); border: 1px solid rgb(189, 160, 227); }
+#shopify-section-{{ section.id }} .cw-icon.cross, #shopify-section-{{ section.id }}:is(.cw-icon.cross) { background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); border: 1px solid rgb(221, 221, 221); }
+#shopify-section-{{ section.id }} .cw-text-bold, #shopify-section-{{ section.id }}:is(.cw-text-bold) { font-weight: bold; font-size: 14px; color: rgb(0, 0, 0); line-height: 1.3; }
+@media screen and (min-width: 750px) {
+#shopify-section-{{ section.id }} .src-section + .src-section, #shopify-section-{{ section.id }}:is(.src-section + .src-section) { margin-top: var(--spacing-sections-desktop); }
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background-attachment: fixed; }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: 40px; padding-bottom: 52px; }
+}
+@media (max-width: 600px) {
+#shopify-section-{{ section.id }} .serum-comparison-widget, #shopify-section-{{ section.id }}:is(.serum-comparison-widget) { padding: 0px 10px; }
+#shopify-section-{{ section.id }} .cw-header, #shopify-section-{{ section.id }}:is(.cw-header) { gap: 10px; }
+#shopify-section-{{ section.id }} .cw-text-bold, #shopify-section-{{ section.id }}:is(.cw-text-bold) { font-size: 12px; }
+#shopify-section-{{ section.id }} .cw-icon, #shopify-section-{{ section.id }}:is(.cw-icon) { width: 24px; height: 24px; font-size: 14px; }
+#shopify-section-{{ section.id }} .cw-select, #shopify-section-{{ section.id }}:is(.cw-select) { font-size: 12px; padding: 0px 25px 0px 10px; }
+#shopify-section-{{ section.id }} .cw-product-box, #shopify-section-{{ section.id }}:is(.cw-product-box) { width: 49%; }
+}
+</style>
+<script>
+  (function() {
+      const comparisonData = {
+          shaving: {
+              img: "{{ 'ap-cmp-rasoir.webp' | asset_url }}", 
+              rows: [
+                  { serum: "\u00c9vite les boutons de rasage", other: "Feu du rasoir et rougeurs" },
+                  { serum: "Stoppe la peau de fraise", other: "Favorise les pores noirs" },
+                  { serum: "Apaise la peau tout de suite", other: "Ass\u00e8che \u00e9norm\u00e9ment la peau" },
+                  { serum: "Rend les poils plus doux", other: "Repousse dure qui pique" }
+              ]
+          },
+          cream: {
+              img: "{{ 'ap-cmp-creme.webp' | asset_url }}", 
+              rows: [
+                  { serum: "Doux pour les peaux sensibles", other: "Souvent des br\u00fblures chimiques" },
+                  { serum: "Parfum agr\u00e9able", other: "Forte odeur chimique" },
+                  { serum: "Ingr\u00e9dients v\u00e9g\u00e9taux", other: "Produits chimiques agressifs" },
+                  { serum: "Moins de poils sur la dur\u00e9e", other: "Les poils repoussent vite" }
+              ]
+          },
+          waxing: {
+              img: "{{ 'ap-cmp-cire.webp' | asset_url }}", 
+              rows: [
+                  { serum: "Totalement indolore", other: "Extr\u00eamement douloureux" },
+                  { serum: "Pas de poils incarn\u00e9s", other: "Risque de poils incarn\u00e9s" },
+                  { serum: "Peau lisse et douce tout de suite", other: "Peau rouge et irrit\u00e9e pendant des jours" },
+                  { serum: "Calme les inflammations", other: "R\u00e9sidus collants et irritations" }
+              ]
+          },
+          ipl: {
+              img: "{{ 'ap-cmp-laser.webp' | asset_url }}", 
+              rows: [
+                  { serum: "Une fraction du prix", other: "Appareil / s\u00e9ances hors de prix" },
+                  { serum: "Pas besoin de lunettes de protection", other: "Danger pour les yeux (flash)" },
+                  { serum: "Pour tous les types de peau", other: "Pas pour toutes les peaux ni tous les poils" },
+                  { serum: "Appliqu\u00e9 en quelques secondes", other: "Des s\u00e9ances qui prennent du temps" }
+              ]
+          },
+          plucking: {
+              img: "{{ 'ap-cmp-pince.webp' | asset_url }}", 
+              rows: [
+                  { serum: "Agit sur de grandes zones", other: "P\u00e9nible, poil par poil" },
+                  { serum: "Les poils ne cassent pas", other: "Les poils cassent souvent \u00e0 la racine" },
+                  { serum: "Pr\u00e9vient les inflammations", other: "Points rouges enflamm\u00e9s apr\u00e8s la pince" },
+                  { serum: "Agr\u00e9able sur la peau", other: "\u00c7a tire et \u00e7a arrache" }
+              ]
+          }
+      };
+
+      const selectElem = document.getElementById('cw-select');
+      const imgElem = document.getElementById('cw-comp-img');
+      const contentElem = document.getElementById('cw-content');
+
+      function updateWidget() {
+          const key = selectElem.value;
+          const data = comparisonData[key];
+          
+          if(!data) return;
+
+          imgElem.src = data.img;
+
+          let html = "";
+          data.rows.forEach(row => {
+              html += `
+              <div class="cw-row">
+                  <div class="cw-point">
+                      <div class="cw-icon check">\u2713</div>
+                      <div class="cw-text-bold">${row.serum}</div>
+                  </div>
+                  <div class="cw-point">
+                      <div class="cw-icon cross">\u2715</div>
+                      <div class="cw-text-bold">${row.other}</div>
+                  </div>
+              </div>
+              `;
+          });
+          contentElem.innerHTML = html;
+      }
+
+      if(selectElem) {
+          selectElem.addEventListener('change', updateWidget);
+          updateWidget();
+      }
+  })();
+</script>
+{% schema %}
+{
+  "name": "AP Comparatif",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "SORELYA",
+      "default": "SORELYA"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "Rasoir",
+      "default": "Rasoir"
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "Cr&#232;me d&#233;pilatoire",
+      "default": "Cr&#232;me d&#233;pilatoire"
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "Cire",
+      "default": "Cire"
+    },
+    {
+      "type": "text",
+      "id": "t05",
+      "label": "IPL / Laser",
+      "default": "IPL / Laser"
+    },
+    {
+      "type": "text",
+      "id": "t06",
+      "label": "Pince / &#201;pilateur",
+      "default": "Pince / &#201;pilateur"
+    },
+    {
+      "type": "image_picker",
+      "id": "img01",
+      "label": "Image 1"
+    }
+  ],
+  "class": "shopify-section src-section"
+}
+{% endschema %}
