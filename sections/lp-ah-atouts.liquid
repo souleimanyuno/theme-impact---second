@@ -1,0 +1,259 @@
+{%- comment -%}
+  Clone verbatim - section source : {{ section.id }}
+  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
+  Chaque texte et chaque image sont exposes en setting : le rendu par
+  defaut est identique a la source, tout reste editable.
+{%- endcomment -%}
+
+<style>
+.section-{{ section.id }}-padding {
+    padding-top: calc(40px * 0.75);
+    padding-bottom: calc(52px  * 0.75);
+  }
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 52px;
+    }
+}
+</style>
+
+<style data-shopify>.section-{{ section.id }}-padding {
+    padding-top: calc(40px * 0.75);
+    padding-bottom: calc(52px  * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 40px;
+      padding-bottom: 52px;
+    }
+  }</style><div class="color-background-1 gradient content-for-grouping always-display">
+  
+  <div class="section-{{ section.id }}-padding">
+    <style>
+  /* Haupt-Container: Abstand verringert */
+  .v-brand-wrapper {
+    padding: 15px 20px;
+    text-align: center;
+    background-color: transparent;
+    color: #333333;
+    font-family: inherit;
+  }
+
+  /* Social Proof / Trust Bar */
+  .v-trust-section {
+    margin-bottom: 30px; /* Abstand zum n\e4 chsten Block verringert */
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .v-stars-wrap {
+    color: #F4B400;
+    font-size: 22px; /* Sterne etwas gr\f6 \df er */
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .v-trust-headline {
+    font-weight: 700;
+    font-size: 16px; /* Gr\f6 \df ere Schrift wie gew\fc nscht */
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* USP Grid */
+  .v-usp-layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .v-usp-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+  }
+
+  .v-usp-img {
+    font-size: 32px; /* Emojis/Icons etwas pr\e4 senter */
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .v-usp-header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #000;
+  }
+
+  .v-usp-body {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.85;
+    margin: 0;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Mobile Anpassung */
+  @media (max-width: 768px) {
+    .v-brand-wrapper { padding: 10px 15px; }
+    .v-usp-layout { flex-direction: column; gap: 15px; }
+    .v-usp-card { margin-bottom: 10px; }
+    .v-trust-headline { font-size: 14px; } /* Mobil etwas skaliert */
+  }
+</style>
+
+<div class="v-brand-wrapper">
+  <div class="v-trust-section">
+    
+    <p class="v-trust-headline">{{ section.settings.t01 }}</p>
+  </div>
+
+  <div class="v-usp-layout">
+    
+    <div class="v-usp-card">
+      <span class="v-usp-img">&#10024;</span>
+      <h3 class="v-usp-header">{{ section.settings.t02 }}</h3>
+      <p class="v-usp-body">{{ section.settings.t03 }}</p>
+    </div>
+
+    <div class="v-usp-card">
+      <span class="v-usp-img">&#129516;</span>
+      <h3 class="v-usp-header">{{ section.settings.t04 }}</h3>
+      <p class="v-usp-body">{{ section.settings.t05 }}</p>
+    </div>
+
+    <div class="v-usp-card">
+      <span class="v-usp-img">&#127807;</span>
+      <h3 class="v-usp-header">{{ section.settings.t06 }}</h3>
+      <p class="v-usp-body">{{ section.settings.t07 }}</p>
+    </div>
+
+  </div>
+</div>
+  </div>
+</div>
+
+<style>
+/* css-applique : regles de la source */
+#shopify-section-{{ section.id }} { --color-base-text: 26, 26, 26; --color-base-background-1: 244, 236, 250; --gradient-base-background-1: #f4ecfa; --color-base-outline-button-labels: 181, 126, 220; --color-base-accent-1: 168, 85, 247; --color-base-solid-button-labels: 255, 255, 255; --color-background: 244, 236, 250; --color-foreground: 26, 26, 26; --spacing-sections-mobile: 0px; --spacing-sections-desktop: 0px; --gradient-background: #f4ecfa; }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-foreground: var(--color-base-text); --color-background: var(--color-base-background-1); --gradient-background: var(--gradient-base-background-1); --color-link: var(--color-base-outline-button-labels); --alpha-link: .85; --color-button: var(--color-base-accent-1); --color-button-text: var(--color-base-solid-button-labels); --alpha-button-background: 1; --alpha-button-border: 1; --color-badge-background: var(--color-background); --color-badge-border: var(--color-foreground); --alpha-badge-border: .1; --accent-color: var(--color-base-accent-1); --border-color: var(--color-foreground); }
+#shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} :root, #shopify-section-{{ section.id }}:is(:root) { --color-card-hover: var(--color-base-text); }
+#shopify-section-{{ section.id }} .src-section + .src-section, #shopify-section-{{ section.id }}:is(.src-section + .src-section) { margin-top: var(--spacing-sections-mobile); }
+#shopify-section-{{ section.id }} .color-accent-1, #shopify-section-{{ section.id }}:is(.color-accent-1), #shopify-section-{{ section.id }} .color-accent-2, #shopify-section-{{ section.id }}:is(.color-accent-2), #shopify-section-{{ section.id }} .color-background-1, #shopify-section-{{ section.id }}:is(.color-background-1), #shopify-section-{{ section.id }} .color-background-2, #shopify-section-{{ section.id }}:is(.color-background-2), #shopify-section-{{ section.id }} .color-inverse, #shopify-section-{{ section.id }}:is(.color-inverse), #shopify-section-{{ section.id }} .color-custom, #shopify-section-{{ section.id }}:is(.color-custom), #shopify-section-{{ section.id }} body, #shopify-section-{{ section.id }}:is(body) { color: rgba(var(--color-foreground),.9); background-color: rgb(var(--color-background)); }
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background: var(--gradient-background); }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: calc(30px); padding-bottom: calc(39px); }
+#shopify-section-{{ section.id }} .v-brand-wrapper, #shopify-section-{{ section.id }}:is(.v-brand-wrapper) { padding: 15px 20px; text-align: center; background-color: transparent; color: rgb(51, 51, 51); font-family: inherit; }
+#shopify-section-{{ section.id }} .v-trust-section, #shopify-section-{{ section.id }}:is(.v-trust-section) { margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.08); display: inline-block; width: 100%; max-width: 500px; }
+#shopify-section-{{ section.id }} .v-stars-wrap, #shopify-section-{{ section.id }}:is(.v-stars-wrap) { color: rgb(244, 180, 0); font-size: 22px; margin-bottom: 8px; display: block; }
+#shopify-section-{{ section.id }} .v-trust-headline, #shopify-section-{{ section.id }}:is(.v-trust-headline) { font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1.2px; margin: 0px; line-height: 1.4; }
+#shopify-section-{{ section.id }} .v-usp-layout, #shopify-section-{{ section.id }}:is(.v-usp-layout) { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; max-width: 1000px; margin: 0px auto; }
+#shopify-section-{{ section.id }} .v-usp-card, #shopify-section-{{ section.id }}:is(.v-usp-card) { flex: 1 1 0%; min-width: 200px; padding: 10px; }
+#shopify-section-{{ section.id }} .v-usp-img, #shopify-section-{{ section.id }}:is(.v-usp-img) { font-size: 32px; margin-bottom: 12px; display: block; }
+#shopify-section-{{ section.id }} .v-usp-header, #shopify-section-{{ section.id }}:is(.v-usp-header) { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: rgb(0, 0, 0); }
+#shopify-section-{{ section.id }} .v-usp-body, #shopify-section-{{ section.id }}:is(.v-usp-body) { font-size: 14px; line-height: 1.5; opacity: 0.85; margin: 0px auto; max-width: 250px; }
+@media screen and (min-width: 750px) {
+#shopify-section-{{ section.id }} .src-section + .src-section, #shopify-section-{{ section.id }}:is(.src-section + .src-section) { margin-top: var(--spacing-sections-desktop); }
+#shopify-section-{{ section.id }} .gradient, #shopify-section-{{ section.id }}:is(.gradient) { background-attachment: fixed; }
+#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding-top: 40px; padding-bottom: 52px; }
+}
+@media (max-width: 768px) {
+#shopify-section-{{ section.id }} .v-brand-wrapper, #shopify-section-{{ section.id }}:is(.v-brand-wrapper) { padding: 10px 15px; }
+#shopify-section-{{ section.id }} .v-usp-layout, #shopify-section-{{ section.id }}:is(.v-usp-layout) { flex-direction: column; gap: 15px; }
+#shopify-section-{{ section.id }} .v-usp-card, #shopify-section-{{ section.id }}:is(.v-usp-card) { margin-bottom: 10px; }
+#shopify-section-{{ section.id }} .v-trust-headline, #shopify-section-{{ section.id }}:is(.v-trust-headline) { font-size: 14px; }
+}
+</style>
+<!-- scripts-inline : repris de la source -->
+<script>
+    
+      function checkBtnVisibility() {
+        const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
+        if (scrollToTopBtn) {
+          if (window.scrollY > 400) {
+            scrollToTopBtn.style.display = '';
+          } else {
+            scrollToTopBtn.style.display = 'none';
+          }
+        }
+      }
+      checkBtnVisibility()
+    
+      window.addEventListener('scroll', checkBtnVisibility)
+    
+  
+    function handleScrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+  </script>
+<style>
+  /* typo Veluna : Poppins, interlettrage 0.96 px */
+  #shopify-section-{{ section.id }}, #shopify-section-{{ section.id }} p, #shopify-section-{{ section.id }} h2, #shopify-section-{{ section.id }} h3, #shopify-section-{{ section.id }} div { font-family: Poppins, sans-serif; letter-spacing: .96px; }
+</style>
+{% schema %}
+{
+  "name": "Accueil atouts",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "PLUS DE 10 000 FEMMES ADORENT LEUR NOUVE",
+      "default": "LA ROUTINE ANTI-REPOUSSE QUI AGIT &#192; LA RACINE"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "Douce comme de la soie",
+      "default": "Douce comme de la soie"
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "Fini la peau de fraise et le feu du raso",
+      "default": "Fini la peau de fraise et le feu du rasoir &#8211; juste une peau parfaitement lisse."
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "Stoppe la pousse",
+      "default": "Stoppe la pousse"
+    },
+    {
+      "type": "text",
+      "id": "t05",
+      "label": "Ralentit visiblement la repousse, direct",
+      "default": "Ralentit visiblement la repousse, directement &#224; la racine."
+    },
+    {
+      "type": "text",
+      "id": "t06",
+      "label": "100 % naturel",
+      "default": "100 % naturel"
+    },
+    {
+      "type": "text",
+      "id": "t07",
+      "label": "Formule sans hormones. Sans risque pour ",
+      "default": "Formule sans hormones, douce pour le visage, le corps et la zone intime."
+    }
+  ],
+  "class": "shopify-section src-section"
+}
+{% endschema %}

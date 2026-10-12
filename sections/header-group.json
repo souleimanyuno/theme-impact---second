@@ -85,7 +85,8 @@
         "reduce_padding": true,
         "background_opacity": 100,
         "background_blur_radius": 0
-      }
+      },
+      "disabled": true
     },
     "custom_liquid_rjiLER": {
       "type": "custom-liquid",
@@ -98,10 +99,16 @@
         "background": "",
         "background_gradient": "",
         "text_color": ""
-      }
+      },
+      "disabled": true
+    },
+    "lp_ah_header": {
+      "type": "lp-ah-header",
+      "settings": {}
     }
   },
   "order": [
+    "lp_ah_header",
     "announcement-bar",
     "custom_liquid_rjiLER",
     "header"

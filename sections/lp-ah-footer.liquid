@@ -1,0 +1,80 @@
+{%- comment -%}
+  Pied de page Sorelya calqué sur Veluna (veluna-skin.com/fr, relevé 2026-10-11) :
+  fond violet #a855f7, titre « Liens » centré (27 px gras blanc), liens centrés en colonne (14 px),
+  puis bande du bas : sélecteur de langue à gauche, moyens de paiement à droite, copyright.
+  Les liens sont des blocs modifiables dans l'éditeur.
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<footer class="ahf">
+  <div class="ahf__top">
+    <h2 class="ahf__title">{{ section.settings.title }}</h2>
+    <ul class="ahf__links">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}><a href="{{ block.settings.url | default: '#' }}">{{ block.settings.label }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <div class="ahf__bottom">
+    <div class="ahf__lang">
+      {%- if localization.available_languages.size > 1 -%}
+        <p class="ahf__lang-title">Langue</p>
+        {%- form 'localization', class: 'ahf__lang-form' -%}
+          <select name="locale_code" onchange="this.form.submit()" aria-label="Langue">
+            {%- for l in localization.available_languages -%}
+              <option value="{{ l.iso_code }}" {% if l.iso_code == localization.language.iso_code %}selected{% endif %}>{{ l.endonym_name | capitalize }}</option>
+            {%- endfor -%}
+          </select>
+        {%- endform -%}
+      {%- endif -%}
+    </div>
+    <ul class="ahf__pay" aria-label="Moyens de paiement">
+      {%- for type in shop.enabled_payment_types -%}<li>{{ type | payment_type_svg_tag: class: 'ahf__pay-icon' }}</li>{%- endfor -%}
+    </ul>
+  </div>
+  <p class="ahf__copy">© {{ 'now' | date: '%Y' }}, {{ section.settings.copyright | default: shop.name }}</p>
+</footer>
+
+<style>
+  .ahf { background: #a855f7; color: rgba(255,255,255,.9); font-family: Poppins, sans-serif; letter-spacing: .96px; padding: 32px 0 20px; }
+  .ahf__top { max-width: 1400px; margin: 0 auto; padding: 0 50px 50px; text-align: center; box-sizing: border-box; }
+  .ahf__title { color: #fff; font-size: 27px; font-weight: 700; line-height: 32.4px; letter-spacing: .9px; margin: 0 0 20px; font-family: Poppins, sans-serif; }
+  .ahf__links { list-style: none; margin: 0; padding: 0; }
+  .ahf__links li { margin: 0; }
+  .ahf__links a { display: inline-block; padding: 5px 0; font-size: 14px; line-height: 25.2px; color: rgba(255,255,255,.9); text-decoration: none; }
+  .ahf__links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .ahf__bottom { border-top: 1px solid rgba(255,255,255,.15); max-width: 1400px; margin: 0 auto; padding: 30px 50px 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; box-sizing: border-box; }
+  .ahf__lang-title { font-size: 13px; line-height: 19.5px; letter-spacing: .4px; margin: 10px 0 6px; }
+  .ahf__lang select { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.55); border-radius: 4px; padding: 8px 32px 8px 12px; font: 14px Poppins, sans-serif; letter-spacing: .6px; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='white' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; cursor: pointer; }
+  .ahf__lang select option { color: #1a1a1a; }
+  .ahf__pay { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+  .ahf__pay-icon { width: 38px; height: 24px; display: block; }
+  .ahf__copy { max-width: 1400px; margin: 0 auto; padding: 18px 50px 0; font-size: 11px; line-height: 16px; letter-spacing: .4px; box-sizing: border-box; }
+  @media (max-width: 749px) {
+    .ahf__top { padding: 0 20px 40px; }
+    .ahf__bottom { padding: 24px 20px 0; flex-direction: column; align-items: center; }
+    .ahf__lang { text-align: center; }
+    .ahf__pay { justify-content: center; }
+    .ahf__copy { padding: 16px 20px 0; text-align: center; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Sorelya pied de page",
+  "class": "lp-ah-footer",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titre", "default": "Liens" },
+    { "type": "text", "id": "copyright", "label": "Copyright (vide = nom de la boutique)", "default": "Sorelya" }
+  ],
+  "blocks": [
+    { "type": "link", "name": "Lien", "settings": [
+      { "type": "text", "id": "label", "label": "Texte", "default": "Lien" },
+      { "type": "url", "id": "url", "label": "Adresse" }
+    ] }
+  ],
+  "presets": [ { "name": "Sorelya pied de page" } ]
+}
+{% endschema %}

@@ -1,0 +1,101 @@
+{%- comment -%}
+  En-tête Sorelya calqué sur Veluna (veluna-skin.com/fr, relevé 2026-10-11) :
+  fond lavande #f4ecfa collant, menu à gauche (élément actif = pastille violette #a855f7),
+  logo violet centré, compte + panier à droite. Mobile : burger à gauche, logo centré, panier à droite.
+  Le panier ouvre le tiroir panier du thème Impact (aria-controls="cart-drawer").
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+{%- capture liens -%}
+  {%- if section.settings.menu != blank and linklists[section.settings.menu].links.size > 0 -%}
+    {%- for l in linklists[section.settings.menu].links -%}{{ l.title }}|{{ l.url }}{% unless forloop.last %}§{% endunless %}{%- endfor -%}
+  {%- else -%}Accueil|{{ routes.root_url }}§Catalogue|{{ routes.all_products_collection_url }}§Contact|/pages/contact{%- endif -%}
+{%- endcapture -%}
+{%- assign liens = liens | strip | split: '§' -%}
+
+<div class="ahh" data-ahh>
+  <header class="ahh__bar">
+    <button type="button" class="ahh__burger" aria-label="Menu" aria-expanded="false" data-ahh-burger>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+
+    <nav class="ahh__nav" aria-label="Menu principal">
+      {%- for l in liens -%}
+        {%- assign p = l | split: '|' -%}
+        {%- assign actif = false -%}
+        {%- if p[1] == request.path -%}{%- assign actif = true -%}{%- endif -%}
+        {%- if forloop.first and request.page_type == 'index' -%}{%- assign actif = true -%}{%- endif -%}
+        <a href="{{ p[1] }}" class="ahh__link">{% if actif %}<span class="ahh__active">{{ p[0] }}</span>{% else %}<span>{{ p[0] }}</span>{% endif %}</a>
+      {%- endfor -%}
+    </nav>
+
+    <a href="{{ routes.root_url }}" class="ahh__logo" aria-label="{{ shop.name }}">
+      <img src="{% if section.settings.logo != blank %}{{ section.settings.logo | image_url: width: 600 }}{% else %}{{ 'ap-logo-sorelya.png' | asset_url }}{% endif %}" alt="{{ shop.name }}" width="220" height="58">
+    </a>
+
+    <div class="ahh__icons">
+      <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="ahh__icon ahh__account" aria-label="Connexion">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke-linecap="round"/></svg>
+      </a>
+      <a href="{{ routes.cart_url }}" data-no-instant class="ahh__icon ahh__cart" aria-label="Panier" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %}>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M2.5 9.5h19l-2 11h-15l-2-11z"/><path d="M7 9.5L10 3.5M17 9.5L14 3.5M8 13.5v4M12 13.5v4M16 13.5v4" stroke-linecap="round"/></svg>
+        <cart-count class="ahh__count {% if cart.item_count == 0 %}opacity-0{% endif %}" aria-hidden="true">{{ cart.item_count }}</cart-count>
+      </a>
+    </div>
+  </header>
+
+  <div class="ahh__drawer" data-ahh-drawer hidden>
+    {%- for l in liens -%}{%- assign p = l | split: '|' -%}<a href="{{ p[1] }}">{{ p[0] }}</a>{%- endfor -%}
+    <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}">Connexion</a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.currentScript.previousElementSibling;
+    var b = root.querySelector('[data-ahh-burger]'), d = root.querySelector('[data-ahh-drawer]');
+    b.addEventListener('click', function () { var o = d.hasAttribute('hidden'); if (o) d.removeAttribute('hidden'); else d.setAttribute('hidden', ''); b.setAttribute('aria-expanded', o); });
+    function h() { document.documentElement.style.setProperty('--header-height', root.offsetHeight + 'px'); }
+    h(); window.addEventListener('resize', h);
+  })();
+</script>
+
+<style>
+  #shopify-section-{{ section.id }} { position: sticky; top: 0; z-index: 30; }
+  .ahh { background: #f4ecfa; font-family: Poppins, sans-serif; color: rgba(26,26,26,.9); letter-spacing: .96px; }
+  .ahh__bar { max-width: 1400px; margin: 0 auto; padding: 8px 50px 4px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 70px; box-sizing: border-box; }
+  .ahh__nav { display: flex; align-items: center; margin-left: -12px; }
+  .ahh__link { padding: 12px; font-size: 14px; line-height: 18.2px; color: rgba(26,26,26,.9); text-decoration: none; }
+  .ahh__link span { display: inline-block; padding: 0 9.8px; }
+  .ahh__link:hover span { text-decoration: underline; text-underline-offset: 3px; }
+  .ahh__active { background: #a855f7; color: rgba(255,255,255,.9); font-weight: 700; }
+  .ahh__logo { justify-self: center; display: block; line-height: 0; }
+  .ahh__logo img { width: 220px; height: auto; max-height: 58px; object-fit: contain; }
+  .ahh__icons { justify-self: end; display: flex; align-items: center; margin-right: -12px; }
+  .ahh__icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: rgb(26,26,26); position: relative; }
+  .ahh__count { position: absolute; top: 6px; right: 4px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #a855f7; color: #fff; font-size: 10px; font-weight: 700; line-height: 17px; text-align: center; letter-spacing: 0; box-sizing: border-box; }
+  .ahh__count.opacity-0 { opacity: 0; }
+  .ahh__burger { display: none; background: none; border: 0; padding: 8px; color: rgb(26,26,26); cursor: pointer; }
+  .ahh__drawer { border-top: 1px solid rgba(26,26,26,.08); padding: 8px 20px 16px; display: flex; flex-direction: column; }
+  .ahh__drawer[hidden] { display: none; }
+  .ahh__drawer a { padding: 10px 0; font-size: 18px; color: rgb(26,26,26); text-decoration: none; }
+  @media (max-width: 989px) {
+    .ahh__bar { padding: 4px 12px; min-height: 60px; }
+    .ahh__nav, .ahh__account { display: none; }
+    .ahh__burger { display: block; justify-self: start; }
+    .ahh__logo img { width: 150px; }
+    .ahh__icons { margin-right: 0; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Sorelya en-tête",
+  "class": "lp-ah-header",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo (vide = logo SORELYA violet)" },
+    { "type": "link_list", "id": "menu", "label": "Menu (vide = Accueil / Catalogue / Contact)" }
+  ]
+}
+{% endschema %}

@@ -129,11 +129,88 @@
         "show_country_flag": true,
         "show_country_name": true,
         "show_locale_selector": true
-      }
+      },
+      "disabled": true
+    },
+    "lp_ah_footer": {
+      "type": "lp-ah-footer",
+      "settings": {
+        "title": "Liens",
+        "copyright": "Sorelya"
+      },
+      "blocks": {
+        "lien_1": {
+          "type": "link",
+          "settings": {
+            "label": "Recherche",
+            "url": "/search"
+          }
+        },
+        "lien_2": {
+          "type": "link",
+          "settings": {
+            "label": "Suivre ma commande",
+            "url": "/account"
+          }
+        },
+        "lien_3": {
+          "type": "link",
+          "settings": {
+            "label": "Mentions légales",
+            "url": "/policies/legal-notice"
+          }
+        },
+        "lien_4": {
+          "type": "link",
+          "settings": {
+            "label": "Politique de confidentialité",
+            "url": "/policies/privacy-policy"
+          }
+        },
+        "lien_5": {
+          "type": "link",
+          "settings": {
+            "label": "Droit de rétractation",
+            "url": "/policies/refund-policy"
+          }
+        },
+        "lien_6": {
+          "type": "link",
+          "settings": {
+            "label": "CGV",
+            "url": "/policies/terms-of-service"
+          }
+        },
+        "lien_7": {
+          "type": "link",
+          "settings": {
+            "label": "Conditions de livraison",
+            "url": "/policies/shipping-policy"
+          }
+        },
+        "lien_8": {
+          "type": "link",
+          "settings": {
+            "label": "Formulaire de rétractation",
+            "url": "/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "lien_1",
+        "lien_2",
+        "lien_3",
+        "lien_4",
+        "lien_5",
+        "lien_6",
+        "lien_7",
+        "lien_8"
+      ]
     }
   },
   "order": [
     "text_with_icons_PLDgKD",
-    "footer"
+    "footer",
+    "lp_ah_footer"
   ]
 }
