@@ -12,12 +12,23 @@
     "ah_hero": {
       "type": "lp-ah-hero",
       "settings": {
+        "t01": "Sorelya Skin",
+        "t02": "Prête pour chaque caresse.",
+        "t03": "Découvrir maintenant",
         "lien": "shopify://products/serum-anti-repousse"
       }
     },
     "ah_atouts": {
       "type": "lp-ah-atouts",
-      "settings": {}
+      "settings": {
+        "t01": "LA ROUTINE ANTI-REPOUSSE QUI AGIT &#192; LA RACINE",
+        "t02": "Douce comme de la soie",
+        "t03": "Fini la peau de fraise et le feu du rasoir &#8211; juste une peau parfaitement lisse.",
+        "t04": "Stoppe la pousse",
+        "t05": "Ralentit visiblement la repousse, directement &#224; la racine.",
+        "t06": "100 % naturel",
+        "t07": "Formule sans hormones, douce pour le visage, le corps et la zone intime."
+      }
     }
   },
   "order": [

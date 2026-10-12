@@ -21,7 +21,7 @@
         "title": {
           "type": "title",
           "settings": {
-            "heading_tag": "h1"
+            "heading_tag": "h2"
           }
         },
         "liquid_benefices": {
@@ -33,7 +33,7 @@
         "liquid_sous_titre": {
           "type": "liquid",
           "settings": {
-            "liquid": "<p class=\"ap-sub\">Contrairement au rasoir, &#224; la pince ou au laser, <strong>Sorelya</strong> mise sur le <strong>Cyperus rotundus</strong> &#8212; un actif v&#233;g&#233;tal qui stoppe la pousse directement &#224; la racine.</p><style>.ap-sub{font-size:15px;color:#444;line-height:1.65;margin:4px 0 6px;letter-spacing:.15px}.ap-sub strong{color:#A855F7;font-weight:700}</style>"
+            "liquid": "<p class=\"ap-sub\">Contrairement au rasoir, &#224; la pince ou au laser, <strong>Sorelya</strong> mise sur le <strong>Cyperus rotundus</strong> &#8212; un actif v&#233;g&#233;tal qui stoppe la pousse directement &#224; la racine.</p><style>.ap-sub{font-size:15px;color:#444;line-height:1.65;margin:4px 0 6px;letter-spacing:.15px}.ap-sub strong{color:#A855F7;font-weight:700}</style>\n<div class=\"stock-badge\">\n  <span class=\"stock-badge__dot\"></span>\n  <span class=\"stock-badge__text\">Plus que 7 % du stock disponible &#224; ce prix</span>\n</div>\n\n<style>\n  .stock-badge {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    padding: 9px 16px;\n    border-radius: 999px;\n    background: #FDECEC;\n  }\n\n  .stock-badge__dot {\n    width: 7px;\n    height: 7px;\n    border-radius: 50%;\n    background: #E01B24;\n    flex-shrink: 0;\n    animation: stock-badge-pulse 1.6s ease-in-out infinite;\n  }\n\n  .stock-badge__text {\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1.2;\n    color: #E01B24;\n    letter-spacing: 0.1px;\n  }\n\n  @keyframes stock-badge-pulse {\n    0%, 100% { opacity: 1; transform: scale(1); }\n    50%      { opacity: 0.45; transform: scale(0.85); }\n  }\n\n  @media (min-width: 750px) {\n    .stock-badge { padding: 10px 18px; }\n    .stock-badge__text { font-size: 14px; }\n  }\n</style>"
           }
         },
         "kaching_bundles_app_block_ap": {
@@ -43,37 +43,35 @@
             "manual_deal_block_id": ""
           }
         },
-        "liquid_stock": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<div class=\"stock-badge\">\n  <span class=\"stock-badge__dot\"></span>\n  <span class=\"stock-badge__text\">Plus que 7 % du stock disponible &#224; ce prix</span>\n</div>\n\n<style>\n  .stock-badge {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    padding: 9px 16px;\n    border-radius: 999px;\n    background: #FDECEC;\n  }\n\n  .stock-badge__dot {\n    width: 7px;\n    height: 7px;\n    border-radius: 50%;\n    background: #E01B24;\n    flex-shrink: 0;\n    animation: stock-badge-pulse 1.6s ease-in-out infinite;\n  }\n\n  .stock-badge__text {\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1.2;\n    color: #E01B24;\n    letter-spacing: 0.1px;\n  }\n\n  @keyframes stock-badge-pulse {\n    0%, 100% { opacity: 1; transform: scale(1); }\n    50%      { opacity: 0.45; transform: scale(0.85); }\n  }\n\n  @media (min-width: 750px) {\n    .stock-badge { padding: 10px 18px; }\n    .stock-badge__text { font-size: 14px; }\n  }\n</style>\n"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": false,
-            "atc_button_background": "#A855F7",
+            "atc_button_background": "#a855f7",
             "atc_button_text_color": "#ffffff",
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
         },
+        "image_g4hPLY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Capture_d_ecran_le_2026-10-04_a_00.41.04.png",
+            "alignment": "center",
+            "max_width": 170
+          }
+        },
         "liquid_confiance": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"tbg-wrap\">\n  <div class=\"tbg-grid\">\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <img src=\"{{ 'ap-ic-maillot.png' | asset_url }}\" width=\"26\" height=\"26\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n      </div>\n      <p>Ose le maillot<span>Agit &#224; la racine du poil</span></p>\n    </div>\n\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <img src=\"{{ 'ap-ic-menton.png' | asset_url }}\" width=\"26\" height=\"26\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n      </div>\n      <p>Un menton tout doux<span>Le poil repousse plus fin</span></p>\n    </div>\n\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <img src=\"{{ 'ap-ic-rasoir-barre.png' | asset_url }}\" width=\"26\" height=\"26\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n      </div>\n      <p>Z&#233;ro feu du rasoir<span>Panth&#233;nol + menthe</span></p>\n    </div>\n  </div>\n\n  <div class=\"tbg-guarantee\">\n    <div class=\"tbg-guarantee-icon\">\n      <img src=\"{{ 'ap-ic-rembourse.png' | asset_url }}\" width=\"22\" height=\"22\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n    </div>\n    <p><strong>Tu as d&#233;j&#224; pay&#233; pour des m&#233;thodes qui n&#8217;ont rien chang&#233;.</strong> 90 jours pour juger. Pas de r&#233;sultat ? On te rembourse, sans discussion.</p>\n  </div>\n</div>\n\n<style>\n.tbg-wrap{\n  max-width:560px;\n  margin:0 auto;\n}\n\n.tbg-wrap *{\n  box-sizing:border-box;\n}\n\n.tbg-live{\n  display:flex;\n  align-items:center;\n  gap:8px;\n  font-size:13px;\n  color:#666666;\n  margin-bottom:16px;\n}\n\n.tbg-live strong{\n  color:#111111;\n}\n\n.tbg-grid{\n  display:grid;\n  grid-template-columns:repeat(3,1fr);\n  gap:10px;\n  margin-bottom:14px;\n}\n\n.tbg-card{\n  background:#FFFFFF;\n  border:1px solid #DCDCDC;\n  border-radius:14px;\n  padding:18px 8px 16px;\n  text-align:center;\n  transition:.2s ease;\n}\n\n.tbg-card:hover{\n  border-color:#BDBDBD;\n  transform:translateY(-2px);\n}\n\n.tbg-icon{\n  display:flex;\n  justify-content:center;\n  align-items:center;\n  margin-bottom:10px;\n}\n\n.tbg-card p{\n  margin:0;\n  font-size:12.5px;\n  font-weight:700;\n  line-height:1.35;\n  color:#111111;\n}\n\n/* L'emotion achete, la logique justifie : le benefice client porte la carte,\n   la raison mecanique le soutient en dessous, sans lui voler l'oeil. */\n.tbg-card p span{\n  display:block;\n  margin-top:6px;\n  font-size:11px;\n  font-weight:400;\n  line-height:1.4;\n  color:#666666;\n}\n\n.tbg-guarantee{\n  display:flex;\n  align-items:flex-start;\n  gap:10px;\n  background:#F5F5F5;\n  border:1px solid #DCDCDC;\n  border-radius:12px;\n  padding:12px 14px;\n}\n\n.tbg-guarantee-icon{\n  flex:0 0 auto;\n  width:34px;\n  height:34px;\n  border-radius:50%;\n  background:#F3E8FF;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  margin-top:1px;\n}\n\n.tbg-guarantee p{\n  margin:0;\n  font-size:12.5px;\n  line-height:1.5;\n  color:#666666;\n}\n\n.tbg-guarantee strong{\n  color:#111111;\n}\n\n@media (max-width:420px){\n\n  .tbg-grid{\n    gap:8px;\n  }\n\n  .tbg-card{\n    padding:14px 6px 12px;\n  }\n\n  .tbg-card p{\n    font-size:11.5px;\n  }\n\n  .tbg-card p span{\n    font-size:10.5px;\n    margin-top:5px;\n  }\n\n}\n</style>\n"
+            "liquid": "<div class=\"tbg-wrap\">\n  <div class=\"tbg-grid\">\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <img src=\"{{ 'ap-ic-maillot.png' | asset_url }}\" width=\"26\" height=\"26\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n      </div>\n      <p>Ose le maillot<span>Agit &#224; la racine du poil</span></p>\n    </div>\n\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <img src=\"{{ 'ap-ic-menton.png' | asset_url }}\" width=\"26\" height=\"26\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n      </div>\n      <p>Un menton tout doux<span>Le poil repousse plus fin</span></p>\n    </div>\n\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <img src=\"{{ 'ap-ic-rasoir-barre.png' | asset_url }}\" width=\"26\" height=\"26\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n      </div>\n      <p>Z&#233;ro feu du rasoir<span>Panth&#233;nol + menthe</span></p>\n    </div>\n  </div>\n\n  <div class=\"tbg-guarantee\">\n    <div class=\"tbg-guarantee-icon\">\n      <img src=\"{{ 'ap-ic-rembourse.png' | asset_url }}\" width=\"22\" height=\"22\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\">\n    </div>\n    <p><strong>Tu as d&#233;j&#224; pay&#233; pour des m&#233;thodes qui n&#8217;ont rien chang&#233;.</strong> 90 jours pour juger. Pas de r&#233;sultat ? On te rembourse, sans discussion.</p>\n  </div>\n</div>\n\n<style>\n.tbg-wrap{\n  max-width:560px;\n  margin:0 auto;\n}\n\n.tbg-wrap *{\n  box-sizing:border-box;\n}\n\n.tbg-live{\n  display:flex;\n  align-items:center;\n  gap:8px;\n  font-size:13px;\n  color:#666666;\n  margin-bottom:16px;\n}\n\n.tbg-live strong{\n  color:#111111;\n}\n\n.tbg-grid{\n  display:grid;\n  grid-template-columns:repeat(3,1fr);\n  gap:10px;\n  margin-bottom:14px;\n}\n\n.tbg-card{\n  background:#FFFFFF;\n  border:1px solid #DCDCDC;\n  border-radius:14px;\n  padding:18px 8px 16px;\n  text-align:center;\n  transition:.2s ease;\n}\n\n.tbg-card:hover{\n  border-color:#BDBDBD;\n  transform:translateY(-2px);\n}\n\n.tbg-icon{\n  display:flex;\n  justify-content:center;\n  align-items:center;\n  margin-bottom:10px;\n}\n\n.tbg-card p{\n  margin:0;\n  font-size:12.5px;\n  font-weight:700;\n  line-height:1.35;\n  color:#111111;\n}\n\n/* L'emotion achete, la logique justifie : le benefice client porte la carte,\n   la raison mecanique le soutient en dessous, sans lui voler l'oeil. */\n.tbg-card p span{\n  display:block;\n  margin-top:6px;\n  font-size:11px;\n  font-weight:400;\n  line-height:1.4;\n  color:#666666;\n}\n\n.tbg-guarantee{\n  display:flex;\n  align-items:flex-start;\n  gap:10px;\n  background:#F5F5F5;\n  border:1px solid #DCDCDC;\n  border-radius:12px;\n  padding:12px 14px;\n}\n\n.tbg-guarantee-icon{\n  flex:0 0 auto;\n  width:34px;\n  height:34px;\n  border-radius:50%;\n  background:#F3E8FF;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  margin-top:1px;\n}\n\n.tbg-guarantee p{\n  margin:0;\n  font-size:12.5px;\n  line-height:1.5;\n  color:#666666;\n}\n\n.tbg-guarantee strong{\n  color:#111111;\n}\n\n@media (max-width:420px){\n\n  .tbg-grid{\n    gap:8px;\n  }\n\n  .tbg-card{\n    padding:14px 6px 12px;\n  }\n\n  .tbg-card p{\n    font-size:11.5px;\n  }\n\n  .tbg-card p span{\n    font-size:10.5px;\n    margin-top:5px;\n  }\n\n}\n</style>"
           }
         },
         "liquid_videos": {
           "type": "liquid",
           "settings": {
-            "liquid": "\n<div class=\"vvs\" data-vvs>\n  <div class=\"vvs__head\">\n    <p class=\"vvs__badge\"><img src=\"{{ 'ap-ic-bouclier-check.png' | asset_url }}\" width=\"22\" height=\"22\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\"><span><b>90 jours</b> pour tester sans risque</span></p>\n    <p class=\"vvs__title\">Le souchet rond, <span>elles en parlent.</span></p>\n  </div>\n  <div class=\"vvs__stage\">\n  <div class=\"vvs__track\">\n\n    \n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-1.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n    \n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-2.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-3.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-4.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-5.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n  </div>\n  <button type=\"button\" class=\"vvs__arrow vvs__arrow--prev\" aria-label=\"Pr&#233;c&#233;dent\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 5l-7 7 7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>\n  <button type=\"button\" class=\"vvs__arrow vvs__arrow--next\" aria-label=\"Suivant\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 5l7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>\n  </div>\n</div>\n\n<style>\n  .vvs{margin:16px 0 4px;--vvs-accent:#A855F7;--vvs-soft:#E9DAF9;--vvs-ink:#1A1A1A;--vvs-gap:8px}\n  .vvs .vvs__head{margin:0 0 14px;text-align:center;font-family:'Poppins',sans-serif;color:var(--vvs-ink)}\n  .vvs .vvs__badge{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:9px 18px 9px 14px;background:#fff;border:0;border-radius:50px;box-shadow:0 1px 6px rgba(0,0,0,.1);font-size:14px;font-weight:500;line-height:1.3;letter-spacing:.9px;color:var(--vvs-ink)}\n  .vvs .vvs__badge svg{flex:0 0 auto;color:var(--vvs-accent)}\n  .vvs .vvs__badge b{font-weight:700;color:var(--vvs-accent)}\n  .vvs .vvs__title{margin:0;font-size:18px;font-weight:700;line-height:1.3;letter-spacing:.9px;color:var(--vvs-ink)}\n  .vvs .vvs__title span{color:var(--vvs-accent)}\n  .vvs .vvs__stage{position:relative}\n  .vvs .vvs__track{display:flex;gap:var(--vvs-gap);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-user-select:none;user-select:none}\n  .vvs .vvs__track::-webkit-scrollbar{display:none}\n  .vvs .vvs__track.is-drag{scroll-snap-type:none;cursor:grabbing}\n  .vvs .vvs__card{position:relative;flex:0 0 35%;scroll-snap-align:start;border-radius:10px;overflow:hidden;background:var(--vvs-soft);-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;transform:translateZ(0)}\n  .vvs .vvs__card::before{content:\"\";display:block;padding-top:177.78%}\n  .vvs .vvs__vid{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;pointer-events:none;background:transparent}\n  .vvs .vvs__vid::-webkit-media-controls{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-panel{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-play-button{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-overlay-play-button{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}\n  .vvs .vvs__arrow{display:none;position:absolute;top:50%;z-index:2;width:36px;height:36px;min-width:0;min-height:0;margin:-18px 0 0;padding:0;border:0;border-radius:50%;background:#fff;color:var(--vvs-accent);box-shadow:0 2px 10px rgba(0,0,0,.15);align-items:center;justify-content:center;cursor:pointer;line-height:1;transition:opacity .2s}\n  .vvs .vvs__arrow--prev{left:8px}\n  .vvs .vvs__arrow--next{right:8px}\n  .vvs .vvs__arrow[disabled]{opacity:0;pointer-events:none}\n  @media (min-width:750px){.vvs .vvs__card{flex-basis:26%}.vvs .vvs__title{font-size:19px}}\n  @media (hover:hover) and (pointer:fine){\n    .vvs .vvs__track{cursor:grab}\n    .vvs.is-scrollable .vvs__arrow{display:flex}\n  }\n</style>\n\n<script>\n(function(){\n  function init(root){\n    if(root.getAttribute('data-vvs-ready'))return;\n    root.setAttribute('data-vvs-ready','1');\n    var track=root.querySelector('.vvs__track');\n    var cards=[].slice.call(root.querySelectorAll('.vvs__card'));\n    var vids=[].slice.call(root.querySelectorAll('.vvs__vid'));\n    var prev=root.querySelector('.vvs__arrow--prev');\n    var next=root.querySelector('.vvs__arrow--next');\n\n    /* Ton bleibt aus, egal was der Browser versucht */\n    vids.forEach(function(v){\n      v.muted=true;v.defaultMuted=true;v.volume=0;\n      v.addEventListener('volumechange',function(){if(!v.muted||v.volume){v.muted=true;v.volume=0;}});\n    });\n\n    function play(v){if(v.preload!=='auto')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}\n    function stop(v){if(!v.paused)v.pause();}\n\n    /* Nur was im Bild ist, l\\u00e4dt und l\\u00e4uft \\u2014 h\\u00e4lt die PDP schnell */\n    var seen=false;\n    if('IntersectionObserver' in window){\n      var io=new IntersectionObserver(function(es){\n        seen=true;\n        es.forEach(function(e){var v=e.target;v._in=e.isIntersecting;if(v._in)play(v);else stop(v);});\n      },{threshold:0.2});\n      vids.forEach(function(v){io.observe(v);});\n    }\n    /* Notausstieg: meldet der Observer sich nicht, starten die sichtbaren Videos trotzdem */\n    setTimeout(function(){\n      if(seen)return;\n      var tr=track.getBoundingClientRect();\n      vids.forEach(function(v){\n        var r=v.getBoundingClientRect();\n        if(r.top<innerHeight&&r.bottom>0&&r.left<tr.right&&r.right>tr.left){v._in=true;play(v);}\n      });\n    },1500);\n\n    /* iOS-Stromsparmodus blockt Autoplay \\u2014 die erste Ber\\u00fchrung startet es nach */\n    function kick(){vids.forEach(function(v){if(v._in&&v.paused)play(v);});}\n    document.addEventListener('touchend',kick,{passive:true});\n    document.addEventListener('visibilitychange',function(){if(!document.hidden)kick();});\n\n    /* Pfeile + Maus-Ziehen (nur Desktop) */\n    function step(){var g=parseFloat(getComputedStyle(track).columnGap)||0;return cards.length?cards[0].getBoundingClientRect().width+g:track.clientWidth;}\n    function update(){\n      var max=track.scrollWidth-track.clientWidth;\n      if(max>2)root.classList.add('is-scrollable');else root.classList.remove('is-scrollable');\n      if(prev)prev.disabled=track.scrollLeft<=2;\n      if(next)next.disabled=track.scrollLeft>=max-2;\n    }\n    if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});\n    if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});\n    track.addEventListener('scroll',update,{passive:true});\n    window.addEventListener('resize',update);\n    update();\n\n    var drag=null;\n    track.addEventListener('pointerdown',function(e){\n      if(e.pointerType!=='mouse'||e.button!==0)return;\n      drag={x:e.clientX,l:track.scrollLeft};track.classList.add('is-drag');e.preventDefault();\n    });\n    window.addEventListener('pointermove',function(e){if(drag)track.scrollLeft=drag.l-(e.clientX-drag.x);});\n    window.addEventListener('pointerup',function(){\n      if(!drag)return;drag=null;\n      var s=step(),l=track.scrollLeft;\n      track.classList.remove('is-drag');track.scrollLeft=l;\n      track.scrollTo({left:Math.round(l/s)*s,behavior:'smooth'});\n    });\n    track.addEventListener('contextmenu',function(e){e.preventDefault();});\n\n    /* Automatisch weiter \\u2014 h\\u00e4lt an, solange jemand selbst wischt oder mit der Maus drauf ist */\n    var TAKT=3500;   /* Millisekunden bis zum n\\u00e4chsten Video */\n    var aktiv=false,maus=false,pauseBis=0;\n    function halt(){pauseBis=Date.now()+5000;}\n    function weiter(){\n      if(!aktiv||maus||drag||document.hidden||Date.now()<pauseBis)return;\n      var max=track.scrollWidth-track.clientWidth;\n      if(max<=2)return;\n      var s=step(),ziel=(Math.round(track.scrollLeft/s)+1)*s;\n      track.scrollTo({left:track.scrollLeft>=max-2?0:Math.min(ziel,max),behavior:'smooth'});\n    }\n    ['touchstart','pointerdown','wheel'].forEach(function(ev){track.addEventListener(ev,halt,{passive:true});});\n    if(prev)prev.addEventListener('click',halt);\n    if(next)next.addEventListener('click',halt);\n    root.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')maus=true;});\n    root.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')maus=false;});\n    if('IntersectionObserver' in window){\n      new IntersectionObserver(function(es){aktiv=es[0].isIntersecting;},{threshold:0.3}).observe(root);\n    }else{aktiv=true;}\n    setTimeout(function(){if(!seen){var r=root.getBoundingClientRect();aktiv=r.top<innerHeight&&r.bottom>0;}},1500);\n    if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))setInterval(weiter,TAKT);\n  }\n  function run(){[].forEach.call(document.querySelectorAll('[data-vvs]'),init);}\n  run();\n  if(!window.__vvs){window.__vvs=1;document.addEventListener('shopify:section:load',run);}\n})();\n</script>"
+            "liquid": "<div class=\"vvs\" data-vvs>\n  <div class=\"vvs__head\">\n    <p class=\"vvs__badge\"><img src=\"{{ 'ap-ic-bouclier-check.png' | asset_url }}\" width=\"22\" height=\"22\" alt=\"\" loading=\"lazy\" style=\"display:block;object-fit:contain\"><span><b>90 jours</b> pour tester sans risque</span></p>\n    <p class=\"vvs__title\">Le souchet rond, <span>elles en parlent.</span></p>\n  </div>\n  <div class=\"vvs__stage\">\n  <div class=\"vvs__track\">\n\n    \n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-1.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n    \n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-2.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-3.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-4.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-5.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n  </div>\n  <button type=\"button\" class=\"vvs__arrow vvs__arrow--prev\" aria-label=\"Pr&#233;c&#233;dent\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 5l-7 7 7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>\n  <button type=\"button\" class=\"vvs__arrow vvs__arrow--next\" aria-label=\"Suivant\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 5l7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>\n  </div>\n</div>\n\n<style>\n  .vvs{margin:16px 0 4px;--vvs-accent:#A855F7;--vvs-soft:#E9DAF9;--vvs-ink:#1A1A1A;--vvs-gap:8px}\n  .vvs .vvs__head{margin:0 0 14px;text-align:center;font-family:'Poppins',sans-serif;color:var(--vvs-ink)}\n  .vvs .vvs__badge{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:9px 18px 9px 14px;background:#fff;border:0;border-radius:50px;box-shadow:0 1px 6px rgba(0,0,0,.1);font-size:14px;font-weight:500;line-height:1.3;letter-spacing:.9px;color:var(--vvs-ink)}\n  .vvs .vvs__badge svg{flex:0 0 auto;color:var(--vvs-accent)}\n  .vvs .vvs__badge b{font-weight:700;color:var(--vvs-accent)}\n  .vvs .vvs__title{margin:0;font-size:18px;font-weight:700;line-height:1.3;letter-spacing:.9px;color:var(--vvs-ink)}\n  .vvs .vvs__title span{color:var(--vvs-accent)}\n  .vvs .vvs__stage{position:relative}\n  .vvs .vvs__track{display:flex;gap:var(--vvs-gap);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-user-select:none;user-select:none}\n  .vvs .vvs__track::-webkit-scrollbar{display:none}\n  .vvs .vvs__track.is-drag{scroll-snap-type:none;cursor:grabbing}\n  .vvs .vvs__card{position:relative;flex:0 0 35%;scroll-snap-align:start;border-radius:10px;overflow:hidden;background:var(--vvs-soft);-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;transform:translateZ(0)}\n  .vvs .vvs__card::before{content:\"\";display:block;padding-top:177.78%}\n  .vvs .vvs__vid{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;pointer-events:none;background:transparent}\n  .vvs .vvs__vid::-webkit-media-controls{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-panel{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-play-button{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-overlay-play-button{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}\n  .vvs .vvs__arrow{display:none;position:absolute;top:50%;z-index:2;width:36px;height:36px;min-width:0;min-height:0;margin:-18px 0 0;padding:0;border:0;border-radius:50%;background:#fff;color:var(--vvs-accent);box-shadow:0 2px 10px rgba(0,0,0,.15);align-items:center;justify-content:center;cursor:pointer;line-height:1;transition:opacity .2s}\n  .vvs .vvs__arrow--prev{left:8px}\n  .vvs .vvs__arrow--next{right:8px}\n  .vvs .vvs__arrow[disabled]{opacity:0;pointer-events:none}\n  @media (min-width:750px){.vvs .vvs__card{flex-basis:26%}.vvs .vvs__title{font-size:19px}}\n  @media (hover:hover) and (pointer:fine){\n    .vvs .vvs__track{cursor:grab}\n    .vvs.is-scrollable .vvs__arrow{display:flex}\n  }\n</style>\n\n<script>\n(function(){\n  function init(root){\n    if(root.getAttribute('data-vvs-ready'))return;\n    root.setAttribute('data-vvs-ready','1');\n    var track=root.querySelector('.vvs__track');\n    var cards=[].slice.call(root.querySelectorAll('.vvs__card'));\n    var vids=[].slice.call(root.querySelectorAll('.vvs__vid'));\n    var prev=root.querySelector('.vvs__arrow--prev');\n    var next=root.querySelector('.vvs__arrow--next');\n\n    /* Ton bleibt aus, egal was der Browser versucht */\n    vids.forEach(function(v){\n      v.muted=true;v.defaultMuted=true;v.volume=0;\n      v.addEventListener('volumechange',function(){if(!v.muted||v.volume){v.muted=true;v.volume=0;}});\n    });\n\n    function play(v){if(v.preload!=='auto')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}\n    function stop(v){if(!v.paused)v.pause();}\n\n    /* Nur was im Bild ist, l\\u00e4dt und l\\u00e4uft \\u2014 h\\u00e4lt die PDP schnell */\n    var seen=false;\n    if('IntersectionObserver' in window){\n      var io=new IntersectionObserver(function(es){\n        seen=true;\n        es.forEach(function(e){var v=e.target;v._in=e.isIntersecting;if(v._in)play(v);else stop(v);});\n      },{threshold:0.2});\n      vids.forEach(function(v){io.observe(v);});\n    }\n    /* Notausstieg: meldet der Observer sich nicht, starten die sichtbaren Videos trotzdem */\n    setTimeout(function(){\n      if(seen)return;\n      var tr=track.getBoundingClientRect();\n      vids.forEach(function(v){\n        var r=v.getBoundingClientRect();\n        if(r.top<innerHeight&&r.bottom>0&&r.left<tr.right&&r.right>tr.left){v._in=true;play(v);}\n      });\n    },1500);\n\n    /* iOS-Stromsparmodus blockt Autoplay \\u2014 die erste Ber\\u00fchrung startet es nach */\n    function kick(){vids.forEach(function(v){if(v._in&&v.paused)play(v);});}\n    document.addEventListener('touchend',kick,{passive:true});\n    document.addEventListener('visibilitychange',function(){if(!document.hidden)kick();});\n\n    /* Pfeile + Maus-Ziehen (nur Desktop) */\n    function step(){var g=parseFloat(getComputedStyle(track).columnGap)||0;return cards.length?cards[0].getBoundingClientRect().width+g:track.clientWidth;}\n    function update(){\n      var max=track.scrollWidth-track.clientWidth;\n      if(max>2)root.classList.add('is-scrollable');else root.classList.remove('is-scrollable');\n      if(prev)prev.disabled=track.scrollLeft<=2;\n      if(next)next.disabled=track.scrollLeft>=max-2;\n    }\n    if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});\n    if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});\n    track.addEventListener('scroll',update,{passive:true});\n    window.addEventListener('resize',update);\n    update();\n\n    var drag=null;\n    track.addEventListener('pointerdown',function(e){\n      if(e.pointerType!=='mouse'||e.button!==0)return;\n      drag={x:e.clientX,l:track.scrollLeft};track.classList.add('is-drag');e.preventDefault();\n    });\n    window.addEventListener('pointermove',function(e){if(drag)track.scrollLeft=drag.l-(e.clientX-drag.x);});\n    window.addEventListener('pointerup',function(){\n      if(!drag)return;drag=null;\n      var s=step(),l=track.scrollLeft;\n      track.classList.remove('is-drag');track.scrollLeft=l;\n      track.scrollTo({left:Math.round(l/s)*s,behavior:'smooth'});\n    });\n    track.addEventListener('contextmenu',function(e){e.preventDefault();});\n\n    /* Automatisch weiter \\u2014 h\\u00e4lt an, solange jemand selbst wischt oder mit der Maus drauf ist */\n    var TAKT=3500;   /* Millisekunden bis zum n\\u00e4chsten Video */\n    var aktiv=false,maus=false,pauseBis=0;\n    function halt(){pauseBis=Date.now()+5000;}\n    function weiter(){\n      if(!aktiv||maus||drag||document.hidden||Date.now()<pauseBis)return;\n      var max=track.scrollWidth-track.clientWidth;\n      if(max<=2)return;\n      var s=step(),ziel=(Math.round(track.scrollLeft/s)+1)*s;\n      track.scrollTo({left:track.scrollLeft>=max-2?0:Math.min(ziel,max),behavior:'smooth'});\n    }\n    ['touchstart','pointerdown','wheel'].forEach(function(ev){track.addEventListener(ev,halt,{passive:true});});\n    if(prev)prev.addEventListener('click',halt);\n    if(next)next.addEventListener('click',halt);\n    root.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')maus=true;});\n    root.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')maus=false;});\n    if('IntersectionObserver' in window){\n      new IntersectionObserver(function(es){aktiv=es[0].isIntersecting;},{threshold:0.3}).observe(root);\n    }else{aktiv=true;}\n    setTimeout(function(){if(!seen){var r=root.getBoundingClientRect();aktiv=r.top<innerHeight&&r.bottom>0;}},1500);\n    if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))setInterval(weiter,TAKT);\n  }\n  function run(){[].forEach.call(document.querySelectorAll('[data-vvs]'),init);}\n  run();\n  if(!window.__vvs){window.__vvs=1;document.addEventListener('shopify:section:load',run);}\n})();\n</script>"
           }
         },
         "collapsible_1": {
@@ -82,7 +80,8 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Comment agit Sorelya ?",
-            "content": "<p><strong>Le Cyperus rotundus</strong> coupe le signal de pousse, directement à la racine. Le poil ne revient pas. Pour toujours.</p><p>Plus de poils qui piquent. Plus de rasoir. Juste une peau lisse et éclatante.</p><p><strong>La formule complète :</strong> le Cyperus agit sur le poil, le reste répare des années de rasage.<br>Panthénol (apaise le feu du rasoir) · Acide hyaluronique (repulpe) · Céramides (renforcent la barrière cutanée) · Extrait de citron (éclaircit les taches sombres) · Arginine (régénère) · Menthe poivrée (effet frais).</p><p>Sans hormones, parabènes ni silicones. Vegan et non testé sur les animaux.</p><p><strong>Mode d’emploi :</strong><br>① Retire tes poils une dernière fois, sèche en tamponnant<br>② Applique 2 à 3 gouttes le soir, en quelques secondes<br>③ Laisse pénétrer, recommence après chaque rasage<br>→ jusqu’à ce que plus aucun poil ne repousse.</p>"
+            "content": "<p><strong>Le Cyperus rotundus</strong> coupe le signal de pousse, directement à la racine. Le poil ne revient pas. Pour toujours.</p><p>Plus de poils qui piquent. Plus de rasoir. Juste une peau lisse et éclatante.</p><p><strong>La formule complète :</strong> le Cyperus agit sur le poil, le reste répare des années de rasage.<br>Panthénol (apaise le feu du rasoir) · Acide hyaluronique (repulpe) · Céramides (renforcent la barrière cutanée) · Extrait de citron (éclaircit les taches sombres) · Arginine (régénère) · Menthe poivrée (effet frais).</p><p>Sans hormones, parabènes ni silicones. Vegan et non testé sur les animaux.</p><p><strong>Mode d’emploi :</strong><br>① Retire tes poils une dernière fois, sèche en tamponnant<br>② Applique 2 à 3 gouttes le soir, en quelques secondes<br>③ Laisse pénétrer, recommence après chaque rasage<br>→ jusqu’à ce que plus aucun poil ne repousse.</p>",
+            "page": ""
           }
         },
         "collapsible_2": {
@@ -91,7 +90,8 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Où et combien de fois ?",
-            "content": "<p><strong>Combien de fois :</strong> après chaque rasage, idéalement tous les soirs, en quelques secondes. Semaine après semaine, la repousse diminue à vue d’œil. Après 2 à 3 mois, ta peau reste lisse pour de bon.</p><p><strong>Où :</strong> partout où tes poils te gênent, visage comme corps : menton, lèvre, cou, aisselles, maillot, jambes. Assez doux pour les zones les plus sensibles.</p>"
+            "content": "<p><strong>Combien de fois :</strong> après chaque rasage, idéalement tous les soirs, en quelques secondes. Semaine après semaine, la repousse diminue à vue d’œil. Après 2 à 3 mois, ta peau reste lisse pour de bon.</p><p><strong>Où :</strong> partout où tes poils te gênent, visage comme corps : menton, lèvre, cou, aisselles, maillot, jambes. Assez doux pour les zones les plus sensibles.</p>",
+            "page": ""
           }
         },
         "collapsible_3": {
@@ -100,7 +100,8 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Sans douleur et sans risque ?",
-            "content": "<p>Oui. Tu tamponnes, c’est tout : pas de brûlure, pas d’arrachage, pas de lame.</p><p>100 % sans hormones, pour tous les types de peau. Comme pour tout nouveau soin, fais d’abord un test sur une petite zone.</p>"
+            "content": "<p>Oui. Tu tamponnes, c’est tout : pas de brûlure, pas d’arrachage, pas de lame.</p><p>100 % sans hormones, pour tous les types de peau. Comme pour tout nouveau soin, fais d’abord un test sur une petite zone.</p>",
+            "page": ""
           }
         },
         "collapsible_4": {
@@ -109,7 +110,8 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Questions fréquentes",
-            "content": "<p><strong>Ça marche aussi sur les poils clairs, blonds ou gris ?</strong><br>Oui. Le laser a besoin d’un pigment foncé, Sorelya non : il agit sur le signal de pousse à la racine, quelle que soit la couleur du poil.</p><p><strong>Je peux l’utiliser pendant la grossesse ou l’allaitement ?</strong><br>Sorelya est 100 % sans hormones, vegan et s’applique uniquement sur la peau. Pendant la grossesse ou l’allaitement, demande d’abord l’avis de ton médecin.</p><p><strong>Ça marche sur les poils foncés au menton dus aux hormones ou à la ménopause ?</strong><br>C’est exactement pour ça que Sorelya a été créé. Il agit à la racine : le poil devient plus fin, plus clair.</p><p><strong>Au bout de combien de temps je vois des résultats ?</strong><br>Les premières semaines : ça pique moins, la repousse ralentit. Après 2 à 3 mois : des zones entières restent lisses.</p>"
+            "content": "<p><strong>Ça marche aussi sur les poils clairs, blonds ou gris ?</strong><br>Oui. Le laser a besoin d’un pigment foncé, Sorelya non : il agit sur le signal de pousse à la racine, quelle que soit la couleur du poil.</p><p><strong>Je peux l’utiliser pendant la grossesse ou l’allaitement ?</strong><br>Sorelya est 100 % sans hormones, vegan et s’applique uniquement sur la peau. Pendant la grossesse ou l’allaitement, demande d’abord l’avis de ton médecin.</p><p><strong>Ça marche sur les poils foncés au menton dus aux hormones ou à la ménopause ?</strong><br>C’est exactement pour ça que Sorelya a été créé. Il agit à la racine : le poil devient plus fin, plus clair.</p><p><strong>Au bout de combien de temps je vois des résultats ?</strong><br>Les premières semaines : ça pique moins, la repousse ralentit. Après 2 à 3 mois : des zones entières restent lisses.</p>",
+            "page": ""
           }
         }
       },
@@ -119,9 +121,8 @@
         "liquid_benefices",
         "liquid_sous_titre",
         "kaching_bundles_app_block_ap",
-        "liquid_stock",
-        "quantity_selector",
         "buy_buttons",
+        "image_g4hPLY",
         "liquid_confiance",
         "liquid_videos",
         "collapsible_1",
@@ -153,15 +154,53 @@
     },
     "ap_cas": {
       "type": "lp-ap-cas",
-      "settings": {}
+      "settings": {
+        "t01": "Tu te reconnais ? Chaque zone a son cercle vicieux.",
+        "t02": "Tu te d&#233;tournes d&#232;s qu'il approche la main de ton menton, de peur qu'il sente ce qui pique ? La pince n'y peut rien : le signal de pousse continue en dessous.",
+        "t03": "Menton & m&#226;choire",
+        "t04": "Le SOPK te donne l&#8217;impression d&#8217;&#234;tre",
+        "t05": "un homme dans un corps de femme",
+        "t06": ". Ce n'est pas ta faute : ce sont tes hormones qui envoient le signal de pousse. Le rasoir, lui, ne fait que couper.",
+        "t07": "Ce que fait Sorelya :",
+        "t08": "il agit sur ce signal, &#224; la racine, chaque soir, sans hormones.",
+        "t09": "Le poil revient plus fin, plus clair, plus lentement.",
+        "t10": "L&#232;vre sup&#233;rieure (SOPK)",
+        "t11": "Tu as d&#233;j&#224; tout essay&#233; et tu n'y crois plus ? Normal : tout ce que tu as test&#233; agissait en surface. Sorelya, lui, vise la racine du poil.",
+        "t12": "Jambes & bras",
+        "t13": "Short par-dessus le maillot, serviette qu&#8217;on ne l&#226;che pas, petits points rouges apr&#232;s chaque rasage ? Le panth&#233;nol apaise, la repousse ralentit.",
+        "t14": "Maillot",
+        "t15": "Le laser t&#8217;est interdit &#224; cause d&#8217;un tatouage ? Sorelya ne chauffe pas et ne br&#251;le pas : il s&#8217;applique sur la peau tatou&#233;e comme un soin.",
+        "t16": "Peau tatou&#233;e",
+        "t17": "Cette &#171; ombre &#187; fonc&#233;e sur le cou qui revient quelques heures apr&#232;s le rasage ? L&#8217;extrait de citron &#233;claircit les marques, le Cyperus affine la repousse.",
+        "t18": "Cou & ombre fonc&#233;e"
+      }
     },
     "ap_titre_chemin": {
       "type": "lp-ap-titre-chemin",
-      "settings": {}
+      "settings": {
+        "t01": "Ton chemin vers une peau lisse et sans poils, pour de bon",
+        "t02": "Voil&#224; ce qui t&#8217;attend avec Sorelya, chaque soir :"
+      }
     },
     "ap_timeline": {
       "type": "lp-ap-timeline",
-      "settings": {}
+      "settings": {
+        "t01": "Semaine 1",
+        "t02": "&#199;a pique moins",
+        "t03": "Les premiers poils qui repoussent sont plus doux et piquent moins. Menthe poivr&#233;e et panth&#233;nol apaisent la peau d&#232;s le premier soir.",
+        "t04": "Semaine 2",
+        "t05": "Une repousse plus fine",
+        "t06": "Les poils reviennent visiblement plus fins et plus clairs. Le rasoir et la pince sortent moins souvent.",
+        "t07": "Mois 1",
+        "t08": "Des poils presque invisibles",
+        "t09": "Les poils &#233;pais et fonc&#233;s deviennent fins, on les voit &#224; peine. Beaucoup de zones restent lisses plusieurs jours.",
+        "t10": "Mois 3",
+        "t11": "Fini la peur de l&#8217;ombre",
+        "t12": "Sur les zones &#224; probl&#232;mes, il ne reste que quelques poils tr&#232;s fins. Plus d&#8217;ombre sur la l&#232;vre ni sur le menton.",
+        "t13": "Mois 6",
+        "t14": "Lib&#233;r&#233;e du rasoir",
+        "t15": "La racine re&#231;oit de moins en moins le signal de pousse. Une peau lisse pour de bon, avec un minimum d&#8217;effort."
+      }
     },
     "ap_banniere": {
       "type": "lp-ap-banniere",
@@ -169,11 +208,51 @@
     },
     "ap_situations": {
       "type": "lp-ap-situations",
-      "settings": {}
+      "settings": {
+        "t01": "Du stress du rasage quotidien &#224; une peau lisse pour de bon.",
+        "t02": "",
+        "t03": "",
+        "t04": "",
+        "t05": "",
+        "t06": "",
+        "t07": "",
+        "t08": "Les poils du SOPK au menton",
+        "t09": "Avec le SOPK, la pince entretient le cercle : chaque poil arrach&#233; revient plus dru. Sorelya agit sur le signal de pousse &#224; la racine, chaque soir, sans hormones. Avec la r&#233;gularit&#233;, le poil repousse plus fin, plus clair, plus lentement.",
+        "t10": "Avec le SOPK, la pince entretient le cercle : chaque poil arrach&#233; revient plus dru. Sorelya agit sur le...",
+        "t11": "Lire la suite",
+        "t12": "Pour les poils hormonaux",
+        "t13": "Le rituel pince de chaque matin",
+        "t14": "Vingt minutes devant le miroir grossissant &#224; traquer chaque poil, et la peau rouge toute la matin&#233;e. Deux gouttes le soir remplacent la chasse du matin : le poil se fait plus fin, la peau s&#8217;apaise.",
+        "t15": "Vingt minutes devant le miroir grossissant &#224; traquer chaque poil, et la peau rouge toute la matin&#233;e. Deux...",
+        "t16": "Pour la pince quotidienne",
+        "t17": "Les boutons de rasage sur le maillot",
+        "t18": "Panth&#233;nol et menthe poivr&#233;e apaisent la peau juste apr&#232;s le rasage. Moins de rougeurs, moins de boutons, m&#234;me sur le maillot, et une repousse qui pique moins.",
+        "t19": "Panth&#233;nol et menthe poivr&#233;e apaisent la peau juste apr&#232;s le rasage. Moins de rougeurs, moins de boutons, m&#234;me...",
+        "t20": "Pour le maillot",
+        "t21": "L&#8217;ombre au-dessus de la l&#232;vre",
+        "t22": "Ras&#233;e le matin, l&#8217;ombre revient d&#232;s midi. En affinant la repousse et en &#233;claircissant les marques laiss&#233;es par le rasoir, Sorelya espace les rasages, jour apr&#232;s jour.",
+        "t23": "Ras&#233;e le matin, l&#8217;ombre revient d&#232;s midi. En affinant la repousse et en &#233;claircissant les marques laiss&#233;es...",
+        "t24": "Pour la l&#232;vre sup&#233;rieure",
+        "t25": "Les poils blancs de la m&#233;nopause",
+        "t26": "&#192; la m&#233;nopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit sur le signal de pousse, quelle que soit la couleur du poil.",
+        "t27": "&#192; la m&#233;nopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit...",
+        "t28": "Pour la m&#233;nopause",
+        "t29": "Le temps perdu chaque matin",
+        "t30": "Se raser tous les jours, ce sont des heures envol&#233;es chaque mois. Avec une repousse plus lente, le rasoir sort de moins en moins souvent, et le matin redevient &#224; toi.",
+        "t31": "Se raser tous les jours, ce sont des heures envol&#233;es chaque mois. Avec une repousse plus lente, le rasoir...",
+        "t32": "Pour gagner du temps",
+        "t33": "Apr&#232;s le laser ou le d&#233;tatouage",
+        "t34": "Peau irrit&#233;e, rougeurs qui tra&#238;nent : la formule au panth&#233;nol et &#224; l&#8217;acide hyaluronique apaise et hydrate comme un vrai soin r&#233;parateur.",
+        "t35": "Peau irrit&#233;e, rougeurs qui tra&#238;nent : la formule au panth&#233;nol et &#224; l&#8217;acide hyaluronique apaise et hydrate...",
+        "t36": "Pour les peaux sensibilis&#233;es",
+        "t37": "Je commence ma cure"
+      }
     },
     "ap_titre_secret": {
       "type": "lp-ap-titre-secret",
-      "settings": {}
+      "settings": {
+        "t01": "Quel est le secret ?"
+      }
     },
     "ap_video_secret": {
       "type": "lp-ap-video-secret",
@@ -181,23 +260,64 @@
     },
     "ap_mecanisme": {
       "type": "lp-ap-mecanisme",
-      "settings": {}
+      "settings": {
+        "t01": "P&#233;n&#233;trer jusqu&#8217;&#224; la racine",
+        "t02": "L&#8217;extrait de Cyperus rotundus",
+        "t03": "p&#233;n&#232;tre en profondeur et atteint le follicule, l&#224; o&#249; na&#238;t le signal de pousse.",
+        "t04": "Couper le signal",
+        "t05": "Ses flavono&#239;des",
+        "t06": "forment un bouclier autour de la racine : le signal qui ordonne au poil de pousser ne passe plus.",
+        "t07": "Affiner le poil",
+        "t08": "&#192; chaque cycle, le poil qui repousse est plus fin, plus clair, plus lent. Avec le temps, de plus en plus discret.",
+        "t09": "Apaiser et r&#233;parer",
+        "t10": "Le panth&#233;nol",
+        "t11": "calme le feu du rasoir, tandis que",
+        "t12": "l&#8217;extrait de citron",
+        "t13": "&#233;claircit les marques fonc&#233;es.",
+        "t14": "L&#8217;acide hyaluronique",
+        "t15": "et",
+        "t16": "les c&#233;ramides",
+        "t17": "r&#233;parent la barri&#232;re de la peau."
+      }
     },
     "ap_avant_apres": {
       "type": "lp-ap-avant-apres",
-      "settings": {}
+      "settings": {
+        "t01": "&#201;pais hier, invisibles demain",
+        "t02": "Sem. 1 &#224; 4",
+        "t03": "Sem. 4 &#224; 8",
+        "t04": "Sem. 8 &#224; 14",
+        "t05": "Bye-bye les poils durs",
+        "t06": "Une peau nettement plus douce d&#232;s le premier mois. Le poil devient plus fin et plus souple.",
+        "t07": "Visiblement plus fins et plus clairs",
+        "t08": "Plus de temps entre deux rasages, une peau plus lisse :",
+        "t09": "la diff&#233;rence se voit clairement maintenant &#8211; les nouveaux poils repoussent beaucoup plus l&#233;gers et plus p&#226;les.",
+        "t10": "Presque sans poils.",
+        "t11": "Les poils durs, c'est de l'histoire ancienne. Il ne reste qu'un duvet &#224; peine visible. Profite de semaines de peau lisse avec presque z&#233;ro effort."
+      }
     },
     "ap_titre_compare": {
       "type": "lp-ap-titre-compare",
-      "settings": {}
+      "settings": {
+        "t01": "Sorelya compar&#233; &#224;&#8230;"
+      }
     },
     "ap_comparatif": {
       "type": "lp-ap-comparatif",
-      "settings": {}
+      "settings": {
+        "t01": "SORELYA",
+        "t02": "Rasoir",
+        "t03": "Cr&#232;me d&#233;pilatoire",
+        "t04": "Cire",
+        "t05": "IPL / Laser",
+        "t06": "Pince / &#201;pilateur"
+      }
     },
     "ap_titre_emploi": {
       "type": "lp-ap-titre-emploi",
-      "settings": {}
+      "settings": {
+        "t01": "Deux gouttes le soir, c&#8217;est tout"
+      }
     },
     "ap_video_emploi": {
       "type": "lp-ap-video-emploi",
@@ -205,15 +325,113 @@
     },
     "ap_faq": {
       "type": "lp-ap-faq",
-      "settings": {}
+      "settings": {
+        "t01": "Les questions que les femmes se posent souvent",
+        "t02": "J'ai d&#233;j&#224; tout essay&#233;. Pourquoi &#231;a marcherait sur moi ?",
+        "t03": "C'est LA question la plus importante. Et elle m&#233;rite mieux qu'une r&#233;ponse marketing.",
+        "t04": "Tout ce que tu as essay&#233; jusqu'ici, rasoir, cire, &#233;pilateur, a retir&#233; le poil en surface. Le signal de pousse, tout au fond du follicule, n'a jamais &#233;t&#233; touch&#233;. C'est pour &#231;a qu'il repousse encore et encore, aussi &#233;pais, aussi vite.",
+        "t05": "Sorelya agit ailleurs.",
+        "t06": "L'actif v&#233;g&#233;tal Cyperus Rotundus p&#233;n&#232;tre en profondeur et affaiblit, &#224; chaque application, le signal qui fait pousser le poil. Sans chaleur. Sans chimie. Gr&#226;ce &#224; un m&#233;canisme biologique, directement &#224; la racine.",
+        "t07": "Concr&#232;tement : le poil ne dispara&#238;t pas du jour au lendemain. Mais avec le temps, il repousse plus fin, plus clair et plus rarement.",
+        "t08": "Et si &#231;a ne marche quand m&#234;me pas ?",
+        "t09": "Satisfaite ou rembours&#233;e pendant 90 jours. Pas de formulaire. Pas de discussion.",
+        "t10": "Ce n'est pas encore une de ces promesses en l'air qui d&#233;&#231;oivent dans la vraie vie ?",
+        "t11": "Ce doute est l&#233;gitime. Le march&#233; est rempli de produits qui promettent trop et tiennent trop peu.",
+        "t12": "C'est pour &#231;a qu'on te dit exactement ce que tu peux esp&#233;rer, et ce que tu ne dois pas esp&#233;rer.",
+        "t13": "Ce qui t'attend, de fa&#231;on r&#233;aliste :",
+        "t14": "Les deux premi&#232;res semaines, ta peau devient plus douce et la repousse commence &#224; s'affiner. Apr&#232;s quatre &#224; six semaines, tu te rases moins souvent. Apr&#232;s trois mois d'utilisation r&#233;guli&#232;re, beaucoup de zones restent lisses pendant des jours.",
+        "t15": "Ce qu'on ne promet pas :",
+        "t16": "Z&#233;ro poil &#224; vie apr&#232;s un seul flacon. Des r&#233;sultats en trois jours.",
+        "t17": "Et si &#231;a ne marche pas pour toi, tu as 90 jours pour te faire rembourser.",
+        "t18": "J'ai la peau ultra sensible et je r&#233;agis &#224; presque tout avec des rougeurs et des boutons. Je peux &#234;tre s&#251;re de bien le supporter ?",
+        "t19": "Oui, c'est notre promesse de base : notre s&#233;rum est doux et s'utilise comme un soin.",
+        "t20": "Pas de lame",
+        "t21": ", donc pas de coupures ni de petites plaies. Il est con&#231;u pour",
+        "t22": "r&#233;duire le stress de la peau",
+        "t23": ", pas pour en provoquer. Un test sur une petite zone reste conseill&#233;, comme pour tout nouveau soin.",
+        "t24": "Quand est-ce que je vois les premiers changements ?",
+        "t25": "Semaines 1 &#224; 2 :",
+        "t26": "La peau devient plus douce. Les poils qui repoussent piquent moins. Beaucoup le remarquent surtout apr&#232;s le rasage suivant.",
+        "t27": "Semaines 3 &#224; 4 :",
+        "t28": "La repousse ralentit nettement. Les poils reviennent plus fins et plus clairs.",
+        "t29": "Mois 2 &#224; 3 :",
+        "t30": "Des zones enti&#232;res restent lisses pendant des jours. Tu prends ton rasoir de moins en moins souvent.",
+        "t31": "Ce n'est pas une promesse pour chaque jour. C'est ce que racontent la plupart des femmes qui s'y tiennent.",
+        "t32": "Il me faut un rituel compliqu&#233; qui prend un temps fou ?",
+        "t33": "Non. Le s&#233;rum s'int&#232;gre",
+        "t34": "facilement et rapidement",
+        "t35": "&#224; ta routine du soir &#8211; comme un soin normal.",
+        "t36": "&#192; long terme, tu gagnes m&#234;me du temps",
+        "t37": ", parce que tu as moins souvent besoin de m&#233;thodes agressives.",
+        "t38": "Est-ce que des ann&#233;es de rasage et de pince ont ab&#238;m&#233; mes racines pour toujours ?",
+        "t39": "Le rasage et la pince peuvent",
+        "t40": "traumatiser",
+        "t41": "les racines. Notre s&#233;rum",
+        "t42": "casse ce cercle vicieux",
+        "t43": "et ralentit la pousse en douceur, au lieu de la combattre par la force.",
+        "t44": "Le s&#233;rum va vraiment r&#233;gler le probl&#232;me sur le long terme, ou j'aurai de nouveau des poils durs au bout de quelques jours et je reprendrai le rasoir ?",
+        "t45": "Notre objectif :",
+        "t46": "all&#233;ger ta routine pour de bon",
+        "t47": ". Le s&#233;rum ralentit la repousse et rend les poils plus fins. Tu ne d&#233;pends plus de la lame tous les jours, tu construis un effet &#224; long terme.",
+        "t48": "Qu'est-ce qu'il y a exactement dans le s&#233;rum ?",
+        "t49": "Extrait de Cyperus Rotundus",
+        "t50": "(souchet rond, &#224; ne pas confondre avec le souchet comestible des huiles classiques) &#8212; p&#233;n&#232;tre jusqu&#8217;au follicule et affaiblit le signal de pousse gr&#226;ce &#224; ses flavono&#239;des.",
+        "t51": "Acide hyaluronique et c&#233;ramides",
+        "t52": "&#8212; renforcent la barri&#232;re cutan&#233;e et gardent la peau souple.",
+        "t53": "Panth&#233;nol",
+        "t54": "&#8212; apaise imm&#233;diatement apr&#232;s l'&#233;pilation.",
+        "t55": "Arginine",
+        "t56": "&#8212; prot&#232;ge le pH naturel de la peau.",
+        "t57": "Extrait de menthe poivr&#233;e",
+        "t58": "&#8212; rafra&#238;chit et calme les rougeurs.",
+        "t59": "Extrait de citron",
+        "t60": "&#8212; &#233;claircit en douceur les zones fonc&#233;es.",
+        "t61": "Sans parab&#232;nes. Sans silicones. Sans huiles min&#233;rales. Sans hormones. Vegan et non test&#233; sur les animaux.",
+        "t62": "Combien de temps dure un flacon et combien il contient ?",
+        "t63": "Chaque flacon contient",
+        "t64": "30 ml.",
+        "t65": "Utilis&#233; tous les jours sur une zone, il dure",
+        "t66": "4 &#224; 6 semaines.",
+        "t67": "Sur plusieurs zones, forc&#233;ment moins. C&#8217;est pour &#231;a qu&#8217;on conseille de commencer par la cure de 3 mois, pour tenir sans interruption le premier mois, le plus important.",
+        "t68": "Le s&#233;rum contient des hormones ou des ingr&#233;dients douteux ?",
+        "t69": "Non. Notre s&#233;rum est un",
+        "t70": "soin d'origine v&#233;g&#233;tale",
+        "t71": "et n'agit sur ton corps",
+        "t72": "ni par des hormones",
+        "t73": "ni par des produits chimiques agressifs.",
+        "t74": "C'est trop cher pour moi. &#199;a vaut vraiment le coup ?",
+        "t75": "Faisons vite le calcul.",
+        "t76": "Cire : 25 &#224; 60 euros toutes les 3 &#224; 4 semaines, soit jusqu'&#224; 720 euros par an. Avec en prime la douleur et la peau rouge pendant des jours.",
+        "t77": "Laser : 300 &#224; 1 500 euros, pas adapt&#233; &#224; tous les types de peau et de poils, pas sur les tatouages, pas en cas de troubles hormonaux.",
+        "t78": "Rasoir : lames, gel, temps perdu, feu du rasoir, poils incarn&#233;s. Un jour sur deux.",
+        "t79": "Avec la cure, un flacon te revient bien moins cher qu&#8217;une seule s&#233;ance de cire.",
+        "t80": "Quand le follicule s'affaiblit au fil des mois, tu n'ach&#232;tes plus une peau lisse pour quelques jours. Tu ach&#232;tes moins d'efforts. Pour de bon.",
+        "t81": "Et si &#231;a ne marche pas sur moi ou que je ne le supporte pas ?",
+        "t82": "Tu ne prends",
+        "t83": "aucun risque",
+        "t84": ". On t'offre une",
+        "t85": "garantie satisfaite ou rembours&#233;e de 90 jours",
+        "t86": ", et un paiement 100 % s&#233;curis&#233;."
+      }
     },
     "ap_cta": {
       "type": "lp-ap-cta",
-      "settings": {}
+      "settings": {
+        "t01": "Formule v&#233;g&#233;tale &#183; sans hormones &#183; vegan",
+        "t02": "Reprends confiance en toi.",
+        "t03": "Je commence ma cure &#8594;",
+        "t04": "&#128737;&#65039; Satisfaite ou rembours&#233;e pendant 90 jours &#183; Sans formulaire, sans discussion."
+      }
     },
     "ap_garantie": {
       "type": "lp-ap-garantie",
-      "settings": {}
+      "settings": {
+        "t01": "90",
+        "t02": "JOURS",
+        "t03": "GARANTIE",
+        "t04": "Tu as d&#233;j&#224; pay&#233; pour des m&#233;thodes qui n&#8217;ont rien chang&#233;.",
+        "t05": "Cette fois, tu as 90 jours pour juger. Pas de r&#233;sultat ? On te rembourse jusqu&#8217;au dernier centime, sans discussion."
+      }
     }
   },
   "order": [
