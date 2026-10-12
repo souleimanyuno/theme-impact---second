@@ -1,0 +1,239 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "liquid_reviews": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- assign note = product.metafields.reviews.rating.value.rating -%}\n{%- assign nb = product.metafields.reviews.rating_count.value -%}\n{%- if nb and nb > 0 -%}\n<div style=\"display:flex;align-items:center;gap:8px;margin:0 0 6px;\">\n  <span style=\"color:#A855F7;font-size:17px;letter-spacing:1px;\" aria-hidden=\"true\">&#9733;&#9733;&#9733;&#9733;&#9733;</span>\n  <span style=\"font-size:15px;color:#333;\">Not&eacute; <strong>{{ note | round: 1 }}</strong>/5 &middot; <strong>{{ nb }}</strong> avis</span>\n</div>\n{%- endif -%}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "liquid_benefices": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<ul class=\"ap-benef\"><li><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#A855F7\"/><path d=\"M7 12.5l3.2 3.2L17 9\" stroke=\"#fff\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Stoppe la pousse directement &#224; la racine</span></li><li><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#A855F7\"/><path d=\"M7 12.5l3.2 3.2L17 9\" stroke=\"#fff\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Les poils repoussent plus fins, plus l&#233;gers</span></li><li><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#A855F7\"/><path d=\"M7 12.5l3.2 3.2L17 9\" stroke=\"#fff\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Fini le feu du rasoir et la peau de fraise</span></li><li><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#A855F7\"/><path d=\"M7 12.5l3.2 3.2L17 9\" stroke=\"#fff\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>100 % v&#233;g&#233;tal, sans hormones et vegan</span></li></ul><style>.ap-benef{list-style:none;margin:6px 0 4px;padding:0;display:grid;gap:10px}.ap-benef li{display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.35;color:#000;letter-spacing:.3px}.ap-benef svg{flex:0 0 20px}</style>"
+          }
+        },
+        "liquid_sous_titre": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<p class=\"ap-sub\">Contrairement au rasoir, &#224; la pince ou au laser, <strong>Sorelya</strong> mise sur le <strong>Cyperus rotundus</strong> &#8212; un actif v&#233;g&#233;tal qui stoppe la pousse directement &#224; la racine.</p><style>.ap-sub{font-size:15px;color:#444;line-height:1.65;margin:4px 0 6px;letter-spacing:.15px}.ap-sub strong{color:#A855F7;font-weight:700}</style>"
+          }
+        },
+        "kaching_bundles_app_block_ap": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
+          }
+        },
+        "liquid_stock": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"stock-badge\">\n  <span class=\"stock-badge__dot\"></span>\n  <span class=\"stock-badge__text\">Plus que 7 % du stock disponible &#224; ce prix</span>\n</div>\n\n<style>\n  .stock-badge {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    padding: 9px 16px;\n    border-radius: 999px;\n    background: #FDECEC;\n  }\n\n  .stock-badge__dot {\n    width: 7px;\n    height: 7px;\n    border-radius: 50%;\n    background: #E01B24;\n    flex-shrink: 0;\n    animation: stock-badge-pulse 1.6s ease-in-out infinite;\n  }\n\n  .stock-badge__text {\n    font-size: 13px;\n    font-weight: 700;\n    line-height: 1.2;\n    color: #E01B24;\n    letter-spacing: 0.1px;\n  }\n\n  @keyframes stock-badge-pulse {\n    0%, 100% { opacity: 1; transform: scale(1); }\n    50%      { opacity: 0.45; transform: scale(0.85); }\n  }\n\n  @media (min-width: 750px) {\n    .stock-badge { padding: 10px 18px; }\n    .stock-badge__text { font-size: 14px; }\n  }\n</style>\n"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#A855F7",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "liquid_confiance": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"tbg-wrap\">\n  <div class=\"tbg-grid\">\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\">\n          <path d=\"M12 3C12 3 7 9 7 12.5C7 15.5 9.2 17.5 12 17.5C14.8 17.5 17 15.5 17 12.5C17 9 12 3 12 3Z\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/>\n          <path d=\"M3.5 20.5H20.5\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linecap=\"round\"/>\n        </svg>\n      </div>\n      <p>Ose le maillot<span>Agit &#224; la racine du poil</span></p>\n    </div>\n\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\">\n          <circle cx=\"6\" cy=\"8\" r=\"2.2\" stroke=\"#111111\" stroke-width=\"1.6\"/>\n          <circle cx=\"18\" cy=\"7\" r=\"2.2\" stroke=\"#111111\" stroke-width=\"1.6\"/>\n          <circle cx=\"12\" cy=\"17\" r=\"2.2\" stroke=\"#111111\" stroke-width=\"1.6\"/>\n          <path d=\"M7.8 9.2L10.6 15.2M16.4 8.8L13.4 15.2M8.2 7.6H15.8\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linecap=\"round\"/>\n        </svg>\n      </div>\n      <p>Un menton tout doux<span>Le poil repousse plus fin</span></p>\n    </div>\n\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\">\n        <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\">\n          <path d=\"M12 3.5C12 3.5 6.5 9.8 6.5 13.6C6.5 16.9 8.9 19 12 19C15.1 19 17.5 16.9 17.5 13.6C17.5 9.8 12 3.5 12 3.5Z\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/>\n          <path d=\"M14.8 13.8C14.8 15.3 13.6 16.4 12.1 16.4\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linecap=\"round\"/>\n        </svg>\n      </div>\n      <p>Z&#233;ro feu du rasoir<span>Panth&#233;nol + menthe</span></p>\n    </div>\n  </div>\n\n  <div class=\"tbg-guarantee\">\n    <div class=\"tbg-guarantee-icon\">\n      <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\">\n        <path d=\"M12 3L4 6.5V11C4 16 7.5 20 12 21C16.5 20 20 16 20 11V6.5L12 3Z\" stroke=\"#FFFFFF\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/>\n        <path d=\"M9 12L11 14L15.5 9.5\" stroke=\"#FFFFFF\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n      </svg>\n    </div>\n    <p><strong>Tu as d&#233;j&#224; pay&#233; pour des m&#233;thodes qui n&#8217;ont rien chang&#233;.</strong> 90 jours pour juger. Pas de r&#233;sultat ? On te rembourse, sans discussion.</p>\n  </div>\n</div>\n\n<style>\n.tbg-wrap{\n  max-width:560px;\n  margin:0 auto;\n}\n\n.tbg-wrap *{\n  box-sizing:border-box;\n}\n\n.tbg-live{\n  display:flex;\n  align-items:center;\n  gap:8px;\n  font-size:13px;\n  color:#666666;\n  margin-bottom:16px;\n}\n\n.tbg-live strong{\n  color:#111111;\n}\n\n.tbg-grid{\n  display:grid;\n  grid-template-columns:repeat(3,1fr);\n  gap:10px;\n  margin-bottom:14px;\n}\n\n.tbg-card{\n  background:#FFFFFF;\n  border:1px solid #DCDCDC;\n  border-radius:14px;\n  padding:18px 8px 16px;\n  text-align:center;\n  transition:.2s ease;\n}\n\n.tbg-card:hover{\n  border-color:#BDBDBD;\n  transform:translateY(-2px);\n}\n\n.tbg-icon{\n  display:flex;\n  justify-content:center;\n  align-items:center;\n  margin-bottom:10px;\n}\n\n.tbg-card p{\n  margin:0;\n  font-size:12.5px;\n  font-weight:700;\n  line-height:1.35;\n  color:#111111;\n}\n\n/* L'emotion achete, la logique justifie : le benefice client porte la carte,\n   la raison mecanique le soutient en dessous, sans lui voler l'oeil. */\n.tbg-card p span{\n  display:block;\n  margin-top:6px;\n  font-size:11px;\n  font-weight:400;\n  line-height:1.4;\n  color:#666666;\n}\n\n.tbg-guarantee{\n  display:flex;\n  align-items:flex-start;\n  gap:10px;\n  background:#F5F5F5;\n  border:1px solid #DCDCDC;\n  border-radius:12px;\n  padding:12px 14px;\n}\n\n.tbg-guarantee-icon{\n  flex:0 0 auto;\n  width:28px;\n  height:28px;\n  border-radius:50%;\n  background:#111111;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  margin-top:1px;\n}\n\n.tbg-guarantee p{\n  margin:0;\n  font-size:12.5px;\n  line-height:1.5;\n  color:#666666;\n}\n\n.tbg-guarantee strong{\n  color:#111111;\n}\n\n@media (max-width:420px){\n\n  .tbg-grid{\n    gap:8px;\n  }\n\n  .tbg-card{\n    padding:14px 6px 12px;\n  }\n\n  .tbg-card p{\n    font-size:11.5px;\n  }\n\n  .tbg-card p span{\n    font-size:10.5px;\n    margin-top:5px;\n  }\n\n}\n</style>\n"
+          }
+        },
+        "liquid_videos": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "\n<div class=\"vvs\" data-vvs>\n  <div class=\"vvs__head\">\n    <p class=\"vvs__badge\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M12 2.5l7.5 3v5.6c0 4.7-3.2 8.9-7.5 10.4-4.3-1.5-7.5-5.7-7.5-10.4V5.5l7.5-3z\" fill=\"currentColor\"/><path d=\"M8.3 12.2l2.5 2.5 4.9-5\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span><b>90 jours</b> pour tester sans risque</span></p>\n    <p class=\"vvs__title\">Le souchet rond, <span>elles en parlent.</span></p>\n  </div>\n  <div class=\"vvs__stage\">\n  <div class=\"vvs__track\">\n\n    \n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-1.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n    \n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-2.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-3.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-4.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n    <div class=\"vvs__card\"><video class=\"vvs__vid\" src=\"{{ 'ap-ugc-5.mp4' | asset_url }}\" muted loop playsinline preload=\"none\" disablepictureinpicture disableremoteplayback controlslist=\"nodownload nofullscreen noremoteplayback noplaybackrate\" tabindex=\"-1\" aria-hidden=\"true\"></video></div>\n\n  </div>\n  <button type=\"button\" class=\"vvs__arrow vvs__arrow--prev\" aria-label=\"Pr&#233;c&#233;dent\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M15 5l-7 7 7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>\n  <button type=\"button\" class=\"vvs__arrow vvs__arrow--next\" aria-label=\"Suivant\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M9 5l7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>\n  </div>\n</div>\n\n<style>\n  .vvs{margin:16px 0 4px;--vvs-accent:#A855F7;--vvs-soft:#E9DAF9;--vvs-ink:#1A1A1A;--vvs-gap:8px}\n  .vvs .vvs__head{margin:0 0 14px;text-align:center;font-family:'Poppins',sans-serif;color:var(--vvs-ink)}\n  .vvs .vvs__badge{display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;padding:9px 18px 9px 14px;background:#fff;border:0;border-radius:50px;box-shadow:0 1px 6px rgba(0,0,0,.1);font-size:14px;font-weight:500;line-height:1.3;letter-spacing:.9px;color:var(--vvs-ink)}\n  .vvs .vvs__badge svg{flex:0 0 auto;color:var(--vvs-accent)}\n  .vvs .vvs__badge b{font-weight:700;color:var(--vvs-accent)}\n  .vvs .vvs__title{margin:0;font-size:18px;font-weight:700;line-height:1.3;letter-spacing:.9px;color:var(--vvs-ink)}\n  .vvs .vvs__title span{color:var(--vvs-accent)}\n  .vvs .vvs__stage{position:relative}\n  .vvs .vvs__track{display:flex;gap:var(--vvs-gap);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-user-select:none;user-select:none}\n  .vvs .vvs__track::-webkit-scrollbar{display:none}\n  .vvs .vvs__track.is-drag{scroll-snap-type:none;cursor:grabbing}\n  .vvs .vvs__card{position:relative;flex:0 0 35%;scroll-snap-align:start;border-radius:10px;overflow:hidden;background:var(--vvs-soft);-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;transform:translateZ(0)}\n  .vvs .vvs__card::before{content:\"\";display:block;padding-top:177.78%}\n  .vvs .vvs__vid{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;pointer-events:none;background:transparent}\n  .vvs .vvs__vid::-webkit-media-controls{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-panel{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-play-button{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-overlay-play-button{display:none!important}\n  .vvs .vvs__vid::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}\n  .vvs .vvs__arrow{display:none;position:absolute;top:50%;z-index:2;width:36px;height:36px;min-width:0;min-height:0;margin:-18px 0 0;padding:0;border:0;border-radius:50%;background:#fff;color:var(--vvs-accent);box-shadow:0 2px 10px rgba(0,0,0,.15);align-items:center;justify-content:center;cursor:pointer;line-height:1;transition:opacity .2s}\n  .vvs .vvs__arrow--prev{left:8px}\n  .vvs .vvs__arrow--next{right:8px}\n  .vvs .vvs__arrow[disabled]{opacity:0;pointer-events:none}\n  @media (min-width:750px){.vvs .vvs__card{flex-basis:26%}.vvs .vvs__title{font-size:19px}}\n  @media (hover:hover) and (pointer:fine){\n    .vvs .vvs__track{cursor:grab}\n    .vvs.is-scrollable .vvs__arrow{display:flex}\n  }\n</style>\n\n<script>\n(function(){\n  function init(root){\n    if(root.getAttribute('data-vvs-ready'))return;\n    root.setAttribute('data-vvs-ready','1');\n    var track=root.querySelector('.vvs__track');\n    var cards=[].slice.call(root.querySelectorAll('.vvs__card'));\n    var vids=[].slice.call(root.querySelectorAll('.vvs__vid'));\n    var prev=root.querySelector('.vvs__arrow--prev');\n    var next=root.querySelector('.vvs__arrow--next');\n\n    /* Ton bleibt aus, egal was der Browser versucht */\n    vids.forEach(function(v){\n      v.muted=true;v.defaultMuted=true;v.volume=0;\n      v.addEventListener('volumechange',function(){if(!v.muted||v.volume){v.muted=true;v.volume=0;}});\n    });\n\n    function play(v){if(v.preload!=='auto')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}\n    function stop(v){if(!v.paused)v.pause();}\n\n    /* Nur was im Bild ist, l\\u00e4dt und l\\u00e4uft \\u2014 h\\u00e4lt die PDP schnell */\n    var seen=false;\n    if('IntersectionObserver' in window){\n      var io=new IntersectionObserver(function(es){\n        seen=true;\n        es.forEach(function(e){var v=e.target;v._in=e.isIntersecting;if(v._in)play(v);else stop(v);});\n      },{threshold:0.2});\n      vids.forEach(function(v){io.observe(v);});\n    }\n    /* Notausstieg: meldet der Observer sich nicht, starten die sichtbaren Videos trotzdem */\n    setTimeout(function(){\n      if(seen)return;\n      var tr=track.getBoundingClientRect();\n      vids.forEach(function(v){\n        var r=v.getBoundingClientRect();\n        if(r.top<innerHeight&&r.bottom>0&&r.left<tr.right&&r.right>tr.left){v._in=true;play(v);}\n      });\n    },1500);\n\n    /* iOS-Stromsparmodus blockt Autoplay \\u2014 die erste Ber\\u00fchrung startet es nach */\n    function kick(){vids.forEach(function(v){if(v._in&&v.paused)play(v);});}\n    document.addEventListener('touchend',kick,{passive:true});\n    document.addEventListener('visibilitychange',function(){if(!document.hidden)kick();});\n\n    /* Pfeile + Maus-Ziehen (nur Desktop) */\n    function step(){var g=parseFloat(getComputedStyle(track).columnGap)||0;return cards.length?cards[0].getBoundingClientRect().width+g:track.clientWidth;}\n    function update(){\n      var max=track.scrollWidth-track.clientWidth;\n      if(max>2)root.classList.add('is-scrollable');else root.classList.remove('is-scrollable');\n      if(prev)prev.disabled=track.scrollLeft<=2;\n      if(next)next.disabled=track.scrollLeft>=max-2;\n    }\n    if(prev)prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});\n    if(next)next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});\n    track.addEventListener('scroll',update,{passive:true});\n    window.addEventListener('resize',update);\n    update();\n\n    var drag=null;\n    track.addEventListener('pointerdown',function(e){\n      if(e.pointerType!=='mouse'||e.button!==0)return;\n      drag={x:e.clientX,l:track.scrollLeft};track.classList.add('is-drag');e.preventDefault();\n    });\n    window.addEventListener('pointermove',function(e){if(drag)track.scrollLeft=drag.l-(e.clientX-drag.x);});\n    window.addEventListener('pointerup',function(){\n      if(!drag)return;drag=null;\n      var s=step(),l=track.scrollLeft;\n      track.classList.remove('is-drag');track.scrollLeft=l;\n      track.scrollTo({left:Math.round(l/s)*s,behavior:'smooth'});\n    });\n    track.addEventListener('contextmenu',function(e){e.preventDefault();});\n\n    /* Automatisch weiter \\u2014 h\\u00e4lt an, solange jemand selbst wischt oder mit der Maus drauf ist */\n    var TAKT=3500;   /* Millisekunden bis zum n\\u00e4chsten Video */\n    var aktiv=false,maus=false,pauseBis=0;\n    function halt(){pauseBis=Date.now()+5000;}\n    function weiter(){\n      if(!aktiv||maus||drag||document.hidden||Date.now()<pauseBis)return;\n      var max=track.scrollWidth-track.clientWidth;\n      if(max<=2)return;\n      var s=step(),ziel=(Math.round(track.scrollLeft/s)+1)*s;\n      track.scrollTo({left:track.scrollLeft>=max-2?0:Math.min(ziel,max),behavior:'smooth'});\n    }\n    ['touchstart','pointerdown','wheel'].forEach(function(ev){track.addEventListener(ev,halt,{passive:true});});\n    if(prev)prev.addEventListener('click',halt);\n    if(next)next.addEventListener('click',halt);\n    root.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')maus=true;});\n    root.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')maus=false;});\n    if('IntersectionObserver' in window){\n      new IntersectionObserver(function(es){aktiv=es[0].isIntersecting;},{threshold:0.3}).observe(root);\n    }else{aktiv=true;}\n    setTimeout(function(){if(!seen){var r=root.getBoundingClientRect();aktiv=r.top<innerHeight&&r.bottom>0;}},1500);\n    if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))setInterval(weiter,TAKT);\n  }\n  function run(){[].forEach.call(document.querySelectorAll('[data-vvs]'),init);}\n  run();\n  if(!window.__vvs){window.__vvs=1;document.addEventListener('shopify:section:load',run);}\n})();\n</script>"
+          }
+        },
+        "collapsible_1": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Comment agit Sorelya ?",
+            "content": "<p><strong>Le Cyperus rotundus</strong> coupe le signal de pousse, directement \u00e0 la racine. Le poil ne revient pas. Pour toujours.</p><p>Plus de poils qui piquent. Plus de rasoir. Juste une peau lisse et \u00e9clatante.</p><p><strong>La formule compl\u00e8te :</strong> le Cyperus agit sur le poil, le reste r\u00e9pare des ann\u00e9es de rasage.<br>Panth\u00e9nol (apaise le feu du rasoir) \u00b7 Acide hyaluronique (repulpe) \u00b7 C\u00e9ramides (renforcent la barri\u00e8re cutan\u00e9e) \u00b7 Extrait de citron (\u00e9claircit les taches sombres) \u00b7 Arginine (r\u00e9g\u00e9n\u00e8re) \u00b7 Menthe poivr\u00e9e (effet frais).</p><p>Sans hormones, parab\u00e8nes ni silicones. Vegan et non test\u00e9 sur les animaux.</p><p><strong>Mode d\u2019emploi :</strong><br>\u2460 Retire tes poils une derni\u00e8re fois, s\u00e8che en tamponnant<br>\u2461 Applique 2 \u00e0 3 gouttes le soir, en quelques secondes<br>\u2462 Laisse p\u00e9n\u00e9trer, recommence apr\u00e8s chaque rasage<br>\u2192 jusqu\u2019\u00e0 ce que plus aucun poil ne repousse.</p>"
+          }
+        },
+        "collapsible_2": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "O\u00f9 et combien de fois ?",
+            "content": "<p><strong>Combien de fois :</strong> apr\u00e8s chaque rasage, id\u00e9alement tous les soirs, en quelques secondes. Semaine apr\u00e8s semaine, la repousse diminue \u00e0 vue d\u2019\u0153il. Apr\u00e8s 2 \u00e0 3 mois, ta peau reste lisse pour de bon.</p><p><strong>O\u00f9 :</strong> partout o\u00f9 tes poils te g\u00eanent, visage comme corps : menton, l\u00e8vre, cou, aisselles, maillot, jambes. Assez doux pour les zones les plus sensibles.</p>"
+          }
+        },
+        "collapsible_3": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Sans douleur et sans risque ?",
+            "content": "<p>Oui. Tu tamponnes, c\u2019est tout : pas de br\u00fblure, pas d\u2019arrachage, pas de lame.</p><p>100 % sans hormones, pour tous les types de peau. Comme pour tout nouveau soin, fais d\u2019abord un test sur une petite zone.</p>"
+          }
+        },
+        "collapsible_4": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Questions fr\u00e9quentes",
+            "content": "<p><strong>\u00c7a marche aussi sur les poils clairs, blonds ou gris ?</strong><br>Oui. Le laser a besoin d\u2019un pigment fonc\u00e9, Sorelya non : il agit sur le signal de pousse \u00e0 la racine, quelle que soit la couleur du poil.</p><p><strong>Je peux l\u2019utiliser pendant la grossesse ou l\u2019allaitement ?</strong><br>Sorelya est 100 % sans hormones, vegan et s\u2019applique uniquement sur la peau. Pendant la grossesse ou l\u2019allaitement, demande d\u2019abord l\u2019avis de ton m\u00e9decin.</p><p><strong>\u00c7a marche sur les poils fonc\u00e9s au menton dus aux hormones ou \u00e0 la m\u00e9nopause ?</strong><br>C\u2019est exactement pour \u00e7a que Sorelya a \u00e9t\u00e9 cr\u00e9\u00e9. Il agit \u00e0 la racine : le poil devient plus fin, plus clair.</p><p><strong>Au bout de combien de temps je vois des r\u00e9sultats ?</strong><br>Les premi\u00e8res semaines : \u00e7a pique moins, la repousse ralentit. Apr\u00e8s 2 \u00e0 3 mois : des zones enti\u00e8res restent lisses.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_reviews",
+        "title",
+        "liquid_benefices",
+        "liquid_sous_titre",
+        "kaching_bundles_app_block_ap",
+        "liquid_stock",
+        "quantity_selector",
+        "buy_buttons",
+        "liquid_confiance",
+        "liquid_videos",
+        "collapsible_1",
+        "collapsible_2",
+        "collapsible_3",
+        "collapsible_4"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": false,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "ap_tokens": {
+      "type": "lp-ap-tokens",
+      "settings": {}
+    },
+    "ap_cas": {
+      "type": "lp-ap-cas",
+      "settings": {}
+    },
+    "ap_titre_chemin": {
+      "type": "lp-ap-titre-chemin",
+      "settings": {}
+    },
+    "ap_timeline": {
+      "type": "lp-ap-timeline",
+      "settings": {}
+    },
+    "ap_banniere": {
+      "type": "lp-ap-banniere",
+      "settings": {}
+    },
+    "ap_situations": {
+      "type": "lp-ap-situations",
+      "settings": {}
+    },
+    "ap_titre_secret": {
+      "type": "lp-ap-titre-secret",
+      "settings": {}
+    },
+    "ap_video_secret": {
+      "type": "lp-ap-video-secret",
+      "settings": {}
+    },
+    "ap_mecanisme": {
+      "type": "lp-ap-mecanisme",
+      "settings": {}
+    },
+    "ap_avant_apres": {
+      "type": "lp-ap-avant-apres",
+      "settings": {}
+    },
+    "ap_titre_compare": {
+      "type": "lp-ap-titre-compare",
+      "settings": {}
+    },
+    "ap_comparatif": {
+      "type": "lp-ap-comparatif",
+      "settings": {}
+    },
+    "ap_titre_emploi": {
+      "type": "lp-ap-titre-emploi",
+      "settings": {}
+    },
+    "ap_video_emploi": {
+      "type": "lp-ap-video-emploi",
+      "settings": {}
+    },
+    "ap_faq": {
+      "type": "lp-ap-faq",
+      "settings": {}
+    },
+    "ap_cta": {
+      "type": "lp-ap-cta",
+      "settings": {}
+    },
+    "ap_garantie": {
+      "type": "lp-ap-garantie",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "ap_tokens",
+    "ap_cas",
+    "ap_titre_chemin",
+    "ap_timeline",
+    "ap_banniere",
+    "ap_situations",
+    "ap_titre_secret",
+    "ap_video_secret",
+    "ap_mecanisme",
+    "ap_avant_apres",
+    "ap_titre_compare",
+    "ap_comparatif",
+    "ap_titre_emploi",
+    "ap_video_emploi",
+    "ap_faq",
+    "ap_cta",
+    "ap_garantie"
+  ]
+}

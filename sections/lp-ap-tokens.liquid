@@ -1,0 +1,18 @@
+{%- comment -%}Tokens de la page anti-poil (Veluna) : portes a ce seul modele.{%- endcomment -%}
+<style>
+  body { background: #F4ECFA; }
+  .scroll-trigger, [class*="animate--"] { opacity: 1 !important; transform: none !important; }
+  #shopify-section-{{ section.id }} { display: none; }
+  .shopify-section[id*="__ap_"]:not([id$="__main"]) { background: transparent; }
+  [id$="__ap_faq"] h1 { font-size: 45px; font-weight: 700; line-height: 1.2; letter-spacing: .9px; color: #1a1a1a; margin: 0 0 24px; }
+  @media (max-width: 749px) { [id$="__ap_faq"] h1 { font-size: 28px; } }
+  [id$="__main"] .product-info__title, [id$="__main"] .product-info .h2 { font-weight: 800; letter-spacing: -0.3px; line-height: 1.1; }
+  @media (min-width: 1000px) { [id$="__main"] .product-info__title { font-size: 46px; } }
+  [id$="__main"] .product-info__quantity-selector, [id$="__main"] [class*="quantity-selector"] { display: none !important; }
+  [id$="__main"] .accordion__toggle, [id$="__main"] .collapsible-toggle { font-weight: 800; font-size: 17px; }
+  [id$="__main"] .stock-badge { margin: 4px 0 2px; }
+  [id$="__main"] .product-info__block-item[data-block-type="buy-buttons"] .button { border-radius: 10px; }
+</style>
+{% schema %}
+{ "name": "AP Tokens", "settings": [] }
+{% endschema %}
