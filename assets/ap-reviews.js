@@ -3,6 +3,15 @@
   const instances = new WeakMap();
   function mount(root) {
     if (instances.has(root)) return;
+    // Decode old numeric entities as text, never as executable HTML.
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let textNode;
+    while ((textNode = walker.nextNode())) {
+      textNode.nodeValue = textNode.nodeValue.replace(/&(?:amp;)?#(x[0-9a-f]+|[0-9]+);/gi, (match, value) => {
+        const point = value[0].toLowerCase() === 'x' ? parseInt(value.slice(1), 16) : parseInt(value, 10);
+        return point > 0 && point <= 0x10ffff && !(point >= 0xd800 && point <= 0xdfff) ? String.fromCodePoint(point) : match;
+      });
+    }
     const track = root.querySelector('.ap-reviews__track');
     const cards = [...track.children];
     const prev = root.querySelector('.ap-reviews__prev');

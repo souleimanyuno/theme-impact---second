@@ -1,2324 +1,306 @@
-{%- comment -%}
-  Clone verbatim - section source : {{ section.id }}
-  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
-  Chaque texte et chaque image sont exposes en setting : le rendu par
-  defaut est identique a la source, tout reste editable.
-{%- endcomment -%}
-
-<style>
-.section-{{ section.id }} {
-    border-top: solid #000000 0px;
-    border-bottom: solid #000000 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    overflow: hidden;
-  }
-
-.section-{{ section.id }}-settings {
-    margin: 0 auto;
-    padding-top: 45px;
-    padding-bottom: 45px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-.testimonials-heading-{{ section.id }} {
-    margin: 0;
-    font-size: 24px;
-    color: #000000;
-    line-height: 130%;
-    text-align: center;
-    text-transform: unset;
-  }
-
-.testimonials-stars-{{ section.id }} {
-    display: flex;
-    align-items: end;
-    gap: 5px;
-  }
-
-.testimonials-stars-{{ section.id }} svg,
-  .testimonials-stars-{{ section.id }} img {
-    display: block;
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-  }
-
-.testimonials-stars-{{ section.id }} svg {
-    background-color: #00b67a; 
-  }
-
-.testimonials-rating-{{ section.id }} {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-
-.testimonials-rating-text-{{ section.id }},
-  .testimonials-rating-{{ section.id }} span {
-    margin: 0;
-    font-size: 20px;
-    color: #000000;
-    line-height: 130%;
-  }
-
-.testimonials-rating-{{ section.id }} span {
-    font-size: 25px;
-    font-weight: 700;
-  }
-
-.testimonials-rating-{{ section.id }} .testimonials-stars-{{ section.id }} {
-    padding-left: 5px;
-  }
-
-.testimonials-text-{{ section.id }} {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-.testimonials-text-{{ section.id }} * {
-    margin: 0;
-    font-size: 16px;
-    color: #000000;
-    line-height: 130%;
-    text-transform: unset;
-  }
-
-.testimonials-text-{{ section.id }} strong {
-    text-decoration: underline;
-  }
-
-.testimonials-image-{{ section.id }} {
-    width: 100px;
-    height: 32px;
-  }
-
-.testimonials-image-{{ section.id }} img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-.testimonials-slider-wrapper-{{ section.id }} {
-    margin-top: 27px;
-  }
-
-.testimonials-slider-{{ section.id }} {
-    overflow: visible !important;
-  }
-
-.testimonials-slide-{{ section.id }}.swiper-slide {
-    opacity: 0.5;
-    transition-duration: 250ms;
-    transition-property: transform, opacity;
-  }
-
-.testimonials-slide-{{ section.id }}.swiper-slide-active {
-    opacity: 1;
-    transition-duration: 250ms;
-    transition-property: transform, opacity;
-  }
-
-.testimonials-slide-{{ section.id }} {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 24px 24px;
-    border-radius: 16px;
-    border: 0px solid #000000;
-    background-color: #ffffff;
-    box-sizing: border-box !important; 
-    height: auto !important;
-  }
-
-.testimonials-slide-top-{{ section.id }} .testimonials-stars-{{ section.id }} {
-    justify-content: center;
-  }
-
-.testimonials-slide-heading-{{ section.id }} {
-    margin: 0;
-    margin-top: 12px;
-    font-size: 20px;
-    color: #000000;
-    line-height: 130%;
-    text-align: center;
-    font-weight: 700;
-    text-transform: unset;
-  }
-
-.testimonials-slide-text-{{ section.id }} {
-    margin: 0;
-    margin-top: 12px;
-    font-size: 14px;
-    color: #000000;
-    line-height: 150%;
-    text-align: center;
-    text-transform: unset;
-  }
-
-.testimonials-slide-text-{{ section.id }} span:first-child {
-    display: none;
-  }
-
-.testimonials-slide-text-small-{{ section.id }}.active {
-    display: none;
-  }
-
-.testimonials-slide-text-big-{{ section.id }} {
-    display: none;
-  }
-
-.testimonials-slide-text-big-{{ section.id }}.active {
-    display: inline;
-  }
-
-.testimonials-slide-text-btn-{{ section.id }} {
-    display: block;
-    max-width: fit-content;
-    width: 100%;
-    background-color: transparent;
-    box-shadow: none;
-    border: 0px;
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 700;
-    margin-top: 10px;
-  }
-
-.testimonials-slide-author-date-{{ section.id }} {
-    margin: 0;
-    font-size: 16px;
-    color: #000000;
-    line-height: 130%;
-    text-align: center;
-    text-transform: unset;
-  }
-
-.testimonials-btn-prev-{{ section.id }},
-  .testimonials-btn-next-{{ section.id }} {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border: 0px solid #ffffff;
-    border-radius: 50%;
-    background: #ffffff;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    -webkit-appearance: none;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.15);
-  }
-
-.testimonials-btn-prev-{{ section.id }} {
-    left: 0px !important;
-  }
-
-.testimonials-btn-next-{{ section.id }} {
-    right: 0px !important;
-  }
-
-.testimonials-btn-prev-{{ section.id }} svg,
-  .testimonials-btn-next-{{ section.id }} svg {
-    height: 28px;
-    width: 28px;
-  }
-
-.testimonials-btn-next-{{ section.id }} svg {
-    transform: rotate(180deg);
-    margin-left: 2px;
-  }
-
-.testimonials-btn-prev-{{ section.id }} svg {
-    margin-left: -2px;
-  }
-
-.testimonials-btn-prev-{{ section.id }} svg path,
-  .testimonials-btn-next-{{ section.id }} svg path {
-    fill: #000000;
-    transition: all 0.3s ease 0s;
-  }
-
-.testimonials-btn-prev-{{ section.id }}:hover ,
-  .testimonials-btn-next-{{ section.id }}:hover {
-    transition: all 0.3s ease 0s;
-    border: 0px solid #ffffff;
-    background: #ffffff;
-  }
-
-.testimonials-btn-prev-{{ section.id }}:hover svg path,
-  .testimonials-btn-next-{{ section.id }}:hover svg path {
-    fill: #000000;
-    transition: all 0.3s ease 0s;
-  }
-
-.testimonials-btn-prev-{{ section.id }}.swiper-button-disabled,
-  .testimonials-btn-next-{{ section.id }}.swiper-button-disabled {
-    opacity: 0.3;
-  }
-
-.testimonials-pagination-{{ section.id }} {
-    margin-top: 20px;
-    position: static !important;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-.testimonials-pagination-{{ section.id }} .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    border: 2px solid #000000;
-    background-color: transparent;
-    opacity: 0.6;
-  }
-
-.testimonials-pagination-{{ section.id }} .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    opacity: 1;
-    background-color: #000000
-  }
-
-.testimonials-btn-{{ section.id }} {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: fit-content;
-    margin: 0;
-    margin-top: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 100%;
-    text-align: center;
-    text-transform: unset;
-    text-decoration: none;
-    padding: 15px 12px;
-    border-radius: 8px;
-    border: 0px solid #000000;
-    background-color: #000000;
-    transition: all 0.25s ease 0s;
-  }
-
-.testimonials-btn-{{ section.id }}:hover {
-    color: #ffffff;
-    border: 0px solid #000000;
-    background-color: #000000;
-    transition: all 0.25s ease 0s;
-  }
-
-@media(min-width: 1024px) {
-  .section-{{ section.id }} {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-  .section-{{ section.id }}-settings {
-      padding: 0 50px;
-      padding-top: 60px;
-      padding-bottom: 60px;
-      padding-left: 50px;
-      padding-right: 50px;
-    }
-  .testimonials-heading-{{ section.id }} {
-      font-size: 40px;
-    }
-  .testimonials-rating-text-{{ section.id }},
-    .testimonials-rating-{{ section.id }} span {
-      font-size: 24px;
-    }
-  .testimonials-rating-{{ section.id }} span {
-      font-size: 30px;
-    }
-  .testimonials-stars-{{ section.id }} svg,
-    .testimonials-stars-{{ section.id }} img {
-      width: 28px;
-      height: 28px;
-    }
-  .testimonials-text-{{ section.id }} {
-      margin-top: 16px;
-    }
-  .testimonials-text-{{ section.id }} * {
-      font-size: 20px;
-    }
-  .testimonials-slider-wrapper-{{ section.id }} {
-      margin-top: 36px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      max-width: 80%;
-    }
-  .testimonials-slide-{{ section.id }} {
-      gap: 16px;
-      padding: 32px 40px;
-    }
-  .testimonials-slide-heading-{{ section.id }} {
-      margin-top: 16px;
-      font-size: 24px;
-    }
-  .testimonials-slide-text-{{ section.id }} {
-      margin-top: 16px;
-      font-size: 14px;
-    }
-  .testimonials-slide-text-btn-{{ section.id }} {
-      font-size: 14px;
-    }
-  .testimonials-slide-text-{{ section.id }} span:first-child {
-      display: inline;
-    }
-  .testimonials-slide-text-{{ section.id }} span:not(:first-child),
-    .testimonials-slide-text-{{ section.id }} button {
-      display: none;
-    }
-  .testimonials-slide-author-date-{{ section.id }} {
-      font-size: 16px;
-    }
-  .testimonials-btn-prev-{{ section.id }},
-    .testimonials-btn-next-{{ section.id }} {
-      width: 50px;
-      height: 50px;
-    }
-  .testimonials-btn-prev-{{ section.id }} {
-      left: -25.0px !important;
-    }
-  .testimonials-btn-next-{{ section.id }} {
-      right: -25.0px !important;
-    }
-  .testimonials-btn-prev-{{ section.id }} svg,
-    .testimonials-btn-next-{{ section.id }} svg {
-      height: 28px;
-      width: 28px;
-    }
-  .testimonials-pagination-{{ section.id }} .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-    }
-  .testimonials-btn-{{ section.id }} {
-      margin-top: 16px;
-      padding: 20px 16px;
-      font-size: 16px;
-    }
-}
-
-.testimonials-btn-prev-{{ section.id }},
-    .testimonials-btn-next-{{ section.id }} {
-      display: none;
-    }
-
-@media(min-width: 1024px) {
-  .testimonials-btn-prev-{{ section.id }},
-      .testimonials-btn-next-{{ section.id }} {
-        display: flex;
-      }
-}
-
-.testimonials-pagination-{{ section.id }} {
-      display: none !important;
-    }
-
-@media(min-width: 1024px) {
-  .testimonials-pagination-{{ section.id }} {
-        display: none !important;
-      }
-}
-
-.testimonials-slide-{{ section.id }} {
-      box-shadow: 0px 0px 20px 0px rgba(0,182,122,0.2);
-    }
-
-.testimonials-slide-text-btn-{{ section.id }} {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-@media(min-width: 768px) {
-  .testimonials-slide-{{ section.id }}.swiper-slide-visible {
-        opacity: 1;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-  .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev {
-        opacity: 0.5;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-}
-
-@media(min-width: 1024px) {
-  .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev,
-      .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-next {
-        opacity: 1;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-  .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev {
-        opacity: 1;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-}
-
-.testimonials-btn-{{ section.id }} {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-.testimonials-slider-{{ section.id }}.preview {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    gap: 20px;
-  }
-
-.testimonials-slider-{{ section.id }}.preview .testimonials-slide-{{ section.id }} {
-    width: 100%;
-  }
-
-.testimonials-slider-{{ section.id }}.preview .testimonials-slide-{{ section.id }}:not(:first-child) {
-    margin-left: 20px;
-  }
-</style>
-
-<link rel="stylesheet" href="{{ 'ap-swiper.min.css' | asset_url }}"><style data-shopify>@font-face {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ap-josefin.woff' | asset_url }}") format("woff");
-}
-
-  @font-face {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ap-josefin.woff' | asset_url }}") format("woff");
-}
-
-  @font-face {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ap-josefin.woff' | asset_url }}") format("woff");
-}
-
-  @font-face {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ap-josefin.woff' | asset_url }}") format("woff");
-}
-
-  @font-face {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ap-josefin.woff' | asset_url }}") format("woff");
-}
-
-  @font-face {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ap-josefin.woff' | asset_url }}") format("woff");
-}
-
-  @font-face {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2"),
-       url("{{ 'ap-josefin.woff' | asset_url }}") format("woff");
-}
-
-  
-  .section-{{ section.id }} {
-    border-top: solid #000000 0px;
-    border-bottom: solid #000000 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    overflow: hidden;
-  }
-  
-  .section-{{ section.id }}-settings {
-    margin: 0 auto;
-    padding-top: 45px;
-    padding-bottom: 45px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .testimonials-heading-{{ section.id }} {
-    margin: 0;
-    font-size: 24px;
-    color: #000000;
-    line-height: 130%;
-    text-align: center;
-    text-transform: unset;
-  }
-
-  .testimonials-stars-{{ section.id }} {
-    display: flex;
-    align-items: end;
-    gap: 5px;
-  }
-
-  .testimonials-stars-{{ section.id }} svg,
-  .testimonials-stars-{{ section.id }} img {
-    display: block;
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-  }
-
-  .testimonials-stars-{{ section.id }} svg {
-    background-color: #00b67a; 
-  }
-
-  .testimonials-rating-{{ section.id }} {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-
-  .testimonials-rating-text-{{ section.id }},
-  .testimonials-rating-{{ section.id }} span {
-    margin: 0;
-    font-size: 20px;
-    color: #000000;
-    line-height: 130%;
-  }
-
-  .testimonials-rating-{{ section.id }} span {
-    font-size: 25px;
-    font-weight: 700;
-  }
-
-  .testimonials-rating-{{ section.id }} .testimonials-stars-{{ section.id }} {
-    padding-left: 5px;
-  }
-
-  .testimonials-text-{{ section.id }} {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .testimonials-text-{{ section.id }} * {
-    margin: 0;
-    font-size: 16px;
-    color: #000000;
-    line-height: 130%;
-    text-transform: unset;
-  }
-
-  .testimonials-text-{{ section.id }} strong {
-    text-decoration: underline;
-  }
-
-  .testimonials-image-{{ section.id }} {
-    width: 100px;
-    height: 32px;
-  }
-
-  .testimonials-image-{{ section.id }} img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .testimonials-slider-wrapper-{{ section.id }} {
-    margin-top: 27px;
-  }
-
-  .testimonials-slider-{{ section.id }} {
-    overflow: visible !important;
-  }
-
-  .testimonials-slide-{{ section.id }}.swiper-slide {
-    opacity: 0.5;
-    transition-duration: 250ms;
-    transition-property: transform, opacity;
-  }
-
-  .testimonials-slide-{{ section.id }}.swiper-slide-active {
-    opacity: 1;
-    transition-duration: 250ms;
-    transition-property: transform, opacity;
-  }
-
-  .testimonials-slide-{{ section.id }} {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 24px 24px;
-    border-radius: 16px;
-    border: 0px solid #000000;
-    background-color: #ffffff;
-    box-sizing: border-box !important; 
-    height: auto !important;
-  }
-
-  .testimonials-slide-top-{{ section.id }} .testimonials-stars-{{ section.id }} {
-    justify-content: center;
-  }
-
-  .testimonials-slide-heading-{{ section.id }} {
-    margin: 0;
-    margin-top: 12px;
-    font-size: 20px;
-    color: #000000;
-    line-height: 130%;
-    text-align: center;
-    font-weight: 700;
-    text-transform: unset;
-  }
-
-  .testimonials-slide-text-{{ section.id }} {
-    margin: 0;
-    margin-top: 12px;
-    font-size: 14px;
-    color: #000000;
-    line-height: 150%;
-    text-align: center;
-    text-transform: unset;
-  }
-
-  .testimonials-slide-text-{{ section.id }} span:first-child {
-    display: none;
-  }
-
-  .testimonials-slide-text-small-{{ section.id }}.active {
-    display: none;
-  }
-
-  .testimonials-slide-text-big-{{ section.id }} {
-    display: none;
-  }
-
-  .testimonials-slide-text-big-{{ section.id }}.active {
-    display: inline;
-  }
-
-  .testimonials-slide-text-btn-{{ section.id }} {
-    display: block;
-    max-width: fit-content;
-    width: 100%;
-    background-color: transparent;
-    box-shadow: none;
-    border: 0px;
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 700;
-    margin-top: 10px;
-  }
-
-  .testimonials-slide-author-date-{{ section.id }} {
-    margin: 0;
-    font-size: 16px;
-    color: #000000;
-    line-height: 130%;
-    text-align: center;
-    text-transform: unset;
-  }
-
-  .testimonials-btn-prev-{{ section.id }},
-  .testimonials-btn-next-{{ section.id }} {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border: 0px solid #ffffff;
-    border-radius: 50%;
-    background: #ffffff;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    -webkit-appearance: none;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.15);
-  }
-
-  .testimonials-btn-prev-{{ section.id }} {
-    left: 0px !important;
-  }
-
-  .testimonials-btn-next-{{ section.id }} {
-    right: 0px !important;
-  }
-
-  .testimonials-btn-prev-{{ section.id }} svg,
-  .testimonials-btn-next-{{ section.id }} svg {
-    height: 28px;
-    width: 28px;
-  }
-
-  .testimonials-btn-next-{{ section.id }} svg {
-    transform: rotate(180deg);
-    margin-left: 2px;
-  }
-
-  .testimonials-btn-prev-{{ section.id }} svg {
-    margin-left: -2px;
-  }
-
-  .testimonials-btn-prev-{{ section.id }} svg path,
-  .testimonials-btn-next-{{ section.id }} svg path {
-    fill: #000000;
-    transition: all 0.3s ease 0s;
-  }
-
-  .testimonials-btn-prev-{{ section.id }}:hover ,
-  .testimonials-btn-next-{{ section.id }}:hover {
-    transition: all 0.3s ease 0s;
-    border: 0px solid #ffffff;
-    background: #ffffff;
-  }
-
-  .testimonials-btn-prev-{{ section.id }}:hover svg path,
-  .testimonials-btn-next-{{ section.id }}:hover svg path {
-    fill: #000000;
-    transition: all 0.3s ease 0s;
-  }
-
-  .testimonials-btn-prev-{{ section.id }}.swiper-button-disabled,
-  .testimonials-btn-next-{{ section.id }}.swiper-button-disabled {
-    opacity: 0.3;
-  }
-
-  .testimonials-pagination-{{ section.id }} {
-    margin-top: 20px;
-    position: static !important;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .testimonials-pagination-{{ section.id }} .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    border: 2px solid #000000;
-    background-color: transparent;
-    opacity: 0.6;
-  }
-
-  .testimonials-pagination-{{ section.id }} .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    opacity: 1;
-    background-color: #000000
-  }
-
-  .testimonials-btn-{{ section.id }} {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: fit-content;
-    margin: 0;
-    margin-top: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 100%;
-    text-align: center;
-    text-transform: unset;
-    text-decoration: none;
-    padding: 15px 12px;
-    border-radius: 8px;
-    border: 0px solid #000000;
-    background-color: #000000;
-    transition: all 0.25s ease 0s;
-  }
-
-  .testimonials-btn-{{ section.id }}:hover {
-    color: #ffffff;
-    border: 0px solid #000000;
-    background-color: #000000;
-    transition: all 0.25s ease 0s;
-  }
-  
-  @media(min-width: 1024px) {
-
-    .section-{{ section.id }} {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-    
-    .section-{{ section.id }}-settings {
-      padding: 0 50px;
-      padding-top: 60px;
-      padding-bottom: 60px;
-      padding-left: 50px;
-      padding-right: 50px;
-    }
-
-    .testimonials-heading-{{ section.id }} {
-      font-size: 40px;
-    }
-
-    .testimonials-rating-text-{{ section.id }},
-    .testimonials-rating-{{ section.id }} span {
-      font-size: 24px;
-    }
-
-    .testimonials-rating-{{ section.id }} span {
-      font-size: 30px;
-    }
-
-    .testimonials-stars-{{ section.id }} svg,
-    .testimonials-stars-{{ section.id }} img {
-      width: 28px;
-      height: 28px;
-    }
-
-    .testimonials-text-{{ section.id }} {
-      margin-top: 16px;
-    }
-  
-    .testimonials-text-{{ section.id }} * {
-      font-size: 20px;
-    }
-
-    .testimonials-slider-wrapper-{{ section.id }} {
-      margin-top: 36px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      max-width: 80%;
-    }
-    
-    .testimonials-slide-{{ section.id }} {
-      gap: 16px;
-      padding: 32px 40px;
-    }
-
-    .testimonials-slide-heading-{{ section.id }} {
-      margin-top: 16px;
-      font-size: 24px;
-    }
-
-    .testimonials-slide-text-{{ section.id }} {
-      margin-top: 16px;
-      font-size: 14px;
-    }
-
-    .testimonials-slide-text-btn-{{ section.id }} {
-      font-size: 14px;
-    }
-
-    .testimonials-slide-text-{{ section.id }} span:first-child {
-      display: inline;
-    }
-
-    .testimonials-slide-text-{{ section.id }} span:not(:first-child),
-    .testimonials-slide-text-{{ section.id }} src-button {
-      display: none;
-    }
-
-    .testimonials-slide-author-date-{{ section.id }} {
-      font-size: 16px;
-    }
-
-    .testimonials-btn-prev-{{ section.id }},
-    .testimonials-btn-next-{{ section.id }} {
-      width: 50px;
-      height: 50px;
-    }
-
-    .testimonials-btn-prev-{{ section.id }} {
-      left: -25.0px !important;
-    }
-  
-    .testimonials-btn-next-{{ section.id }} {
-      right: -25.0px !important;
-    }
-
-    .testimonials-btn-prev-{{ section.id }} svg,
-    .testimonials-btn-next-{{ section.id }} svg {
-      height: 28px;
-      width: 28px;
-    }
-
-    .testimonials-pagination-{{ section.id }} .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-    }
-
-    .testimonials-btn-{{ section.id }} {
-      margin-top: 16px;
-      padding: 20px 16px;
-      font-size: 16px;
-    }
-  }</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <style>
-    .testimonials-btn-prev-{{ section.id }},
-    .testimonials-btn-next-{{ section.id }} {
-      display: none;
-    }
-  </style>
-
-
-
-  <style>
-    @media(min-width: 1024px) {
-      .testimonials-btn-prev-{{ section.id }},
-      .testimonials-btn-next-{{ section.id }} {
-        display: flex;
-      }
-    }
-  </style>
-
-
-
-  <style>
-    .testimonials-pagination-{{ section.id }} {
-      display: none !important;
-    }
-  </style>
-
-
-
-  <style>
-    @media(min-width: 1024px) {
-      .testimonials-pagination-{{ section.id }} {
-        display: none !important;
-      }
-    }
-  </style>
-
-
-
-  <style>
-    .testimonials-slide-{{ section.id }} {
-      box-shadow: 0px 0px 20px 0px rgba(0,182,122,0.2);
-    }
-  </style>
-
-
-
-  <style>
-    .testimonials-slide-text-btn-{{ section.id }} {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
-
-
-
-  <style>
-    @media(min-width: 768px) {
-      .testimonials-slide-{{ section.id }}.swiper-slide-visible {
-        opacity: 1;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-
-      .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev {
-        opacity: 0.5;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-    }
-  </style>
-
-
-
-  <style>
-    @media(min-width: 1024px) {
-      .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev,
-      .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-next {
-        opacity: 1;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-      
-      .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev {
-        opacity: 1;
-        transition-duration: 250ms;
-        transition-property: transform, opacity;
-      }
-    }
-  </style>
-
-
-
-  <style>
-   .testimonials-btn-{{ section.id }} {
-      margin-left: auto;
-      margin-right: auto;
-    } 
-  </style>
-
-
-
-<style>
-  .testimonials-slider-{{ section.id }}.preview {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    gap: 20px;
-  }
-
-  .testimonials-slider-{{ section.id }}.preview .testimonials-slide-{{ section.id }} {
-    width: 100%;
-  }
-
-  .testimonials-slider-{{ section.id }}.preview .testimonials-slide-{{ section.id }}:not(:first-child) {
-    margin-left: 20px;
-  }
-</style>
-
-<div class="section-{{ section.id }} testimonials-{{ section.id }}" style="background-color:#ffffff; background-image: linear-gradient(180deg, rgba(244, 236, 250, 1), rgba(255, 255, 255, 1) 100%);">
-    <div class="section-{{ section.id }}-settings ">
-      
-        <h2 class="testimonials-heading-{{ section.id }}">{{ section.settings.t01 }}</h2>
-      
-      
-        <div class="testimonials-rating-{{ section.id }}">
-          
-            <p class="testimonials-rating-text-{{ section.id }}">{{ section.settings.t02 }}</p>
-          
-          
-            <span>{{ section.settings.t03 }}</span>
-             <p class="testimonials-rating-text-{{ section.id }}"><strong>{{ section.settings.t04 }}</strong></p>
-          
-          
-            <div class="testimonials-stars-{{ section.id }}">
-                
-                  
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      
-                      <rect width="32" height="32" fill="#00b67a"/>
-                      <g clip-path="url(#clip0_25_4)">
-                      <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_25_4">
-                      <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                      </clipPath>
-                      </defs>
-                    </svg>
-                  
-                  
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      
-                      <rect width="32" height="32" fill="#00b67a"/>
-                      <g clip-path="url(#clip0_25_4)">
-                      <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_25_4">
-                      <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                      </clipPath>
-                      </defs>
-                    </svg>
-                  
-                  
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      
-                      <rect width="32" height="32" fill="#00b67a"/>
-                      <g clip-path="url(#clip0_25_4)">
-                      <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_25_4">
-                      <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                      </clipPath>
-                      </defs>
-                    </svg>
-                  
-                  
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      
-                      <rect width="32" height="32" fill="#00b67a"/>
-                      <g clip-path="url(#clip0_25_4)">
-                      <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_25_4">
-                      <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                      </clipPath>
-                      </defs>
-                    </svg>
-                  
-                  
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      
-                      <rect width="32" height="32" fill="#00b67a"/>
-                      <g clip-path="url(#clip0_25_4)">
-                      <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_25_4">
-                      <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                      </clipPath>
-                      </defs>
-                    </svg>
-                  
-                
-            </div>
-          
-        </div>
-      
-      
-        <div class="testimonials-text-{{ section.id }}">
-          <p><br/>{{ section.settings.t05 }} <strong>{{ section.settings.t06 }} </strong>{{ section.settings.t07 }}<br/><br/></p>
-          
-        </div>
-      
-      <div class="testimonials-slider-wrapper-{{ section.id }}">
-        <div class="testimonials-slider-{{ section.id }} swiper preview">
-          <div class="swiper-wrapper">
-            
-              <div class="testimonials-slide-{{ section.id }} swiper-slide">
-                <div class="testimonials-slide-top-{{ section.id }}">
-                  
-                    <div class="testimonials-stars-{{ section.id }}">
-                        
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                              
-                        
-                    </div>
-                  
-                  
-                    <p class="testimonials-slide-heading-{{ section.id }}">{{ section.settings.t08 }}</p>
-                  
-                  
-                    <p class="testimonials-slide-text-{{ section.id }}">
-                      <span>{{ section.settings.t09 }}</span>
-                      <span class="testimonials-slide-text-small-{{ section.id }} testimonials-slide-text-small">{{ section.settings.t10 }}</span>
-                      <span class="testimonials-slide-text-big-{{ section.id }} testimonials-slide-text-big">{{ section.settings.t09 }}</span>
-                      <button class="testimonials-slide-text-btn-{{ section.id }} testimonials-slide-text-btn">{{ section.settings.t11 }}</button>
-                    </p>
-                  
-                </div>
-                <div class="testimonials-slide-bottom-{{ section.id }}">
-                  
-                    <p class="testimonials-slide-author-date-{{ section.id }}">{{ section.settings.t12 }}</p>
-                  
-                </div>
-              </div>
-            
-              <div class="testimonials-slide-{{ section.id }} swiper-slide">
-                <div class="testimonials-slide-top-{{ section.id }}">
-                  
-                    <div class="testimonials-stars-{{ section.id }}">
-                        
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                              
-                        
-                    </div>
-                  
-                  
-                    <p class="testimonials-slide-heading-{{ section.id }}">{{ section.settings.t13 }}</p>
-                  
-                  
-                    <p class="testimonials-slide-text-{{ section.id }}">
-                      <span>{{ section.settings.t14 }}</span>
-                      <span class="testimonials-slide-text-small-{{ section.id }} testimonials-slide-text-small">{{ section.settings.t15 }}</span>
-                      <span class="testimonials-slide-text-big-{{ section.id }} testimonials-slide-text-big">{{ section.settings.t14 }}</span>
-                      <button class="testimonials-slide-text-btn-{{ section.id }} testimonials-slide-text-btn">{{ section.settings.t11 }}</button>
-                    </p>
-                  
-                </div>
-                <div class="testimonials-slide-bottom-{{ section.id }}">
-                  
-                    <p class="testimonials-slide-author-date-{{ section.id }}">{{ section.settings.t16 }}</p>
-                  
-                </div>
-              </div>
-            
-              <div class="testimonials-slide-{{ section.id }} swiper-slide">
-                <div class="testimonials-slide-top-{{ section.id }}">
-                  
-                    <div class="testimonials-stars-{{ section.id }}">
-                        
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                              
-                        
-                    </div>
-                  
-                  
-                    <p class="testimonials-slide-heading-{{ section.id }}">{{ section.settings.t17 }}</p>
-                  
-                  
-                    <p class="testimonials-slide-text-{{ section.id }}">
-                      <span>{{ section.settings.t18 }}</span>
-                      <span class="testimonials-slide-text-small-{{ section.id }} testimonials-slide-text-small">{{ section.settings.t19 }}</span>
-                      <span class="testimonials-slide-text-big-{{ section.id }} testimonials-slide-text-big">{{ section.settings.t18 }}</span>
-                      <button class="testimonials-slide-text-btn-{{ section.id }} testimonials-slide-text-btn">{{ section.settings.t11 }}</button>
-                    </p>
-                  
-                </div>
-                <div class="testimonials-slide-bottom-{{ section.id }}">
-                  
-                    <p class="testimonials-slide-author-date-{{ section.id }}">{{ section.settings.t20 }}</p>
-                  
-                </div>
-              </div>
-            
-              <div class="testimonials-slide-{{ section.id }} swiper-slide">
-                <div class="testimonials-slide-top-{{ section.id }}">
-                  
-                    <div class="testimonials-stars-{{ section.id }}">
-                        
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                              
-                        
-                    </div>
-                  
-                  
-                    <p class="testimonials-slide-heading-{{ section.id }}">{{ section.settings.t21 }}</p>
-                  
-                  
-                    <p class="testimonials-slide-text-{{ section.id }}">
-                      <span>{{ section.settings.t22 }}</span>
-                      <span class="testimonials-slide-text-small-{{ section.id }} testimonials-slide-text-small">{{ section.settings.t23 }}</span>
-                      <span class="testimonials-slide-text-big-{{ section.id }} testimonials-slide-text-big">{{ section.settings.t22 }}</span>
-                      <button class="testimonials-slide-text-btn-{{ section.id }} testimonials-slide-text-btn">{{ section.settings.t11 }}</button>
-                    </p>
-                  
-                </div>
-                <div class="testimonials-slide-bottom-{{ section.id }}">
-                  
-                    <p class="testimonials-slide-author-date-{{ section.id }}">{{ section.settings.t24 }}</p>
-                  
-                </div>
-              </div>
-            
-              <div class="testimonials-slide-{{ section.id }} swiper-slide">
-                <div class="testimonials-slide-top-{{ section.id }}">
-                  
-                    <div class="testimonials-stars-{{ section.id }}">
-                        
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                              
-                        
-                    </div>
-                  
-                  
-                    <p class="testimonials-slide-heading-{{ section.id }}">{{ section.settings.t25 }}</p>
-                  
-                  
-                    <p class="testimonials-slide-text-{{ section.id }}">
-                      <span>{{ section.settings.t26 }}</span>
-                      <span class="testimonials-slide-text-small-{{ section.id }} testimonials-slide-text-small">{{ section.settings.t27 }}</span>
-                      <span class="testimonials-slide-text-big-{{ section.id }} testimonials-slide-text-big">{{ section.settings.t26 }}</span>
-                      <button class="testimonials-slide-text-btn-{{ section.id }} testimonials-slide-text-btn">{{ section.settings.t11 }}</button>
-                    </p>
-                  
-                </div>
-                <div class="testimonials-slide-bottom-{{ section.id }}">
-                  
-                    <p class="testimonials-slide-author-date-{{ section.id }}">{{ section.settings.t28 }}</p>
-                  
-                </div>
-              </div>
-            
-              <div class="testimonials-slide-{{ section.id }} swiper-slide">
-                <div class="testimonials-slide-top-{{ section.id }}">
-                  
-                    <div class="testimonials-stars-{{ section.id }}">
-                        
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                              
-                        
-                    </div>
-                  
-                  
-                    <p class="testimonials-slide-heading-{{ section.id }}">{{ section.settings.t29 }}</p>
-                  
-                  
-                    <p class="testimonials-slide-text-{{ section.id }}">
-                      <span>{{ section.settings.t30 }}</span>
-                      <span class="testimonials-slide-text-small-{{ section.id }} testimonials-slide-text-small">{{ section.settings.t31 }}</span>
-                      <span class="testimonials-slide-text-big-{{ section.id }} testimonials-slide-text-big">{{ section.settings.t30 }}</span>
-                      <button class="testimonials-slide-text-btn-{{ section.id }} testimonials-slide-text-btn">{{ section.settings.t11 }}</button>
-                    </p>
-                  
-                </div>
-                <div class="testimonials-slide-bottom-{{ section.id }}">
-                  
-                    <p class="testimonials-slide-author-date-{{ section.id }}">{{ section.settings.t32 }}</p>
-                  
-                </div>
-              </div>
-            
-              <div class="testimonials-slide-{{ section.id }} swiper-slide">
-                <div class="testimonials-slide-top-{{ section.id }}">
-                  
-                    <div class="testimonials-stars-{{ section.id }}">
-                        
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                          
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              
-                              <rect width="32" height="32" fill="#00b67a"/>
-                              <g clip-path="url(#clip0_25_4)">
-                              <path d="M9.20283 27L16.001 21.807L22.7972 27L20.2018 18.596L27 13.403H18.5984L16.001 5L13.4037 13.403H5L11.7982 18.596L9.20283 27Z" fill="#ffffff"/>
-                              </g>
-                              <defs>
-                              <clipPath id="clip0_25_4">
-                              <rect width="22" height="22" fill="#ffffff" transform="translate(5 5)"/>
-                              </clipPath>
-                              </defs>
-                            </svg>
-                          
-                              
-                        
-                    </div>
-                  
-                  
-                    <p class="testimonials-slide-heading-{{ section.id }}">{{ section.settings.t33 }}</p>
-                  
-                  
-                    <p class="testimonials-slide-text-{{ section.id }}">
-                      <span>{{ section.settings.t34 }}</span>
-                      <span class="testimonials-slide-text-small-{{ section.id }} testimonials-slide-text-small">{{ section.settings.t35 }}</span>
-                      <span class="testimonials-slide-text-big-{{ section.id }} testimonials-slide-text-big">{{ section.settings.t34 }}</span>
-                      <button class="testimonials-slide-text-btn-{{ section.id }} testimonials-slide-text-btn">{{ section.settings.t11 }}</button>
-                    </p>
-                  
-                </div>
-                <div class="testimonials-slide-bottom-{{ section.id }}">
-                  
-                    <p class="testimonials-slide-author-date-{{ section.id }}">{{ section.settings.t36 }}</p>
-                  
-                </div>
-              </div>
-            
-          </div>
-          <div class="testimonials-btn-prev-{{ section.id }}">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Left"><path d="M14,17a1,1,0,0,1-.707-.293l-4-4a1,1,0,0,1,0-1.414l4-4a1,1,0,1,1,1.414,1.414L11.414,12l3.293,3.293A1,1,0,0,1,14,17Z" style="fill:#1c1b1e"/></g></svg>
-          </div>
-          <div class="testimonials-btn-next-{{ section.id }}">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Left"><path d="M14,17a1,1,0,0,1-.707-.293l-4-4a1,1,0,0,1,0-1.414l4-4a1,1,0,1,1,1.414,1.414L11.414,12l3.293,3.293A1,1,0,0,1,14,17Z" style="fill:#1c1b1e"/></g></svg>
-          </div>
-          <div class="testimonials-pagination-{{ section.id }} swiper-pagination"></div>
-        </div>
-      </div>
-      
-        <a href="#shopify-section-{{ section.id | split: '__' | first }}__main" class="testimonials-btn-{{ section.id }}">{{ section.settings.t37 }}</a>
-      
-    </div>
-</div>
-
-<style>
-/* css-applique : regles de la source */
-#shopify-section-{{ section.id }} { --swiper-theme-color: #007aff; }
-#shopify-section-{{ section.id }} .swiper, #shopify-section-{{ section.id }}:is(.swiper) { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0px; z-index: 1; }
-#shopify-section-{{ section.id }} .swiper-wrapper, #shopify-section-{{ section.id }}:is(.swiper-wrapper) { position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box; }
-#shopify-section-{{ section.id }} .swiper-android .swiper-slide, #shopify-section-{{ section.id }}:is(.swiper-android .swiper-slide), #shopify-section-{{ section.id }} .swiper-wrapper, #shopify-section-{{ section.id }}:is(.swiper-wrapper) { transform: translate3d(0px, 0px, 0px); }
-#shopify-section-{{ section.id }} .swiper-pointer-events, #shopify-section-{{ section.id }}:is(.swiper-pointer-events) { touch-action: pan-y; }
-#shopify-section-{{ section.id }} .swiper-slide, #shopify-section-{{ section.id }}:is(.swiper-slide) { flex-shrink: 0; width: 100%; height: 100%; position: relative; transition-property: transform; }
-#shopify-section-{{ section.id }} .swiper-pagination, #shopify-section-{{ section.id }}:is(.swiper-pagination) { position: absolute; text-align: center; transition: opacity 0.3s; transform: translate3d(0px, 0px, 0px); z-index: 10; }
-#shopify-section-{{ section.id }} .swiper-horizontal > .swiper-pagination-bullets, #shopify-section-{{ section.id }}:is(.swiper-horizontal > .swiper-pagination-bullets), #shopify-section-{{ section.id }} .swiper-pagination-bullets.swiper-pagination-horizontal, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullets.swiper-pagination-horizontal), #shopify-section-{{ section.id }} .swiper-pagination-custom, #shopify-section-{{ section.id }}:is(.swiper-pagination-custom), #shopify-section-{{ section.id }} .swiper-pagination-fraction, #shopify-section-{{ section.id }}:is(.swiper-pagination-fraction) { bottom: 10px; left: 0px; width: 100%; }
-#shopify-section-{{ section.id }} .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullet) { width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px)); height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px)); display: inline-block; border-radius: 50%; background: var(--swiper-pagination-bullet-inactive-color,#000); opacity: var(--swiper-pagination-bullet-inactive-opacity, .2); }
-#shopify-section-{{ section.id }} .swiper-pagination-clickable .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-pagination-clickable .swiper-pagination-bullet) { cursor: pointer; }
-#shopify-section-{{ section.id }} .swiper-pagination-bullet:only-child, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullet:only-child) { display: none !important; }
-#shopify-section-{{ section.id }} .swiper-pagination-bullet-active, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullet-active) { opacity: var(--swiper-pagination-bullet-opacity, 1); background: var(--swiper-pagination-color,var(--swiper-theme-color)); }
-#shopify-section-{{ section.id }} .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet), #shopify-section-{{ section.id }} .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet) { margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px); }
-#shopify-section-{{ section.id }} .swiper .swiper-notification, #shopify-section-{{ section.id }}:is(.swiper .swiper-notification) { position: absolute; left: 0px; top: 0px; pointer-events: none; opacity: 0; z-index: -1000; }
-#shopify-section-{{ section.id }} .swiper, #shopify-section-{{ section.id }}:is(.swiper) { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0px; z-index: 1; }
-#shopify-section-{{ section.id }} .swiper-wrapper, #shopify-section-{{ section.id }}:is(.swiper-wrapper) { position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box; }
-#shopify-section-{{ section.id }} .swiper-android .swiper-slide, #shopify-section-{{ section.id }}:is(.swiper-android .swiper-slide), #shopify-section-{{ section.id }} .swiper-wrapper, #shopify-section-{{ section.id }}:is(.swiper-wrapper) { transform: translate3d(0px, 0px, 0px); }
-#shopify-section-{{ section.id }} .swiper-pointer-events, #shopify-section-{{ section.id }}:is(.swiper-pointer-events) { touch-action: pan-y; }
-#shopify-section-{{ section.id }} .swiper-slide, #shopify-section-{{ section.id }}:is(.swiper-slide) { flex-shrink: 0; width: 100%; height: 100%; position: relative; transition-property: transform; }
-#shopify-section-{{ section.id }} .swiper-pagination, #shopify-section-{{ section.id }}:is(.swiper-pagination) { position: absolute; text-align: center; transition: opacity 0.3s; transform: translate3d(0px, 0px, 0px); z-index: 10; }
-#shopify-section-{{ section.id }} .swiper-horizontal > .swiper-pagination-bullets, #shopify-section-{{ section.id }}:is(.swiper-horizontal > .swiper-pagination-bullets), #shopify-section-{{ section.id }} .swiper-pagination-bullets.swiper-pagination-horizontal, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullets.swiper-pagination-horizontal), #shopify-section-{{ section.id }} .swiper-pagination-custom, #shopify-section-{{ section.id }}:is(.swiper-pagination-custom), #shopify-section-{{ section.id }} .swiper-pagination-fraction, #shopify-section-{{ section.id }}:is(.swiper-pagination-fraction) { bottom: 10px; left: 0px; width: 100%; }
-#shopify-section-{{ section.id }} .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullet) { width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px)); height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px)); display: inline-block; border-radius: 50%; background: var(--swiper-pagination-bullet-inactive-color,#000); opacity: var(--swiper-pagination-bullet-inactive-opacity, .2); }
-#shopify-section-{{ section.id }} .swiper-pagination-clickable .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-pagination-clickable .swiper-pagination-bullet) { cursor: pointer; }
-#shopify-section-{{ section.id }} .swiper-pagination-bullet:only-child, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullet:only-child) { display: none !important; }
-#shopify-section-{{ section.id }} .swiper-pagination-bullet-active, #shopify-section-{{ section.id }}:is(.swiper-pagination-bullet-active) { opacity: var(--swiper-pagination-bullet-opacity, 1); background: var(--swiper-pagination-color,var(--swiper-theme-color)); }
-#shopify-section-{{ section.id }} .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet), #shopify-section-{{ section.id }} .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet) { margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px); }
-#shopify-section-{{ section.id }} .swiper .swiper-notification, #shopify-section-{{ section.id }}:is(.swiper .swiper-notification) { position: absolute; left: 0px; top: 0px; pointer-events: none; opacity: 0; z-index: -1000; }
-#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { border-top: 0px solid rgb(0, 0, 0); border-bottom: 0px solid rgb(0, 0, 0); margin-top: 0px; margin-bottom: 0px; overflow: hidden; }
-#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { margin: 0px auto; padding: 45px 15px; }
-#shopify-section-{{ section.id }} .testimonials-heading-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-heading-{{ section.id }}) { margin: 0px; font-size: 24px; color: rgb(0, 0, 0); line-height: 130%; text-align: center; text-transform: unset; }
-#shopify-section-{{ section.id }} .testimonials-stars-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-stars-{{ section.id }}) { display: flex; align-items: end; gap: 5px; }
-#shopify-section-{{ section.id }} .testimonials-stars-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-stars-{{ section.id }} svg), #shopify-section-{{ section.id }} .testimonials-stars-{{ section.id }} img, #shopify-section-{{ section.id }}:is(.testimonials-stars-{{ section.id }} img) { display: block; width: 24px; height: 24px; object-fit: cover; }
-#shopify-section-{{ section.id }} .testimonials-stars-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-stars-{{ section.id }} svg) { background-color: rgb(0, 182, 122); }
-#shopify-section-{{ section.id }} .testimonials-rating-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-rating-{{ section.id }}) { margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 5px; flex-wrap: wrap; }
-#shopify-section-{{ section.id }} .testimonials-rating-text-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-rating-text-{{ section.id }}), #shopify-section-{{ section.id }} .testimonials-rating-{{ section.id }} span, #shopify-section-{{ section.id }}:is(.testimonials-rating-{{ section.id }} span) { margin: 0px; font-size: 20px; color: rgb(0, 0, 0); line-height: 130%; }
-#shopify-section-{{ section.id }} .testimonials-rating-{{ section.id }} span, #shopify-section-{{ section.id }}:is(.testimonials-rating-{{ section.id }} span) { font-size: 25px; font-weight: 700; }
-#shopify-section-{{ section.id }} .testimonials-rating-{{ section.id }} .testimonials-stars-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-rating-{{ section.id }} .testimonials-stars-{{ section.id }}) { padding-left: 5px; }
-#shopify-section-{{ section.id }} .testimonials-text-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-text-{{ section.id }}) { margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
-#shopify-section-{{ section.id }} .testimonials-text-{{ section.id }} *, #shopify-section-{{ section.id }}:is(.testimonials-text-{{ section.id }} *) { margin: 0px; font-size: 16px; color: rgb(0, 0, 0); line-height: 130%; text-transform: unset; }
-#shopify-section-{{ section.id }} .testimonials-text-{{ section.id }} strong, #shopify-section-{{ section.id }}:is(.testimonials-text-{{ section.id }} strong) { text-decoration: underline; }
-#shopify-section-{{ section.id }} .testimonials-slider-wrapper-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slider-wrapper-{{ section.id }}) { margin-top: 27px; }
-#shopify-section-{{ section.id }} .testimonials-slider-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slider-{{ section.id }}) { overflow: visible !important; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}.swiper-slide, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}.swiper-slide) { opacity: 0.5; transition-duration: 250ms; transition-property: transform, opacity; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}.swiper-slide-active, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}.swiper-slide-active) { opacity: 1; transition-duration: 250ms; transition-property: transform, opacity; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}) { flex-direction: column; justify-content: space-between; gap: 12px; padding: 24px; border-radius: 16px; border: 0px solid rgb(0, 0, 0); background-color: rgb(255, 255, 255); display: flex !important; box-sizing: border-box !important; height: auto !important; }
-#shopify-section-{{ section.id }} .testimonials-slide-top-{{ section.id }} .testimonials-stars-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-top-{{ section.id }} .testimonials-stars-{{ section.id }}) { justify-content: center; }
-#shopify-section-{{ section.id }} .testimonials-slide-heading-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-heading-{{ section.id }}) { margin: 12px 0px 0px; font-size: 20px; color: rgb(0, 0, 0); line-height: 130%; text-align: center; font-weight: 700; text-transform: unset; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-{{ section.id }}) { margin: 12px 0px 0px; font-size: 14px; color: rgb(0, 0, 0); line-height: 150%; text-align: center; text-transform: unset; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-{{ section.id }} span:first-child, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-{{ section.id }} span:first-child) { display: none; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-big-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-big-{{ section.id }}) { display: none; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-btn-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-btn-{{ section.id }}) { display: block; max-width: fit-content; width: 100%; background-color: transparent; box-shadow: none; border: 0px; font-size: 14px; line-height: 150%; font-weight: 700; margin-top: 10px; }
-#shopify-section-{{ section.id }} .testimonials-slide-author-date-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-author-date-{{ section.id }}) { margin: 0px; font-size: 16px; color: rgb(0, 0, 0); line-height: 130%; text-align: center; text-transform: unset; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}) { position: absolute; z-index: 2; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border: 0px solid rgb(255, 255, 255); border-radius: 50%; background: rgb(255, 255, 255); align-items: center; justify-content: center; transition: 0.3s; cursor: pointer; appearance: none; box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}) { left: 0px !important; }
-#shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}) { right: 0px !important; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }} svg), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }} svg) { height: 28px; width: 28px; }
-#shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }} svg) { transform: rotate(180deg); margin-left: 2px; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }} svg) { margin-left: -2px; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }} svg path, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }} svg path), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }} svg path, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }} svg path) { fill: rgb(0, 0, 0); transition: 0.3s; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}:hover, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}:hover), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}:hover, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}:hover) { transition: 0.3s; border: 0px solid rgb(255, 255, 255); background: rgb(255, 255, 255); }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}:hover svg path, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}:hover svg path), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}:hover svg path, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}:hover svg path) { fill: rgb(0, 0, 0); transition: 0.3s; }
-#shopify-section-{{ section.id }} .testimonials-pagination-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-pagination-{{ section.id }}) { margin-top: 20px; width: 100%; justify-content: center; align-items: center; position: static !important; }
-#shopify-section-{{ section.id }} .testimonials-pagination-{{ section.id }} .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.testimonials-pagination-{{ section.id }} .swiper-pagination-bullet) { width: 12px; height: 12px; border: 2px solid rgb(0, 0, 0); background-color: transparent; opacity: 0.6; }
-#shopify-section-{{ section.id }} .testimonials-pagination-{{ section.id }} .swiper-pagination-bullet.swiper-pagination-bullet-active, #shopify-section-{{ section.id }}:is(.testimonials-pagination-{{ section.id }} .swiper-pagination-bullet.swiper-pagination-bullet-active) { opacity: 1; background-color: rgb(0, 0, 0); }
-#shopify-section-{{ section.id }} .testimonials-btn-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-{{ section.id }}) { display: flex; align-items: center; justify-content: center; max-width: fit-content; margin: 12px 0px 0px; font-size: 14px; font-weight: 700; color: rgb(255, 255, 255); line-height: 100%; text-align: center; text-transform: unset; text-decoration: none; padding: 15px 12px; border-radius: 8px; border: 0px solid rgb(0, 0, 0); background-color: rgb(0, 0, 0); transition: 0.25s; }
-#shopify-section-{{ section.id }} .testimonials-btn-{{ section.id }}:hover, #shopify-section-{{ section.id }}:is(.testimonials-btn-{{ section.id }}:hover) { color: rgb(255, 255, 255); border: 0px solid rgb(0, 0, 0); background-color: rgb(0, 0, 0); transition: 0.25s; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}) { display: none; }
-#shopify-section-{{ section.id }} .testimonials-pagination-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-pagination-{{ section.id }}) { display: none !important; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}) { box-shadow: rgba(0, 182, 122, 0.2) 0px 0px 20px 0px; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-btn-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-btn-{{ section.id }}) { margin-left: auto; margin-right: auto; }
-#shopify-section-{{ section.id }} .testimonials-btn-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-{{ section.id }}) { margin-left: auto; margin-right: auto; }
-@media (min-width: 1024px) {
-#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { margin-top: 0px; margin-bottom: 0px; }
-#shopify-section-{{ section.id }} .section-{{ section.id }}, #shopify-section-{{ section.id }}:is(.section-{{ section.id }}) { padding: 60px 50px; }
-#shopify-section-{{ section.id }} .testimonials-heading-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-heading-{{ section.id }}) { font-size: 40px; }
-#shopify-section-{{ section.id }} .testimonials-rating-text-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-rating-text-{{ section.id }}), #shopify-section-{{ section.id }} .testimonials-rating-{{ section.id }} span, #shopify-section-{{ section.id }}:is(.testimonials-rating-{{ section.id }} span) { font-size: 24px; }
-#shopify-section-{{ section.id }} .testimonials-rating-{{ section.id }} span, #shopify-section-{{ section.id }}:is(.testimonials-rating-{{ section.id }} span) { font-size: 30px; }
-#shopify-section-{{ section.id }} .testimonials-stars-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-stars-{{ section.id }} svg), #shopify-section-{{ section.id }} .testimonials-stars-{{ section.id }} img, #shopify-section-{{ section.id }}:is(.testimonials-stars-{{ section.id }} img) { width: 28px; height: 28px; }
-#shopify-section-{{ section.id }} .testimonials-text-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-text-{{ section.id }}) { margin-top: 16px; }
-#shopify-section-{{ section.id }} .testimonials-text-{{ section.id }} *, #shopify-section-{{ section.id }}:is(.testimonials-text-{{ section.id }} *) { font-size: 20px; }
-#shopify-section-{{ section.id }} .testimonials-slider-wrapper-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slider-wrapper-{{ section.id }}) { margin-top: 36px; margin-left: auto; margin-right: auto; width: 100%; max-width: 80%; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}) { gap: 16px; padding: 32px 40px; }
-#shopify-section-{{ section.id }} .testimonials-slide-heading-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-heading-{{ section.id }}) { margin-top: 16px; font-size: 24px; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-{{ section.id }}) { margin-top: 16px; font-size: 14px; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-btn-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-btn-{{ section.id }}) { font-size: 14px; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-{{ section.id }} span:first-child, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-{{ section.id }} span:first-child) { display: inline; }
-#shopify-section-{{ section.id }} .testimonials-slide-text-{{ section.id }} span:not(:first-child), #shopify-section-{{ section.id }}:is(.testimonials-slide-text-{{ section.id }} span:not(:first-child)), #shopify-section-{{ section.id }} .testimonials-slide-text-{{ section.id }} button, #shopify-section-{{ section.id }}:is(.testimonials-slide-text-{{ section.id }} button) { display: none; }
-#shopify-section-{{ section.id }} .testimonials-slide-author-date-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-slide-author-date-{{ section.id }}) { font-size: 16px; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}) { width: 50px; height: 50px; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}) { left: -25px !important; }
-#shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}) { right: -25px !important; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }} svg), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }} svg, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }} svg) { height: 28px; width: 28px; }
-#shopify-section-{{ section.id }} .testimonials-pagination-{{ section.id }} .swiper-pagination-bullet, #shopify-section-{{ section.id }}:is(.testimonials-pagination-{{ section.id }} .swiper-pagination-bullet) { width: 12px; height: 12px; }
-#shopify-section-{{ section.id }} .testimonials-btn-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-{{ section.id }}) { margin-top: 16px; padding: 20px 16px; font-size: 16px; }
-#shopify-section-{{ section.id }} .testimonials-btn-prev-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-prev-{{ section.id }}), #shopify-section-{{ section.id }} .testimonials-btn-next-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-btn-next-{{ section.id }}) { display: flex; }
-#shopify-section-{{ section.id }} .testimonials-pagination-{{ section.id }}, #shopify-section-{{ section.id }}:is(.testimonials-pagination-{{ section.id }}) { display: none !important; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev), #shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-next, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-next) { opacity: 1; transition-duration: 250ms; transition-property: transform, opacity; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev) { opacity: 1; transition-duration: 250ms; transition-property: transform, opacity; }
-}
-@media (min-width: 768px) {
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}.swiper-slide-visible, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}.swiper-slide-visible) { opacity: 1; transition-duration: 250ms; transition-property: transform, opacity; }
-#shopify-section-{{ section.id }} .testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev, #shopify-section-{{ section.id }}:is(.testimonials-slide-{{ section.id }}.swiper-slide-visible.swiper-slide-prev) { opacity: 0.5; transition-duration: 250ms; transition-property: transform, opacity; }
-}
-</style>
-<!-- scripts-inline : repris de la source -->
-<script src="{{ 'ap-swiper.min.js' | asset_url }}"></script>
-
-<script>
-  function initTestimonials8template32527643967818__ss_testimonial_8_nfjFtq() {
-    document.querySelector('.testimonials-slider-{{ section.id }}').classList.remove('preview');
-    const slider = new Swiper('.testimonials-slider-{{ section.id }}', {
-      speed: 300,
-      loop: true,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: '.testimonials-btn-next-{{ section.id }}',
-        prevEl: '.testimonials-btn-prev-{{ section.id }}'
-      },
-      pagination: {
-        el: '.testimonials-pagination-{{ section.id }}',
-        type: 'bullets',
-        clickable: true
-      },
-      breakpoints: {
-        320: {
-          centeredSlides: true,
-          spaceBetween: 20,
-          slidesPerView: 1.2
-        },
-        768: {
-          centeredSlides: false,
-          spaceBetween: 20,
-          slidesPerView: 2
-        },
-        1024: {
-          centeredSlides: true,
-          spaceBetween: 20,
-          slidesPerView: 3
-        }
-      }
-    })
-    // slider.slidePrev();
-    let texts = document.querySelectorAll('.testimonials-slide-text-{{ section.id }}');
-    texts.forEach(el => {
-      let btn = el.querySelector('.testimonials-slide-text-btn');
-      let small = el.querySelector('.testimonials-slide-text-small');
-      let big = el.querySelector('.testimonials-slide-text-big');
-      btn.addEventListener('click', () => {
-        console.log(btn);
-        if(btn.classList.contains("active")) {
-          small.classList.remove('active');
-          big.classList.remove('active');
-          btn.classList.remove('active');
-          btn.textContent = "Lire la suite";
-        } else {
-          small.classList.add('active');
-          big.classList.add('active');
-          btn.textContent = "Afficher moins";
-          btn.classList.add('active');
-        }
-      })
-    })
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(initTestimonials8template32527643967818__ss_testimonial_8_nfjFtq, 500);
-  });
-  
-  if (Shopify.designMode) {
-     document.addEventListener('shopify:section:unload', initTestimonials8template32527643967818__ss_testimonial_8_nfjFtq);
-     document.addEventListener('shopify:section:load', initTestimonials8template32527643967818__ss_testimonial_8_nfjFtq);
-  }
-  
-</script>
-<style>#shopify-section-{{ section.id }} [class^="testimonials-rating-"],#shopify-section-{{ section.id }} [class^="testimonials-text-"],#shopify-section-{{ section.id }} [class^="testimonials-slide-top-"] > div:has(svg){display:none!important}</style>
+{{ 'ap-reviews.css' | asset_url | stylesheet_tag }}
+{% render 'ap-reviews', section: section, design_mode: request.design_mode, kind: 'text' %}
+<script src="{{ 'ap-reviews.js' | asset_url }}" defer></script>
 {% schema %}
 {
-  "name": "AP Situations",
+  "name": "AP Avis détaillés",
   "tag": "section",
   "settings": [
     {
       "type": "text",
+      "id": "reviews_heading",
+      "label": "Titre des avis",
+      "default": "Elles partagent leur expérience"
+    },
+    {
+      "type": "text",
+      "id": "average",
+      "label": "Note moyenne réelle (facultatif)"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Nombre réel d’avis (facultatif)"
+    },
+    {
+      "type": "url",
+      "id": "all_reviews_url",
+      "label": "Lien vers tous les avis"
+    },
+    {
+      "type": "header",
+      "content": "Contenu existant (sans bloc Avis)"
+    },
+    {
+      "type": "text",
       "id": "t01",
-      "label": "Du stress du rasage quotidien &#224; une peau",
-      "default": "Du stress du rasage quotidien &#224; une peau lisse pour de bon."
+      "label": "Texte existant 01",
+      "default": "Du stress du rasage quotidien à une peau lisse pour de bon."
     },
     {
       "type": "text",
       "id": "t02",
-      "label": "Excellent"
+      "label": "Texte existant 02"
     },
     {
       "type": "text",
       "id": "t03",
-      "label": "4,7"
+      "label": "Texte existant 03"
     },
     {
       "type": "text",
       "id": "t04",
-      "label": "/ 5"
+      "label": "Texte existant 04"
     },
     {
       "type": "text",
       "id": "t05",
-      "label": "D'apr&#232;s"
+      "label": "Texte existant 05"
     },
     {
       "type": "text",
       "id": "t06",
-      "label": "7 867"
+      "label": "Texte existant 06"
     },
     {
       "type": "text",
       "id": "t07",
-      "label": "avis"
+      "label": "Texte existant 07"
     },
     {
       "type": "text",
       "id": "t08",
-      "label": "Ma solution miracle contre les poils du ",
+      "label": "Texte existant 08",
       "default": "Les poils du SOPK au menton"
     },
     {
       "type": "text",
       "id": "t09",
-      "label": "&#192; cause du SOPK, j'avais plein de poils ",
-      "default": "Avec le SOPK, la pince entretient le cercle : chaque poil arrach&#233; revient plus dru. Sorelya agit sur le signal de pousse &#224; la racine, chaque soir, sans hormones. Avec la r&#233;gularit&#233;, le poil repousse plus fin, plus clair, plus lentement."
+      "label": "Texte existant 09",
+      "default": "Avec le SOPK, la pince entretient le cercle : chaque poil arraché revient plus dru. Sorelya agit sur le signal de pousse à la racine, chaque soir, sans hormones. Avec la régularité, le poil repousse plus fin, plus clair, plus lentement."
     },
     {
       "type": "text",
       "id": "t10",
-      "label": "&#192; cause du SOPK, j'avais plein de poils ",
-      "default": "Avec le SOPK, la pince entretient le cercle : chaque poil arrach&#233; revient plus dru. Sorelya agit sur le..."
+      "label": "Texte existant 10",
+      "default": "Avec le SOPK, la pince entretient le cercle : chaque poil arraché revient plus dru. Sorelya agit sur le..."
     },
     {
       "type": "text",
       "id": "t11",
-      "label": "Lire la suite",
+      "label": "Texte existant 11",
       "default": "Lire la suite"
     },
     {
       "type": "text",
       "id": "t12",
-      "label": "Marion T. (36 ans)",
+      "label": "Texte existant 12",
       "default": "Pour les poils hormonaux"
     },
     {
       "type": "text",
       "id": "t13",
-      "label": "Je pensais que c'&#233;tait juste un effet de",
+      "label": "Texte existant 13",
       "default": "Le rituel pince de chaque matin"
     },
     {
       "type": "text",
       "id": "t14",
-      "label": "Ma s&#339;ur me harcelait depuis des lustres ",
-      "default": "Vingt minutes devant le miroir grossissant &#224; traquer chaque poil, et la peau rouge toute la matin&#233;e. Deux gouttes le soir remplacent la chasse du matin : le poil se fait plus fin, la peau s&#8217;apaise."
+      "label": "Texte existant 14",
+      "default": "Vingt minutes devant le miroir grossissant à traquer chaque poil, et la peau rouge toute la matinée. Deux gouttes le soir remplacent la chasse du matin : le poil se fait plus fin, la peau s’apaise."
     },
     {
       "type": "text",
       "id": "t15",
-      "label": "Ma s&#339;ur me harcelait depuis des lustres ",
-      "default": "Vingt minutes devant le miroir grossissant &#224; traquer chaque poil, et la peau rouge toute la matin&#233;e. Deux..."
+      "label": "Texte existant 15",
+      "default": "Vingt minutes devant le miroir grossissant à traquer chaque poil, et la peau rouge toute la matinée. Deux..."
     },
     {
       "type": "text",
       "id": "t16",
-      "label": "Julie F. (38 ans)",
+      "label": "Texte existant 16",
       "default": "Pour la pince quotidienne"
     },
     {
       "type": "text",
       "id": "t17",
-      "label": "Enfin plus de boutons de rasage !",
+      "label": "Texte existant 17",
       "default": "Les boutons de rasage sur le maillot"
     },
     {
       "type": "text",
       "id": "t18",
-      "label": "Le s&#233;rum apaise ma peau tout de suite ap",
-      "default": "Panth&#233;nol et menthe poivr&#233;e apaisent la peau juste apr&#232;s le rasage. Moins de rougeurs, moins de boutons, m&#234;me sur le maillot, et une repousse qui pique moins."
+      "label": "Texte existant 18",
+      "default": "Panthénol et menthe poivrée apaisent la peau juste après le rasage. Moins de rougeurs, moins de boutons, même sur le maillot, et une repousse qui pique moins."
     },
     {
       "type": "text",
       "id": "t19",
-      "label": "Le s&#233;rum apaise ma peau tout de suite ap",
-      "default": "Panth&#233;nol et menthe poivr&#233;e apaisent la peau juste apr&#232;s le rasage. Moins de rougeurs, moins de boutons, m&#234;me..."
+      "label": "Texte existant 19",
+      "default": "Panthénol et menthe poivrée apaisent la peau juste après le rasage. Moins de rougeurs, moins de boutons, même..."
     },
     {
       "type": "text",
       "id": "t20",
-      "label": "L&#233;na S. (32 ans)",
+      "label": "Texte existant 20",
       "default": "Pour le maillot"
     },
     {
       "type": "text",
       "id": "t21",
-      "label": "Fini l'ombre fonc&#233;e au-dessus de la l&#232;vr",
-      "default": "L&#8217;ombre au-dessus de la l&#232;vre"
+      "label": "Texte existant 21",
+      "default": "L’ombre au-dessus de la lèvre"
     },
     {
       "type": "text",
       "id": "t22",
-      "label": "Avant, quelques heures &#224; peine apr&#232;s le ",
-      "default": "Ras&#233;e le matin, l&#8217;ombre revient d&#232;s midi. En affinant la repousse et en &#233;claircissant les marques laiss&#233;es par le rasoir, Sorelya espace les rasages, jour apr&#232;s jour."
+      "label": "Texte existant 22",
+      "default": "Rasée le matin, l’ombre revient dès midi. En affinant la repousse et en éclaircissant les marques laissées par le rasoir, Sorelya espace les rasages, jour après jour."
     },
     {
       "type": "text",
       "id": "t23",
-      "label": "Avant, quelques heures &#224; peine apr&#232;s le ",
-      "default": "Ras&#233;e le matin, l&#8217;ombre revient d&#232;s midi. En affinant la repousse et en &#233;claircissant les marques laiss&#233;es..."
+      "label": "Texte existant 23",
+      "default": "Rasée le matin, l’ombre revient dès midi. En affinant la repousse et en éclaircissant les marques laissées..."
     },
     {
       "type": "text",
       "id": "t24",
-      "label": "Sarah M. (25 ans)",
-      "default": "Pour la l&#232;vre sup&#233;rieure"
+      "label": "Texte existant 24",
+      "default": "Pour la lèvre supérieure"
     },
     {
       "type": "text",
       "id": "t25",
-      "label": "Moins de pince, plus de confiance en moi",
-      "default": "Les poils blancs de la m&#233;nopause"
+      "label": "Texte existant 25",
+      "default": "Les poils blancs de la ménopause"
     },
     {
       "type": "text",
       "id": "t26",
-      "label": "Au bout de quelques semaines, les petits",
-      "default": "&#192; la m&#233;nopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit sur le signal de pousse, quelle que soit la couleur du poil."
+      "label": "Texte existant 26",
+      "default": "À la ménopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit sur le signal de pousse, quelle que soit la couleur du poil."
     },
     {
       "type": "text",
       "id": "t27",
-      "label": "Au bout de quelques semaines, les petits",
-      "default": "&#192; la m&#233;nopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit..."
+      "label": "Texte existant 27",
+      "default": "À la ménopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit..."
     },
     {
       "type": "text",
       "id": "t28",
-      "label": "Anne K. (41 ans)",
-      "default": "Pour la m&#233;nopause"
+      "label": "Texte existant 28",
+      "default": "Pour la ménopause"
     },
     {
       "type": "text",
       "id": "t29",
-      "label": "Le temps gagn&#233; n'a pas de prix",
+      "label": "Texte existant 29",
       "default": "Le temps perdu chaque matin"
     },
     {
       "type": "text",
       "id": "t30",
-      "label": "Les poils repoussent nettement plus lent",
-      "default": "Se raser tous les jours, ce sont des heures envol&#233;es chaque mois. Avec une repousse plus lente, le rasoir sort de moins en moins souvent, et le matin redevient &#224; toi."
+      "label": "Texte existant 30",
+      "default": "Se raser tous les jours, ce sont des heures envolées chaque mois. Avec une repousse plus lente, le rasoir sort de moins en moins souvent, et le matin redevient à toi."
     },
     {
       "type": "text",
       "id": "t31",
-      "label": "Les poils repoussent nettement plus lent",
-      "default": "Se raser tous les jours, ce sont des heures envol&#233;es chaque mois. Avec une repousse plus lente, le rasoir..."
+      "label": "Texte existant 31",
+      "default": "Se raser tous les jours, ce sont des heures envolées chaque mois. Avec une repousse plus lente, le rasoir..."
     },
     {
       "type": "text",
       "id": "t32",
-      "label": "Sabine H. (29 ans)",
+      "label": "Texte existant 32",
       "default": "Pour gagner du temps"
     },
     {
       "type": "text",
       "id": "t33",
-      "label": "Apais&#233;e apr&#232;s le laser",
-      "default": "Apr&#232;s le laser ou le d&#233;tatouage"
+      "label": "Texte existant 33",
+      "default": "Après le laser ou le détatouage"
     },
     {
       "type": "text",
       "id": "t34",
-      "label": "Apr&#232;s mon d&#233;tatouage au laser, ma peau &#233;",
-      "default": "Peau irrit&#233;e, rougeurs qui tra&#238;nent : la formule au panth&#233;nol et &#224; l&#8217;acide hyaluronique apaise et hydrate comme un vrai soin r&#233;parateur."
+      "label": "Texte existant 34",
+      "default": "Peau irritée, rougeurs qui traînent : la formule au panthénol et à l’acide hyaluronique apaise et hydrate comme un vrai soin réparateur."
     },
     {
       "type": "text",
       "id": "t35",
-      "label": "Apr&#232;s mon d&#233;tatouage au laser, ma peau &#233;",
-      "default": "Peau irrit&#233;e, rougeurs qui tra&#238;nent : la formule au panth&#233;nol et &#224; l&#8217;acide hyaluronique apaise et hydrate..."
+      "label": "Texte existant 35",
+      "default": "Peau irritée, rougeurs qui traînent : la formule au panthénol et à l’acide hyaluronique apaise et hydrate..."
     },
     {
       "type": "text",
       "id": "t36",
-      "label": "Kim Z. (25 ans)",
-      "default": "Pour les peaux sensibilis&#233;es"
+      "label": "Texte existant 36",
+      "default": "Pour les peaux sensibilisées"
     },
     {
       "type": "text",
       "id": "t37",
-      "label": "Tout voir",
+      "label": "Texte existant 37",
       "default": "Je commence ma cure"
     }
   ],
-  "class": "shopify-section"
+  "class": "shopify-section",
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Témoignage authentique"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Signature réelle"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo correspondant au témoignage"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Description de la photo"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Note (0 = ne pas afficher)",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 0
+        },
+        {
+          "type": "text",
+          "id": "source",
+          "label": "Provenance (facultatif)"
+        },
+        {
+          "type": "url",
+          "id": "source_url",
+          "label": "Lien vers la provenance"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 24
 }
 {% endschema %}

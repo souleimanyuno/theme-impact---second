@@ -1,15 +1,13 @@
-<style>@font-face{font-family:SorelyaReviews;src:url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2");font-style:normal;font-weight:400;font-display:swap}.ap-reviews__copy,.ap-reviews__author{font-family:SorelyaReviews,sans-serif}</style>
 {%- assign has_reviews = false -%}
 {%- for block in section.blocks -%}
   {%- if block.settings.quote != blank -%}{%- assign has_reviews = true -%}{%- endif -%}
 {%- endfor -%}
 <section class="ap-reviews ap-reviews--{{ kind }}" data-ap-reviews aria-labelledby="ap-review-title-{{ section.id }}">
   <div class="ap-reviews__inner">
-    <h2 id="ap-review-title-{{ section.id }}">{% if has_reviews %}{{ section.settings.reviews_heading | escape }}{% else %}{{ section.settings.t01 | escape }}{% endif %}</h2>
+    <h2 id="ap-review-title-{{ section.id }}">{% if has_reviews %}{{ section.settings.reviews_heading | escape_once }}{% else %}{{ section.settings.t01 | escape_once }}{% endif %}</h2>
     {% if has_reviews and section.settings.average != blank and section.settings.review_count != blank %}
-      <p class="ap-reviews__summary"><strong>{{ section.settings.average | escape }} / 5</strong><span>D’après {{ section.settings.review_count | escape }} avis</span></p>
+      <p class="ap-reviews__summary"><strong>{{ section.settings.average | escape_once }} / 5</strong><span>D’après {{ section.settings.review_count | escape_once }} avis</span></p>
     {% endif %}
-    {% if design_mode and has_reviews == false %}<p class="ap-reviews__editor">Ajoutez un bloc « Avis » pour insérer un témoignage, sa signature et sa photo. Les cartes ci-dessous sont les textes commerciaux existants.</p>{% endif %}
     <div class="ap-reviews__stage">
       <div class="ap-reviews__track" id="ap-review-track-{{ section.id }}" tabindex="0" role="region" aria-label="Cartes à faire défiler">
       {% if has_reviews %}
@@ -18,11 +16,11 @@
           <article class="ap-reviews__card" {{ block.shopify_attributes }}>
             {% if block.settings.image != blank %}{{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'ap-reviews__image', widths: '300,450,600,800', sizes: '(max-width: 749px) 80vw, 360px', alt: block.settings.image_alt }}{% endif %}
             {% if block.settings.rating > 0 %}<div class="ap-reviews__stars" role="img" aria-label="{{ block.settings.rating }} étoiles sur 5">{% for star in (1..5) %}<span{% if star > block.settings.rating %} class="is-empty"{% endif %} aria-hidden="true">★</span>{% endfor %}</div>{% endif %}
-            {% if block.settings.title != blank %}<h3>{{ block.settings.title | escape }}</h3>{% endif %}
-            <div class="ap-reviews__copy" data-review-copy>{{ block.settings.quote | escape | newline_to_br }}</div>
+            {% if block.settings.title != blank %}<h3>{{ block.settings.title | escape_once }}</h3>{% endif %}
+            <div class="ap-reviews__copy" data-review-copy>{{ block.settings.quote | escape_once | newline_to_br }}</div>
             <button type="button" class="ap-reviews__more" hidden aria-expanded="false">Lire la suite</button>
-            {% if block.settings.author != blank %}<p class="ap-reviews__author">{{ block.settings.author | escape }}</p>{% endif %}
-            {% if block.settings.source != blank %}<p class="ap-reviews__source">{% if block.settings.source_url != blank %}<a href="{{ block.settings.source_url | escape }}">{{ block.settings.source | escape }}</a>{% else %}{{ block.settings.source | escape }}{% endif %}</p>{% endif %}
+            {% if block.settings.author != blank %}<p class="ap-reviews__author">{{ block.settings.author | escape_once }}</p>{% endif %}
+            {% if block.settings.source != blank %}<p class="ap-reviews__source">{% if block.settings.source_url != blank %}<a href="{{ block.settings.source_url | escape_once }}">{{ block.settings.source | escape_once }}</a>{% else %}{{ block.settings.source | escape_once }}{% endif %}</p>{% endif %}
           </article>
           {% endif %}
         {% endfor %}
@@ -92,13 +90,14 @@
             {% assign title = section.settings[tk] %}{% assign quote = section.settings[qk] %}{% assign author = section.settings[ak] %}
           {% endif %}
           <article class="ap-reviews__card">
+            {% if kind == 'text' %}<span class="ap-reviews__quote-mark" aria-hidden="true">“</span>{% endif %}
             {% if kind == 'photos' %}
-              {% if photo != blank %}{{ photo | image_url: width: 800 | image_tag: loading: 'lazy', class: 'ap-reviews__image', alt: author }}{% else %}<img class="ap-reviews__image" src="{{ asset | asset_url }}" alt="{{ author | escape }}" width="600" height="600" loading="lazy">{% endif %}
+              {% if photo != blank %}{{ photo | image_url: width: 800 | image_tag: loading: 'lazy', class: 'ap-reviews__image', alt: author }}{% else %}<img class="ap-reviews__image" src="{{ asset | asset_url }}" alt="{{ author | escape_once }}" width="600" height="600" loading="lazy">{% endif %}
             {% endif %}
-            {% if title != blank %}<h3>{{ title | escape }}</h3>{% endif %}
-            <div class="ap-reviews__copy" data-review-copy>{{ quote | escape | newline_to_br }}</div>
+            {% if title != blank %}<h3>{{ title | escape_once }}</h3>{% endif %}
+            <div class="ap-reviews__copy" data-review-copy>{{ quote | escape_once | newline_to_br }}</div>
             <button type="button" class="ap-reviews__more" hidden aria-expanded="false">Lire la suite</button>
-            {% if author != blank %}<p class="ap-reviews__author">{{ author | escape }}</p>{% endif %}
+            {% if author != blank %}<p class="ap-reviews__author">{{ author | escape_once }}</p>{% endif %}
           </article>
         {% endfor %}
       {% endif %}
@@ -107,6 +106,6 @@
       <button class="ap-reviews__arrow ap-reviews__next" type="button" aria-label="Carte suivante" aria-controls="ap-review-track-{{ section.id }}" hidden>›</button>
     </div>
     <p class="ap-reviews__position" aria-live="polite"></p>
-    {% if has_reviews and section.settings.all_reviews_url != blank %}<a class="ap-reviews__all" href="{{ section.settings.all_reviews_url | escape }}">Voir tous les avis</a>{% endif %}
+    {% if has_reviews and section.settings.all_reviews_url != blank %}<a class="ap-reviews__all" href="{{ section.settings.all_reviews_url | escape_once }}">Voir tous les avis</a>{% endif %}
   </div>
 </section>
