@@ -1,0 +1,112 @@
+<style>@font-face{font-family:SorelyaReviews;src:url("{{ 'ap-josefin.woff2' | asset_url }}") format("woff2");font-style:normal;font-weight:400;font-display:swap}.ap-reviews__copy,.ap-reviews__author{font-family:SorelyaReviews,sans-serif}</style>
+{%- assign has_reviews = false -%}
+{%- for block in section.blocks -%}
+  {%- if block.settings.quote != blank -%}{%- assign has_reviews = true -%}{%- endif -%}
+{%- endfor -%}
+<section class="ap-reviews ap-reviews--{{ kind }}" data-ap-reviews aria-labelledby="ap-review-title-{{ section.id }}">
+  <div class="ap-reviews__inner">
+    <h2 id="ap-review-title-{{ section.id }}">{% if has_reviews %}{{ section.settings.reviews_heading | escape }}{% else %}{{ section.settings.t01 | escape }}{% endif %}</h2>
+    {% if has_reviews and section.settings.average != blank and section.settings.review_count != blank %}
+      <p class="ap-reviews__summary"><strong>{{ section.settings.average | escape }} / 5</strong><span>D’après {{ section.settings.review_count | escape }} avis</span></p>
+    {% endif %}
+    {% if design_mode and has_reviews == false %}<p class="ap-reviews__editor">Ajoutez un bloc « Avis » pour insérer un témoignage, sa signature et sa photo. Les cartes ci-dessous sont les textes commerciaux existants.</p>{% endif %}
+    <div class="ap-reviews__stage">
+      <div class="ap-reviews__track" id="ap-review-track-{{ section.id }}" tabindex="0" role="region" aria-label="Cartes à faire défiler">
+      {% if has_reviews %}
+        {% for block in section.blocks %}
+          {% if block.settings.quote != blank %}
+          <article class="ap-reviews__card" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}{{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'ap-reviews__image', widths: '300,450,600,800', sizes: '(max-width: 749px) 80vw, 360px', alt: block.settings.image_alt }}{% endif %}
+            {% if block.settings.rating > 0 %}<div class="ap-reviews__stars" role="img" aria-label="{{ block.settings.rating }} étoiles sur 5">{% for star in (1..5) %}<span{% if star > block.settings.rating %} class="is-empty"{% endif %} aria-hidden="true">★</span>{% endfor %}</div>{% endif %}
+            {% if block.settings.title != blank %}<h3>{{ block.settings.title | escape }}</h3>{% endif %}
+            <div class="ap-reviews__copy" data-review-copy>{{ block.settings.quote | escape | newline_to_br }}</div>
+            <button type="button" class="ap-reviews__more" hidden aria-expanded="false">Lire la suite</button>
+            {% if block.settings.author != blank %}<p class="ap-reviews__author">{{ block.settings.author | escape }}</p>{% endif %}
+            {% if block.settings.source != blank %}<p class="ap-reviews__source">{% if block.settings.source_url != blank %}<a href="{{ block.settings.source_url | escape }}">{{ block.settings.source | escape }}</a>{% else %}{{ block.settings.source | escape }}{% endif %}</p>{% endif %}
+          </article>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% if kind == 'photos' %}{% assign total = 6 %}{% else %}{% assign total = 7 %}{% endif %}
+        {% for i in (1..total) %}
+          {% liquid
+            assign title = ''
+            assign quote = ''
+            assign author = ''
+            if kind == 'photos'
+              case i
+                when 1
+                  assign quote = section.settings.t02
+                  assign author = section.settings.t03
+                  assign asset = 'ap-cas-menton.jpg'
+                when 2
+                  assign quote = section.settings.t04 | append: ' ' | append: section.settings.t05 | append: section.settings.t06 | append: ' ' | append: section.settings.t07 | append: ' ' | append: section.settings.t08 | append: ' ' | append: section.settings.t09
+                  assign author = section.settings.t10
+                  assign asset = 'ap-cas-levre.jpg'
+                when 3
+                  assign quote = section.settings.t11
+                  assign author = section.settings.t12
+                  assign asset = 'ap-cas-jambes.jpg'
+                when 4
+                  assign quote = section.settings.t13
+                  assign author = section.settings.t14
+                  assign asset = 'ap-cas-maillot.jpg'
+                when 5
+                  assign quote = section.settings.t15
+                  assign author = section.settings.t16
+                  assign asset = 'ap-cas-tatouage.jpg'
+                when 6
+                  assign quote = section.settings.t17
+                  assign author = section.settings.t18
+                  assign asset = 'ap-cas-cou.jpg'
+              endcase
+              assign image_key = 'img0' | append: i
+              assign photo = section.settings[image_key]
+            else
+              assign title_index = i | minus: 1 | times: 4 | plus: 8
+              assign quote_index = title_index | plus: 1
+              assign author_index = title_index | plus: 4
+              if title_index < 10
+                assign title_key = 't0' | append: title_index
+              else
+                assign title_key = 't' | append: title_index
+              endif
+              if quote_index < 10
+                assign quote_key = 't0' | append: quote_index
+              else
+                assign quote_key = 't' | append: quote_index
+              endif
+              assign author_key = 't' | append: author_index
+              assign title = section.settings[title_key]
+              assign quote = section.settings[quote_key]
+              assign author = section.settings[author_key]
+              comment
+                After card 1 each next title is 13,17,21,25,29,33.
+              endcomment
+            endif
+          %}
+          {% if kind == 'text' and i > 1 %}
+            {% assign ti = i | minus: 2 | times: 4 | plus: 13 %}
+            {% assign qi = ti | plus: 1 %}{% assign ai = ti | plus: 3 %}
+            {% assign tk = 't' | append: ti %}{% assign qk = 't' | append: qi %}{% assign ak = 't' | append: ai %}
+            {% assign title = section.settings[tk] %}{% assign quote = section.settings[qk] %}{% assign author = section.settings[ak] %}
+          {% endif %}
+          <article class="ap-reviews__card">
+            {% if kind == 'photos' %}
+              {% if photo != blank %}{{ photo | image_url: width: 800 | image_tag: loading: 'lazy', class: 'ap-reviews__image', alt: author }}{% else %}<img class="ap-reviews__image" src="{{ asset | asset_url }}" alt="{{ author | escape }}" width="600" height="600" loading="lazy">{% endif %}
+            {% endif %}
+            {% if title != blank %}<h3>{{ title | escape }}</h3>{% endif %}
+            <div class="ap-reviews__copy" data-review-copy>{{ quote | escape | newline_to_br }}</div>
+            <button type="button" class="ap-reviews__more" hidden aria-expanded="false">Lire la suite</button>
+            {% if author != blank %}<p class="ap-reviews__author">{{ author | escape }}</p>{% endif %}
+          </article>
+        {% endfor %}
+      {% endif %}
+      </div>
+      <button class="ap-reviews__arrow ap-reviews__prev" type="button" aria-label="Carte précédente" aria-controls="ap-review-track-{{ section.id }}" hidden>‹</button>
+      <button class="ap-reviews__arrow ap-reviews__next" type="button" aria-label="Carte suivante" aria-controls="ap-review-track-{{ section.id }}" hidden>›</button>
+    </div>
+    <p class="ap-reviews__position" aria-live="polite"></p>
+    {% if has_reviews and section.settings.all_reviews_url != blank %}<a class="ap-reviews__all" href="{{ section.settings.all_reviews_url | escape }}">Voir tous les avis</a>{% endif %}
+  </div>
+</section>
