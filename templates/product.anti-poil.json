@@ -208,7 +208,9 @@
     },
     "ap_banniere": {
       "type": "lp-ap-banniere",
-      "settings": {}
+      "settings": {
+        "img01": "shopify://shop_images/image-1791781604322.webp"
+      }
     },
     "ap_situations": {
       "type": "lp-ap-situations",
