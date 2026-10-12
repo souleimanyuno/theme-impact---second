@@ -1,0 +1,131 @@
+{%- comment -%}
+  Bloc avis façon Trustpilot (modèle : Veluna, « Vom täglichen Rasier-Stress… »).
+  Livré VIDE : aucun avis, aucune note. Souleiman ajoute ses vrais avis Trustpilot en blocs « Avis ».
+  Sans avis, la section ne s'affiche pas sur le site (un rappel n'apparaît que dans l'éditeur).
+  En-tête : titre + ligne de note facultative (image des étoiles Trustpilot OU étoiles vertes intégrées).
+{%- endcomment -%}
+{%- assign nb = 0 -%}
+{%- for b in section.blocks -%}{%- if b.settings.texte != blank -%}{%- assign nb = nb | plus: 1 -%}{%- endif -%}{%- endfor -%}
+
+{%- if nb > 0 or request.design_mode -%}
+<section class="aptp" data-aptp>
+  <div class="aptp__inner">
+    {%- if section.settings.titre != blank -%}<h2 class="aptp__title">{{ section.settings.titre }}</h2>{%- endif -%}
+
+    {%- if section.settings.etoiles_image != blank or section.settings.note != blank -%}
+      <div class="aptp__rating">
+        {%- if section.settings.libelle != blank -%}<span class="aptp__label">{{ section.settings.libelle }}</span>{%- endif -%}
+        {%- if section.settings.note != blank -%}<span class="aptp__score">{{ section.settings.note }}</span>{%- endif -%}
+        {%- if section.settings.etoiles_image != blank -%}
+          {{ section.settings.etoiles_image | image_url: width: 400 | image_tag: class: 'aptp__stars-img', loading: 'lazy', alt: 'Note Trustpilot' }}
+        {%- else -%}
+          <span class="aptp__stars" aria-hidden="true">{% for i in (1..5) %}<span>★</span>{% endfor %}</span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.nombre != blank -%}<p class="aptp__count">{{ section.settings.nombre }}</p>{%- endif -%}
+
+    {%- if nb > 0 -%}
+      <div class="aptp__stage">
+        <div class="aptp__track" data-aptp-track tabindex="0" aria-label="Avis clientes">
+          {%- for b in section.blocks -%}
+            {%- if b.settings.texte != blank -%}
+            <article class="aptp__card" {{ b.shopify_attributes }}>
+              {%- if b.settings.etoiles_image != blank -%}
+                {{ b.settings.etoiles_image | image_url: width: 300 | image_tag: class: 'aptp__card-stars-img', loading: 'lazy', alt: '' }}
+              {%- elsif b.settings.etoiles > 0 -%}
+                <div class="aptp__stars aptp__stars--card" role="img" aria-label="{{ b.settings.etoiles }} étoiles sur 5">{% for i in (1..5) %}<span{% if i > b.settings.etoiles %} class="is-off"{% endif %}>★</span>{% endfor %}</div>
+              {%- endif -%}
+              {%- if b.settings.titre != blank -%}<h3 class="aptp__card-title">{{ b.settings.titre }}</h3>{%- endif -%}
+              <div class="aptp__text">{{ b.settings.texte }}</div>
+              {%- if b.settings.auteur != blank -%}<p class="aptp__author">{{ b.settings.auteur }}</p>{%- endif -%}
+            </article>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <button type="button" class="aptp__arrow aptp__prev" aria-label="Avis précédent" data-aptp-prev>‹</button>
+        <button type="button" class="aptp__arrow aptp__next" aria-label="Avis suivant" data-aptp-next>›</button>
+      </div>
+    {%- else -%}
+      <p class="aptp__empty">Visible uniquement dans l'éditeur : ajoute tes vrais avis Trustpilot avec « Ajouter un bloc → Avis ». Tant qu'il n'y a aucun avis, ce bloc n'apparaît pas sur le site.</p>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.currentScript.previousElementSibling, t = root.querySelector('[data-aptp-track]');
+    if (!t) return;
+    var p = root.querySelector('[data-aptp-prev]'), n = root.querySelector('[data-aptp-next]');
+    function step() { var c = t.querySelector('.aptp__card'); return c ? c.getBoundingClientRect().width + 16 : 300; }
+    function maj() { p.disabled = t.scrollLeft < 4; n.disabled = t.scrollLeft + t.clientWidth > t.scrollWidth - 4; p.hidden = n.hidden = t.scrollWidth <= t.clientWidth + 4; }
+    p.addEventListener('click', function () { t.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    n.addEventListener('click', function () { t.scrollBy({ left: step(), behavior: 'smooth' }); });
+    t.addEventListener('scroll', maj, { passive: true }); window.addEventListener('resize', maj); maj();
+  })();
+</script>
+
+<style>
+  .aptp { padding: var(--ap-pad, 28px) 0; background: transparent; color: #1a1a1a; font-family: Barlow, sans-serif; }
+  .aptp__inner { max-width: 1260px; margin: 0 auto; padding: 0 18px; box-sizing: border-box; text-align: center; }
+  .aptp__title { font: 700 var(--ap-h2, 24px)/1.22 Poppins, sans-serif; letter-spacing: 0; margin: 0 auto 10px; max-width: 880px; color: #1a1a1a; }
+  .aptp__rating { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 0 0 4px; font-size: 17px; }
+  .aptp__label { font-weight: 500; }
+  .aptp__score { font-weight: 700; }
+  .aptp__stars-img { height: 26px; width: auto; display: block; }
+  .aptp__count { font-size: var(--ap-body, 15px); margin: 0 0 4px; }
+  .aptp__stars { display: inline-flex; gap: 3px; }
+  .aptp__stars span { width: 24px; height: 24px; display: grid; place-items: center; background: #00b67a; color: #fff; font-size: 19px; line-height: 1; }
+  .aptp__stars .is-off { background: #dcdce6; }
+  .aptp__stage { position: relative; margin-top: 14px; }
+  .aptp__track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 4px 2px 8px; align-items: stretch; }
+  .aptp__track::-webkit-scrollbar { display: none; }
+  .aptp__card { flex: 0 0 84%; scroll-snap-align: start; background: #fff; border-radius: 16px; padding: 22px 18px; box-shadow: 0 4px 18px rgba(40,20,60,.06); display: flex; flex-direction: column; align-items: center; box-sizing: border-box; }
+  .aptp__stars--card { margin-bottom: 12px; }
+  .aptp__card-stars-img { height: 24px; width: auto; margin: 0 auto 12px; display: block; }
+  .aptp__card-title { font: 700 var(--ap-h3, 17px)/1.3 Poppins, sans-serif; letter-spacing: 0; margin: 0 0 8px; color: #1a1a1a; }
+  .aptp__text { font-size: var(--ap-body, 15px); line-height: 1.5; color: #2a2a2a; }
+  .aptp__text p { margin: 0 0 8px; }
+  .aptp__author { margin: auto 0 0; padding-top: 14px; font-size: 14px; font-weight: 600; }
+  .aptp__arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; border: 0; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.12); font: 28px/1 Arial, sans-serif; cursor: pointer; display: grid; place-items: center; color: #1a1a1a; }
+  .aptp__arrow[hidden] { display: none; }
+  .aptp__arrow:disabled { opacity: .35; cursor: default; }
+  .aptp__prev { left: -8px; } .aptp__next { right: -8px; }
+  .aptp__empty { margin: 14px auto 0; max-width: 560px; padding: 18px; border: 2px dashed #c9a7f0; border-radius: 12px; font-size: 14px; color: #6b4a8f; background: #fff; }
+  @media (min-width: 750px) {
+    .aptp__card { flex-basis: calc((100% - 32px) / 3); padding: 26px 22px; }
+    .aptp__prev { left: -18px; } .aptp__next { right: -18px; }
+    .aptp__stars span { width: 28px; height: 28px; font-size: 22px; }
+  }
+</style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "AP Avis Trustpilot",
+  "class": "lp-ap-trustpilot",
+  "settings": [
+    { "type": "text", "id": "titre", "label": "Titre", "default": "Du stress du rasage quotidien à une peau lisse pour de bon." },
+    { "type": "header", "content": "Ligne de note (facultative)" },
+    { "type": "text", "id": "libelle", "label": "Libellé (ex. Excellent)" },
+    { "type": "text", "id": "note", "label": "Note réelle (ex. 4,8 / 5)" },
+    { "type": "image_picker", "id": "etoiles_image", "label": "Image des étoiles Trustpilot", "info": "Sinon : étoiles vertes intégrées, affichées si une note est saisie." },
+    { "type": "text", "id": "nombre", "label": "Nombre réel d'avis (ex. Basé sur 124 avis)" }
+  ],
+  "blocks": [
+    {
+      "type": "avis",
+      "name": "Avis",
+      "settings": [
+        { "type": "range", "id": "etoiles", "label": "Étoiles", "min": 0, "max": 5, "step": 1, "default": 5 },
+        { "type": "image_picker", "id": "etoiles_image", "label": "Image des étoiles", "info": "Remplace les étoiles vertes intégrées." },
+        { "type": "text", "id": "titre", "label": "Titre de l'avis" },
+        { "type": "richtext", "id": "texte", "label": "Texte de l'avis" },
+        { "type": "text", "id": "auteur", "label": "Prénom (âge, ville…)" }
+      ]
+    }
+  ],
+  "max_blocks": 24,
+  "presets": [ { "name": "AP Avis Trustpilot" } ]
+}
+{% endschema %}

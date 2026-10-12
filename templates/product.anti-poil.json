@@ -160,22 +160,22 @@
         "review_count": "",
         "all_reviews_url": "",
         "t01": "Enfin bien dans sa peau : des résultats qui se voient",
-        "t02": "Avant, je me détournais toujours quand mon compagnon touchait mon menton. J’avais terriblement peur qu’il sente les poils qui piquent. Maintenant, ma peau est enfin douce.",
+        "t02": "Avant, je me détournais dès qu’il touchait mon menton. Aujourd’hui, ma peau est enfin douce.",
         "t03": "Marie L.",
         "t04": "",
         "t05": "",
         "t06": "",
         "t07": "",
         "t08": "",
-        "t09": "Le SOPK avait fait de moi un homme dans un corps de femme. Ma mère m’insultait et je me trouvais affreuse. Ce sérum était mon dernier espoir. Le résultat : les poils ont disparu ! Enfin une peau douce, sans poils qui piquent. Merci de m’avoir rendu ma joie de vivre !",
+        "t09": "Avec le SOPK, je me trouvais affreuse. Ce sérum était mon dernier espoir : enfin une peau douce, sans poils qui piquent.",
         "t10": "",
-        "t11": "Je vais être tout à fait honnête : au début, je ne voulais pas l’essayer, parce que je pensais que ça ne pouvait pas fonctionner. Maintenant, mes jambes sont lisses, j’ai davantage confiance en moi et je me sens enfin à nouveau bien dans mon corps.",
+        "t11": "Je n’y croyais pas du tout. Aujourd’hui, mes jambes sont lisses et je me sens enfin bien dans mon corps.",
         "t12": "Lea S.",
-        "t13": "J’avais toujours honte de mes petits points rouges et, en vacances, je portais un short par-dessus mon bikini. Cette année, enfin, je n’en ai plus besoin : ma peau est lisse et nette.",
+        "t13": "Je cachais mes points rouges sous un short à la plage. Cette année, plus besoin : ma peau est lisse et nette.",
         "t14": "Vanessa S.",
-        "t15": "J’avais terriblement peur d’abîmer mon tatouage avec le laser. Ce sérum est la solution parfaite : les poils ont disparu, mon tatouage est préservé et ses couleurs sont super intenses.",
+        "t15": "J’avais peur d’abîmer mon tatouage au laser. Les poils sont partis, les couleurs sont intactes.",
         "t16": "Kim S.",
-        "t17": "Pendant des années, j’ai eu honte de cette “ombre” foncée sur mon cou. Rien ne fonctionnait. Après quatre semaines, ma peau est enfin lisse et uniforme. Ça m’a sauvé la vie ! 🙏",
+        "t17": "J’avais honte de cette ombre foncée sur mon cou. Après quatre semaines, ma peau est lisse et uniforme.",
         "t18": "Samira K."
       }
     },
@@ -198,64 +198,18 @@
         "t07": "Mois 1",
         "t08": "Des poils presque invisibles",
         "t09": "Les poils &#233;pais et fonc&#233;s deviennent fins, on les voit &#224; peine. Beaucoup de zones restent lisses plusieurs jours.",
-        "t10": "Mois 3",
+        "t10": "Mois 2",
         "t11": "Fini la peur de l&#8217;ombre",
         "t12": "Sur les zones &#224; probl&#232;mes, il ne reste que quelques poils tr&#232;s fins. Plus d&#8217;ombre sur la l&#232;vre ni sur le menton.",
-        "t13": "Mois 6",
+        "t13": "Mois 4",
         "t14": "Lib&#233;r&#233;e du rasoir",
-        "t15": "La racine re&#231;oit de moins en moins le signal de pousse. Une peau lisse pour de bon, avec un minimum d&#8217;effort."
+        "t15": "La racine reçoit de moins en moins le signal de pousse. Le rasoir reste au placard."
       }
     },
     "ap_banniere": {
       "type": "lp-ap-banniere",
       "settings": {
         "img01": "shopify://shop_images/image-1791781604322.webp"
-      }
-    },
-    "ap_situations": {
-      "type": "lp-ap-situations",
-      "settings": {
-        "reviews_heading": "Elles partagent leur expérience",
-        "average": "",
-        "review_count": "",
-        "all_reviews_url": "",
-        "t01": "Du stress du rasage quotidien &#224; une peau lisse pour de bon.",
-        "t02": "",
-        "t03": "",
-        "t04": "",
-        "t05": "",
-        "t06": "",
-        "t07": "",
-        "t08": "Les poils du SOPK au menton",
-        "t09": "Avec le SOPK, la pince entretient le cercle : chaque poil arrach&#233; revient plus dru. Sorelya agit sur le signal de pousse &#224; la racine, chaque soir, sans hormones. Avec la r&#233;gularit&#233;, le poil repousse plus fin, plus clair, plus lentement.",
-        "t10": "Avec le SOPK, la pince entretient le cercle : chaque poil arrach&#233; revient plus dru. Sorelya agit sur le...",
-        "t11": "Lire la suite",
-        "t12": "Pour les poils hormonaux",
-        "t13": "Le rituel pince de chaque matin",
-        "t14": "Vingt minutes devant le miroir grossissant &#224; traquer chaque poil, et la peau rouge toute la matin&#233;e. Deux gouttes le soir remplacent la chasse du matin : le poil se fait plus fin, la peau s&#8217;apaise.",
-        "t15": "Vingt minutes devant le miroir grossissant &#224; traquer chaque poil, et la peau rouge toute la matin&#233;e. Deux...",
-        "t16": "Pour la pince quotidienne",
-        "t17": "Les boutons de rasage sur le maillot",
-        "t18": "Panth&#233;nol et menthe poivr&#233;e apaisent la peau juste apr&#232;s le rasage. Moins de rougeurs, moins de boutons, m&#234;me sur le maillot, et une repousse qui pique moins.",
-        "t19": "Panth&#233;nol et menthe poivr&#233;e apaisent la peau juste apr&#232;s le rasage. Moins de rougeurs, moins de boutons, m&#234;me...",
-        "t20": "Pour le maillot",
-        "t21": "L&#8217;ombre au-dessus de la l&#232;vre",
-        "t22": "Ras&#233;e le matin, l&#8217;ombre revient d&#232;s midi. En affinant la repousse et en &#233;claircissant les marques laiss&#233;es par le rasoir, Sorelya espace les rasages, jour apr&#232;s jour.",
-        "t23": "Ras&#233;e le matin, l&#8217;ombre revient d&#232;s midi. En affinant la repousse et en &#233;claircissant les marques laiss&#233;es...",
-        "t24": "Pour la l&#232;vre sup&#233;rieure",
-        "t25": "Les poils blancs de la m&#233;nopause",
-        "t26": "&#192; la m&#233;nopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit sur le signal de pousse, quelle que soit la couleur du poil.",
-        "t27": "&#192; la m&#233;nopause, les poils du menton deviennent drus, souvent blancs. Le laser ne les voit pas. Sorelya agit...",
-        "t28": "Pour la m&#233;nopause",
-        "t29": "Le temps perdu chaque matin",
-        "t30": "Se raser tous les jours, ce sont des heures envol&#233;es chaque mois. Avec une repousse plus lente, le rasoir sort de moins en moins souvent, et le matin redevient &#224; toi.",
-        "t31": "Se raser tous les jours, ce sont des heures envol&#233;es chaque mois. Avec une repousse plus lente, le rasoir...",
-        "t32": "Pour gagner du temps",
-        "t33": "Apr&#232;s le laser ou le d&#233;tatouage",
-        "t34": "Peau irrit&#233;e, rougeurs qui tra&#238;nent : la formule au panth&#233;nol et &#224; l&#8217;acide hyaluronique apaise et hydrate comme un vrai soin r&#233;parateur.",
-        "t35": "Peau irrit&#233;e, rougeurs qui tra&#238;nent : la formule au panth&#233;nol et &#224; l&#8217;acide hyaluronique apaise et hydrate...",
-        "t36": "Pour les peaux sensibilis&#233;es",
-        "t37": "Je commence ma cure"
       }
     },
     "ap_titre_secret": {
@@ -442,6 +396,15 @@
         "t04": "Tu as d&#233;j&#224; pay&#233; pour des m&#233;thodes qui n&#8217;ont rien chang&#233;.",
         "t05": "Cette fois, tu as 90 jours pour juger. Pas de r&#233;sultat ? On te rembourse jusqu&#8217;au dernier centime, sans discussion."
       }
+    },
+    "ap_avis_trustpilot": {
+      "type": "lp-ap-trustpilot",
+      "settings": {
+        "titre": "Du stress du rasage quotidien &#224; une peau lisse pour de bon.",
+        "libelle": "",
+        "note": "",
+        "nombre": ""
+      }
     }
   },
   "order": [
@@ -451,7 +414,7 @@
     "ap_titre_chemin",
     "ap_timeline",
     "ap_banniere",
-    "ap_situations",
+    "ap_avis_trustpilot",
     "ap_titre_secret",
     "ap_video_secret",
     "ap_mecanisme",
