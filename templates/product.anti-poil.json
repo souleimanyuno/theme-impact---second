@@ -168,7 +168,7 @@
         "t07": "",
         "t08": "",
         "t09": "Avec le SOPK, je me trouvais affreuse. Ce sérum était mon dernier espoir : enfin une peau douce, sans poils qui piquent.",
-        "t10": "",
+        "t10": "Laura K.",
         "t11": "Je n’y croyais pas du tout. Aujourd’hui, mes jambes sont lisses et je me sens enfin bien dans mon corps.",
         "t12": "Lea S.",
         "t13": "Je cachais mes points rouges sous un short à la plage. Cette année, plus besoin : ma peau est lisse et nette.",
@@ -210,6 +210,15 @@
       "type": "lp-ap-banniere",
       "settings": {
         "img01": "shopify://shop_images/image-1791781604322.webp"
+      }
+    },
+    "ap_avis_trustpilot": {
+      "type": "lp-ap-trustpilot",
+      "settings": {
+        "titre": "Du stress du rasage quotidien &#224; une peau lisse pour de bon.",
+        "libelle": "",
+        "note": "",
+        "nombre": ""
       }
     },
     "ap_titre_secret": {
@@ -395,15 +404,6 @@
         "t03": "GARANTIE",
         "t04": "Tu as d&#233;j&#224; pay&#233; pour des m&#233;thodes qui n&#8217;ont rien chang&#233;.",
         "t05": "Cette fois, tu as 90 jours pour juger. Pas de r&#233;sultat ? On te rembourse jusqu&#8217;au dernier centime, sans discussion."
-      }
-    },
-    "ap_avis_trustpilot": {
-      "type": "lp-ap-trustpilot",
-      "settings": {
-        "titre": "Du stress du rasage quotidien &#224; une peau lisse pour de bon.",
-        "libelle": "",
-        "note": "",
-        "nombre": ""
       }
     }
   },
