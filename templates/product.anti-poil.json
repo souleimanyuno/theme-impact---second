@@ -214,8 +214,9 @@
     },
     "ap_avis_trustpilot": {
       "type": "lp-ap-trustpilot",
+      "disabled": true,
       "settings": {
-        "titre": "Du stress du rasage quotidien &#224; une peau lisse pour de bon.",
+        "titre": "Du stress du rasage quotidien à une peau lisse pour de bon.",
         "libelle": "",
         "note": "",
         "nombre": ""
@@ -234,23 +235,23 @@
     "ap_mecanisme": {
       "type": "lp-ap-mecanisme",
       "settings": {
-        "t01": "P&#233;n&#233;trer jusqu&#8217;&#224; la racine",
-        "t02": "L&#8217;extrait de Cyperus rotundus",
-        "t03": "p&#233;n&#232;tre en profondeur et atteint le follicule, l&#224; o&#249; na&#238;t le signal de pousse.",
+        "t01": "Pénétrer jusqu’à la racine",
+        "t02": "L’extrait de Cyperus rotundus",
+        "t03": "pénètre en profondeur et atteint le follicule, là où naît le signal de pousse.",
         "t04": "Couper le signal",
-        "t05": "Ses flavono&#239;des",
+        "t05": "Ses flavonoïdes",
         "t06": "forment un bouclier autour de la racine : le signal qui ordonne au poil de pousser ne passe plus.",
         "t07": "Affiner le poil",
-        "t08": "&#192; chaque cycle, le poil qui repousse est plus fin, plus clair, plus lent. Avec le temps, de plus en plus discret.",
-        "t09": "Apaiser et r&#233;parer",
-        "t10": "Le panth&#233;nol",
+        "t08": "À chaque cycle, le poil qui repousse est plus fin, plus clair, plus lent. Avec le temps, de plus en plus discret.",
+        "t09": "Apaiser et réparer",
+        "t10": "Le panthénol",
         "t11": "calme le feu du rasoir, tandis que",
-        "t12": "l&#8217;extrait de citron",
-        "t13": "&#233;claircit les marques fonc&#233;es.",
-        "t14": "L&#8217;acide hyaluronique",
+        "t12": "l’extrait de citron",
+        "t13": "éclaircit les marques foncées.",
+        "t14": "L’acide hyaluronique",
         "t15": "et",
-        "t16": "les c&#233;ramides",
-        "t17": "r&#233;parent la barri&#232;re de la peau."
+        "t16": "les céramides",
+        "t17": "réparent la barrière de la peau."
       }
     },
     "ap_avant_apres": {
@@ -272,7 +273,7 @@
     "ap_titre_compare": {
       "type": "lp-ap-titre-compare",
       "settings": {
-        "t01": "Sorelya compar&#233; &#224;&#8230;"
+        "t01": "Sorelya comparé à…"
       }
     },
     "ap_comparatif": {
