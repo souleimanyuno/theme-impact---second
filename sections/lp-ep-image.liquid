@@ -1,0 +1,19 @@
+{%- if section.settings.image != blank -%}{%- assign url = section.settings.image | image_url: width: 1600 -%}{%- else -%}{%- assign url = section.settings.asset | asset_url -%}{%- endif -%}
+<div class="lp-ep-img-{{ section.id }}"><img src="{{ url }}" alt="{{ section.settings.alt | escape }}" loading="lazy" width="1360" height="1360"></div>
+<style>
+  .lp-ep-img-{{ section.id }} { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+  .lp-ep-img-{{ section.id }} img { display: block; width: 100%; height: auto; border-radius: 20px; }
+  @media (max-width: 749px) { .lp-ep-img-{{ section.id }} { padding: 0 16px; } .lp-ep-img-{{ section.id }} img { border-radius: 14px; } }
+</style>
+{% schema %}
+{
+  "name": "Lp Ep image",
+  "tag": "section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image (remplace l'image par defaut)" },
+    { "type": "text", "id": "asset", "label": "Fichier par defaut (assets)", "default": "ep-infographie.jpg" },
+    { "type": "text", "id": "alt", "label": "Texte alternatif", "default": "Triple Therapie Sorelya" }
+  ],
+  "presets": [{ "name": "Lp Ep image" }]
+}
+{% endschema %}

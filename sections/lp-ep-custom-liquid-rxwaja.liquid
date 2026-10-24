@@ -1,0 +1,660 @@
+{%- comment -%}
+  Clone verbatim - section source : template--31207678181717__custom_liquid_RxWAJA
+  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
+  Chaque texte et chaque image sont exposes en setting : le rendu par
+  defaut est identique a la source, tout reste editable.
+{%- endcomment -%}
+
+<div
+  class="section-background"
+></div>
+<div
+  class="src-section section--page-width spacing-style"
+  style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px;
+"
+>
+  <!-- SORELYA EPAULE - SEZIONE 1 -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  .thp-s1 * { box-sizing: border-box; margin: 0; padding: 0; }
+  .thp-s1 { font-family: 'Inter', -apple-system, sans-serif; color: #000; background: #fff; }
+  .thp-s1 h2, .thp-s1 h3, .thp-s1 h4, .thp-s1 h5 { font-family: 'Montserrat', sans-serif; }
+  .thp-s1 .blue { color: #2795fe; }
+
+  .thp-bleed {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+  .thp-bleed-wave {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    line-height: 0;
+    display: block;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+  .thp-bleed-wave svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* Trust strip */
+  .thp-mini-strip {
+    display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+    padding: 16px; border-top: 1px solid #eee;
+  }
+  .thp-mini-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: #333;
+  }
+  .thp-mini-ico {
+    width: 26px; height: 26px; background: #eef6ff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; flex-shrink: 0;
+  }
+
+  /* Rating */
+  .thp-rating { text-align: center; padding: 20px 16px 6px; font-size: 15px; color: #555; }
+  .thp-rating .stars { color: #2795fe; font-size: 18px; letter-spacing: 2px; }
+
+  /* Carousel */
+  .thp-carousel-inner { overflow: hidden; padding: 24px 0; }
+  .thp-carousel-track {
+    display: flex; gap: 14px;
+    animation: thp-scroll 30s linear infinite;
+    width: max-content;
+  }
+  .thp-carousel-track:hover { animation-play-state: paused; }
+  @keyframes thp-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .thp-mini-rev {
+    flex-shrink: 0; width: 280px;
+    background: #f8f9fa; border-radius: 10px; padding: 16px 18px;
+  }
+  .thp-mini-rev .rev-stars { color: #2795fe; font-size: 12px; letter-spacing: 1px; margin-bottom: 6px; }
+  .thp-mini-rev p { font-size: 13px; line-height: 1.5; color: #333; font-style: italic; margin-bottom: 8px; }
+  .thp-mini-rev .rev-who { font-size: 12px; font-weight: 700; color: #000; }
+  .thp-mini-rev .rev-who .rev-city { font-weight: 400; color: #999; }
+  .thp-mini-rev .rev-badge {
+    display: inline-block; background: #eef6ff; color: #2795fe;
+    font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-top: 4px;
+  }
+
+  /* One size band */
+  .thp-onesize-inner {
+    background: #000 !important; color: #fff !important;
+    padding: 28px 20px; text-align: center;
+  }
+  .thp-onesize-inner h3 { font-size: 20px; font-weight: 800; color: #fff !important; margin-bottom: 8px; }
+  .thp-onesize-inner p { font-size: 14px; color: #aaa !important; line-height: 1.6; max-width: 500px; margin: 0 auto; }
+  .thp-onesize-inner strong { color: #2795fe !important; }
+  .thp-onesize-pills { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+  .thp-onesize-pill {
+    display: flex; align-items: center; gap: 6px;
+    background: #111; border: 1px solid #333; padding: 8px 14px; border-radius: 8px;
+    font-size: 12px; font-weight: 600; color: #ccc;
+  }
+  .thp-onesize-pill .ico { font-size: 14px; }
+
+  /* Blue src-section */
+  .thp-blue-inner { background: #eef6ff !important; padding: 40px 20px; }
+
+  /* Benefits */
+  .thp-benefits { display: flex; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto; flex-wrap: wrap; }
+  .thp-benefit {
+    flex: 1; min-width: 240px; max-width: 280px; text-align: center;
+    padding: 20px 14px; background: #fff; border-radius: 12px;
+  }
+  .thp-benefit-icon {
+    width: 50px; height: 50px; background: #2795fe; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;
+  }
+  .thp-benefit h4 { font-size: 15px; font-weight: 800; margin-bottom: 6px; }
+  .thp-benefit p { font-size: 13px; line-height: 1.6; color: #555; }
+
+  /* Hook */
+  .thp-hook { max-width: 780px; margin: 0 auto; padding: 40px 20px 10px; text-align: center; }
+  .thp-eyebrow {
+    display: inline-block; background: #eef6ff; color: #2795fe;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .thp-hook h2 { font-size: clamp(24px, 5vw, 38px); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+  .thp-hook > p { font-size: 16px; line-height: 1.7; color: #444; max-width: 600px; margin: 0 auto; }
+
+  /* Quote */
+  .thp-quote {
+    max-width: 680px; margin: 30px auto; padding: 24px 26px;
+    background: #f8f9fa; border-left: 4px solid #2795fe; border-radius: 0 10px 10px 0;
+    font-size: 16px; line-height: 1.7; color: #333; font-style: italic;
+  }
+  .thp-quote .author { font-style: normal; font-weight: 700; color: #000; margin-top: 10px; font-size: 14px; }
+  .thp-quote .author span { color: #2795fe; font-size: 12px; font-weight: 600; }
+
+  /* Checklist */
+  .thp-checks { max-width: 600px; margin: 30px auto; padding: 0 20px; }
+  .thp-chk {
+    display: flex; align-items: flex-start; gap: 12px; padding: 11px 0;
+    border-bottom: 1px solid #f0f0f0; font-size: 15px; line-height: 1.5; color: #333;
+  }
+  .thp-chk:last-child { border-bottom: none; }
+  .thp-chk-ico {
+    flex-shrink: 0; width: 22px; height: 22px; background: #2795fe; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+  .thp-chk-ico svg { width: 12px; height: 12px; }
+  .thp-chk strong { color: #000; }
+</style>
+
+<div class="thp-s1">
+
+  <!-- Trust strip -->
+  <div class="thp-mini-strip">
+    <div class="thp-mini-item"><span class="thp-mini-ico">&#128666;</span> {{ section.settings.t01 }} <strong class="blue">{{ section.settings.t02 }}</strong></div>
+    <div class="thp-mini-item"><span class="thp-mini-ico">&#128737;&#65039;</span> {{ section.settings.t03 }} <strong class="blue">{{ section.settings.t04 }}</strong></div>
+    <div class="thp-mini-item"><span class="thp-mini-ico">&#128260;</span> {{ section.settings.t05 }} <strong class="blue">{{ section.settings.t06 }}</strong></div>
+  </div>
+
+  {%- if section.settings.t08 != blank or section.settings.t12 != blank or section.settings.t15 != blank or section.settings.t18 != blank or section.settings.t21 != blank or section.settings.t24 != blank or section.settings.t27 != blank or section.settings.t29 != blank or section.settings.t32 != blank or section.settings.t35 != blank -%}
+<!-- Rating -->
+  <div class="thp-rating">
+    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>{{ section.settings.t07 }}
+  </div>
+
+  <!-- CAROUSEL -->
+  <div class="thp-bleed">
+    <div class="thp-carousel-inner">
+      <div class="thp-carousel-track">
+        {%- if section.settings.t08 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t08 }}</p><div class="rev-who">{{ section.settings.t09 }} <span class="rev-city">{{ section.settings.t10 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t12 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t12 }}</p><div class="rev-who">{{ section.settings.t13 }} <span class="rev-city">{{ section.settings.t14 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t15 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t15 }}</p><div class="rev-who">{{ section.settings.t16 }} <span class="rev-city">{{ section.settings.t17 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t18 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t18 }}</p><div class="rev-who">{{ section.settings.t19 }} <span class="rev-city">{{ section.settings.t20 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t21 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t21 }}</p><div class="rev-who">{{ section.settings.t22 }} <span class="rev-city">{{ section.settings.t23 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t24 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p>{{ section.settings.t24 }}</p><div class="rev-who">{{ section.settings.t25 }} <span class="rev-city">{{ section.settings.t26 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t27 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t27 }}</p><div class="rev-who">{{ section.settings.t28 }} <span class="rev-city">{{ section.settings.t20 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t29 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t29 }}</p><div class="rev-who">{{ section.settings.t30 }} <span class="rev-city">{{ section.settings.t31 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t32 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t32 }}</p><div class="rev-who">{{ section.settings.t33 }} <span class="rev-city">{{ section.settings.t34 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t35 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t35 }}</p><div class="rev-who">{{ section.settings.t36 }} <span class="rev-city">{{ section.settings.t37 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        <!-- Duplicato per loop -->
+        {%- if section.settings.t08 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t08 }}</p><div class="rev-who">{{ section.settings.t09 }} <span class="rev-city">{{ section.settings.t10 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t12 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t12 }}</p><div class="rev-who">{{ section.settings.t13 }} <span class="rev-city">{{ section.settings.t14 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t15 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t15 }}</p><div class="rev-who">{{ section.settings.t16 }} <span class="rev-city">{{ section.settings.t17 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t18 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t18 }}</p><div class="rev-who">{{ section.settings.t19 }} <span class="rev-city">{{ section.settings.t20 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t21 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t21 }}</p><div class="rev-who">{{ section.settings.t22 }} <span class="rev-city">{{ section.settings.t23 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t24 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p>{{ section.settings.t24 }}</p><div class="rev-who">{{ section.settings.t25 }} <span class="rev-city">{{ section.settings.t26 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t27 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t27 }}</p><div class="rev-who">{{ section.settings.t28 }} <span class="rev-city">{{ section.settings.t20 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t29 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t29 }}</p><div class="rev-who">{{ section.settings.t30 }} <span class="rev-city">{{ section.settings.t31 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t32 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t32 }}</p><div class="rev-who">{{ section.settings.t33 }} <span class="rev-city">{{ section.settings.t34 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+        {%- if section.settings.t35 != blank -%}<div class="thp-mini-rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>{{ section.settings.t35 }}</p><div class="rev-who">{{ section.settings.t36 }} <span class="rev-city">{{ section.settings.t37 }}</span></div>{%- endif -%}<span class="rev-badge">{{ section.settings.t11 }}</span></div>
+      </div>
+    </div>
+  </div>
+
+  {%- endif -%}
+<!-- ONE SIZE -->
+  <div class="thp-bleed">
+    <div class="thp-onesize-inner">
+      <h3>{{ section.settings.t38 }} <span class="blue">{{ section.settings.t39 }}</span></h3>
+      <p>{{ section.settings.t40 }} <strong>{{ section.settings.t41 }}</strong>.</p>
+      <div class="thp-onesize-pills">
+        <div class="thp-onesize-pill"><span class="ico">&#128260;</span> {{ section.settings.t42 }}</div>
+        <div class="thp-onesize-pill"><span class="ico">&#128267;</span> {{ section.settings.t43 }}</div>
+        <div class="thp-onesize-pill"><span class="ico">&#9201;&#65039;</span> {{ section.settings.t44 }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAVE: black &#8594; blue -->
+  <div class="thp-bleed-wave" style="background:#000;">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,100 L0,100 Z" fill="#eef6ff"/>
+    </svg>
+  </div>
+
+  <!-- BENEFITS -->
+  <div class="thp-bleed">
+    <div class="thp-blue-inner">
+      <div class="thp-benefits">
+        <div class="thp-benefit">
+          <div class="thp-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h4>{{ section.settings.t45 }}</h4>
+          <p>{{ section.settings.t46 }}</p>
+        </div>
+        <div class="thp-benefit">
+          <div class="thp-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>{{ section.settings.t47 }}</h4>
+          <p>{{ section.settings.t48 }}</p>
+        </div>
+        <div class="thp-benefit">
+          <div class="thp-benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"/><line x1="12" y1="2" x2="12" y2="9"/><polyline points="4.22 10.22 5.64 11.64"/><polyline points="1 18 3 18"/><polyline points="21 18 23 18"/><polyline points="18.36 11.64 19.78 10.22"/></svg></div>
+          <h4>{{ section.settings.t49 }}</h4>
+          <p>{{ section.settings.t50 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAVE: blue &#8594; white -->
+  <div class="thp-bleed-wave" style="background:#eef6ff;">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,60 C240,20 480,100 720,60 C960,20 1200,100 1440,60 L1440,100 L0,100 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- Hook -->
+  <div class="thp-hook">
+    <span class="thp-eyebrow">{{ section.settings.t51 }}</span>
+    <h2>{{ section.settings.t52 }}<br><span class="blue">{{ section.settings.t53 }}</span></h2>
+    <p>{{ section.settings.t54 }} <strong>{{ section.settings.t55 }}</strong> {{ section.settings.t56 }}</p>
+  </div>
+
+  {%- if section.settings.t57 != blank -%}
+<!-- Quote -->
+  <div style="padding: 0 20px;">
+    <div class="thp-quote">
+      {{ section.settings.t57 }}
+      <div class="author">{{ section.settings.t58 }} <span>{{ section.settings.t11 }}</span></div>
+    </div>
+  </div>
+
+  {%- endif -%}
+<!-- Checklist -->
+  <div class="thp-checks">
+    <div class="thp-chk"><div class="thp-chk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>{{ section.settings.t59 }}</strong> {{ section.settings.t60 }}</div></div>
+    <div class="thp-chk"><div class="thp-chk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>{{ section.settings.t61 }}</strong> {{ section.settings.t62 }}</div></div>
+    <div class="thp-chk"><div class="thp-chk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>{{ section.settings.t63 }}</strong> {{ section.settings.t64 }}</div></div>
+    <div class="thp-chk"><div class="thp-chk-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>{{ section.settings.t65 }}</strong> {{ section.settings.t66 }}</div></div>
+  </div>
+
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Lp Ep rxwaja",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "Livraison en",
+      "default": "Livraison en"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "3-5 jours",
+      "default": " 3-5 jours"
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "Garantie",
+      "default": "Garantie"
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "100 jours",
+      "default": " 100 jours"
+    },
+    {
+      "type": "text",
+      "id": "t05",
+      "label": "Retour",
+      "default": "Retour"
+    },
+    {
+      "type": "text",
+      "id": "t06",
+      "label": "gratuit",
+      "default": " gratuit"
+    },
+    {
+      "type": "text",
+      "id": "t07",
+      "label": "4,8/5 Plus de 2 400 clients satisfaits en France",
+      "default": "  4,8/5 \u2014 Plus de 2 400 clients satisfaits en France"
+    },
+    {
+      "type": "text",
+      "id": "t08",
+      "label": "Avis t08 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t09",
+      "label": "Avis t09 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t10",
+      "label": "Avis t10 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t11",
+      "label": "Verifie",
+      "default": "\u2713 V\u00e9rifi\u00e9"
+    },
+    {
+      "type": "text",
+      "id": "t12",
+      "label": "Avis t12 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t13",
+      "label": "Avis t13 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t14",
+      "label": "Avis t14 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t15",
+      "label": "Avis t15 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t16",
+      "label": "Avis t16 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t17",
+      "label": "Avis t17 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t18",
+      "label": "Avis t18 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t19",
+      "label": "Avis t19 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t20",
+      "label": "Avis t20 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t21",
+      "label": "Avis t21 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t22",
+      "label": "Avis t22 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t23",
+      "label": "Avis t23 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t24",
+      "label": "Avis t24 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t25",
+      "label": "Avis t25 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t26",
+      "label": "Avis t26 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t27",
+      "label": "Avis t27 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t28",
+      "label": "Avis t28 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t29",
+      "label": "Avis t29 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t30",
+      "label": "Avis t30 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t31",
+      "label": "Avis t31 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t32",
+      "label": "Avis t32 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t33",
+      "label": "Avis t33 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t34",
+      "label": "Avis t34 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t35",
+      "label": "Avis t35 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t36",
+      "label": "Avis t36 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t37",
+      "label": "Avis t37 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t38",
+      "label": "Taille unique s'adapte a",
+      "default": "Taille unique \u2014 s'adapte \u00e0"
+    },
+    {
+      "type": "text",
+      "id": "t39",
+      "label": "toutes les morphologies",
+      "default": "toutes les morphologies"
+    },
+    {
+      "type": "text",
+      "id": "t40",
+      "label": "Pas de guide des tailles, pas de doute. La sangl",
+      "default": "Pas de guide des tailles, pas de doute. La sangle velcro s'enroule autour de votre \u00e9paule et s'adapte \u00e0 toutes les morphologies \u2014 du S au 3XL. Elle fonctionne sur"
+    },
+    {
+      "type": "text",
+      "id": "t41",
+      "label": "l'epaule droite ou gauche",
+      "default": "l'\u00e9paule droite ou gauche"
+    },
+    {
+      "type": "text",
+      "id": "t42",
+      "label": "Velcro reglable",
+      "default": "Velcro r\u00e9glable"
+    },
+    {
+      "type": "text",
+      "id": "t43",
+      "label": "Recharge USB-C",
+      "default": "Recharge USB-C"
+    },
+    {
+      "type": "text",
+      "id": "t44",
+      "label": "12 min / seance",
+      "default": "12 min / s\u00e9ance"
+    },
+    {
+      "type": "text",
+      "id": "t45",
+      "label": "Chaleur a 42 C",
+      "default": "Chaleur \u00e0 42 \u00b0C"
+    },
+    {
+      "type": "text",
+      "id": "t46",
+      "label": "Elle rouvre les petits vaisseaux qui se ferment ",
+      "default": "Elle rouvre les petits vaisseaux qui se ferment avec l'\u00e2ge et l'usure. Le sang revient nourrir les tendons de la coiffe, l\u00e0 o\u00f9 il faut."
+    },
+    {
+      "type": "text",
+      "id": "t47",
+      "label": "Compression rythmique",
+      "default": "Compression rythmique"
+    },
+    {
+      "type": "text",
+      "id": "t48",
+      "label": "Elle pousse du sang oxygene dans un tissu appauv",
+      "default": "Elle pousse du sang oxyg\u00e9n\u00e9 dans un tissu appauvri au fil des ann\u00e9es. Elle draine l'inflammation et apporte de quoi se r\u00e9parer."
+    },
+    {
+      "type": "text",
+      "id": "t49",
+      "label": "Vibration a 60 Hz",
+      "default": "Vibration \u00e0 60 Hz"
+    },
+    {
+      "type": "text",
+      "id": "t50",
+      "label": "Elle assouplit les adherences et le tissu calcif",
+      "default": "Elle assouplit les adh\u00e9rences et le tissu calcifi\u00e9 qui bloquent l'\u00e9paule. Elle casse le cycle raideur-douleur-raideur."
+    },
+    {
+      "type": "text",
+      "id": "t51",
+      "label": "Pourquoi la Triple Therapie Sorelya est differen",
+      "default": "Pourquoi la Triple Th\u00e9rapie Sorelya est diff\u00e9rente"
+    },
+    {
+      "type": "text",
+      "id": "t52",
+      "label": "La douleur a l'epaule vous reveille a 4 h du mat",
+      "default": "La douleur \u00e0 l'\u00e9paule vous r\u00e9veille \u00e0 4 h du matin."
+    },
+    {
+      "type": "text",
+      "id": "t53",
+      "label": "Et si le probleme, c'etait la circulation ?",
+      "default": "Et si le probl\u00e8me, c'\u00e9tait la circulation ?"
+    },
+    {
+      "type": "text",
+      "id": "t54",
+      "label": "La plupart des gens pensent que c'est l'age ou l",
+      "default": "La plupart des gens pensent que c'est l'\u00e2ge ou l'usure. Mais souvent, le vrai probl\u00e8me, c'est le"
+    },
+    {
+      "type": "text",
+      "id": "t55",
+      "label": "manque de sang qui arrive",
+      "default": "manque de sang qui arrive"
+    },
+    {
+      "type": "text",
+      "id": "t56",
+      "label": "jusqu'au tissu profond de la coiffe des rotateur",
+      "default": "jusqu'au tissu profond de la coiffe des rotateurs \u2014 les tendons ne re\u00e7oivent pas assez de nourriture pour se r\u00e9parer. La Triple Th\u00e9rapie Sorelya r\u00e9unit chaleur, compression et vibration pour relancer la circulation exactement l\u00e0 o\u00f9 il faut \u2014 en 12 minutes par jour."
+    },
+    {
+      "type": "text",
+      "id": "t57",
+      "label": "Avis t57 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t58",
+      "label": "Avis t58 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t59",
+      "label": "Triple therapie simultanee",
+      "default": "Triple th\u00e9rapie simultan\u00e9e"
+    },
+    {
+      "type": "text",
+      "id": "t60",
+      "label": "chaleur, compression et vibration en une seule s",
+      "default": "\u2014 chaleur, compression et vibration en une seule s\u00e9ance de 12 minutes"
+    },
+    {
+      "type": "text",
+      "id": "t61",
+      "label": "Taille unique reglable",
+      "default": "Taille unique r\u00e9glable"
+    },
+    {
+      "type": "text",
+      "id": "t62",
+      "label": "la sangle velcro s'adapte du S au 3XL, epaule dr",
+      "default": "\u2014 la sangle velcro s'adapte du S au 3XL, \u00e9paule droite ou gauche"
+    },
+    {
+      "type": "text",
+      "id": "t63",
+      "label": "Sans fil et rechargeable",
+      "default": "Sans fil et rechargeable"
+    },
+    {
+      "type": "text",
+      "id": "t64",
+      "label": "USB-C, une charge dure 7 a 10 seances, a utilise",
+      "default": "\u2014 USB-C, une charge dure 7 \u00e0 10 s\u00e9ances, \u00e0 utiliser partout"
+    },
+    {
+      "type": "text",
+      "id": "t65",
+      "label": "Sans medicaments, sans chirurgie",
+      "default": "Sans m\u00e9dicaments, sans chirurgie"
+    },
+    {
+      "type": "text",
+      "id": "t66",
+      "label": "s'attaque a la cause profonde de la douleur chro",
+      "default": "\u2014 s'attaque \u00e0 la cause profonde de la douleur chronique de l'\u00e9paule"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lp Ep custom-liquid-rxwaj"
+    }
+  ],
+  "class": "shopify-section"
+}
+{% endschema %}

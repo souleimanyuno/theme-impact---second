@@ -1,0 +1,265 @@
+{%- comment -%}
+  Clone verbatim - section source : template--31207678181717__custom_liquid_47mEKM
+  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
+  Chaque texte et chaque image sont exposes en setting : le rendu par
+  defaut est identique a la source, tout reste editable.
+{%- endcomment -%}
+
+<div
+  class="section-background"
+></div>
+<div
+  class="src-section section--page-width spacing-style"
+  style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px;
+"
+>
+  <!-- SORELYA EPAULE - SEZIONE CLIENTI SODDISFATTI (GRIGLIA STATICA) -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  .thp-social * { box-sizing: border-box; margin: 0; padding: 0; }
+  .thp-social { font-family: 'Inter', -apple-system, sans-serif; color: #000; background: #fff; }
+  .thp-social h2, .thp-social h3 { font-family: 'Montserrat', sans-serif; }
+  .thp-social .blue { color: #2795fe; }
+
+  .thp-social-header {
+    position: relative; left: 50%; transform: translateX(-50%); width: 100vw;
+    background: #EDF6FC !important; padding: 32px 20px 24px; text-align: center;
+  }
+  .thp-social-header .thp-social-tag {
+    display: inline-block; background: #fff; color: #2795fe;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .thp-social-header h2 {
+    font-size: clamp(22px, 5vw, 32px); font-weight: 900;
+    color: #000 !important; line-height: 1.2; margin-bottom: 6px;
+  }
+  .thp-social-header p { font-size: 14px; color: #555 !important; }
+  .thp-social-header .stars-row { color: #2795fe; font-size: 20px; letter-spacing: 3px; margin-bottom: 8px; }
+
+  .thp-photo-grid-wrap {
+    position: relative; left: 50%; transform: translateX(-50%); width: 100vw;
+    background: #EDF6FC !important;
+    padding: 0 20px 32px;
+  }
+  .thp-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .thp-photo-card {
+    background: #fff !important;
+    border-radius: 14px; overflow: hidden;
+    border: 1px solid #dce8f0;
+    transition: border-color 0.3s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .thp-photo-card:hover { border-color: #2795fe; }
+  .thp-photo-card img {
+    width: 100%; height: 260px;
+    object-fit: cover; display: block;
+  }
+  .thp-photo-card-body { padding: 14px 16px 18px; }
+  .thp-photo-card-body .card-stars { color: #2795fe; font-size: 13px; letter-spacing: 2px; margin-bottom: 6px; }
+  .thp-photo-card-body .card-quote {
+    font-size: 13px; line-height: 1.5; color: #333 !important;
+    font-style: italic; margin-bottom: 10px; min-height: 40px;
+  }
+  .thp-photo-card-body .card-name { font-size: 12px; font-weight: 700; color: #000 !important; }
+  .thp-photo-card-body .card-city { font-weight: 400; color: #999 !important; }
+  .thp-photo-card-body .card-badge {
+    display: inline-block; background: rgba(39,149,254,0.15);
+    color: #2795fe; font-size: 10px; font-weight: 700;
+    padding: 2px 8px; border-radius: 4px; margin-top: 6px;
+  }
+</style>
+
+{%- if section.settings.t05 != blank or section.settings.t09 != blank or section.settings.t12 != blank or section.settings.t15 != blank -%}
+<div class="thp-social">
+
+  <div class="thp-social-header">
+    <span class="thp-social-tag">{{ section.settings.t01 }}</span>
+    <div class="stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <h2>{{ section.settings.t02 }} <span class="blue">{{ section.settings.t03 }}</span></h2>
+    <p>{{ section.settings.t04 }}</p>
+  </div>
+
+  <div class="thp-photo-grid-wrap">
+    <div class="thp-photo-grid">
+
+      {%- if section.settings.t05 != blank -%}<div class="thp-photo-card">
+        {%- if section.settings.img01 != blank -%}<img src="{{ section.settings.img01 | image_url: width: 1400 }}" alt="Cliente Triple Th&#233;rapie Sorelya" loading="lazy">{%- endif -%}
+        <div class="thp-photo-card-body">
+          <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="card-quote">{{ section.settings.t05 }}</div>
+          <div class="card-name">{{ section.settings.t06 }} <span class="card-city">{{ section.settings.t07 }}</span></div>
+          <span class="card-badge">{{ section.settings.t08 }}</span>
+        </div>
+      </div>{%- endif -%}
+      {%- if section.settings.t09 != blank -%}<div class="thp-photo-card">
+        {%- if section.settings.img02 != blank -%}<img src="{{ section.settings.img02 | image_url: width: 1400 }}" alt="Cliente Triple Th&#233;rapie Sorelya" loading="lazy">{%- endif -%}
+        <div class="thp-photo-card-body">
+          <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="card-quote">{{ section.settings.t09 }}</div>
+          <div class="card-name">{{ section.settings.t10 }} <span class="card-city">{{ section.settings.t11 }}</span></div>
+          <span class="card-badge">{{ section.settings.t08 }}</span>
+        </div>
+      </div>{%- endif -%}
+
+      {%- if section.settings.t12 != blank -%}<div class="thp-photo-card">
+        {%- if section.settings.img03 != blank -%}<img src="{{ section.settings.img03 | image_url: width: 1400 }}" alt="Cliente Triple Th&#233;rapie Sorelya" loading="lazy">{%- endif -%}
+        <div class="thp-photo-card-body">
+          <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="card-quote">{{ section.settings.t12 }}</div>
+          <div class="card-name">{{ section.settings.t13 }} <span class="card-city">{{ section.settings.t14 }}</span></div>
+          <span class="card-badge">{{ section.settings.t08 }}</span>
+        </div>
+      </div>{%- endif -%}
+
+      {%- if section.settings.t15 != blank -%}<div class="thp-photo-card">
+        {%- if section.settings.img04 != blank -%}<img src="{{ section.settings.img04 | image_url: width: 1400 }}" alt="Cliente Triple Th&#233;rapie Sorelya" loading="lazy">{%- endif -%}
+        <div class="thp-photo-card-body">
+          <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="card-quote">{{ section.settings.t15 }}</div>
+          <div class="card-name">{{ section.settings.t16 }} <span class="card-city">{{ section.settings.t17 }}</span></div>
+          <span class="card-badge">{{ section.settings.t08 }}</span>
+        </div>
+      </div>{%- endif -%}
+
+    </div>
+  </div>
+
+</div>
+{%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Lp Ep 47mekm",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "Vrais clients, vrais resultats",
+      "default": "Vrais clients, vrais r\u00e9sultats"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "Plus de 2 400 Francais ont choisi la",
+      "default": "Plus de 2 400 Fran\u00e7ais ont choisi la"
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "Triple Therapie Sorelya",
+      "default": "Triple Th\u00e9rapie Sorelya"
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "12 minutes par jour. Chaleur, compression et vib",
+      "default": "12 minutes par jour. Chaleur, compression et vibration. Voici leurs r\u00e9sultats."
+    },
+    {
+      "type": "text",
+      "id": "t05",
+      "label": "Avis t05 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t06",
+      "label": "Avis t06 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t07",
+      "label": "Avis t07 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t08",
+      "label": "Achat verifie",
+      "default": "\u2713 Achat v\u00e9rifi\u00e9"
+    },
+    {
+      "type": "text",
+      "id": "t09",
+      "label": "Avis t09 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t10",
+      "label": "Avis t10 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t11",
+      "label": "Avis t11 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t12",
+      "label": "Avis t12 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t13",
+      "label": "Avis t13 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t14",
+      "label": "Avis t14 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t15",
+      "label": "Avis t15 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t16",
+      "label": "Avis t16 (vide = masque)"
+    },
+    {
+      "type": "text",
+      "id": "t17",
+      "label": "Avis t17 (vide = masque)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img01",
+      "label": "Photo avis img01"
+    },
+    {
+      "type": "image_picker",
+      "id": "img02",
+      "label": "Photo avis img02"
+    },
+    {
+      "type": "image_picker",
+      "id": "img03",
+      "label": "Photo avis img03"
+    },
+    {
+      "type": "image_picker",
+      "id": "img04",
+      "label": "Photo avis img04"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lp Ep custom-liquid-47mek"
+    }
+  ],
+  "class": "shopify-section"
+}
+{% endschema %}

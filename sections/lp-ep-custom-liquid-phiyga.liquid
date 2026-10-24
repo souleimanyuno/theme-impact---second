@@ -1,0 +1,365 @@
+{%- comment -%}
+  Clone verbatim - section source : template--31207678181717__custom_liquid_PHiYgA
+  Markup et CSS repris tels quels, identifiants rescopes sur section.id.
+  Chaque texte et chaque image sont exposes en setting : le rendu par
+  defaut est identique a la source, tout reste editable.
+{%- endcomment -%}
+
+<div
+  class="section-background"
+></div>
+<div
+  class="src-section section--page-width spacing-style"
+  style="--padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px;
+"
+>
+  <!-- SORELYA EPAULE - SEZIONE 4 -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  .thp-s4 * { box-sizing: border-box; margin: 0; padding: 0; }
+  .thp-s4 { font-family: 'Inter', -apple-system, sans-serif; color: #000; background: #fff; }
+  .thp-s4 h2, .thp-s4 h3, .thp-s4 h4, .thp-s4 h5 { font-family: 'Montserrat', sans-serif; }
+  .thp-s4 .blue { color: #2795fe; }
+
+  .thp-bleed4 { position: relative; left: 50%; transform: translateX(-50%); width: 100vw; }
+  .thp-bleed-wave4 { position: relative; left: 50%; transform: translateX(-50%); width: 100vw; line-height: 0; display: block; margin-top: -1px; margin-bottom: -1px; }
+  .thp-bleed-wave4 svg { display: block; width: 100%; height: 60px; }
+
+  .thp-tag4 { display: inline-block; background: #eef6ff; color: #2795fe; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 14px; }
+
+  .thp-faq-wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 50px; }
+  .thp-faq-head { text-align: center; margin-bottom: 28px; }
+  .thp-faq-item { border-bottom: 1px solid #e8e8e8; }
+  .thp-faq-q { width: 100%; background: none; border: none; padding: 18px 40px 18px 0; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #000; text-align: left; cursor: pointer; position: relative; line-height: 1.4; }
+  .thp-faq-q:hover { color: #2795fe; }
+  .thp-faq-q::after { content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 400; color: #2795fe; }
+  .thp-faq-item.open .thp-faq-q::after { content: '&#8722;'; }
+  .thp-faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+  .thp-faq-item.open .thp-faq-a { max-height: 500px; padding-bottom: 18px; }
+  .thp-faq-a p { font-size: 14px; line-height: 1.7; color: #555; }
+  .thp-faq-a p + p { margin-top: 8px; }
+
+  .thp-cta-inner { background: #eef6ff !important; padding: 60px 20px; text-align: center; }
+  .thp-cta-inner h2 { font-size: clamp(24px, 5vw, 36px); font-weight: 900; line-height: 1.2; margin-bottom: 14px; }
+  .thp-cta-inner p { font-size: 16px; color: #555; line-height: 1.6; max-width: 540px; margin: 0 auto 28px; }
+  .thp-cta-btn { display: inline-block; background: #2795fe; color: #fff !important; font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800; padding: 16px 48px; border-radius: 10px; text-decoration: none !important; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 16px rgba(39,149,254,0.3); transition: background 0.2s, transform 0.1s; }
+  .thp-cta-btn:hover { background: #1a7de0; transform: translateY(-1px); text-decoration: none !important; }
+  .thp-sub-cta { margin-top: 16px; font-size: 13px; color: #888; }
+  .thp-sub-cta strong { color: #2795fe; }
+
+  .thp-bot-trust { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; padding: 28px 20px; }
+  .thp-bot-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #555; }
+  .thp-bot-ico { width: 30px; height: 30px; background: #eef6ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+  .thp-final { text-align: center; padding: 20px 20px 40px; }
+  .thp-final p { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 800; line-height: 1.5; }
+  .thp-final .sub { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: #999; margin-top: 6px; }
+</style>
+
+<div class="thp-s4">
+
+  <div class="thp-faq-wrap">
+    <div class="thp-faq-head"><span class="thp-tag4">{{ section.settings.t01 }}</span><h2>{{ section.settings.t02 }} <span class="blue">{{ section.settings.t03 }}</span></h2></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t04 }}</button><div class="thp-faq-a"><p>{{ section.settings.t05 }}</p><p>{{ section.settings.t06 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t07 }}</button><div class="thp-faq-a"><p>{{ section.settings.t08 }}</p><p>{{ section.settings.t09 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t10 }}</button><div class="thp-faq-a"><p>{{ section.settings.t11 }}</p><p>{{ section.settings.t12 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t13 }}</button><div class="thp-faq-a"><p>{{ section.settings.t14 }}</p><p>{{ section.settings.t15 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t16 }}</button><div class="thp-faq-a"><p>{{ section.settings.t17 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t18 }}</button><div class="thp-faq-a"><p>{{ section.settings.t19 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t20 }}</button><div class="thp-faq-a"><p>{{ section.settings.t21 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t22 }}</button><div class="thp-faq-a"><p>{{ section.settings.t23 }}</p></div></div>
+
+    <div class="thp-faq-item"><button class="thp-faq-q" onclick="this.parentElement.classList.toggle('open')">{{ section.settings.t24 }}</button><div class="thp-faq-a"><p>{{ section.settings.t25 }}</p></div></div>
+
+  </div>
+
+  <!-- WAVE: white &#8594; blue -->
+  <div class="thp-bleed-wave4" style="background:#fff;">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,100 L0,100 Z" fill="#eef6ff"/>
+    </svg>
+  </div>
+
+  <div class="thp-bleed4"><div class="thp-cta-inner">
+    <h2>{{ section.settings.t26 }}<br><span class="blue">{{ section.settings.t27 }}</span></h2>
+    <p>{{ section.settings.t28 }}</p>
+    <a href="javascript:void(0)" class="thp-cta-btn" onclick="(function(){var t=document.querySelector('product-form')||document.querySelector('.product-form')||document.querySelector('[data-type=add-to-cart-form]')||document.querySelector('form[action*=cart]');if(t){t.scrollIntoView({behavior:'smooth',block:'center'})}else{window.scrollTo({top:0,behavior:'smooth'})}})()">{{ section.settings.t29 }}</a>
+    <div class="thp-sub-cta"><strong>{{ section.settings.t30 }}</strong> &#183; <strong>{{ section.settings.t31 }}</strong> &#183; <strong>{{ section.settings.t32 }}</strong></div>
+  </div></div>
+
+  <!-- WAVE: blue &#8594; white -->
+  <div class="thp-bleed-wave4" style="background:#eef6ff;">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,60 C240,20 480,100 720,60 C960,20 1200,100 1440,60 L1440,100 L0,100 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <div class="thp-bot-trust">
+    <div class="thp-bot-item"><span class="thp-bot-ico">&#128737;&#65039;</span> {{ section.settings.t33 }}</div>
+    <div class="thp-bot-item"><span class="thp-bot-ico">&#128666;</span> {{ section.settings.t34 }}</div>
+    <div class="thp-bot-item"><span class="thp-bot-ico">&#128274;</span> {{ section.settings.t35 }}</div>
+    <div class="thp-bot-item"><span class="thp-bot-ico">&#127467;&#127479;</span> {{ section.settings.t36 }}</div>
+  </div>
+
+  <div class="thp-final"><p>{{ section.settings.t37 }} <span class="blue">{{ section.settings.t38 }}</span></p><div class="sub">{{ section.settings.t39 }}</div></div>
+
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Lp Ep phiyga",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "Des doutes ?",
+      "default": "Des doutes ?"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "frequentes",
+      "default": "fr\u00e9quentes"
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "Comment fonctionne exactement la Triple Therapie",
+      "default": "Comment fonctionne exactement la Triple Th\u00e9rapie Sorelya ?"
+    },
+    {
+      "type": "text",
+      "id": "t05",
+      "label": "La Triple Therapie Sorelya reunit trois therapie",
+      "default": "La Triple Th\u00e9rapie Sorelya r\u00e9unit trois th\u00e9rapies simultan\u00e9es dans une seule s\u00e9ance de 12 minutes. La chaleur \u00e0 42 \u00b0C rouvre les petits vaisseaux ferm\u00e9s avec l'\u00e2ge. La compression rythmique pousse du sang oxyg\u00e9n\u00e9 dans le tissu profond de la coiffe. La vibration \u00e0 60 Hz assouplit les adh\u00e9rences et le tissu calcifi\u00e9 qui bloquent l'\u00e9paule."
+    },
+    {
+      "type": "text",
+      "id": "t06",
+      "label": "Les trois ensemble font ce qu'aucune therapie ne",
+      "default": "Les trois ensemble font ce qu'aucune th\u00e9rapie ne peut faire seule."
+    },
+    {
+      "type": "text",
+      "id": "t07",
+      "label": "Pour quels problemes d'epaule est-elle adaptee ?",
+      "default": "Pour quels probl\u00e8mes d'\u00e9paule est-elle adapt\u00e9e ?"
+    },
+    {
+      "type": "text",
+      "id": "t08",
+      "label": "La Triple Therapie Sorelya est concue pour la do",
+      "default": "La Triple Th\u00e9rapie Sorelya est con\u00e7ue pour la douleur chronique de la coiffe des rotateurs apr\u00e8s 45 ans : tendinite, \u00e9paule gel\u00e9e (capsulite), conflit sous-acromial, raideur due \u00e0 une ancienne blessure, calcification du tendon, bursite sous-acromiale et douleur qui ne r\u00e9pond ni \u00e0 la kin\u00e9 ni \u00e0 la cortisone."
+    },
+    {
+      "type": "text",
+      "id": "t09",
+      "label": "Elle n'est pas indiquee en cas de traumatisme re",
+      "default": "Elle n'est pas indiqu\u00e9e en cas de traumatisme r\u00e9cent (chute, luxation) : consultez d'abord un m\u00e9decin."
+    },
+    {
+      "type": "text",
+      "id": "t10",
+      "label": "En combien de temps voit-on des resultats ?",
+      "default": "En combien de temps voit-on des r\u00e9sultats ?"
+    },
+    {
+      "type": "text",
+      "id": "t11",
+      "label": "La plupart des clients sentent leur epaule relac",
+      "default": "La plupart des clients sentent leur \u00e9paule \u00ab rel\u00e2ch\u00e9e \u00bb d\u00e8s la premi\u00e8re s\u00e9ance de 12 minutes. Les r\u00e9veils \u00e0 4 h du matin diminuent en g\u00e9n\u00e9ral entre le 7e et le 14e jour. Pour retrouver vraiment le mouvement \u2014 lever le bras, attraper en hauteur \u2014 comptez 4 \u00e0 6 semaines d'utilisation quotidienne."
+    },
+    {
+      "type": "text",
+      "id": "t12",
+      "label": "C'est pour ca que notre garantie dure 100 jours ",
+      "default": "C'est pour \u00e7a que notre garantie dure 100 jours : le temps de voir de vrais r\u00e9sultats."
+    },
+    {
+      "type": "text",
+      "id": "t13",
+      "label": "Quelle difference avec un TENS ou une bouillotte",
+      "default": "Quelle diff\u00e9rence avec un TENS ou une bouillotte ?"
+    },
+    {
+      "type": "text",
+      "id": "t14",
+      "label": "Un TENS masque le signal de douleur : vous l'ete",
+      "default": "Un TENS masque le signal de douleur : vous l'\u00e9teignez et la douleur revient. Une bouillotte chauffe la peau mais n'atteint pas le tissu profond de la coiffe des rotateurs."
+    },
+    {
+      "type": "text",
+      "id": "t15",
+      "label": "La Triple Therapie Sorelya agit sur les trois ca",
+      "default": "La Triple Th\u00e9rapie Sorelya agit sur les trois causes \u00e0 la fois : elle rouvre les petits vaisseaux par la chaleur, pousse le sang par la compression et assouplit les adh\u00e9rences par la vibration. Elle ne masque pas le sympt\u00f4me, elle s'attaque \u00e0 la cause."
+    },
+    {
+      "type": "text",
+      "id": "t16",
+      "label": "Comment fonctionne la taille unique ?",
+      "default": "Comment fonctionne la taille unique ?"
+    },
+    {
+      "type": "text",
+      "id": "t17",
+      "label": "La sangle velcro s'ajuste a toutes les morpholog",
+      "default": "La sangle velcro s'ajuste \u00e0 toutes les morphologies \u2014 du S au 3XL. Elle s'adapte \u00e0 l'\u00e9paule droite ou gauche sans r\u00e9glage particulier. Pas de guide des tailles, pas de mesures. Si vous avez mal aux deux \u00e9paules, commandez le pack de 2 pour ne pas d\u00e9placer l'appareil \u00e0 chaque fois."
+    },
+    {
+      "type": "text",
+      "id": "t18",
+      "label": "Faut-il la recharger ? Combien de temps dure la ",
+      "default": "Faut-il la recharger ? Combien de temps dure la batterie ?"
+    },
+    {
+      "type": "text",
+      "id": "t19",
+      "label": "Oui : elle se recharge avec le cable USB-C fourn",
+      "default": "Oui : elle se recharge avec le c\u00e2ble USB-C fourni. Une charge compl\u00e8te prend environ 3 heures et dure 7 \u00e0 10 s\u00e9ances (90 \u00e0 120 minutes d'utilisation). La plupart des clients la rechargent une fois par semaine."
+    },
+    {
+      "type": "text",
+      "id": "t20",
+      "label": "Comment fonctionne la garantie 100 jours ?",
+      "default": "Comment fonctionne la garantie 100 jours ?"
+    },
+    {
+      "type": "text",
+      "id": "t21",
+      "label": "Utilisez-la tous les jours pendant 100 jours. Si",
+      "default": "Utilisez-la tous les jours pendant 100 jours. Si votre \u00e9paule ne bouge pas mieux, ne dort pas mieux et ne fait pas moins mal, \u00e9crivez-nous un e-mail, renvoyez-la et nous vous remboursons \u00e0 100 %. Pas de formulaire, pas d'avoir, pas de questions."
+    },
+    {
+      "type": "text",
+      "id": "t22",
+      "label": "Quand vais-je recevoir ma commande ?",
+      "default": "Quand vais-je recevoir ma commande ?"
+    },
+    {
+      "type": "text",
+      "id": "t23",
+      "label": "Nous expedions sous 24 heures. Livraison en 3 a ",
+      "default": "Nous exp\u00e9dions sous 24 heures. Livraison en 3 \u00e0 5 jours par transporteur express dans toute la France. Suivi par e-mail inclus, colis assur\u00e9."
+    },
+    {
+      "type": "text",
+      "id": "t24",
+      "label": "Pourquoi pas de paiement a la livraison ?",
+      "default": "Pourquoi pas de paiement \u00e0 la livraison ?"
+    },
+    {
+      "type": "text",
+      "id": "t25",
+      "label": "Pour vous garantir le prix le plus bas. Le paiem",
+      "default": "Pour vous garantir le prix le plus bas. Le paiement \u00e0 la livraison a des frais de gestion qui se retrouveraient dans le prix. Nous acceptons la carte, PayPal et le paiement en 3 fois sans frais \u2014 tous avec protection acheteur."
+    },
+    {
+      "type": "text",
+      "id": "t26",
+      "label": "La seule chose que vous risquez de perdre...",
+      "default": "La seule chose que vous risquez de perdre\u2026"
+    },
+    {
+      "type": "text",
+      "id": "t27",
+      "label": "c'est votre douleur a l'epaule.",
+      "default": "c'est votre douleur \u00e0 l'\u00e9paule."
+    },
+    {
+      "type": "text",
+      "id": "t28",
+      "label": "Rejoignez plus de 2 400 Francais qui ont retrouv",
+      "default": "Rejoignez plus de 2 400 Fran\u00e7ais qui ont retrouv\u00e9 du soulagement avec la Triple Th\u00e9rapie Sorelya. 12 minutes par jour pendant 100 jours \u2014 si \u00e7a ne marche pas, on vous rembourse."
+    },
+    {
+      "type": "text",
+      "id": "t29",
+      "label": "Commander Livraison gratuite",
+      "default": "\u2191 Commander \u2014 Livraison gratuite"
+    },
+    {
+      "type": "text",
+      "id": "t30",
+      "label": "Garantie 100 jours",
+      "default": "\ud83d\udee1\ufe0f Garantie 100 jours"
+    },
+    {
+      "type": "text",
+      "id": "t31",
+      "label": "Livraison gratuite",
+      "default": "\ud83d\ude9a Livraison gratuite"
+    },
+    {
+      "type": "text",
+      "id": "t32",
+      "label": "Aussi en 3 fois",
+      "default": "\ud83d\udcb3 Aussi en 3 fois"
+    },
+    {
+      "type": "text",
+      "id": "t33",
+      "label": "Garantie 100 jours",
+      "default": "Garantie 100 jours"
+    },
+    {
+      "type": "text",
+      "id": "t34",
+      "label": "Livraison gratuite",
+      "default": "Livraison gratuite"
+    },
+    {
+      "type": "text",
+      "id": "t35",
+      "label": "Paiement securise",
+      "default": "Paiement s\u00e9curis\u00e9"
+    },
+    {
+      "type": "text",
+      "id": "t36",
+      "label": "Service client en francais",
+      "default": "Service client en fran\u00e7ais"
+    },
+    {
+      "type": "text",
+      "id": "t37",
+      "label": "Triple Therapie Sorelya",
+      "default": "Triple Th\u00e9rapie Sorelya \u2014"
+    },
+    {
+      "type": "text",
+      "id": "t38",
+      "label": "Triple therapie pour la coiffe des rotateurs.",
+      "default": "Triple th\u00e9rapie pour la coiffe des rotateurs."
+    },
+    {
+      "type": "text",
+      "id": "t39",
+      "label": "12 minutes par jour. Chaque jour d'attente, c'es",
+      "default": "12 minutes par jour. Chaque jour d'attente, c'est un jour de douleur en plus."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lp Ep custom-liquid-phiyg"
+    }
+  ],
+  "class": "shopify-section"
+}
+{% endschema %}
