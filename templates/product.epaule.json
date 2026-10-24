@@ -1,0 +1,130 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "liquid_hero": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style> .thp-hero * { box-sizing: border-box; margin: 0; padding: 0; } .thp-hero { font-family: 'Inter', -apple-system, sans-serif; color: #000; padding: 0; } .thp-hero h1, .thp-hero h2, .thp-hero h3, .thp-hero h4, .thp-hero strong { font-family: 'Montserrat', sans-serif; } .thp-hero .blue { color: #2795fe; } .thp-badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; } .thp-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 10px; border-radius: 4px; } .thp-badge-blue { background: #2795fe; color: #fff; } .thp-badge-outline { background: transparent; color: #2795fe; border: 1.5px solid #2795fe; } .thp-badge-dark { background: #000; color: #fff; } .thp-hero h1 { font-size: clamp(22px, 5vw, 30px); font-weight: 900; line-height: 1.2; margin-bottom: 6px; } .thp-hero-sub { font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 14px; } .thp-hero-sub strong { color: #000; font-family: 'Inter', sans-serif; font-weight: 700; } .thp-hero-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; } .thp-stars { color: #2795fe; font-size: 16px; letter-spacing: 1px; } .thp-rating-text { font-size: 13px; color: #666; font-weight: 500; } .thp-rating-text strong { color: #000; font-family: 'Inter', sans-serif; font-weight: 700; } .thp-usps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; } .thp-usp { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #333; line-height: 1.4; } .thp-usp-ico { flex-shrink: 0; width: 28px; height: 28px; background: #eef6ff; border-radius: 6px; display: flex; align-items: center; justify-content: center; } .thp-usp-ico svg { width: 14px; height: 14px; } .thp-usp strong { color: #000; font-family: 'Inter', sans-serif; font-weight: 700; } .thp-triple-box { background: #000; border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; margin-bottom: 16px; } .thp-triple-ico { flex-shrink: 0; width: 40px; height: 40px; background: #2795fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; } .thp-triple-text { color: #fff; font-size: 13px; line-height: 1.5; } .thp-triple-text strong { color: #2795fe; font-family: 'Montserrat', sans-serif; } .thp-tech-strip { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; } .thp-tech-tag { display: flex; align-items: center; gap: 6px; background: #f8f9fa; border: 1px solid #e8e8e8; padding: 7px 12px; border-radius: 6px; font-size: 11px; font-weight: 700; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px; color: #333; } .thp-tech-tag .dot { width: 6px; height: 6px; background: #2795fe; border-radius: 50%; flex-shrink: 0; } .thp-doc-line { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #EDF6FC; border-radius: 8px; margin-bottom: 16px; border-left: 3px solid #2795fe; } .thp-doc-line .doc-ico { flex-shrink: 0; font-size: 22px; } .thp-doc-line p { font-size: 13px; color: #444; line-height: 1.5; } .thp-doc-line strong { color: #000; font-family: 'Inter', sans-serif; } .thp-urgency-bar { background: #2795fe; border-radius: 10px; padding: 16px 20px; text-align: center; margin-bottom: 0; } .thp-urgency-bar .thp-urg-text { color: #fff; font-size: 15px; font-weight: 700; font-family: 'Inter', sans-serif; display: block; margin-bottom: 4px; } .thp-urgency-bar .thp-urg-timer { color: #fff; font-size: 28px; font-weight: 900; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; display: block; } </style> <div class=\"thp-hero\"> <!-- Badges --> <div class=\"thp-badge-row\"> <span class=\"thp-badge thp-badge-blue\">&#128737;&#65039; Garantie 100 jours</span> <span class=\"thp-badge thp-badge-dark\">&#128293; Chaleur + Compression + Vibration</span> </div> <!-- Title --> <h1>Triple th&#233;rapie pour la coiffe des rotateurs en <span class=\"blue\">12 minutes par jour</span></h1> <!-- Subtitle --> <div class=\"thp-hero-sub\"> Le syst&#232;me de r&#233;cup&#233;ration qui r&#233;unit <strong>une chaleur de 42 &#176;C</strong>, <strong>une compression rythmique</strong> et <strong>une vibration cibl&#233;e &#224; 60 Hz</strong> pour relancer la circulation en profondeur, r&#233;duire la douleur chronique et aider les tendons &#224; se r&#233;parer naturellement &#8212; sans m&#233;dicaments, sans chirurgie. </div> <!-- Note : seulement si l'app d'avis a de vrais avis -->\n  {%- assign note = product.metafields.reviews.rating.value.rating -%}{%- assign nb = product.metafields.reviews.rating_count.value -%}\n  {%- if nb and nb > 0 -%}<div class=\"thp-hero-rating\"><span class=\"thp-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class=\"thp-rating-text\"><strong>{{ note | round: 1 }}/5</strong> &#8212; d'apr&#232;s {{ nb }} avis</span></div>{%- endif -%} <!-- USPs --> <div class=\"thp-usps\"> <div class=\"thp-usp\"> <div class=\"thp-usp-ico\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2795fe\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></div> <div><strong>Triple th&#233;rapie simultan&#233;e</strong> &#8212; chaleur, compression et vibration en une seule s&#233;ance</div> </div> <div class=\"thp-usp\"> <div class=\"thp-usp-ico\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2795fe\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></div> <div><strong>12 minutes et c'est fini</strong> &#8212; vous la mettez, vous appuyez sur le bouton, l'appareil fait tout seul</div> </div> <div class=\"thp-usp\"> <div class=\"thp-usp-ico\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2795fe\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></div> <div><strong>R&#233;sultats en 7 &#224; 14 jours</strong> &#8212; 95 % des clients notent une am&#233;lioration d&#232;s les 2 premi&#232;res semaines</div> </div> <div class=\"thp-usp\"> <div class=\"thp-usp-ico\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#2795fe\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></div> <div><strong>Une alternative &#224; la chirurgie</strong> &#8212; elle s'attaque &#224; la cause profonde : le sang qui n'arrive plus jusqu'aux tendons</div> </div> </div> <!-- Triple therapy / one size highlight box --> <div class=\"thp-triple-box\"> <div class=\"thp-triple-ico\">&#128293;</div> <div class=\"thp-triple-text\"> <strong>Taille unique r&#233;glable &#8212; du S au 3XL.</strong> S'adapte &#224; l'&#233;paule droite ou gauche. Sangle velcro pour toutes les morphologies. Pas de guide des tailles, pas de doute. </div> </div> <!-- Tech tags --> <div class=\"thp-tech-strip\"> <div class=\"thp-tech-tag\"><span class=\"dot\"></span> Chaleur 42 &#176;C</div> <div class=\"thp-tech-tag\"><span class=\"dot\"></span> Compression rythmique</div> <div class=\"thp-tech-tag\"><span class=\"dot\"></span> Vibration 60 Hz</div> <div class=\"thp-tech-tag\"><span class=\"dot\"></span> Recharge USB-C</div> <div class=\"thp-tech-tag\"><span class=\"dot\"></span> Sans fil</div> </div> <!-- Doctor endorsement --> <div class=\"thp-doc-line\"> <span class=\"doc-ico\">&#129658;</span> <p><strong>D&#233;velopp&#233;e avec un chirurgien orthop&#233;diste</strong> &#8212; fond&#233;e sur les principes cliniques de la thermoth&#233;rapie et de la compression cibl&#233;e pour la r&#233;paration du tissu profond de la coiffe des rotateurs.</p> </div> <!-- Urgency: countdown spedizione gratuita --> <div class=\"thp-urgency-bar\"> <span class=\"thp-urg-text\">&#128666; La livraison gratuite se termine dans</span> <span class=\"thp-urg-timer\" id=\"thp-timer\" data-ep-timer>14:59</span> </div> <script> (function(){ var el = document.querySelector('[data-ep-timer]'); if(!el) return; var sec = 14 * 60 + 59; function tick(){ if(sec <= 0){ sec = 14 * 60 + 59; } var m = Math.floor(sec / 60); var s = sec % 60; el.textContent = m + ':' + (s < 10 ? '0' : '') + s; sec--; } tick(); setInterval(tick, 1000); })(); </script>\n</div>\n"
+          }
+        },
+        "kaching_bundles_app_block_ep": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{product}}",
+            "manual_deal_block_id": ""
+          }
+        },
+        "liquid_stock": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"stock-badge\">\n  <span class=\"stock-badge__dot\"></span>\n  <span class=\"stock-badge__text\">Plus que 8 % du stock disponible aujourd'hui</span>\n</div>\n<style>\n  .stock-badge { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; background: #FDECEC; margin: 4px 0 2px; }\n  .stock-badge__dot { width: 7px; height: 7px; border-radius: 50%; background: #E01B24; flex-shrink: 0; animation: stock-badge-pulse 1.6s ease-in-out infinite; }\n  .stock-badge__text { font-size: 13px; font-weight: 700; line-height: 1.2; color: #E01B24; letter-spacing: 0.1px; }\n  @keyframes stock-badge-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(0.85); } }\n  @media (min-width: 750px) { .stock-badge { padding: 10px 18px; } .stock-badge__text { font-size: 14px; } }\n</style>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "#2795fe",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "liquid_confiance": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"tbg-wrap\">\n  <div class=\"tbg-live\">\n    <svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\"><path d=\"M3 17L9 11L13 15L21 6\" stroke=\"#111111\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 6H21V12\" stroke=\"#111111\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n    <span><strong>37</strong> personnes ont command&#233; dans la derni&#232;re heure</span>\n  </div>\n  <div class=\"tbg-grid\">\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\"><path d=\"M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n      <p>Dormir sur ce c&#244;t&#233;<span>Chaleur 42 &#176;C profonde</span></p>\n    </div>\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\"><circle cx=\"12\" cy=\"5\" r=\"2\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 8V15M12 15L9 21M12 15L15 21M12 10L18 4M12 10L7 13\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n      <p>Relever le bras haut<span>Vibration 60 Hz cibl&#233;e</span></p>\n    </div>\n    <div class=\"tbg-card\">\n      <div class=\"tbg-icon\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\"><path d=\"M8 3L3 6.5L5.5 10L7 9V21H17V9L18.5 10L21 6.5L16 3C15.2 4.4 13.8 5.2 12 5.2C10.2 5.2 8.8 4.4 8 3Z\" stroke=\"#111111\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n      <p>S'habiller seule<span>12 min, un seul bouton</span></p>\n    </div>\n  </div>\n  <div class=\"tbg-guarantee\">\n    <div class=\"tbg-guarantee-icon\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\"><path d=\"M12 3L4 6.5V11C4 16 7.5 20 12 21C16.5 20 20 16 20 11V6.5L12 3Z\" stroke=\"#FFFFFF\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/><path d=\"M9 12L11 14L15.5 9.5\" stroke=\"#FFFFFF\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div>\n    <p><strong>Vous avez d&#233;j&#224; pay&#233; pour des solutions qui n'ont rien chang&#233;.</strong> 100 jours pour d&#233;cider. Si votre &#233;paule ne dort pas mieux et ne bouge pas mieux, on vous rembourse &#8212; sans questions.</p>\n  </div>\n</div>\n<style>\n.tbg-wrap{max-width:560px;margin:0 auto}.tbg-wrap *{box-sizing:border-box}\n.tbg-live{display:flex;align-items:center;gap:8px;font-size:13px;color:#666666;margin-bottom:16px}.tbg-live strong{color:#111111}\n.tbg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}\n.tbg-card{background:#FFFFFF;border:1px solid #DCDCDC;border-radius:14px;padding:18px 8px 16px;text-align:center;transition:.2s ease}\n.tbg-card:hover{border-color:#BDBDBD;transform:translateY(-2px)}.tbg-icon{display:flex;justify-content:center;align-items:center;margin-bottom:10px}\n.tbg-card p{margin:0;font-size:12.5px;font-weight:700;line-height:1.35;color:#111111}\n.tbg-card p span{display:block;margin-top:6px;font-size:11px;font-weight:400;line-height:1.4;color:#666666}\n.tbg-guarantee{display:flex;align-items:flex-start;gap:10px;background:#F5F5F5;border:1px solid #DCDCDC;border-radius:12px;padding:12px 14px}\n.tbg-guarantee-icon{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:#111111;display:flex;align-items:center;justify-content:center;margin-top:1px}\n.tbg-guarantee p{margin:0;font-size:12.5px;line-height:1.5;color:#666666}.tbg-guarantee strong{color:#111111}\n@media (max-width:420px){.tbg-grid{gap:8px}.tbg-card{padding:14px 6px 12px}.tbg-card p{font-size:11.5px}.tbg-card p span{font-size:10.5px;margin-top:5px}}\n</style>"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_hero",
+        "kaching_bundles_app_block_ep",
+        "liquid_stock",
+        "buy_buttons",
+        "liquid_confiance"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": false,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "avis_photos": {
+      "type": "lp-ep-custom-liquid-47mekm",
+      "settings": {}
+    },
+    "benefices": {
+      "type": "lp-ep-custom-liquid-rxwaja",
+      "settings": {}
+    },
+    "img_cuisine": {
+      "type": "lp-ep-image",
+      "settings": {
+        "asset": "ep-cuisine.gif",
+        "alt": "Triple Therapie Sorelya portee en cuisine"
+      }
+    },
+    "fonctionnement": {
+      "type": "lp-ep-custom-liquid-wcixmp",
+      "settings": {}
+    },
+    "img_infographie": {
+      "type": "lp-ep-image",
+      "settings": {
+        "asset": "ep-infographie.jpg",
+        "alt": "Triple Therapie Sorelya, caracteristiques"
+      }
+    },
+    "comparatif": {
+      "type": "lp-ep-custom-liquid-vunize",
+      "settings": {}
+    },
+    "img_zones": {
+      "type": "lp-ep-image",
+      "settings": {
+        "asset": "ep-zones.jpg",
+        "alt": "Zones de chaleur et de vibration sur l'epaule"
+      }
+    },
+    "faq": {
+      "type": "lp-ep-custom-liquid-phiyga",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "avis_photos",
+    "benefices",
+    "img_cuisine",
+    "fonctionnement",
+    "img_infographie",
+    "comparatif",
+    "img_zones",
+    "faq"
+  ]
+}
