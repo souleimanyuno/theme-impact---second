@@ -9,30 +9,54 @@
  */
 {
   "sections": {
-    "ah_hero": {
-      "type": "lp-ah-hero",
+    "ep_hero": {
+      "type": "lp-ep-hero",
       "settings": {
-        "t01": "Sorelya Skin",
-        "t02": "Prête pour chaque caresse.",
-        "t03": "Découvrir maintenant",
-        "lien": "shopify://products/serum-anti-repousse"
+        "produit": "",
+        "lien": ""
       }
     },
-    "ah_atouts": {
-      "type": "lp-ah-atouts",
+    "ep_benefices": {
+      "type": "lp-ep-custom-liquid-rxwaja",
+      "settings": {}
+    },
+    "ep_img_cuisine": {
+      "type": "lp-ep-image",
       "settings": {
-        "t01": "LA ROUTINE ANTI-REPOUSSE QUI AGIT &#192; LA RACINE",
-        "t02": "Douce comme de la soie",
-        "t03": "Fini la peau de fraise et le feu du rasoir &#8211; juste une peau parfaitement lisse.",
-        "t04": "Stoppe la pousse",
-        "t05": "Ralentit visiblement la repousse, directement &#224; la racine.",
-        "t06": "100 % naturel",
-        "t07": "Formule sans hormones, douce pour le visage, le corps et la zone intime."
+        "asset": "ep-cuisine.gif",
+        "alt": "Triple Therapie Sorelya portee en cuisine"
+      }
+    },
+    "ep_fonctionnement": {
+      "type": "lp-ep-custom-liquid-wcixmp",
+      "settings": {}
+    },
+    "ep_img_infographie": {
+      "type": "lp-ep-image",
+      "settings": {
+        "asset": "ep-infographie.jpg",
+        "alt": "Triple Therapie Sorelya, caracteristiques"
+      }
+    },
+    "ep_comparatif": {
+      "type": "lp-ep-custom-liquid-vunize",
+      "settings": {}
+    },
+    "ep_faq": {
+      "type": "lp-ep-custom-liquid-phiyga",
+      "settings": {
+        "lien_cta": "#ep-hero",
+        "t29": "Commander \u2014 Livraison gratuite"
       }
     }
   },
   "order": [
-    "ah_hero",
-    "ah_atouts"
+    "ep_hero",
+    "ep_benefices",
+    "ep_img_cuisine",
+    "ep_fonctionnement",
+    "ep_img_infographie",
+    "ep_comparatif",
+    "ep_faq"
   ]
 }

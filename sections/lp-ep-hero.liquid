@@ -1,0 +1,150 @@
+{%- if section.settings.produit != blank -%}{%- assign url = section.settings.produit.url -%}{%- elsif section.settings.lien != blank -%}{%- assign url = section.settings.lien -%}{%- else -%}{%- assign url = routes.all_products_collection_url -%}{%- endif -%}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<div class="eph" id="ep-hero">
+  <div class="eph__in">
+    <div class="eph__txt">
+      <div class="eph__badges"><span class="eph__b eph__b--blue">{{ section.settings.t01 }}</span><span class="eph__b eph__b--dark">{{ section.settings.t02 }}</span></div>
+      <h1>{{ section.settings.t03 }} <span class="eph__blue">{{ section.settings.t04 }}</span></h1>
+      <p class="eph__sub">{{ section.settings.t05 }}</p>
+      <ul class="eph__usps">
+        <li><span class="eph__ck">&#10003;</span><span><strong>{{ section.settings.t06 }}</strong> {{ section.settings.t07 }}</span></li>
+        <li><span class="eph__ck">&#10003;</span><span><strong>{{ section.settings.t08 }}</strong> {{ section.settings.t09 }}</span></li>
+        <li><span class="eph__ck">&#10003;</span><span><strong>{{ section.settings.t10 }}</strong> {{ section.settings.t11 }}</span></li>
+      </ul>
+      <a class="eph__cta" href="{{ url }}">{{ section.settings.t12 }}</a>
+      <p class="eph__note">{{ section.settings.t13 }}</p>
+    </div>
+    <div class="eph__img"><img src="{% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 1400 }}{% else %}{{ 'ep-hero.jpg' | asset_url }}{% endif %}" alt="{{ section.settings.t03 | escape }}" width="1200" height="1200" loading="eager" fetchpriority="high"></div>
+  </div>
+</div>
+<style>
+  #ep-hero { font-family: 'Inter', -apple-system, sans-serif; color: #000; background: linear-gradient(180deg, #eef6ff 0%, #ffffff 100%); }
+  #ep-hero * { box-sizing: border-box; }
+  .eph__in { max-width: 1240px; margin: 0 auto; padding: 56px 40px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+  .eph__badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .eph__b { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .3px; padding: 7px 14px; border-radius: 20px; }
+  .eph__b--blue { background: #2795fe; color: #fff; } .eph__b--dark { background: #000; color: #fff; }
+  #ep-hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(28px, 3.6vw, 44px); font-weight: 800; line-height: 1.15; margin: 0 0 16px; color: #000; }
+  .eph__blue { color: #2795fe; }
+  .eph__sub { font-size: 16px; line-height: 1.65; color: #444; margin: 0 0 20px; }
+  .eph__usps { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 10px; }
+  .eph__usps li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #333; }
+  .eph__usps strong { color: #000; }
+  .eph__ck { flex: 0 0 22px; height: 22px; border-radius: 50%; background: #2795fe; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .eph__cta { display: inline-block; background: #2795fe; color: #fff !important; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; padding: 17px 34px; border-radius: 12px; text-decoration: none; box-shadow: 0 8px 22px rgba(39,149,254,.3); }
+  .eph__cta:hover { background: #1b7fe0; }
+  .eph__note { font-size: 13px; color: #666; margin: 12px 0 0; }
+  .eph__img img { display: block; width: 100%; height: auto; border-radius: 20px; box-shadow: 0 18px 40px rgba(0,0,0,.12); }
+  @media (max-width: 749px) {
+    .eph__in { grid-template-columns: 1fr; padding: 28px 16px 36px; gap: 24px; }
+    .eph__img { order: -1; } .eph__img img { border-radius: 14px; }
+    .eph__cta { display: block; text-align: center; }
+    .eph__note { text-align: center; }
+  }
+</style>
+{% schema %}
+{
+  "name": "Lp Ep accueil hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "produit",
+      "label": "Produit vers lequel pointent les boutons"
+    },
+    {
+      "type": "url",
+      "id": "lien",
+      "label": "Lien de secours (si aucun produit choisi)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (vide = ep-hero.jpg)"
+    },
+    {
+      "type": "text",
+      "id": "t01",
+      "label": "Garantie 100 jours",
+      "default": "\ud83d\udee1\ufe0f Garantie 100 jours"
+    },
+    {
+      "type": "text",
+      "id": "t02",
+      "label": "Chaleur + Compression + Vibration",
+      "default": "\ud83d\udd25 Chaleur + Compression + Vibration"
+    },
+    {
+      "type": "text",
+      "id": "t03",
+      "label": "La douleur  l'paule vous rveille la nuit",
+      "default": "La douleur \u00e0 l'\u00e9paule vous r\u00e9veille la nuit ?"
+    },
+    {
+      "type": "text",
+      "id": "t04",
+      "label": "Ce n'est pas l'ge.",
+      "default": "Ce n'est pas l'\u00e2ge."
+    },
+    {
+      "type": "text",
+      "id": "t05",
+      "label": "La Triple Thrapie Sorelya runit une chal",
+      "default": "La Triple Th\u00e9rapie Sorelya r\u00e9unit une chaleur de 42 \u00b0C, une compression rythmique et une vibration \u00e0 60 Hz pour relancer la circulation dans la coiffe des rotateurs \u2014 12 minutes par jour, chez vous, sans m\u00e9dicaments."
+    },
+    {
+      "type": "text",
+      "id": "t06",
+      "label": "Triple thrapie simultane",
+      "default": "Triple th\u00e9rapie simultan\u00e9e"
+    },
+    {
+      "type": "text",
+      "id": "t07",
+      "label": "chaleur, compression et vibration en un",
+      "default": "\u2014 chaleur, compression et vibration en une seule s\u00e9ance"
+    },
+    {
+      "type": "text",
+      "id": "t08",
+      "label": "12 minutes et c'est fini",
+      "default": "12 minutes et c'est fini"
+    },
+    {
+      "type": "text",
+      "id": "t09",
+      "label": "un seul bouton, l'appareil s'teint tout",
+      "default": "\u2014 un seul bouton, l'appareil s'\u00e9teint tout seul"
+    },
+    {
+      "type": "text",
+      "id": "t10",
+      "label": "Rsultats en 7  14 jours",
+      "default": "R\u00e9sultats en 7 \u00e0 14 jours"
+    },
+    {
+      "type": "text",
+      "id": "t11",
+      "label": "95 % des clients notent une amlioration",
+      "default": "\u2014 95 % des clients notent une am\u00e9lioration d\u00e8s les 2 premi\u00e8res semaines"
+    },
+    {
+      "type": "text",
+      "id": "t12",
+      "label": "Dcouvrir la Triple Thrapie",
+      "default": "D\u00e9couvrir la Triple Th\u00e9rapie"
+    },
+    {
+      "type": "text",
+      "id": "t13",
+      "label": "Livraison gratuite  Satisfait ou rembour",
+      "default": "Livraison gratuite \u00b7 Satisfait ou rembours\u00e9 100 jours \u00b7 Paiement s\u00e9curis\u00e9"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lp Ep accueil hero"
+    }
+  ]
+}
+{% endschema %}

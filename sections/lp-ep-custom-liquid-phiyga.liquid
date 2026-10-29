@@ -92,7 +92,7 @@
   <div class="thp-bleed4"><div class="thp-cta-inner">
     <h2>{{ section.settings.t26 }}<br><span class="blue">{{ section.settings.t27 }}</span></h2>
     <p>{{ section.settings.t28 }}</p>
-    <a href="javascript:void(0)" class="thp-cta-btn" onclick="(function(){var t=document.querySelector('product-form')||document.querySelector('.product-form')||document.querySelector('[data-type=add-to-cart-form]')||document.querySelector('form[action*=cart]');if(t){t.scrollIntoView({behavior:'smooth',block:'center'})}else{window.scrollTo({top:0,behavior:'smooth'})}})()">{{ section.settings.t29 }}</a>
+    {%- if section.settings.lien_cta != blank -%}<a href="{{ section.settings.lien_cta }}" class="thp-cta-btn">{{ section.settings.t29 }}</a>{%- else -%}<a href="javascript:void(0)" class="thp-cta-btn" onclick="(function(){var t=document.querySelector('product-form')||document.querySelector('.product-form')||document.querySelector('[data-type=add-to-cart-form]')||document.querySelector('form[action*=cart]');if(t){t.scrollIntoView({behavior:'smooth',block:'center'})}else{window.scrollTo({top:0,behavior:'smooth'})}})()">{{ section.settings.t29 }}</a>{%- endif -%}
     <div class="thp-sub-cta"><strong>{{ section.settings.t30 }}</strong> &#183; <strong>{{ section.settings.t31 }}</strong> &#183; <strong>{{ section.settings.t32 }}</strong></div>
   </div></div>
 
@@ -353,6 +353,11 @@
       "id": "t39",
       "label": "12 minutes par jour. Chaque jour d'attente, c'es",
       "default": "12 minutes par jour. Chaque jour d'attente, c'est un jour de douleur en plus."
+    },
+    {
+      "type": "url",
+      "id": "lien_cta",
+      "label": "Lien du bouton final (vide = remonte au panier)"
     }
   ],
   "presets": [
