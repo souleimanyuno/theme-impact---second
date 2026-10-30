@@ -32,8 +32,8 @@
     "ep_benefices": {
       "type": "lp-ep-custom-liquid-rxwaja",
       "settings": {
-        "t01": "Livraison",
-        "t02": "gratuite et suivie",
+        "t01": "Livraison en",
+        "t02": "3-5 jours",
         "t03": "Garantie",
         "t04": "100 jours",
         "t05": "Retour",
@@ -143,7 +143,7 @@
         "t31": "Sans fil — recharge USB-C",
         "t32": "Une charge complète dure 7 à 10 séances. Aucun câble pendant l'utilisation. Elle se glisse dans un sac et s'utilise partout.",
         "t33": "Livraison gratuite",
-        "t34": "Livraison gratuite et suivie dans toute la France.",
+        "t34": "Livraison en 3 à 5 jours par transporteur express dans toute la France. Suivi inclus, colis assuré.",
         "t35": "La Triple Thérapie Sorelya repose sur des principes cliniques de thermothérapie, de compression et de vibration largement utilisés en kinésithérapie et en médecine de rééducation. Les résultats peuvent varier. Certifiée CE et RoHS. En cas de problème grave, consultez votre médecin."
       }
     },
@@ -191,7 +191,7 @@
         "t32": "Remplacement gratuit",
         "t33": "Colis perdu ou défectueux ? On vous en renvoie un gratuitement, tout de suite.",
         "t34": "Livraison gratuite",
-        "t35": "Livraison gratuite et suivie dans toute la France.",
+        "t35": "3 à 5 jours par transporteur express dans toute la France. Suivi inclus.",
         "t36": "Service client en français",
         "t37": "Une équipe qui vous répond en français par e-mail, sous 24 heures.",
         "t38": "Ce qu'en disent",
@@ -252,7 +252,7 @@
         "t20": "Comment fonctionne la garantie 100 jours ?",
         "t21": "Utilisez-la tous les jours pendant 100 jours. Si votre épaule ne bouge pas mieux, ne dort pas mieux et ne fait pas moins mal, écrivez-nous un e-mail, renvoyez-la et nous vous remboursons à 100 %. Pas de formulaire, pas d'avoir, pas de questions.",
         "t22": "Quand vais-je recevoir ma commande ?",
-        "t23": "La livraison est gratuite et suivie dans toute la France. Vous recevez votre numéro de suivi par e-mail.",
+        "t23": "Nous expédions sous 24 heures. Livraison en 3 à 5 jours par transporteur express dans toute la France. Suivi par e-mail inclus, colis assuré.",
         "t24": "Pourquoi pas de paiement à la livraison ?",
         "t25": "Pour vous garantir le prix le plus bas. Le paiement à la livraison a des frais de gestion qui se retrouveraient dans le prix. Nous acceptons la carte bancaire et PayPal — tous avec protection acheteur.",
         "t26": "La seule chose que vous risquez de perdre…",
