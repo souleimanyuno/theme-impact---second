@@ -27,6 +27,7 @@
         },
         "liquid_stock": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"stock-badge\">\n  <span class=\"stock-badge__dot\"></span>\n  <span class=\"stock-badge__text\">Plus que 8 % du stock disponible aujourd'hui</span>\n</div>\n<style>\n  .stock-badge { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; background: #FDECEC; margin: 4px 0 2px; }\n  .stock-badge__dot { width: 7px; height: 7px; border-radius: 50%; background: #E01B24; flex-shrink: 0; animation: stock-badge-pulse 1.6s ease-in-out infinite; }\n  .stock-badge__text { font-size: 13px; font-weight: 700; line-height: 1.2; color: #E01B24; letter-spacing: 0.1px; }\n  @keyframes stock-badge-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(0.85); } }\n  @media (min-width: 750px) { .stock-badge { padding: 10px 18px; } .stock-badge__text { font-size: 14px; } }\n</style>"
           }
