@@ -132,10 +132,11 @@
       },
       "disabled": true
     },
-    "lp_ah_footer": {
-      "type": "lp-ah-footer",
+    "lp_ep_footer": {
+      "type": "lp-ep-footer",
       "settings": {
-        "title": "Liens",
+        "texte": "Satisfait ou remboursé pendant 100 jours. Livraison gratuite, suivie et assurée.",
+        "title": "Liens utiles",
         "copyright": "Sorelya"
       },
       "blocks": {
@@ -211,6 +212,6 @@
   "order": [
     "text_with_icons_PLDgKD",
     "footer",
-    "lp_ah_footer"
+    "lp_ep_footer"
   ]
 }

@@ -102,13 +102,15 @@
       },
       "disabled": true
     },
-    "lp_ah_header": {
-      "type": "lp-ah-header",
-      "settings": {}
+    "lp_ep_header": {
+      "type": "lp-ep-header",
+      "settings": {
+        "bandeau": "Satisfait ou remboursé pendant 100 jours · Livraison gratuite"
+      }
     }
   },
   "order": [
-    "lp_ah_header",
+    "lp_ep_header",
     "announcement-bar",
     "custom_liquid_rjiLER",
     "header"

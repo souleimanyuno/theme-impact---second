@@ -1,0 +1,118 @@
+{%- comment -%}
+  En-tête Triple Thérapie Sorelya calqué sur Rotafix (rotafixitalia.com, relevé 2026-10-30) :
+  bandeau bleu #2795fe en haut, puis barre blanche : logo à gauche (SORE noir + LYA bleu),
+  menu à côté, compte + panier à droite. Mobile : burger à gauche, logo centré, panier à droite.
+  Le panier ouvre le tiroir panier du thème Impact (aria-controls="cart-drawer").
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+{%- capture liens -%}
+  {%- if section.settings.menu != blank and linklists[section.settings.menu].links.size > 0 -%}
+    {%- for l in linklists[section.settings.menu].links -%}{{ l.title }}|{{ l.url }}{% unless forloop.last %}§{% endunless %}{%- endfor -%}
+  {%- else -%}Accueil|{{ routes.root_url }}§Catalogue|{{ routes.all_products_collection_url }}§Contact|/pages/contact{%- endif -%}
+{%- endcapture -%}
+{%- assign liens = liens | strip | split: '§' -%}
+
+<div class="eph" data-eph>
+  {%- if section.settings.bandeau != blank -%}
+    {%- assign morceaux = section.settings.bandeau | split: ' · ' -%}
+    <div class="eph__bandeau">{{ morceaux | first }}{% for m in morceaux offset: 1 %}<span class="eph__bandeau-suite"> · {{ m }}</span>{% endfor %}</div>
+  {%- endif -%}
+
+  <header class="eph__bar">
+    <button type="button" class="eph__burger" aria-label="Menu" aria-expanded="false" data-eph-burger>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+
+    <a href="{{ routes.root_url }}" class="eph__logo" aria-label="{{ shop.name }}">
+      {%- if section.settings.logo != blank -%}
+        <img src="{{ section.settings.logo | image_url: width: 600 }}" alt="{{ shop.name }}" width="180" height="40">
+      {%- else -%}
+        <span class="eph__logo-txt">SORE<span>LYA</span></span>
+      {%- endif -%}
+    </a>
+
+    <nav class="eph__nav" aria-label="Menu principal">
+      {%- for l in liens -%}
+        {%- assign p = l | split: '|' -%}
+        {%- assign actif = false -%}
+        {%- if p[1] == request.path -%}{%- assign actif = true -%}{%- endif -%}
+        {%- if forloop.first and request.page_type == 'index' -%}{%- assign actif = true -%}{%- endif -%}
+        <a href="{{ p[1] }}" class="eph__link{% if actif %} is-actif{% endif %}">{{ p[0] }}</a>
+      {%- endfor -%}
+    </nav>
+
+    <div class="eph__icons">
+      <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="eph__icon eph__account" aria-label="Mon compte">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke-linecap="round"/></svg>
+      </a>
+      <a href="{{ routes.cart_url }}" data-no-instant class="eph__icon eph__cart" aria-label="Panier" {% if settings.cart_type != 'page' and request.page_type != 'cart' %}aria-controls="cart-drawer"{% endif %}>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h14l-1.2 12.5H6.2L5 8z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10" stroke-linecap="round"/></svg>
+        <cart-count class="eph__count {% if cart.item_count == 0 %}opacity-0{% endif %}" aria-hidden="true">{{ cart.item_count }}</cart-count>
+      </a>
+    </div>
+  </header>
+
+  <div class="eph__drawer" data-eph-drawer hidden>
+    {%- for l in liens -%}{%- assign p = l | split: '|' -%}<a href="{{ p[1] }}">{{ p[0] }}</a>{%- endfor -%}
+    <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}">Mon compte</a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.currentScript.previousElementSibling;
+    var b = root.querySelector('[data-eph-burger]'), d = root.querySelector('[data-eph-drawer]');
+    b.addEventListener('click', function () { var o = d.hasAttribute('hidden'); if (o) d.removeAttribute('hidden'); else d.setAttribute('hidden', ''); b.setAttribute('aria-expanded', o); });
+    function h() { document.documentElement.style.setProperty('--header-height', root.offsetHeight + 'px'); }
+    h(); window.addEventListener('resize', h);
+  })();
+</script>
+
+<style>
+  #shopify-section-{{ section.id }} { position: sticky; top: 0; z-index: 30; }
+  .eph { background: #fff; font-family: 'Inter', -apple-system, sans-serif; color: #000; border-bottom: 1px solid #edf0f4; }
+  .eph__bandeau { background: #2795fe; color: #fff; text-align: center; font-size: 14px; line-height: 20px; padding: 12px 16px; }
+  .eph__bar { max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; gap: 36px; min-height: 66px; box-sizing: border-box; }
+  .eph__logo { display: block; line-height: 0; text-decoration: none; flex-shrink: 0; }
+  .eph__logo img { width: 180px; height: auto; max-height: 44px; object-fit: contain; }
+  .eph__logo-txt { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; letter-spacing: -.5px; color: #000; }
+  .eph__logo-txt span { color: #2795fe; }
+  .eph__nav { display: flex; align-items: center; gap: 26px; flex: 1; }
+  .eph__link { font-size: 15px; line-height: 22px; color: #333; text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+  .eph__link:hover { color: #000; }
+  .eph__link.is-actif { color: #000; font-weight: 600; border-bottom-color: #2795fe; }
+  .eph__icons { display: flex; align-items: center; margin-left: auto; margin-right: -10px; }
+  .eph__icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #000; position: relative; }
+  .eph__count { position: absolute; top: 5px; right: 3px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #2795fe; color: #fff; font-size: 10px; font-weight: 600; line-height: 17px; text-align: center; box-sizing: border-box; }
+  .eph__count.opacity-0 { opacity: 0; }
+  .eph__burger { display: none; background: none; border: 0; padding: 8px; margin-left: -8px; color: #000; cursor: pointer; }
+  .eph__drawer { border-top: 1px solid #edf0f4; padding: 8px 20px 16px; display: flex; flex-direction: column; }
+  .eph__drawer[hidden] { display: none; }
+  .eph__drawer a { padding: 10px 0; font-size: 17px; color: #000; text-decoration: none; }
+  @media (max-width: 989px) {
+    .eph__bandeau { font-size: 13px; padding: 9px 12px; }
+    .eph__bandeau-suite { display: none; }
+    .eph__bar { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; padding: 0 12px; min-height: 58px; }
+    .eph__nav, .eph__account { display: none; }
+    .eph__burger { display: block; justify-self: start; }
+    .eph__logo { justify-self: center; }
+    .eph__logo-txt { font-size: 25px; }
+    .eph__logo img { width: 140px; }
+    .eph__icons { justify-self: end; margin-right: -6px; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Sorelya en-tête bleu",
+  "class": "lp-ep-header",
+  "settings": [
+    { "type": "text", "id": "bandeau", "label": "Bandeau du haut (vide = masqué)", "default": "Satisfait ou remboursé pendant 100 jours · Livraison gratuite" },
+    { "type": "image_picker", "id": "logo", "label": "Logo (vide = SORELYA noir et bleu)" },
+    { "type": "link_list", "id": "menu", "label": "Menu (vide = Accueil / Catalogue / Contact)" }
+  ],
+  "presets": [ { "name": "Sorelya en-tête bleu" } ]
+}
+{% endschema %}
