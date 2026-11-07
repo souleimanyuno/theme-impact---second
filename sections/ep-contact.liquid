@@ -1,0 +1,164 @@
+{%- comment -%}
+  Page Contact Sorelya (Lucia, 2026-11-07).
+  Formulaire Shopify (les messages arrivent sur l'e-mail de contact de la boutique) + lien e-mail direct.
+  Raccourcis : suivi de commande, retours 100 jours. Aucun délai de réponse chiffré (non confirmé).
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+{%- assign email = section.settings.email | default: shop.email -%}
+
+<div class="epc">
+  <div class="epc__hero">
+    <p class="epc__surtitre">{{ section.settings.surtitre }}</p>
+    <h1 class="epc__titre">{{ section.settings.titre }}</h1>
+    <p class="epc__intro">{{ section.settings.intro }}</p>
+  </div>
+
+  <div class="epc__grille">
+    <aside class="epc__cartes">
+      <a class="epc__carte" href="mailto:{{ email }}">
+        <span class="epc__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg></span>
+        <span class="epc__carte-txt">
+          <strong>Par e-mail</strong>
+          <span class="epc__mail">{{ email }}</span>
+          <span class="epc__petit">Écrivez-nous directement depuis votre messagerie.</span>
+        </span>
+      </a>
+
+      <a class="epc__carte" href="{{ section.settings.lien_suivi }}">
+        <span class="epc__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+        <span class="epc__carte-txt">
+          <strong>Où est mon colis ?</strong>
+          <span class="epc__petit">Suivez votre livraison en direct avec votre numéro de commande.</span>
+          <span class="epc__lien">Suivre ma commande</span>
+        </span>
+      </a>
+
+      <a class="epc__carte" href="{{ section.settings.lien_retours }}">
+        <span class="epc__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v6h6"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <span class="epc__carte-txt">
+          <strong>Retour ou remboursement</strong>
+          <span class="epc__petit">Satisfait ou remboursé pendant 100 jours, appareil garanti 2 ans.</span>
+          <span class="epc__lien">Voir les conditions</span>
+        </span>
+      </a>
+    </aside>
+
+    <div class="epc__form-bloc">
+      <h2 class="epc__form-titre">Envoyez-nous un message</h2>
+      {%- form 'contact', id: 'epc-form', class: 'epc__form' -%}
+        {%- if form.posted_successfully? -%}
+          <div class="epc__ok" role="status" tabindex="-1" autofocus>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.7 2.7L16 9.8"/></svg>
+            <span><strong>Merci, votre message est bien envoyé.</strong> Nous vous répondons par e-mail à l’adresse que vous avez indiquée.</span>
+          </div>
+        {%- elsif form.errors -%}
+          <div class="epc__err" role="alert">
+            {%- if form.errors contains 'email' -%}Merci de vérifier votre adresse e-mail.{%- else -%}Merci de remplir tous les champs obligatoires.{%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <div class="epc__ligne">
+          <label class="epc__champ">
+            <span>Nom et prénom *</span>
+            <input type="text" name="contact[Nom]" autocomplete="name" required value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+          </label>
+          <label class="epc__champ">
+            <span>E-mail *</span>
+            <input type="email" name="contact[email]" autocomplete="email" required value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+          </label>
+        </div>
+
+        <div class="epc__ligne">
+          <label class="epc__champ">
+            <span>Numéro de commande <em>(facultatif)</em></span>
+            <input type="text" name="contact[Numéro de commande]" placeholder="Exemple : #1204" inputmode="text">
+          </label>
+          <label class="epc__champ">
+            <span>Sujet *</span>
+            <select name="contact[Sujet]" required>
+              <option value="" disabled selected>Choisissez un sujet</option>
+              <option>Suivi de ma commande</option>
+              <option>Utilisation de l’appareil</option>
+              <option>Retour ou remboursement</option>
+              <option>Modifier ma commande ou mon adresse</option>
+              <option>Autre question</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="epc__champ">
+          <span>Votre message *</span>
+          <textarea name="contact[body]" rows="6" required placeholder="Dites-nous comment nous pouvons vous aider."></textarea>
+        </label>
+
+        <button type="submit" class="epc__btn">Envoyer mon message</button>
+        <p class="epc__note">Vous pouvez aussi nous écrire directement à <a href="mailto:{{ email }}">{{ email }}</a>.</p>
+      {%- endform -%}
+    </div>
+  </div>
+</div>
+
+<style>
+  .epc { --b: #2795fe; --n: #0b2440; --t: #1d2733; --g: #5d6875; --l: #e6ebf1; font-family: 'Inter', -apple-system, sans-serif; color: var(--t); background: #fff; }
+  .epc *, .epc *::before, .epc *::after { box-sizing: border-box; }
+  .epc__hero { background: linear-gradient(180deg, #eef6ff 0%, #fff 100%); text-align: center; padding: 64px 20px 40px; }
+  .epc__surtitre { margin: 0 0 10px; color: var(--b); font-weight: 600; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+  .epc__titre { margin: 0 0 14px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 42px; line-height: 1.1; color: #000; letter-spacing: -.5px; }
+  .epc__intro { margin: 0 auto; max-width: 560px; font-size: 17px; line-height: 1.6; color: var(--g); }
+  .epc__grille { max-width: 1100px; margin: 0 auto; padding: 8px 20px 80px; display: grid; grid-template-columns: 360px 1fr; gap: 32px; align-items: start; }
+  .epc__cartes { display: flex; flex-direction: column; gap: 14px; }
+  .epc__carte { display: flex; gap: 16px; align-items: flex-start; padding: 20px; border: 1px solid var(--l); border-radius: 14px; background: #fff; text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s, transform .2s; }
+  .epc__carte:hover { border-color: var(--b); box-shadow: 0 8px 24px rgba(39, 149, 254, .12); transform: translateY(-1px); }
+  .epc__ico { flex: 0 0 44px; width: 44px; height: 44px; border-radius: 12px; background: #eef6ff; display: flex; align-items: center; justify-content: center; }
+  .epc__ico svg { width: 22px; height: 22px; fill: none; stroke: var(--b); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .epc__carte-txt { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .epc__carte-txt strong { font-size: 16px; color: #000; }
+  .epc__mail { font-weight: 600; color: var(--b); word-break: break-all; }
+  .epc__petit { font-size: 14px; line-height: 1.5; color: var(--g); }
+  .epc__lien { margin-top: 2px; font-size: 14px; font-weight: 600; color: var(--b); }
+  .epc__lien::after { content: ' →'; }
+  .epc__form-bloc { border: 1px solid var(--l); border-radius: 18px; padding: 32px; background: #fff; box-shadow: 0 10px 30px rgba(11, 36, 64, .06); }
+  .epc__form-titre { margin: 0 0 20px; font-size: 22px; font-weight: 700; color: #000; }
+  .epc__form { display: flex; flex-direction: column; gap: 16px; }
+  .epc__ligne { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .epc__champ { display: flex; flex-direction: column; gap: 6px; margin: 0; }
+  .epc__champ > span { font-size: 14px; font-weight: 600; color: var(--t); }
+  .epc__champ em { font-style: normal; font-weight: 400; color: var(--g); }
+  .epc__champ input, .epc__champ select, .epc__champ textarea { width: 100%; font: inherit; font-size: 16px; color: var(--t); background: #fff; border: 1px solid #cfd8e3; border-radius: 10px; padding: 13px 14px; outline: none; transition: border-color .2s, box-shadow .2s; -webkit-appearance: none; appearance: none; }
+  .epc__champ select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235d6875' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px; }
+  .epc__champ textarea { resize: vertical; min-height: 140px; }
+  .epc__champ input:focus, .epc__champ select:focus, .epc__champ textarea:focus { border-color: var(--b); box-shadow: 0 0 0 3px rgba(39, 149, 254, .15); }
+  .epc__btn { margin-top: 4px; width: 100%; border: 0; border-radius: 10px; background: var(--b); color: #fff; font: inherit; font-size: 17px; font-weight: 700; padding: 16px 20px; cursor: pointer; transition: background .2s; }
+  .epc__btn:hover { background: #1a7fe0; }
+  .epc__note { margin: 0; text-align: center; font-size: 14px; color: var(--g); }
+  .epc__note a { color: var(--b); font-weight: 600; text-decoration: none; }
+  .epc__ok { display: flex; gap: 12px; align-items: flex-start; padding: 16px; border-radius: 12px; background: #ecfdf3; color: #14532d; font-size: 15px; line-height: 1.5; }
+  .epc__ok svg { flex: 0 0 24px; width: 24px; height: 24px; fill: none; stroke: #16a34a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .epc__err { padding: 14px 16px; border-radius: 12px; background: #fef2f2; color: #991b1b; font-size: 15px; }
+  @media (max-width: 899px) {
+    .epc__hero { padding: 40px 16px 24px; }
+    .epc__titre { font-size: 32px; }
+    .epc__intro { font-size: 16px; }
+    .epc__grille { grid-template-columns: 1fr; padding: 4px 16px 56px; gap: 24px; }
+    .epc__form-bloc { order: -1; padding: 22px 18px; border-radius: 16px; }
+    .epc__ligne { grid-template-columns: 1fr; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Sorelya contact",
+  "class": "ep-contact",
+  "settings": [
+    { "type": "text", "id": "surtitre", "label": "Surtitre", "default": "Service client" },
+    { "type": "text", "id": "titre", "label": "Titre", "default": "Contactez-nous" },
+    { "type": "textarea", "id": "intro", "label": "Introduction", "default": "Une question sur votre commande, votre livraison ou l’utilisation de votre appareil ? Écrivez-nous, notre équipe vous répond par e-mail." },
+    { "type": "text", "id": "email", "label": "E-mail affiché (vide = e-mail de la boutique)", "default": "contact@mysorelya.com" },
+    { "type": "text", "id": "lien_suivi", "label": "Lien suivi de commande", "default": "/apps/track123" },
+    { "type": "text", "id": "lien_retours", "label": "Lien retours et remboursements", "default": "/policies/refund-policy" }
+  ],
+  "presets": [ { "name": "Sorelya contact" } ]
+}
+{% endschema %}
