@@ -105,7 +105,8 @@
     "lp_ep_header": {
       "type": "lp-ep-header",
       "settings": {
-        "bandeau": "Satisfait ou remboursé pendant 100 jours · Livraison gratuite"
+        "bandeau": "Satisfait ou remboursé pendant 100 jours · Livraison gratuite",
+        "menu": "menu-sorelya-fr"
       }
     }
   },

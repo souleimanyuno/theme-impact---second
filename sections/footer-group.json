@@ -151,7 +151,7 @@
           "type": "link",
           "settings": {
             "label": "Suivre ma commande",
-            "url": "/account"
+            "url": "/apps/track123"
           }
         },
         "lien_3": {
