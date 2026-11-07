@@ -1,0 +1,538 @@
+{%- comment -%} Sorelya : traduction française des étapes de suivi Track123 (Lucia, 2026-11-07). Source : brand/sorelya/site-lucia/suivi-traduction/suivi-fr.js {%- endcomment -%}
+<script>{% raw %}
+/*
+ * Sorelya : traduction française des étapes de suivi (page Track123, /apps/track123).
+ * Écrit par Lucia le 2026-11-07.
+ * Ordre : 1) déjà en français ? on garde ; 2) phrase exacte ; 3) modèle avec lieu ;
+ *         4) famille de mots-clés ; 5) phrase neutre.
+ * Les lieux en Chine ne sont jamais affichés (en plus du mode dropshipping de Track123).
+ * Aucun tiret cadratin ni demi-cadratin dans les textes affichés.
+ */
+(function (root) {
+  'use strict';
+
+  /* ---------- 1. Phrases exactes (clé normalisée : minuscules, sans point final) ---------- */
+  var T = {
+    /* Informations reçues, avant prise en charge */
+    'shipment information received': 'Le transporteur a reçu les informations de votre colis.',
+    'shipping information received': 'Le transporteur a reçu les informations de votre colis.',
+    'shipment info received': 'Le transporteur a reçu les informations de votre colis.',
+    'information received': 'Le transporteur a reçu les informations de votre colis.',
+    'info received': 'Le transporteur a reçu les informations de votre colis.',
+    'order information received': 'Le transporteur a reçu les informations de votre colis.',
+    'electronic information received': 'Le transporteur a reçu les informations de votre colis.',
+    'electronic notification received': 'Le transporteur a reçu les informations de votre colis.',
+    'electronic shipping info received': 'Le transporteur a reçu les informations de votre colis.',
+    'shipment data received': 'Les informations de votre colis ont été enregistrées.',
+    'parcel data received': 'Les informations de votre colis ont été enregistrées.',
+    'data received': 'Les informations de votre colis ont été enregistrées.',
+    'pre-advice received': 'Le transporteur a été prévenu de l’arrivée de votre colis.',
+    'pre-alert received': 'Le transporteur a été prévenu de l’arrivée de votre colis.',
+    'processing information input': 'Votre colis est en cours d’enregistrement chez le transporteur.',
+    'processing information': 'Votre colis est en cours d’enregistrement chez le transporteur.',
+    'order processed': 'Votre commande a été traitée et votre colis est en préparation.',
+    'order processing': 'Votre commande est en cours de préparation.',
+    'shipment created': 'L’envoi de votre colis a été créé.',
+    'label created': 'L’étiquette d’expédition de votre colis a été créée.',
+    'shipping label created': 'L’étiquette d’expédition de votre colis a été créée.',
+    'label printed': 'L’étiquette d’expédition de votre colis a été imprimée.',
+    'awaiting pickup': 'Votre colis attend d’être pris en charge par le transporteur.',
+    'awaiting pickup by carrier': 'Votre colis attend d’être pris en charge par le transporteur.',
+    'waiting for pickup': 'Votre colis attend d’être pris en charge par le transporteur.',
+    'ready for pickup by carrier': 'Votre colis attend d’être pris en charge par le transporteur.',
+    'pending': 'En attente des premières informations du transporteur.',
+    'not found': 'En attente des premières informations du transporteur.',
+    'no information yet': 'En attente des premières informations du transporteur.',
+    'tracking information not yet available': 'En attente des premières informations du transporteur.',
+
+    /* Prise en charge */
+    'yanwen pickup scan': 'Votre colis a été pris en charge par le transporteur.',
+    'pickup scan': 'Votre colis a été pris en charge par le transporteur.',
+    'picked up': 'Votre colis a été pris en charge par le transporteur.',
+    'parcel picked up': 'Votre colis a été pris en charge par le transporteur.',
+    'shipment picked up': 'Votre colis a été pris en charge par le transporteur.',
+    'package picked up': 'Votre colis a été pris en charge par le transporteur.',
+    'picked up by carrier': 'Votre colis a été pris en charge par le transporteur.',
+    'collected': 'Votre colis a été pris en charge par le transporteur.',
+    'parcel collected': 'Votre colis a été pris en charge par le transporteur.',
+    'the parcel has been collected': 'Votre colis a été pris en charge par le transporteur.',
+    'accepted': 'Votre colis a été pris en charge par le transporteur.',
+    'accepted by carrier': 'Votre colis a été pris en charge par le transporteur.',
+    'acceptance': 'Votre colis a été pris en charge par le transporteur.',
+    'acceptance scan': 'Votre colis a été pris en charge par le transporteur.',
+    'posting/collection': 'Votre colis a été pris en charge par le transporteur.',
+    'received by carrier': 'Votre colis a été pris en charge par le transporteur.',
+    'parcel received': 'Votre colis a été réceptionné par le transporteur.',
+    'shipment received': 'Votre colis a été réceptionné par le transporteur.',
+    'received': 'Votre colis a été réceptionné par le transporteur.',
+    'received at origin facility': 'Votre colis est arrivé au centre d’expédition.',
+    'arrived at origin facility': 'Votre colis est arrivé au centre d’expédition.',
+    'arrived at warehouse': 'Votre colis est arrivé à l’entrepôt d’expédition.',
+    'received at warehouse': 'Votre colis est arrivé à l’entrepôt d’expédition.',
+    'warehouse inbound': 'Votre colis est arrivé à l’entrepôt d’expédition.',
+    'warehouse outbound': 'Votre colis a quitté l’entrepôt d’expédition.',
+    'left warehouse': 'Votre colis a quitté l’entrepôt d’expédition.',
+
+    /* Centres de tri, transit */
+    'in transit': 'Votre colis est en cours d’acheminement.',
+    'in transit to next facility': 'Votre colis est en route vers le prochain centre de tri.',
+    'in transit to the next facility': 'Votre colis est en route vers le prochain centre de tri.',
+    'on the way': 'Votre colis est en cours d’acheminement.',
+    'on its way': 'Votre colis est en cours d’acheminement.',
+    'shipment in transit': 'Votre colis est en cours d’acheminement.',
+    'parcel in transit': 'Votre colis est en cours d’acheminement.',
+    'package in transit': 'Votre colis est en cours d’acheminement.',
+    'transit': 'Votre colis est en cours d’acheminement.',
+    'arrived at sorting center': 'Votre colis est arrivé dans un centre de tri.',
+    'arrived at sorting centre': 'Votre colis est arrivé dans un centre de tri.',
+    'arrived at sort facility': 'Votre colis est arrivé dans un centre de tri.',
+    'arrived at facility': 'Votre colis est arrivé dans un centre de tri.',
+    'arrived at hub': 'Votre colis est arrivé dans un centre de tri.',
+    'arrival at sorting center': 'Votre colis est arrivé dans un centre de tri.',
+    'arrival at facility': 'Votre colis est arrivé dans un centre de tri.',
+    'inbound scan': 'Votre colis est arrivé dans un centre de tri.',
+    'processed at facility': 'Votre colis a été trié dans un centre de tri.',
+    'processed at sorting center': 'Votre colis a été trié dans un centre de tri.',
+    'processed at sorting centre': 'Votre colis a été trié dans un centre de tri.',
+    'parcel processed': 'Votre colis a été trié dans un centre de tri.',
+    'sorting': 'Votre colis est en cours de tri.',
+    'sorting completed': 'Votre colis a été trié dans un centre de tri.',
+    'sorted': 'Votre colis a été trié dans un centre de tri.',
+    'processing': 'Votre colis est en cours de traitement.',
+    'operation': 'Votre colis est en cours de traitement.',
+    'departed facility': 'Votre colis a quitté le centre de tri.',
+    'departed from facility': 'Votre colis a quitté le centre de tri.',
+    'departed sorting center': 'Votre colis a quitté le centre de tri.',
+    'departed from sorting center': 'Votre colis a quitté le centre de tri.',
+    'departed from sorting centre': 'Votre colis a quitté le centre de tri.',
+    'departure from facility': 'Votre colis a quitté le centre de tri.',
+    'left the facility': 'Votre colis a quitté le centre de tri.',
+    'outbound scan': 'Votre colis a quitté le centre de tri.',
+    'dispatched': 'Votre colis a été expédié.',
+    'shipment dispatched': 'Votre colis a été expédié.',
+    'parcel dispatched': 'Votre colis a été expédié.',
+    'shipped': 'Votre colis a été expédié.',
+    'despatched': 'Votre colis a été expédié.',
+    'consolidated': 'Votre colis a été regroupé pour le transport international.',
+    'bagged': 'Votre colis a été regroupé pour le transport international.',
+    'linehaul': 'Votre colis est en cours de transport vers le prochain centre.',
+    'line haul': 'Votre colis est en cours de transport vers le prochain centre.',
+    'in transit to destination': 'Votre colis est en route vers votre pays.',
+    'in transit to destination country': 'Votre colis est en route vers votre pays.',
+
+    /* Transport international */
+    'departed from origin country': 'Votre colis a quitté le pays d’expédition.',
+    'departed origin country': 'Votre colis a quitté le pays d’expédition.',
+    'departure from origin country': 'Votre colis a quitté le pays d’expédition.',
+    'left origin country': 'Votre colis a quitté le pays d’expédition.',
+    'export': 'Votre colis est en cours d’export.',
+    'export scan': 'Votre colis est en cours d’export.',
+    'export clearance': 'Votre colis passe les formalités d’export.',
+    'export customs clearance': 'Votre colis passe les formalités d’export.',
+    'export clearance completed': 'Les formalités d’export de votre colis sont terminées.',
+    'export customs clearance completed': 'Les formalités d’export de votre colis sont terminées.',
+    'export customs cleared': 'Les formalités d’export de votre colis sont terminées.',
+    'handed over to airline': 'Votre colis a été remis à la compagnie aérienne.',
+    'handed over to carrier': 'Votre colis a été remis au transporteur.',
+    'handover to airline': 'Votre colis a été remis à la compagnie aérienne.',
+    'delivered to airline': 'Votre colis a été remis à la compagnie aérienne.',
+    'arrived at airport': 'Votre colis est arrivé à l’aéroport.',
+    'arrived at departure airport': 'Votre colis est arrivé à l’aéroport de départ.',
+    'arrived at origin airport': 'Votre colis est arrivé à l’aéroport de départ.',
+    'flight departed': 'Votre colis a décollé, il est en vol vers l’Europe.',
+    'departed from airport': 'Votre colis a décollé, il est en vol vers l’Europe.',
+    'departure from airport': 'Votre colis a décollé, il est en vol vers l’Europe.',
+    'flight departure': 'Votre colis a décollé, il est en vol vers l’Europe.',
+    'airline departure': 'Votre colis a décollé, il est en vol vers l’Europe.',
+    'in flight': 'Votre colis est en vol vers l’Europe.',
+    'flight in transit': 'Votre colis est en vol vers l’Europe.',
+    'transit flight': 'Votre colis est en vol vers l’Europe.',
+    'flight arrived': 'Votre colis a atterri en Europe.',
+    'flight arrival': 'Votre colis a atterri en Europe.',
+    'arrived at destination airport': 'Votre colis a atterri en Europe.',
+    'arrival at destination airport': 'Votre colis a atterri en Europe.',
+    'landed': 'Votre colis a atterri en Europe.',
+    'arrived at destination country': 'Votre colis est arrivé dans votre pays.',
+    'arrival at destination country': 'Votre colis est arrivé dans votre pays.',
+    'arrived in destination country': 'Votre colis est arrivé dans votre pays.',
+    'arrived at destination': 'Votre colis est arrivé dans votre pays.',
+    'arrival at destination': 'Votre colis est arrivé dans votre pays.',
+    'arrived in the destination country': 'Votre colis est arrivé dans votre pays.',
+    'import scan': 'Votre colis est arrivé dans votre pays.',
+    'arrived at import facility': 'Votre colis est arrivé dans votre pays.',
+
+    /* Douane */
+    'customs clearance': 'Votre colis passe les formalités de douane.',
+    'customs clearance in progress': 'Votre colis passe les formalités de douane.',
+    'customs clearance started': 'Votre colis passe les formalités de douane.',
+    'import customs clearance': 'Votre colis passe les formalités de douane.',
+    'import clearance': 'Votre colis passe les formalités de douane.',
+    'in customs': 'Votre colis passe les formalités de douane.',
+    'handed over to customs': 'Votre colis a été présenté à la douane.',
+    'presented to customs': 'Votre colis a été présenté à la douane.',
+    'awaiting customs clearance': 'Votre colis attend son passage en douane.',
+    'customs inspection': 'Votre colis est en cours de contrôle par la douane.',
+    'held by customs': 'Votre colis est retenu temporairement par la douane.',
+    'held in customs': 'Votre colis est retenu temporairement par la douane.',
+    'customs hold': 'Votre colis est retenu temporairement par la douane.',
+    'customs cleared': 'Votre colis a passé la douane.',
+    'customs clearance completed': 'Votre colis a passé la douane.',
+    'import customs clearance completed': 'Votre colis a passé la douane.',
+    'import clearance completed': 'Votre colis a passé la douane.',
+    'clearance completed': 'Votre colis a passé la douane.',
+    'clearance complete': 'Votre colis a passé la douane.',
+    'released by customs': 'Votre colis a passé la douane.',
+    'released from customs': 'Votre colis a passé la douane.',
+    'customs released': 'Votre colis a passé la douane.',
+
+    /* Transporteur local */
+    'handed over to last mile carrier': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'handed over to last-mile carrier': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'handed over to local carrier': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'handed over to delivery partner': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'handed over to final carrier': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'transferred to local carrier': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'transferred to delivery partner': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'tendered to delivery service provider': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'tendered to final delivery agent': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'received by local delivery company': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'received by delivery partner': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'last mile received': 'Votre colis a été confié au transporteur qui va vous le livrer.',
+    'arrived at local delivery facility': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'arrived at delivery facility': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'arrived at delivery depot': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'arrived at delivery office': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'arrived at local facility': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'arrived at depot': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'at local depot': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'arrived at post office': 'Votre colis est arrivé au bureau de poste qui va vous le livrer.',
+
+    /* Livraison */
+    'out for delivery': 'Votre colis est en cours de livraison, il arrive aujourd’hui.',
+    'with delivery courier': 'Votre colis est en cours de livraison, il arrive aujourd’hui.',
+    'on vehicle for delivery': 'Votre colis est en cours de livraison, il arrive aujourd’hui.',
+    'delivery in progress': 'Votre colis est en cours de livraison.',
+    'the parcel is out for delivery': 'Votre colis est en cours de livraison, il arrive aujourd’hui.',
+    'scheduled for delivery': 'La livraison de votre colis est programmée.',
+    'expected delivery today': 'Votre colis devrait être livré aujourd’hui.',
+    'delivered': 'Votre colis a été livré.',
+    'delivery successful': 'Votre colis a été livré.',
+    'successfully delivered': 'Votre colis a été livré.',
+    'delivered to recipient': 'Votre colis a été remis en main propre.',
+    'delivered to addressee': 'Votre colis a été remis en main propre.',
+    'delivered in person': 'Votre colis a été remis en main propre.',
+    'signed for': 'Votre colis a été livré contre signature.',
+    'delivered and signed': 'Votre colis a été livré contre signature.',
+    'delivered to mailbox': 'Votre colis a été déposé dans votre boîte aux lettres.',
+    'delivered to letterbox': 'Votre colis a été déposé dans votre boîte aux lettres.',
+    'delivered to letter box': 'Votre colis a été déposé dans votre boîte aux lettres.',
+    'delivered to mail box': 'Votre colis a été déposé dans votre boîte aux lettres.',
+    'delivered to neighbour': 'Votre colis a été remis à un voisin.',
+    'delivered to neighbor': 'Votre colis a été remis à un voisin.',
+    'delivered to pickup point': 'Votre colis a été livré dans votre point relais.',
+    'delivered to parcel shop': 'Votre colis a été livré dans votre point relais.',
+    'delivered to parcel locker': 'Votre colis a été livré dans votre consigne à colis.',
+    'delivered to safe place': 'Votre colis a été déposé dans un lieu sûr à votre adresse.',
+    'delivered to reception': 'Votre colis a été remis à l’accueil de votre adresse.',
+    'available for pickup': 'Votre colis vous attend en point de retrait.',
+    'available for collection': 'Votre colis vous attend en point de retrait.',
+    'ready for collection': 'Votre colis vous attend en point de retrait.',
+    'ready for pickup': 'Votre colis vous attend en point de retrait.',
+    'awaiting collection': 'Votre colis vous attend en point de retrait.',
+    'arrived at pickup point': 'Votre colis vous attend en point de retrait.',
+    'arrived at pick-up point': 'Votre colis vous attend en point de retrait.',
+    'arrived at parcel shop': 'Votre colis vous attend en point de retrait.',
+    'item available at post office': 'Votre colis vous attend à votre bureau de poste.',
+    'available at post office': 'Votre colis vous attend à votre bureau de poste.',
+    'collected by recipient': 'Votre colis a été retiré.',
+    'picked up by recipient': 'Votre colis a été retiré.',
+    'picked up by customer': 'Votre colis a été retiré.',
+
+    /* Incidents */
+    'delivery attempted': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'delivery attempt': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'attempted delivery': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'delivery attempt failed': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'failed delivery attempt': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'delivery failed': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'unable to deliver': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'undeliverable': 'Le transporteur n’a pas pu livrer votre colis.',
+    'recipient not at home': 'Le livreur n’a trouvé personne à votre adresse.',
+    'recipient not available': 'Le livreur n’a trouvé personne à votre adresse.',
+    'addressee not available': 'Le livreur n’a trouvé personne à votre adresse.',
+    'consignee not available': 'Le livreur n’a trouvé personne à votre adresse.',
+    'nobody at home': 'Le livreur n’a trouvé personne à votre adresse.',
+    'notice left': 'Le livreur vous a laissé un avis de passage.',
+    'notice card left': 'Le livreur vous a laissé un avis de passage.',
+    'address incorrect': 'Le transporteur signale un problème d’adresse. Contactez-nous à contact@mysorelya.com.',
+    'incorrect address': 'Le transporteur signale un problème d’adresse. Contactez-nous à contact@mysorelya.com.',
+    'wrong address': 'Le transporteur signale un problème d’adresse. Contactez-nous à contact@mysorelya.com.',
+    'address incomplete': 'Le transporteur signale une adresse incomplète. Contactez-nous à contact@mysorelya.com.',
+    'incomplete address': 'Le transporteur signale une adresse incomplète. Contactez-nous à contact@mysorelya.com.',
+    'insufficient address': 'Le transporteur signale une adresse incomplète. Contactez-nous à contact@mysorelya.com.',
+    'unknown address': 'Le transporteur ne trouve pas l’adresse. Contactez-nous à contact@mysorelya.com.',
+    'address unknown': 'Le transporteur ne trouve pas l’adresse. Contactez-nous à contact@mysorelya.com.',
+    'refused': 'Le colis a été refusé à la livraison.',
+    'refused by recipient': 'Le colis a été refusé à la livraison.',
+    'delivery refused': 'Le colis a été refusé à la livraison.',
+    'return to sender': 'Votre colis est en retour vers l’expéditeur.',
+    'returned to sender': 'Votre colis a été renvoyé à l’expéditeur.',
+    'returning to sender': 'Votre colis est en retour vers l’expéditeur.',
+    'being returned': 'Votre colis est en retour vers l’expéditeur.',
+    'parcel being returned': 'Votre colis est en retour vers l’expéditeur.',
+    'return in transit': 'Votre colis est en retour vers l’expéditeur.',
+    'returned': 'Votre colis a été renvoyé à l’expéditeur.',
+    'delivery rescheduled': 'La livraison de votre colis a été reprogrammée.',
+    'rescheduled delivery': 'La livraison de votre colis a été reprogrammée.',
+    'redelivery scheduled': 'Une nouvelle livraison de votre colis est programmée.',
+    'delayed': 'L’acheminement de votre colis prend un peu de retard.',
+    'delay': 'L’acheminement de votre colis prend un peu de retard.',
+    'shipment delayed': 'L’acheminement de votre colis prend un peu de retard.',
+    'transport delay': 'L’acheminement de votre colis prend un peu de retard.',
+    'weather delay': 'Les conditions météo retardent un peu votre colis.',
+    'flight delayed': 'Le vol de votre colis a pris du retard.',
+    'exception': 'Le transporteur signale un incident. Nous suivons votre colis de près.',
+    'shipment exception': 'Le transporteur signale un incident. Nous suivons votre colis de près.',
+    'on hold': 'Votre colis est momentanément en attente chez le transporteur.',
+    'held': 'Votre colis est momentanément en attente chez le transporteur.',
+    'held at facility': 'Votre colis est momentanément en attente chez le transporteur.',
+    'damaged': 'Le transporteur signale un colis endommagé. Contactez-nous à contact@mysorelya.com.',
+    'lost': 'Le transporteur signale un colis égaré. Contactez-nous à contact@mysorelya.com.',
+    /* Étapes postales internationales (norme UPU, Yanwen, La Poste, bpost...) */
+    'posting': 'Votre colis a été pris en charge par le transporteur.',
+    'arrival at outward office of exchange': 'Votre colis est arrivé au centre d’échange international du pays d’expédition.',
+    'departure from outward office of exchange': 'Votre colis a quitté le pays d’expédition.',
+    'arrival at transit office of exchange': 'Votre colis fait étape dans un centre d’échange international.',
+    'departure from transit office of exchange': 'Votre colis a quitté un centre d’échange international et poursuit sa route.',
+    'arrival at inward office of exchange': 'Votre colis est arrivé dans votre pays.',
+    'departure from inward office of exchange': 'Votre colis a quitté le centre d’échange international de votre pays.',
+    'held at inward office of exchange': 'Votre colis est momentanément en attente à son arrivée dans votre pays.',
+    'returned from customs': 'Votre colis a passé la douane.',
+    'arrival at delivery office': 'Votre colis est arrivé à l’agence qui va vous le livrer.',
+    'final delivery': 'Votre colis a été livré.',
+    'unsuccessful delivery': 'Le livreur est passé mais n’a pas pu vous remettre le colis.',
+    'item held': 'Votre colis est momentanément en attente chez le transporteur.',
+    'delivery to parcel locker': 'Votre colis a été livré dans votre consigne à colis.',
+    'delivered to locker': 'Votre colis a été livré dans votre consigne à colis.',
+    'ready for collection at post office': 'Votre colis vous attend à votre bureau de poste.',
+    'awaiting collection at post office': 'Votre colis vous attend à votre bureau de poste.',
+    'loaded onto delivery vehicle': 'Votre colis est en cours de livraison, il arrive aujourd’hui.',
+    'country of origin left': 'Votre colis a quitté le pays d’expédition.',
+    'left the country of origin': 'Votre colis a quitté le pays d’expédition.',
+    'electronic information submitted by shipper': 'Le transporteur a reçu les informations de votre colis.',
+    'shipper created a label': 'L’étiquette d’expédition de votre colis a été créée.',
+    'expired': 'Le suivi de ce colis n’est plus mis à jour. Contactez-nous à contact@mysorelya.com.'
+  };
+
+  /* ---------- Lieux ---------- */
+  var ORIGINE = /\b(china|chine|cn|prc|shenzhen|guangzhou|dongguan|yiwu|hangzhou|shanghai|beijing|ningbo|xiamen|fuzhou|foshan|zhongshan|huizhou|jinhua|quanzhou|suzhou|wuhan|chengdu|tianjin|qingdao|zhengzhou|hong ?kong|hk|hkg|szx|can|pvg|pek|macau|taiwan|guangdong|zhejiang|fujian|jiangsu|nanjing|wenzhou|shantou)\b/i;
+  var CJK = /[㐀-鿿豈-﫿]/;
+  /* Mots qui montrent que ce n'est pas un nom de lieu (anglais, transporteurs, termes logistiques). */
+  var PAS_UN_LIEU = /\b(the|by|not|at|in|to|for|of|from|home|left|notice|recipient|addressee|signed|mail ?box|letter ?box|delivery|delivered|parcel|item|shipment|package|address|customer|door|available|ready|destination|origin|local|international|transit|export|import|outward|inward|exchange|office|sorting|sort|facility|center|centre|hub|warehouse|depot|gateway|airport|station|terminal|logistics|network|country|bpost|la ?poste|colissimo|chronopost|colis ?priv[eé]|mondial ?relay|relais|dhl|gls|dpd|ups|fedex|tnt|postnl|swiss ?post|post|yanwen|yunexpress|yun ?express|wanb|cainiao|4px|ems|courier|carrier|agent|partner|vehicle|van)\b/i;
+
+  function propre(s) {
+    return String(s || '').replace(/\s+/g, ' ').trim();
+  }
+  /* Forme comparable : apostrophes droites, sans préfixe « [VILLE] », sans ponctuation finale,
+     sans sujet en tête (« The parcel has been », « Your item is »...). Garde la casse d'origine. */
+  function nettoie(s) {
+    return propre(s)
+      .replace(/[’`]/g, "'")
+      .replace(/[\u2013\u2014]/g, '-')
+      .replace(/^\[[^\]]*\]\s*/, '')
+      .replace(/[.!;:,]+$/g, '')
+      .replace(/^(?:the |your |this |an? )?(?:international )?(?:parcel|item|shipment|package|consignment|pakket|parcel\/item)\s+(?:has been|have been|was|were|is being|has|is|are)?\s*/i, '')
+      .trim();
+  }
+  function cle(s) { return nettoie(s).toLowerCase(); }
+
+  /* « PARIS CEDEX 15 » → « Paris Cedex 15 » ; renvoie '' si ce n'est pas un lieu affichable. */
+  function lieu(l) {
+    l = propre(l).replace(/^[\s,;:.\-/]+|[\s,;:.\-/]+$/g, '');
+    if (!l || l.length > 40 || ORIGINE.test(l) || CJK.test(l) || PAS_UN_LIEU.test(l) || /\d{5,}/.test(l)) return '';
+    if (l === l.toUpperCase() || l === l.toLowerCase()) {
+      var orig = l;
+      l = l.toLowerCase().replace(/(^|[\s'\-])([a-zà-ÿ])/g, function (m, a, b) { return a + b.toUpperCase(); });
+      /* Sigles de 2 ou 3 lettres (CDG, ORY) restent en majuscules, sauf petits mots français. */
+      l = l.replace(/\b([A-Z][a-z]{1,2})\b/g, function (w) { return /^(Le|La|Les|De|Du|Des|Sur|En|Et|Aux|Au|St|Ste)$/.test(w) || orig !== orig.toUpperCase() ? w : w.toUpperCase(); });
+    }
+    l = l.replace(/\s+X$/, '');
+    var V = { 'brussels': 'Bruxelles', 'brussel': 'Bruxelles', 'bruxelles': 'Bruxelles', 'antwerpen': 'Anvers', 'antwerp': 'Anvers', 'liege': 'Liège', 'gent': 'Gand', 'ghent': 'Gand', 'brugge': 'Bruges', 'mechelen': 'Malines', 'leuven': 'Louvain', 'namen': 'Namur', 'bergen': 'Mons', 'koln': 'Cologne', 'koeln': 'Cologne', 'köln': 'Cologne', 'munchen': 'Munich', 'muenchen': 'Munich', 'münchen': 'Munich', 'frankfurt': 'Francfort', 'frankfurt am main': 'Francfort', 'aachen': 'Aix-la-Chapelle', 'geneve': 'Genève', 'geneva': 'Genève', 'genf': 'Genève', 'zurich': 'Zurich', 'zürich': 'Zurich', 'basel': 'Bâle', 'bern': 'Berne', 'luzern': 'Lucerne', 'lausanne': 'Lausanne', 'paris': 'Paris', 'liege x': 'Liège', 'roissy': 'Roissy', 'saint-etienne': 'Saint-Étienne', 'st etienne': 'Saint-Étienne', 'orleans': 'Orléans', 'nimes': 'Nîmes', 'besancon': 'Besançon', 'beziers': 'Béziers', 'chambery': 'Chambéry', 'angouleme': 'Angoulême', 'evry': 'Évry', 'creteil': 'Créteil', 'montelimar': 'Montélimar', 'valence': 'Valence' };
+    var base = l.toLowerCase().replace(/\s+cedex.*$/, '').trim();
+    if (V[base]) l = V[base] + l.slice(base.length);
+    return l;
+  }
+  function de(L) { if (/^Le /.test(L)) return 'du ' + L.slice(3); if (/^Les /.test(L)) return 'des ' + L.slice(4); return /^[aeiouyhàâéèêîôû]/i.test(L) ? 'd’' + L : 'de ' + L; }
+  function a(L) { return L.replace(/^Le /, 'au ').replace(/^Les /, 'aux ').replace(/^(?!au |aux )/, 'à '); }
+  /* Choisit la phrase avec ou sans lieu. */
+  function avec(sans, gabarit, brut) {
+    var L = lieu(brut || '');
+    return L ? gabarit.replace('{de L}', de(L)).replace('{à L}', a(L)).replace('{L}', L) : sans;
+  }
+
+  /* ---------- 2. Modèles (testés sur le texte nettoyé, casse d'origine conservée pour le lieu) ---------- */
+  var CT = '(?:sorting|sort|processing|distribution|mail|parcel|logistics)?\\s*(?:cent(?:er|re)|facility|hub|warehouse)';
+  var M = [
+    /* Livré, avec ses variantes */
+    [/^(?:successfully )?delivered\b(.*)$/i, function (m) {
+      var d = m[1].toLowerCase();
+      if (/mail ?box|letter ?box|brievenbus|briefkasten/.test(d)) return 'Votre colis a été déposé dans votre boîte aux lettres.';
+      if (/neighbo|nachbar|buren/.test(d)) return 'Votre colis a été remis à un voisin.';
+      if (/locker|packstation|consigne/.test(d)) return 'Votre colis a été livré dans votre consigne à colis.';
+      if (/pick ?-?up|parcel ?shop|relay|relais|point|post office/.test(d)) return 'Votre colis a été livré dans votre point relais.';
+      if (/safe place|porch|door/.test(d)) return 'Votre colis a été déposé dans un lieu sûr à votre adresse.';
+      if (/reception|concierge|front desk/.test(d)) return 'Votre colis a été remis à l’accueil de votre adresse.';
+      if (/sign/.test(d)) return 'Votre colis a été livré contre signature.';
+      if (/person|recipient|addressee|customer|consignee/.test(d)) return 'Votre colis a été remis en main propre.';
+      var c = m[1].match(/^,?\s*(?:in|at)\s+(.+)$/i);
+      return avec('Votre colis a été livré.', 'Votre colis a été livré {à L}.', c && c[1]);
+    }],
+    /* Pays d'origine / pays de destination */
+    [/^(?:departed|departure|left|leaving)\s+(?:from\s+)?(?:the\s+)?(?:china|chine|hong ?kong|country of origin|origin country|origin)\b/i, function () { return 'Votre colis a quitté le pays d’expédition.'; }],
+    [/^(?:arrived|arrival)\s+(?:at|in)\s+(?:the\s+)?(?:destination country|country of destination|france|belgium|belgique|switzerland|suisse|luxembourg|germany|allemagne|europe)\b/i, function () { return 'Votre colis est arrivé dans votre pays.'; }],
+    /* Aéroport */
+    [/^(?:the\s+)?flight\s+(?:has\s+)?(?:arrived|landed)\b/i, function () { return 'Votre colis a atterri en Europe.'; }],
+    [/^(?:the\s+)?flight\s+(?:has\s+)?(?:departed|left|taken off)\b/i, function () { return 'Votre colis a décollé, il est en vol vers l’Europe.'; }],
+    [/^(?:departed|departure|left)\s+(?:from\s+)?(?:the\s+)?(?:origin\s+)?airport\b/i, function () { return 'Votre colis a décollé, il est en vol vers l’Europe.'; }],
+    [/^(?:departed|departure|left)\s+(?:from\s+)?(?:the\s+)?.+\s+airport$/i, function () { return 'Votre colis a décollé, il est en vol vers l’Europe.'; }],
+    [/^(?:flight\s+(?:has\s+)?)?(?:arrived|arrival|landed)\s+(?:at|in)\s+(?:the\s+)?(?:destination\s+)?airport\b/i, function () { return 'Votre colis a atterri en Europe.'; }],
+    [/^(?:arrived|arrival)\s+(?:at|in)\s+(?:the\s+)?(?:origin|departure)\s+airport\b/i, function () { return 'Votre colis est arrivé à l’aéroport de départ.'; }],
+    /* Agence de livraison */
+    [/^(?:arrived|arrival)\s+(?:at|in)\s+(?:the\s+)?(?:local\s+)?(?:delivery|distribution)\s+(?:office|depot|facility|station|cent(?:er|re))(?:\s*(?:in|of|at|,|-)\s*)?(.*)$/i, function (m) { return avec('Votre colis est arrivé à l’agence qui va vous le livrer.', 'Votre colis est arrivé à l’agence {de L}, qui va vous le livrer.', m[1]); }],
+    /* Centres de tri */
+    [new RegExp('^(?:arrived|arrival|inbound)\\s+(?:at|in)\\s+(?:the\\s+)?' + CT + '(?:\\s*(?:in|of|at|,|-)\\s*)?(.*)$', 'i'), function (m) { return avec('Votre colis est arrivé dans un centre de tri.', 'Votre colis est arrivé au centre de tri {de L}.', m[1]); }],
+    [new RegExp('^(?:arrived|arrival)\\s+(?:at|in)\\s+(?:the\\s+)?(.+?)\\s+' + CT + '$', 'i'), function (m) { return avec('Votre colis est arrivé dans un centre de tri.', 'Votre colis est arrivé au centre de tri {de L}.', m[1]); }],
+    [new RegExp('^(?:departed|departure|left|dispatched|outbound)\\s+(?:from\\s+|in\\s+|at\\s+)?(?:the\\s+)?' + CT + '(?:\\s*(?:in|of|at|,|-)\\s*)?(.*)$', 'i'), function (m) { return avec('Votre colis a quitté le centre de tri.', 'Votre colis a quitté le centre de tri {de L}.', m[1]); }],
+    [new RegExp('^(?:departed|departure|left|dispatched)\\s+(?:from\\s+|in\\s+|at\\s+)?(?:the\\s+)?(.+?)\\s+' + CT + '$', 'i'), function (m) { return avec('Votre colis a quitté le centre de tri.', 'Votre colis a quitté le centre de tri {de L}.', m[1]); }],
+    [new RegExp('^(?:processed|sorted|scanned|processing)\\s+(?:at|in)\\s+(?:the\\s+)?(?:destination\\s+)?' + CT + '(?:\\s*(?:in|of|at|,|-)\\s*)?(.*)$', 'i'), function (m) { return avec('Votre colis a été trié dans un centre de tri.', 'Votre colis a été trié au centre de tri {de L}.', m[1]); }],
+    [/^(?:processed|sorted|scanned)\s+(?:at|in)\s+(?:the\s+)?(.+)$/i, function (m) { return avec('Votre colis a été trié dans un centre de tri.', 'Votre colis a été trié {à L}.', m[1]); }],
+    /* Arrivées et départs génériques */
+    [/^(?:arrived|arrival)\s+(?:at|in)\s+(?:the\s+)?(.+)$/i, function (m) { return avec('Votre colis est arrivé à une nouvelle étape de son trajet.', 'Votre colis est arrivé {à L}.', m[1]); }],
+    [/^(?:departed|departure|left)\s+(?:from\s+|in\s+|at\s+)?(?:the\s+)?(.+)$/i, function (m) { return avec('Votre colis poursuit sa route.', 'Votre colis a quitté {L} et poursuit sa route.', m[1]); }],
+    [/^received\s+(?:at|in)\s+(?:the\s+)?(.+)$/i, function (m) { return /cent(er|re)|facility|hub|warehouse/i.test(m[1]) ? 'Votre colis est arrivé dans un centre de tri.' : avec('Votre colis a été réceptionné par le transporteur.', 'Votre colis a été réceptionné {à L}.', m[1]); }],
+    [/^(?:in transit|transit|forwarded|routed)\s+(?:to|through|via)\s+(?:the\s+)?(.+)$/i, function (m) { return /destination|country/i.test(m[1]) ? 'Votre colis est en route vers votre pays.' : avec('Votre colis est en cours d’acheminement.', 'Votre colis est en cours d’acheminement, il passe par {L}.', m[1]); }],
+    [/^out for delivery\s+(?:in|at|from)\s+(.+)$/i, function (m) { return avec('Votre colis est en cours de livraison, il arrive aujourd’hui.', 'Votre colis est en cours de livraison {à L}, il arrive aujourd’hui.', m[1]); }],
+    [/^(?:handed over|transferred|tendered|passed|given)\s+to\s+(.+)$/i, function (m) {
+      var d = m[1].toLowerCase();
+      if (/airline|flight|air carrier/.test(d)) return 'Votre colis a été remis à la compagnie aérienne.';
+      if (/customs|douane/.test(d)) return 'Votre colis a été présenté à la douane.';
+      return 'Votre colis a été confié au transporteur qui va vous le livrer.';
+    }],
+    [/^(?:loaded|placed)\s+(?:on|onto)\s+(?:the\s+)?(?:delivery\s+)?(?:vehicle|van|truck)/i, function () { return 'Votre colis est en cours de livraison, il arrive aujourd’hui.'; }],
+    [/^(?:loaded|placed)\s+(?:on|onto)\s+(?:the\s+)?(?:flight|aircraft|plane)/i, function () { return 'Votre colis a été chargé dans l’avion.'; }]
+  ];
+
+  /* ---------- 3. Familles de mots-clés (ordre = priorité) ---------- */
+  var F = [
+    [/return(ed|ing)? to (the )?(sender|shipper|origin)|being returned|return (in transit|initiated)|retour|retoure|retour afzender/, 'Votre colis est en retour vers l’expéditeur.'],
+    [/refus|geweigerd|verweigert/, 'Le colis a été refusé à la livraison.'],
+    [/\b(lost|missing)\b/, 'Le transporteur signale un colis égaré. Contactez-nous à contact@mysorelya.com.'],
+    [/damag|beschädigt|beschadigd/, 'Le transporteur signale un colis endommagé. Contactez-nous à contact@mysorelya.com.'],
+    [/address|adresse|adres\b/, 'Le transporteur signale un problème d’adresse. Contactez-nous à contact@mysorelya.com.'],
+    [/not (at )?home|nobody|no one|unavailable|not available|absent|niet thuis|nicht angetroffen/, 'Le livreur n’a trouvé personne à votre adresse.'],
+    [/attempt|notice (card )?left|missed|avis de passage/, 'Le livreur est passé mais n’a pas pu vous remettre le colis.'],
+    [/fail|unable|undeliver|unsuccessful|exception|problem|issue|abnormal/, 'Le transporteur signale un incident. Nous suivons votre colis de près.'],
+    [/(ready|available|awaiting|await|waiting)\b.*\b(pick ?-?up|collection|collect|post office|parcel ?shop|point|locker|counter)|arrived at (the )?(pick ?-?up point|parcel ?shop|post office|locker|parcel locker)|abholbereit|afhaalpunt|ophalen/, 'Votre colis vous attend en point de retrait.'],
+    [/zugestellt|afgeleverd|bezorgd|geleverd|^delivered|delivered$|delivery (complete|successful)|final delivery|^delivery$/, 'Votre colis a été livré.'],
+    [/out for delivery|with (the )?(courier|driver)|on (the )?(vehicle|van)|delivery (in progress|today)|in zustellung|wird zugestellt|onderweg naar|bezorger/, 'Votre colis est en cours de livraison, il arrive aujourd’hui.'],
+    [/customs|clearance|douane|zoll|duty|duties|\btax/, 'Votre colis passe les formalités de douane.'],
+    [/office of exchange/, 'Votre colis passe par un centre d’échange international.'],
+    [/flight|airline|airport|aircraft|air transport|by air|landed|take ?off|vliegtuig|flugzeug/, 'Votre colis est en cours de transport aérien.'],
+    [/destination country|country of destination/, 'Votre colis est en route vers votre pays.'],
+    [/last ?-?mile|local carrier|delivery partner|final carrier|delivery (agent|company|service)|tendered/, 'Votre colis a été confié au transporteur qui va vous le livrer.'],
+    [/delay|postpone|resched|vertraagd|verzögert/, 'L’acheminement de votre colis prend un peu de retard.'],
+    [/\bhold\b|\bheld\b/, 'Votre colis est momentanément en attente chez le transporteur.'],
+    [/pick ?-?up|picked|collect|accept|abgeholt|opgehaald/, 'Votre colis a été pris en charge par le transporteur.'],
+    [/depart|\bleft\b|leav|dispatch|despatch|outbound|export|verlassen|vertrokken/, 'Votre colis poursuit sa route.'],
+    [/arriv|inbound|received at|reached|angekommen|aangekomen/, 'Votre colis est arrivé dans un centre de tri.'],
+    [/sort|process|scan|operation|hub|facility|center|centre|warehouse|sortiert|gesorteerd/, 'Votre colis a été trié dans un centre de tri.'],
+    [/information|\binfo\b|data|label|electronic|manifest|pre-?advi|pre-?alert|\border\b|submitted|angekündigt|aangemeld/, 'Le transporteur a reçu les informations de votre colis.'],
+    [/transit|on the way|on its way|forward|transport|en route|shipped|underway|moving|onderweg|unterwegs/, 'Votre colis est en cours d’acheminement.']
+  ];
+
+  var NEUTRE = 'Votre colis poursuit son acheminement.';
+
+  /* Déjà en français (La Poste, Colis Privé, Chronopost...) : on garde tel quel. */
+  var FR = /[àâçéèêëîïôûùüœ]|\b(votre|vos|colis|livr\w*|la livraison|est arrivé|en cours|pris en charge|destinataire|bureau de poste|point relais|expédi\w*|acheminement|commande|douane)\b/i;
+  var EN = /\b(the|has been|arrived|departed|received|parcel|shipment|delivery|delivered|facility|item|your)\b/i;
+
+  function traduire(texte) {
+    var brut = propre(texte);
+    if (!brut) return brut;
+    if (FR.test(brut) && !EN.test(brut)) return brut;
+    /* « Shipment information received. Last mile tracking number: XX - Last mile tracking carrier: DHLink » */
+    var lm = brut.match(/last ?-?mile tracking (?:number|no)\.?\s*:\s*([A-Za-z0-9]{6,})/i);
+    if (lm) {
+      var lmc = brut.match(/last ?-?mile (?:tracking )?carrier\s*:\s*([^,;]+?)\s*$/i);
+      var debut = brut.split(/\.\s+|\s+-\s+/)[0];
+      var phrase = /last ?-?mile/i.test(debut) ? 'Votre colis a été confié au transporteur qui va vous le livrer.' : traduire(debut);
+      return phrase + ' Numéro de suivi chez le transporteur local' + (lmc ? ' ' + propre(lmc[1]) : '') + ' : ' + lm[1] + '.';
+    }
+    var n = nettoie(brut);
+    var k = n.toLowerCase();
+    if (T[k]) return T[k];
+    /* Plusieurs phrases : on traduit la première si elle est connue. */
+    var premiere = k.split(/\.\s+/)[0];
+    if (premiere !== k && T[premiere]) return T[premiere];
+    for (var i = 0; i < M.length; i++) {
+      var r = n.match(M[i][0]);
+      if (r) return M[i][1](r);
+    }
+    /* « Texte connu, LIEU » / « Texte connu (LIEU) » / « Texte connu - LIEU » : on garde la phrase connue. */
+    for (var p = 0; p < 5; p++) { if (F[p][0].test(k)) return F[p][1]; }
+    var s = k.match(/^(.*?)\s*(?:\(([^)]*)\)|\[([^\]]*)\]|,\s*([^,]+)|\s-\s(.+)|:\s*(.+))$/);
+    if (s && T[s[1]]) return T[s[1]];
+    for (var j = 0; j < F.length; j++) {
+      if (F[j][0].test(k)) return F[j][1];
+    }
+    return NEUTRE;
+  }
+
+  /* « 7 nov. 2026 01:22 pm » → « 7 nov. 2026 à 13 h 22 » */
+  function heure(texte) {
+    return String(texte || '').replace(/(\d{1,2}):(\d{2})\s*(am|pm)\b/i, function (_, h, mi, ap) {
+      h = parseInt(h, 10);
+      if (/pm/i.test(ap) && h < 12) h += 12;
+      if (/am/i.test(ap) && h === 12) h = 0;
+      return 'à ' + h + ' h ' + mi;
+    });
+  }
+
+  var api = { traduire: traduire, heure: heure, lieu: lieu, _T: T };
+  if (typeof module !== 'undefined' && module.exports) { module.exports = api; return; }
+
+  /* ---------- Page : on traduit les lignes du trajet à chaque rendu de Track123 ---------- */
+  if (!/^\/apps\/track123/.test(root.location.pathname)) return;
+  root.SorelyaSuiviFR = api;
+  var CIBLES = '.track123_track_desc, .track123_track_location, .track123_order_tracking_detail_location, .track123_last_track_info, .track123_track_time';
+
+  function traiterNoeud(el) {
+    var estHeure = el.classList.contains('track123_track_time');
+    for (var n = el.firstChild; n; n = n.nextSibling) {
+      if (n.nodeType !== 3 || !propre(n.nodeValue)) continue;
+      if (n.__sorelyaFait === n.nodeValue) continue;
+      var avant = n.nodeValue;
+      var apres;
+      if (estHeure) apres = heure(avant);
+      else if (el.classList.contains('track123_last_track_info')) apres = T[cle(avant)] ? traduire(avant) : avant;
+      else if (el.classList.contains('track123_track_location') || el.classList.contains('track123_order_tracking_detail_location')) apres = lieu(avant);
+      else apres = traduire(avant);
+      if (apres !== avant) { n.nodeValue = apres; }
+      n.__sorelyaFait = n.nodeValue;
+    }
+  }
+  function tout() {
+    var els = root.document.querySelectorAll(CIBLES);
+    for (var i = 0; i < els.length; i++) traiterNoeud(els[i]);
+  }
+  var prevu = false;
+  function planifier() {
+    if (prevu) return;
+    prevu = true;
+    setTimeout(function () { prevu = false; tout(); }, 40);
+  }
+  new MutationObserver(planifier).observe(root.document.documentElement, { childList: true, subtree: true, characterData: true });
+  if (root.document.readyState !== 'loading') tout(); else root.document.addEventListener('DOMContentLoaded', tout);
+})(typeof window !== 'undefined' ? window : globalThis);
+
+{% endraw %}</script>
