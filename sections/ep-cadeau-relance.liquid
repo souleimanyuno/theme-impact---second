@@ -1,0 +1,60 @@
+{%- comment -%}
+  ep-cadeau-relance (Lucia, 2026-11-11)
+  Lien du mail 4 de la relance paiement abandonné :
+  /products/triple-therapie-sorelya?cadeau=elastique
+  Ajoute « Élastique de rééducation (offert) » (0 €) au panier, garde le panier du client
+  s'il existe encore, sinon ajoute 1 Triple Thérapie, puis envoie au paiement.
+  Passe par la vitrine pour que Kaching pose _kaching_session_id et applique sa remise.
+  Invisible sans le paramètre ?cadeau=elastique.
+{%- endcomment -%}
+<div id="ep-cadeau-relance" hidden style="position:fixed;inset:0;z-index:2147483000;background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-family:inherit;">
+  <div style="max-width:420px;">
+    <p style="font-size:22px;font-weight:700;color:#0E2A47;margin:0 0 12px;">Votre élastique de rééducation est offert</p>
+    <p style="font-size:17px;color:#1E2B38;margin:0;">Nous l'ajoutons à votre commande, un instant…</p>
+  </div>
+</div>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('cadeau') !== 'elastique') return;
+  var TT = {{ section.settings.produit_id | default: 67960026857794 }};
+  var CADEAU = {{ section.settings.cadeau_id | default: 68114989384002 }};
+  var box = document.getElementById('ep-cadeau-relance');
+  if (box) { box.hidden = false; box.style.display = 'flex'; }
+  var essais = 0;
+  function versPaiement() { window.location.href = '/checkout'; }
+  function lancer() {
+    fetch('/cart.js', { credentials: 'same-origin' })
+      .then(function (r) { return r.json(); })
+      .then(function (cart) {
+        var attrs = cart.attributes || {};
+        if (!attrs._kaching_session_id && essais < 20) { essais++; return setTimeout(lancer, 300); }
+        var aTT = cart.items.some(function (i) { return i.variant_id === TT; });
+        var aCadeau = cart.items.some(function (i) { return i.variant_id === CADEAU; });
+        var items = [];
+        if (!aTT) items.push({ id: TT, quantity: 1 });
+        if (!aCadeau) items.push({ id: CADEAU, quantity: 1 });
+        if (!items.length) return versPaiement();
+        return fetch('/cart/add.js', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ items: items })
+        }).then(versPaiement, versPaiement);
+      })
+      .catch(function () { if (box) { box.hidden = true; box.style.display = 'none'; } });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lancer); else lancer();
+})();
+</script>
+
+{% schema %}
+{
+  "name": "EP cadeau relance",
+  "settings": [
+    { "type": "number", "id": "produit_id", "label": "ID variante Triple Thérapie", "default": 67960026857794 },
+    { "type": "number", "id": "cadeau_id", "label": "ID variante élastique offert", "default": 68114989384002 }
+  ],
+  "presets": []
+}
+{% endschema %}
