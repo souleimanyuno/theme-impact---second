@@ -444,6 +444,10 @@
     "checkout": {
       "alternative_payment_method_banner": {
         "express_checkout": "Paiement express – Excellent ⭐⭐⭐⭐⭐ 4,8/5 · 12 000+ thérapies vendues"
+      },
+      "thank_you": {
+        "thank_you_confirmed_order_with_email": "Vous allez recevoir dans quelques minutes un e-mail de confirmation avec votre numéro de commande. Vous ne le voyez pas ? Pensez à regarder dans vos courriers indésirables (spams). Toujours rien ? Écrivez-nous à contact@mysorelya.com, notre service client vous répondra.",
+        "thank_you_confirmed_order_with_email_and_phone": "Vous allez recevoir dans quelques minutes un e-mail de confirmation avec votre numéro de commande. Vous ne le voyez pas ? Pensez à regarder dans vos courriers indésirables (spams). Toujours rien ? Écrivez-nous à contact@mysorelya.com, notre service client vous répondra."
       }
     }
   }
